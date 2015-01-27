@@ -24,7 +24,8 @@ header {
     header .About .Name {
       border-right: 1px solid gainsboro;
       font-size: 2em;
-      color: #505050; }
+      color: #505050;
+      text-align: center; }
     header .About .Roles {
       text-align: center;
       padding-top: 13px;
