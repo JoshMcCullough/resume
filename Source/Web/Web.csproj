@@ -178,7 +178,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Scripts\bigtext.js" />
     <Content Include="Content\Scripts\InfoSlider.js" />
     <Content Include="Content\Stylesheets\bootstrap-theme.css" />
     <Content Include="Content\Stylesheets\bootstrap-theme.min.css" />
