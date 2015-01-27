@@ -28,6 +28,7 @@ namespace JSM.Web.Views.WorkHistory
     using System.Web.UI;
     using System.Web.WebPages;
     using JSM.Web;
+    using JSM.Web.Models.Shared;
     using QuantumConcepts.Common.Extensions;
     using QuantumConcepts.Common.Mvc.Extensions;
     using QuantumConcepts.Common.Mvc.Utils;
@@ -182,10 +183,10 @@ WriteLiteral(">Reston, Virginia</span>\r\n    </span>\r\n</h2>\r\n<h3>Senior Sof
 "li>Create and refine complex SQL queries, stored procedures and views on Oracle " +
 "platform.</li>\r\n            <li>Lead developer on multiple software iterations.<" +
 "/li>\r\n        </ul>\r\n    </li>\r\n    <li>\r\n        General:\r\n        <ul>\r\n      " +
-"      <li>Go-to-guy for network and server configuration; impolemented custom VO" +
-"IP solution (Asterisk); developed in-house time-tracking system; presented softw" +
-"are development training courses to other employees; excellent evaluations each " +
-"year.</li>\r\n        </ul>\r\n    </li>\r\n</ul>");
+"      <li>Go-to-guy for network and server configuration; implemented custom VOI" +
+"P solution (Asterisk); developed in-house time-tracking system; presented softwa" +
+"re development training courses to other employees; excellent evaluations each y" +
+"ear.</li>\r\n        </ul>\r\n    </li>\r\n</ul>");
 
         }
     }
