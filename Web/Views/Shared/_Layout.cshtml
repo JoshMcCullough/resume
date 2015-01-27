@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="author" content="Josh McCullough"/>
+        <meta name="description" content="I'm a highly skilled software engineer who prides himself on completing tasks on time while maintaining high quality standards and adhering to software development best practices." />
+        <meta name="keywords" content="software,development,engineering,engineer,c#,.NET,coding,coder,for hire"/>
+        <title>Josh McCullough | A top-quality, full-stack software engineer.</title>
+        <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css"/>
+        @Styles.Render("~/Content/Stylesheets/3rdParty")
+        @Styles.Render("~/Content/Stylesheets/Site")
+        @Scripts.Render("~/Content/Scripts/3rdParty")
+        @Scripts.Render("~/Content/Scripts/Site")
+        @RenderSection("Head", required: false)
+</head>
+    <body class="Controller-@(ViewContext.RouteData.Values["controller"]) Action-@(ViewContext.RouteData.Values["action"])">
+        <header>
+            <div class="row About">
+                <div class="col-xs-12 col-md-3 Name">Josh McCullough</div>
+                <ul class="col-xs-12 col-md-9 Roles">
+                    <li>software engineer</li>
+                    <li>leader</li>
+                    <li>database developer</li>
+                    <li>mentor</li>
+                    <li>ui/ux designer</li>
+                </ul>
+            </div>
+            <nav class="row">
+                @NavUtil.WriteMenuLink(Html, "overview", "Index", "Overview", null, "Overview")
+                @NavUtil.WriteMenuLink(Html, "skills & tech", "Index", "SkillsAndTech", null, "SkillsAndTech")
+                @NavUtil.WriteMenuLink(Html, "work history", "Index", "WorkHistory", null, "WorkHistory")
+                @NavUtil.WriteMenuLink(Html, "education", "Index", "Education", null, "Education")
+                @NavUtil.WriteMenuLink(Html, "contact me", "Index", "ContactMe", null, "ContactMe")
+            </nav>
+        </header>
+
+        <section id="Content">
+            <div>
+                <h1><span>@ViewBag.Title</span></h1>
+                @RenderBody()
+            </div>
+        </section>
+
+        @Scripts.Render("~/Content/Scripts/3rdParty")
+        @Scripts.Render("~/Content/Scripts/Site")
+        @RenderSection("Scripts", required: false)
+    </body>
+</html>

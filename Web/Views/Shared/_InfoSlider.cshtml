@@ -1,0 +1,7 @@
+﻿@model InfoSliderModel
+
+<div id="@Model.Id" class="@(Model.CssClass ?? "info-slider")">
+    <span class="label">@Model.Label</span>
+    <span class="content">@(new MvcHtmlString(Model.Content))</span>
+    <span class="slider"><span class="grip"></span><span class="hint">@(Model.Hint ?? "> slide to reveal")</span></span>
+</div>

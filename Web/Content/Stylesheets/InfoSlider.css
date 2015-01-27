@@ -1,0 +1,73 @@
+﻿.info-slider {
+  position: relative;
+  top: 5px;
+  margin: 0 0 20px 20px;
+  height: 34px;
+  width: 400px;
+  border: solid 1px #e9e9e9;
+  background-color: #f6f6f6;
+  white-space: nowrap;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default; }
+  .info-slider.sliding, .info-slider.sliding .label, .info-slider.sliding {
+    cursor: ew-resize; }
+    .info-slider.sliding .content, .info-slider.sliding .label .content, .info-slider.sliding .content {
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -webkit-user-select: none;
+      user-select: none;
+      cursor: default; }
+  .info-slider .label, .info-slider .content, .info-slider .slider {
+    display: inline-block;
+    padding: 0;
+    line-height: 34px;
+    vertical-align: middle;
+    font-size: 1em; }
+  .info-slider .label {
+    margin: 0 10px;
+    width: 55px;
+    color: darkgray; }
+  .info-slider .content {
+    margin-left: 10px;
+    color: #000;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    -webkit-user-select: text;
+    user-select: text; }
+  .info-slider .slider {
+    position: absolute;
+    top: -4px;
+    right: 0;
+    width: 100%;
+    height: 40px;
+    border: solid 1px gainsboro;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #e9e9e9;
+    overflow: hidden;
+    white-space: nowrap; }
+    .info-slider .slider span {
+      display: inline-block;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -webkit-user-select: none;
+      vertical-align: middle;
+      user-select: none; }
+      .info-slider .slider span.grip {
+        width: 5px;
+        height: 100%;
+        background-color: rgba(0, 255, 0, 0.2);
+        cursor: ew-resize; }
+      .info-slider .slider span.hint {
+        margin-left: 10px;
+        color: darkgray; }
+  .info-slider:hover .slider span.grip {
+    background-color: #0f0; }
+  .info-slider:hover.disabled .slider span.grip {
+    background-color: rgba(0, 255, 0, 0.2); }
+
+/*# sourceMappingURL=InfoSlider.css.map */
