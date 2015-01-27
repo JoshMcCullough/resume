@@ -69,6 +69,7 @@ class InfoSlider {
     }
 
     public setContent(content: any) {
+        this.content.empty();
         this.content.append(content);
     }
 

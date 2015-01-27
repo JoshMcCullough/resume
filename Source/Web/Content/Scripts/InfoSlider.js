@@ -57,6 +57,7 @@ var InfoSlider = (function () {
     };
 
     InfoSlider.prototype.setContent = function (content) {
+        this.content.empty();
         this.content.append(content);
     };
 
