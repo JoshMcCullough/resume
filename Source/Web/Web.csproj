@@ -274,6 +274,8 @@
       <Generator>RazorGenerator</Generator>
       <LastGenOutput>_InfoSlider.generated.cs</LastGenOutput>
     </Content>
+    <None Include="Properties\PublishProfiles\ftp.JoshMcCullough.me.pubxml" />
+    <None Include="Properties\PublishProfiles\Local.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\SkillAndTech\" />
@@ -282,15 +284,15 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Quantum Concepts\Quantum Concepts\Common\CommonMvc\QC Common MVC.csproj">
+    <ProjectReference Include="..\..\..\..\Quantum Concepts\Quantum Concepts\Common\CommonMvc\QC Common MVC.csproj">
       <Project>{98452b67-0a4a-4e91-b152-ff1df80f718a}</Project>
       <Name>QC Common MVC</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Quantum Concepts\Quantum Concepts\Common\CommonWeb\QC Common Web.csproj">
+    <ProjectReference Include="..\..\..\..\Quantum Concepts\Quantum Concepts\Common\CommonWeb\QC Common Web.csproj">
       <Project>{890d3bc7-7bbb-4722-b0ab-2a840379530b}</Project>
       <Name>QC Common Web</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Quantum Concepts\Quantum Concepts\Common\Common\QC Common.csproj">
+    <ProjectReference Include="..\..\..\..\Quantum Concepts\Quantum Concepts\Common\Common\QC Common.csproj">
       <Project>{8807828d-db88-462a-875e-647240d48668}</Project>
       <Name>QC Common</Name>
     </ProjectReference>
@@ -305,6 +307,9 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
