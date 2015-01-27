@@ -276,9 +276,7 @@
     <None Include="Properties\PublishProfiles\ftp.JoshMcCullough.me.pubxml" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\SkillAndTech\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
