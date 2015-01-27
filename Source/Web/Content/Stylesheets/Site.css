@@ -15,7 +15,6 @@ header {
   position: relative;
   z-index: 100;
   padding-top: 20px;
-  padding-bottom: 20px;
   border-bottom: 2px solid #d0d0d0;
   background-color: #e9e9e9; }
   header .About {
@@ -23,8 +22,9 @@ header {
     padding: 0 0 10px 0;
     border-bottom: 1px solid gainsboro; }
     header .About .Name {
+      border-right: 1px solid gainsboro;
       font-size: 2em;
-      color: #6a6a6a; }
+      color: #505050; }
     header .About .Roles {
       text-align: center;
       padding-top: 13px;
@@ -44,7 +44,7 @@ header {
       -moz-box-sizing: border-box;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
-      padding: 20px 0 0 0;
+      padding: 20px 0;
       width: 20%;
       border: 2px solid transparent;
       line-height: 1em;
@@ -52,36 +52,38 @@ header {
       font-size: 1.5vw;
       text-align: center; }
       header nav a.Overview {
-        color: #b585ff;
-        text-shadow: #020006 1px 1px 1px; }
+        color: #9652ff;
+        text-shadow: #200052 1px 1px 1px; }
         header nav a.Overview:hover, header nav a.Overview.Active {
           color: #6706FF; }
       header nav a.SkillsAndTech {
-        color: #ff697f;
-        text-shadow: black 1px 1px 1px; }
+        color: #ff3654;
+        text-shadow: #360008 1px 1px 1px; }
         header nav a.SkillsAndTech:hover, header nav a.SkillsAndTech.Active {
           color: #E80023; }
       header nav a.WorkHistory {
-        color: #57ff82;
-        text-shadow: black 1px 1px 1px; }
+        color: #23ff5c;
+        text-shadow: #002409 1px 1px 1px; }
         header nav a.WorkHistory:hover, header nav a.WorkHistory.Active {
           color: #00D637; }
       header nav a.Education {
-        color: #72ccfb;
-        text-shadow: black 1px 1px 1px; }
+        color: #40bafa;
+        text-shadow: #02263a 1px 1px 1px; }
         header nav a.Education:hover, header nav a.Education.Active {
           color: #069AE8; }
       header nav a.ContactMe {
-        color: #ffc585;
-        text-shadow: #060300 1px 1px 1px; }
+        color: #ffad52;
+        text-shadow: #522b00 1px 1px 1px; }
         header nav a.ContactMe:hover, header nav a.ContactMe.Active {
           color: #FF8906; }
-      header nav a:hover, header nav a.Active {
+      header nav a:hover, header nav a:active, header nav a:visited, header nav a.Active {
         text-decoration: none; }
       header nav a.Active:before {
-        content: "< "; }
+        content: "< ";
+        vertical-align: text-bottom; }
       header nav a.Active:after {
-        content: " />"; }
+        content: " />";
+        vertical-align: text-bottom; }
 
 section#Content {
   padding: 0 40px;
@@ -122,5 +124,12 @@ section#Content {
     section#Content > div h5 {
       margin-top: 0;
       font-size: 1.2em; }
+    section#Content > div ul li {
+      text-indent: -15px;
+      list-style-type: none; }
+      section#Content > div ul li:before {
+        position: relative;
+        left: -10px;
+        content: "\2013"; }
 
 /*# sourceMappingURL=Site.css.map */

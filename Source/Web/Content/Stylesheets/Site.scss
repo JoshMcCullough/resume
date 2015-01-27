@@ -4,8 +4,8 @@ $skills-and-tech-color: #E80023;
 $work-history-color: #00D637;
 $education-color: #069AE8;
 $contact-me-color: #FF8906;
-$main-menu-lighten: 25%;
-$main-menu-shadow-darken: 50%;
+$main-menu-lighten: 15%;
+$main-menu-shadow-darken: 35%;
 
 html,
 body {
@@ -31,7 +31,6 @@ header {
     position: relative;
     z-index: 100;
     padding-top: 20px;
-    padding-bottom: 20px;
     border-bottom: 2px solid darken($primary-gray, 10%);
     background-color: $primary-gray;
 
@@ -41,8 +40,9 @@ header {
         border-bottom: 1px solid darken($primary-gray, 5%);
 
         .Name {
+            border-right: 1px solid darken($primary-gray, 5%);
             font-size: 2em;
-            color: darken($primary-gray, 50%);
+            color: darken($primary-gray, 60%);
         }
 
         .Roles {
@@ -72,7 +72,7 @@ header {
             -moz-box-sizing: border-box;
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
-            padding: 20px 0 0 0;
+            padding: 20px 0;
             width: 20%;
             border: 2px solid transparent;
             line-height: 1em;
@@ -131,16 +131,20 @@ header {
             }
 
             &:hover,
+            &:active,
+            &:visited,
             &.Active {
                 text-decoration: none;
             }
 
             &.Active:before {
                 content: "< ";
+                vertical-align: text-bottom;
             }
 
             &.Active:after {
                 content: " />";
+                vertical-align: text-bottom;
             }
         }
     }
@@ -206,6 +210,19 @@ section#Content {
         h5 {
             margin-top: 0;
             font-size: 1.2em;
+        }
+
+        ul {
+            li {
+                text-indent: -15px;
+                list-style-type: none;
+
+                &:before {
+                    position: relative;
+                    left: -10px;
+                    content: "\2013";
+                }
+            }
         }
     }
 }
