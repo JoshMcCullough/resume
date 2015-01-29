@@ -1,0 +1,7 @@
+﻿@model JSM.Web.Models.Shared.Resume.Subsection
+
+<section @(new MvcHtmlString(this.Model.Class.IsNullOrEmpty() ? "" : "class=\"{0}\"".FormatString(this.Model.Class)))>
+    <h2><span>@this.Model.Title</span></h2>
+
+    @{Html.RenderPartial("DisplayTemplates/Content", this.Model.Content);}
+</section>

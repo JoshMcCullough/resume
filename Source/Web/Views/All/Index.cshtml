@@ -1,0 +1,7 @@
+﻿@model Resume
+
+@{
+    ViewBag.Title = "Resume of {0}".FormatString(this.Model.DisplayName);
+}
+
+@Html.DisplayForModel()

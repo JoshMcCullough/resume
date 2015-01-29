@@ -29,6 +29,7 @@ namespace JSM.Web.Views.ContactMe
     using System.Web.WebPages;
     using JSM.Web;
     using JSM.Web.Models.Shared;
+    using JSM.Web.Models.Shared.Resume;
     using QuantumConcepts.Common.Extensions;
     using QuantumConcepts.Common.Mvc.Extensions;
     using QuantumConcepts.Common.Mvc.Utils;
@@ -47,6 +48,7 @@ namespace JSM.Web.Views.ContactMe
             #line 1 "..\..\Views\ContactMe\Index.cshtml"
   
     ViewBag.Title = "contact me";
+    ViewBag.PageTitle = ViewBag.Title;
 
             
             #line default
@@ -55,7 +57,7 @@ WriteLiteral("\r\n\r\n<p>If you\'d like to get in touch with me, please use one 
 "hods:</p>\r\n\r\n");
 
             
-            #line 7 "..\..\Views\ContactMe\Index.cshtml"
+            #line 8 "..\..\Views\ContactMe\Index.cshtml"
   Html.RenderPartial("_InfoSlider", new InfoSliderModel() {
     Id = "emailSlider",
     Label = "email"
@@ -66,7 +68,7 @@ WriteLiteral("\r\n\r\n<p>If you\'d like to get in touch with me, please use one 
 WriteLiteral("\r\n\r\n");
 
             
-            #line 12 "..\..\Views\ContactMe\Index.cshtml"
+            #line 13 "..\..\Views\ContactMe\Index.cshtml"
   Html.RenderPartial("_InfoSlider", new InfoSliderModel() {
       Id = "phoneSlider",
       Label = "phone"
@@ -84,14 +86,14 @@ WriteLiteral(" type=\"text/css\"");
 
 WriteLiteral(" rel=\"stylesheet\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 427), Tuple.Create("\"", 486)
+WriteAttribute("href", Tuple.Create(" href=\"", 467), Tuple.Create("\"", 526)
             
-            #line 18 "..\..\Views\ContactMe\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 434), Tuple.Create<System.Object, System.Int32>(Url.Content("~/Content/Stylesheets/InfoSlider.css")
+            #line 19 "..\..\Views\ContactMe\Index.cshtml"
+, Tuple.Create(Tuple.Create("", 474), Tuple.Create<System.Object, System.Int32>(Url.Content("~/Content/Stylesheets/InfoSlider.css")
             
             #line default
             #line hidden
-, 434), false)
+, 474), false)
 );
 
 WriteLiteral("/>\r\n");
@@ -106,14 +108,14 @@ WriteLiteral("\r\n    <script");
 
 WriteLiteral(" type=\"text/javascript\"");
 
-WriteAttribute("src", Tuple.Create(" src=\"", 550), Tuple.Create("\"", 603)
+WriteAttribute("src", Tuple.Create(" src=\"", 590), Tuple.Create("\"", 643)
             
-            #line 22 "..\..\Views\ContactMe\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 556), Tuple.Create<System.Object, System.Int32>(Url.Content("~/Content/Scripts/InfoSlider.js")
+            #line 23 "..\..\Views\ContactMe\Index.cshtml"
+, Tuple.Create(Tuple.Create("", 596), Tuple.Create<System.Object, System.Int32>(Url.Content("~/Content/Scripts/InfoSlider.js")
             
             #line default
             #line hidden
-, 556), false)
+, 596), false)
 );
 
 WriteLiteral("></script>\r\n    <script");
@@ -125,7 +127,7 @@ WriteLiteral(">\r\n        $(document).ready(function () {\r\n            var $e
 "emailSlider.infoSlider(sliderCallback.bind($emailSlider, \"");
 
             
-            #line 28 "..\..\Views\ContactMe\Index.cshtml"
+            #line 29 "..\..\Views\ContactMe\Index.cshtml"
                                                                   Write(Url.Action("GetEmail"));
 
             
@@ -136,7 +138,7 @@ WriteLiteral("\", function (data) {\r\n                return $(\"<a>\")\r\n    
 "           $phoneSlider.infoSlider(sliderCallback.bind($phoneSlider, \"");
 
             
-            #line 33 "..\..\Views\ContactMe\Index.cshtml"
+            #line 34 "..\..\Views\ContactMe\Index.cshtml"
                                                                   Write(Url.Action("GetPhone"));
 
             

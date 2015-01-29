@@ -28,6 +28,8 @@ namespace JSM.Web.Views.SkillsAndTech
     using System.Web.UI;
     using System.Web.WebPages;
     using JSM.Web;
+    using JSM.Web.Models.Shared;
+    using JSM.Web.Models.Shared.Resume;
     using QuantumConcepts.Common.Extensions;
     using QuantumConcepts.Common.Mvc.Extensions;
     using QuantumConcepts.Common.Mvc.Utils;
@@ -50,8 +52,18 @@ namespace JSM.Web.Views.SkillsAndTech
             
             #line default
             #line hidden
+WriteLiteral("\r\n\r\n");
+
+            
+            #line 5 "..\..\Views\SkillsAndTech\Index.cshtml"
+Write(Html.DisplayForModel());
+
+            
+            #line default
+            #line hidden
 WriteLiteral(@"
 
+<!--
 <h2><span>skills</span></h2>
 <ul>
     <li>Bottom-up database design and development.</li>
@@ -77,7 +89,8 @@ WriteLiteral(@"
     <li>3D printing – QuantumConcepts on Thingiverse.com.</li>
     <li>General DIY and learning how things work.</li>
     <li>Technology, astronomy, travel, photography.</li>
-</ul>");
+</ul>
+-->");
 
         }
     }

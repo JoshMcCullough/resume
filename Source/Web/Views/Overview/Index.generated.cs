@@ -28,6 +28,7 @@ namespace JSM.Web.Views.Overview
     using System.Web.UI;
     using System.Web.WebPages;
     using JSM.Web;
+    using JSM.Web.Models.Shared;
     using QuantumConcepts.Common.Extensions;
     using QuantumConcepts.Common.Mvc.Extensions;
     using QuantumConcepts.Common.Mvc.Utils;
@@ -50,14 +51,20 @@ namespace JSM.Web.Views.Overview
             
             #line default
             #line hidden
+WriteLiteral("\r\n\r\n");
+
+            
+            #line 5 "..\..\Views\Overview\Index.cshtml"
+Write(Html.DisplayForModel());
+
+            
+            #line default
+            #line hidden
 WriteLiteral(@"
 
-<h2><span>objective</span></h2>
-<p>To apply and grow my existing skillset in a challenging, fast-paced, and rewarding software engineering environment.</p>
-<p>To bring a new level of efficiency and stability to software projects by utilizing the latest technologies and software engineering ideals.</p>
 
-<h2><span>summary</span></h2>
-<p>Highly skilled software engineer who prides himself on completing tasks on time while maintaining high quality standards and adhering to software development best practices.</p>
+<!--
+<p>I am a highly skilled software engineer who prides himself on completing tasks on time while maintaining high quality standards and adhering to software development best practices.</p>
 <ul>
     <li>Plan, research, estimate and develop solutions for Government contracts.</li>
     <li>Responsible for architecting and developing sophisticated SOAP and RESTful API (HealthIndicators.gov).</li>
@@ -65,7 +72,11 @@ WriteLiteral(@"
     <li>Design and develop entire SQL Server databases; inspect queries and apply performance updates as needed.</li>
     <li>Constantly learning new technologies, frameworks and tools.</li>
 </ul>
-");
+
+<h2><span>objective</span></h2>
+<p>To apply and grow my existing skillset in a challenging, fast-paced, and rewarding software engineering environment.</p>
+<p>To bring a new level of efficiency and stability to software projects by utilizing the latest technologies and software engineering ideals.</p>
+-->");
 
         }
     }

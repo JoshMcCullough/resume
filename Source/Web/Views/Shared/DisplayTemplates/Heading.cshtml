@@ -1,0 +1,7 @@
+﻿@model JSM.Web.Models.Shared.Resume.Heading
+
+@{
+    string element = "h{0}".FormatString(this.Model.Level);
+}
+
+<@element @(new MvcHtmlString(this.Model.Class.IsNullOrEmpty() ? "" : "class=\"{0}\"".FormatString(this.Model.Class)))>@{Html.RenderPartial("DisplayTemplates/Content", this.Model.Content);}</@element>

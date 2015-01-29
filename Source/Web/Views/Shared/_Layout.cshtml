@@ -7,9 +7,10 @@
         <meta name="description" content="I'm a highly skilled software engineer who prides himself on completing tasks on time while maintaining high quality standards and adhering to software development best practices." />
         <meta name="keywords" content="software,development,engineering,engineer,c#,.NET,coding,coder,for hire"/>
         <title>Josh McCullough | A top-quality, full-stack software engineer.</title>
-        <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css"/>
+        <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"/>
         @Styles.Render("~/Content/Stylesheets/3rdParty")
         @Styles.Render("~/Content/Stylesheets/Site")
+        @Styles.RenderFormat("<link href=\"{0}\" rel=\"stylesheet\" media=\"print\" />", "~/Content/Stylesheets/Print")
         @Scripts.Render("~/Content/Scripts/3rdParty")
         @Scripts.Render("~/Content/Scripts/Site")
         @RenderSection("Head", required: false)
@@ -27,20 +28,31 @@
                 </ul>
             </div>
             <nav class="row">
-                @NavUtil.WriteMenuLink(Html, "overview", "Index", "Overview", null, "Overview")
-                @NavUtil.WriteMenuLink(Html, "skills & tech", "Index", "SkillsAndTech", null, "SkillsAndTech")
-                @NavUtil.WriteMenuLink(Html, "work history", "Index", "WorkHistory", null, "WorkHistory")
-                @NavUtil.WriteMenuLink(Html, "education", "Index", "Education", null, "Education")
-                @NavUtil.WriteMenuLink(Html, "contact me", "Index", "ContactMe", null, "ContactMe")
+                @{Html.RenderPartial("_Menu");}
             </nav>
         </header>
 
         <section id="Content">
             <div>
-                <h1><span>@ViewBag.Title</span></h1>
+                @if (ViewBag.PageTitle != null) {
+                    <h1><span>@ViewBag.PageTitle</span></h1>
+                }
+                
                 @RenderBody()
+
+                <div class="clearfix"></div>
             </div>
         </section>
+
+        <footer>
+            <div>
+                <div class="left-menu">
+                    <a href="@Url.Action("Index", "All")">view as single page</a>
+                    <a href="@Url.Action("PDF", "Export")">download as PDF</a>
+                    <a href="https://github.com/JoshMcCullough/jsm-web" target="_blank">view source on GitHub</a>
+                </div>
+            </div>
+        </footer>
 
         @Scripts.Render("~/Content/Scripts/3rdParty")
         @Scripts.Render("~/Content/Scripts/Site")

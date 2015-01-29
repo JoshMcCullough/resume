@@ -21,7 +21,6 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
-    <TypeScriptToolsVersion>1.4</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -116,12 +115,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\AllController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\ContactMeController.cs" />
     <Compile Include="Controllers\EducationController.cs" />
+    <Compile Include="Controllers\ExportController.cs" />
     <Compile Include="Controllers\SkillsAndTechController.cs" />
     <Compile Include="Controllers\WorkHistoryController.cs" />
+    <Compile Include="Models\Shared\Resume\Heading.cs" />
+    <Compile Include="Models\Shared\Resume\History.cs" />
+    <Compile Include="Models\Shared\Resume\Tag.cs" />
+    <Compile Include="Models\Shared\Resume\Text.cs" />
+    <Compile Include="Models\Shared\Resume\TextElement.cs" />
     <Compile Include="Models\Shared\InfoSliderModel.cs" />
+    <Compile Include="Models\Shared\Resume\Link.cs" />
+    <Compile Include="Models\Shared\Resume\List.cs" />
+    <Compile Include="Models\Shared\Resume\ListItem.cs" />
+    <Compile Include="Models\Shared\Resume\ListType.cs" />
+    <Compile Include="Models\Shared\Resume\Paragraph.cs" />
+    <Compile Include="Models\Shared\Resume\Resume.cs" />
+    <Compile Include="Models\Shared\Resume\Section.cs" />
+    <Compile Include="Models\Shared\Resume\Subsection.cs" />
     <Compile Include="Startup\RazorGeneratorMvcStart.cs" />
     <Compile Include="Startup\BundleConfig.cs" />
     <Compile Include="Startup\FilterConfig.cs" />
@@ -131,6 +145,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\All\Index.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Index.cshtml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ContactMe\Index.generated.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -146,10 +165,75 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Index.cshtml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Shared\DisplayTemplates\Content.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Content.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\DisplayTemplates\Heading.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Heading.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\DisplayTemplates\History.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>History.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\DisplayTemplates\Link - Copy.generated.cs">
+      <DependentUpon>Link - Copy.cshtml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Shared\DisplayTemplates\Link.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Link.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\DisplayTemplates\List.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>List.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\DisplayTemplates\ListItem.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ListItem.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\DisplayTemplates\Paragraph.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Paragraph.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\DisplayTemplates\Resume.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resume.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\DisplayTemplates\Section.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Section.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\DisplayTemplates\Subsection.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Subsection.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\DisplayTemplates\TextRun.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TextRun.cshtml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Shared\Error.generated.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Error.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\Section.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Section.cshtml</DependentUpon>
     </Compile>
     <Compile Include="Views\Shared\_InfoSlider.generated.cs">
       <AutoGen>True</AutoGen>
@@ -160,6 +244,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>_Layout.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_Menu.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Menu.cshtml</DependentUpon>
     </Compile>
     <Compile Include="Views\SkillsAndTech\Index.generated.cs">
       <AutoGen>True</AutoGen>
@@ -178,18 +267,34 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Data\Resume.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Content\Scripts\InfoSlider.js" />
     <Content Include="Content\Stylesheets\bootstrap-theme.css" />
     <Content Include="Content\Stylesheets\bootstrap-theme.min.css" />
     <Content Include="Content\Stylesheets\bootstrap.css" />
     <Content Include="Content\Stylesheets\bootstrap.min.css" />
     <Content Include="Content\Scripts\Site.js" />
+    <Content Include="Content\Stylesheets\Global.css">
+      <DependentUpon>Global.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\Stylesheets\Global.min.css">
+      <DependentUpon>Global.css</DependentUpon>
+    </Content>
     <Content Include="Content\Stylesheets\InfoSlider.css">
       <DependentUpon>InfoSlider.scss</DependentUpon>
     </Content>
     <Content Include="Content\Stylesheets\InfoSlider.min.css">
       <DependentUpon>InfoSlider.css</DependentUpon>
     </Content>
+    <Content Include="Content\Stylesheets\Print.css">
+      <DependentUpon>Print.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\Stylesheets\Print.min.css">
+      <DependentUpon>Print.css</DependentUpon>
+    </Content>
+    <Content Include="Content\Stylesheets\Section.xslt" />
     <Content Include="Content\Stylesheets\Site.css">
       <DependentUpon>Site.scss</DependentUpon>
     </Content>
@@ -209,6 +314,9 @@
     <Content Include="Content\Stylesheets\bootstrap-theme.css.map" />
     <Content Include="Content\Stylesheets\bootstrap.css.map" />
     <Content Include="Content\Scripts\InfoSlider.js.map" />
+    <Content Include="Content\Data\Resume.xsd">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Content\Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Content\Scripts\jquery-2.1.1.js" />
     <Content Include="Content\Scripts\jquery-2.1.1.min.js" />
@@ -273,12 +381,89 @@
       <Generator>RazorGenerator</Generator>
       <LastGenOutput>_InfoSlider.generated.cs</LastGenOutput>
     </Content>
+    <Content Include="Content\Stylesheets\Print.scss" />
+    <Content Include="Content\Stylesheets\Print.css.map">
+      <DependentUpon>Print.css</DependentUpon>
+    </Content>
+    <Content Include="Content\Stylesheets\Global.scss" />
+    <Content Include="Content\Stylesheets\Global.css.map">
+      <DependentUpon>Global.css</DependentUpon>
+    </Content>
     <None Include="Properties\PublishProfiles\ftp.JoshMcCullough.me.pubxml" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
+    <Content Include="Views\Shared\_Menu.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_Menu.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\All\Index.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Index.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\DisplayTemplates\Resume.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Resume.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\DisplayTemplates\Section.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Section.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\DisplayTemplates\Paragraph.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Paragraph.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\DisplayTemplates\Content.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Content.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\DisplayTemplates\List.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>List.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\DisplayTemplates\Subsection.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Subsection.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\DisplayTemplates\Heading.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Heading.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\DisplayTemplates\ListItem.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>ListItem.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\DisplayTemplates\History.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>History.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\DisplayTemplates\Link.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Link.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\Section.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Section.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\DisplayTemplates\TextRun.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>TextRun.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\DisplayTemplates\Link - Copy.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Link - Copy.generated.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\Export\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Content\Scripts\InfoSlider.ts" />
+    <TypeScriptCompile Include="Content\Scripts\jquery.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\Quantum Concepts\Quantum Concepts\Common\CommonMvc\QC Common MVC.csproj">
@@ -293,13 +478,6 @@
       <Project>{8807828d-db88-462a-875e-647240d48668}</Project>
       <Name>QC Common</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <TypeScriptCompile Include="Content\Scripts\InfoSlider.ts" />
-    <TypeScriptCompile Include="Content\Scripts\jquery.d.ts" />
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Resume FirstName="Josh" LastName="McCullough" DisplayName="Josh McCullough" Email="joshua.mccullough@gmail.com" Phone="(802) 318-6441" Website="http://joshmccullough.me" LastUpdated="2015-01-27" xmlns="http://joshmccullough.me/Content/Data/Resume.xsd/Resume.xsd">
+    <Tag>Software Engineer</Tag>
+    <Tag>Leader</Tag>
+    <Tag>Database Developer</Tag>
+    <Tag>Mentor</Tag>
+    <Tag>UI/UX Designer</Tag>
+
+    <Section Key="overview" Title="Overview">
+        <Subsection Title="Objective">
+            <Paragraph>To apply and grow my existing skillset in a challenging, fast-paced, and rewarding software engineering environment.</Paragraph>
+            <Paragraph>To bring a new level of efficiency and stability to software projects by utilizing the latest technologies and software engineering ideals.</Paragraph>
+        </Subsection>
+
+        <Subsection Title="Summary">
+            <Heading Level="3">I Love Technology (and Learning)</Heading>
+            <Paragraph>
+                Almost everything I do has something to do with technology and learning. Not only do I write software <Text Class="em">every day</Text>, but I always have one or more side projects in progress. In my free time, my goal isn't always to "ship" a product or to reach a defined goal – often I simply want to <Text Class="em">learn something</Text>. Whether I'm working on a JavaScript framework, catching a glimpse of Jupiter through my telescope, installing a PC in my car, donating my tech skills for a cause in which I believe, building an HTML5 game, configuring a Linux mail server, designing and budgeting my next house project, or printing something in 3D – it all comes back to technology and my unquenchable thirst for knowledge.
+            </Paragraph>
+            <Paragraph>I live and breathe this stuff.</Paragraph>
+
+            <Heading Level="3">What Drives Me</Heading>
+            <Paragraph>
+                I'm driven by being challenged. I enjoy facing, dissecting, and solving a problem. I am also motivated by knowing that <Text Class="em">someone</Text> is going to use and enjoy what I am working on. I like to help people solve their own problems – <Link Url="http://stackoverflow.com/users/374198/josh-m?tab=answers">view my profile on Stack Overflow</Link> for examples.
+            </Paragraph>
+        </Subsection>
+
+        <Subsection Title="examples">
+            <Paragraph>Please find below a small collection of my work.</Paragraph>
+            <List Class="blocks">
+                <Item>
+                    <Heading Level="3">
+                        Platform Liberty
+                        <Link Class="visit" Url="http://platformliberty.org">
+                            <Text Class="glyphicon glyphicon-new-window"></Text>
+                        </Link>
+                    </Heading>
+                    <Text Class="tagline" Block="true">Empowering candidates in the fight for liberty.</Text>
+                    <Text Class="content" Block="true">
+                        <Paragraph>The goal of this project is to provide an inexpensive, easy-to-use web application for liberty candidates. This platform will be available to any candidate who is on the side of liberty - regardless of party their party affiliation.</Paragraph>
+                    </Text>
+                    
+                </Item>
+                <Item>
+                    <Heading Level="3">
+                        Carson for Congress
+                        <Link Class="visit" Url="http://jeffreycarson.platformliberty.org">
+                            <Text Class="glyphicon glyphicon-new-window"></Text>
+                        </Link>
+                    </Heading>
+                    <Text Class="tagline" Block="true">Restoring Sanity</Text>
+                    <Text Class="content" Block="true">
+                        <Paragraph>Built atop Platform Liberty and customized to fit the needs of Jeffrey Carson's 2014 Congressional campaign.</Paragraph>
+                    </Text>
+                </Item>
+                <Item>
+                    <Heading Level="3">
+                        Another Example 1
+                        <Link Class="visit" Url="">
+                            <Text Class="glyphicon glyphicon-new-window"></Text>
+                        </Link>
+                    </Heading>
+                    <Text Class="tagline" Block="true"></Text>
+                    <Text Class="content" Block="true">
+                        <Paragraph></Paragraph>
+                    </Text>
+                </Item>
+                <Item>
+                    <Heading Level="3">
+                        Another Example 2
+                        <Link Class="visit" Url="">
+                            <Text Class="glyphicon glyphicon-new-window"></Text>
+                        </Link>
+                    </Heading>
+                    <Text Class="tagline" Block="true"></Text>
+                    <Text Class="content" Block="true">
+                        <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dapibus pellentesque lorem nec egestas. Aliquam consequat magna quis enim fringilla elementum. Etiam vehicula nisl quis felis sagittis placerat. Donec felis urna, bibendum ut urna vitae, euismod vestibulum lorem. Etiam leo metus, feugiat vel erat at, porttitor eleifend nisi. Suspendisse euismod orci sed sem vulputate, vitae vestibulum orci bibendum. Proin interdum sodales ipsum et facilisis. Vestibulum et eros sollicitudin, varius leo non, aliquam nunc. Proin rhoncus aliquam ex non volutpat.</Paragraph>
+                    </Text>
+                </Item>
+                <Item>
+                    <Heading Level="3">
+                        Another Example 3
+                        <Link Class="visit" Url="">
+                            <Text Class="glyphicon glyphicon-new-window"></Text>
+                        </Link>
+                    </Heading>
+                    <Text Class="tagline" Block="true"></Text>
+                    <Text Class="content" Block="true">
+                        <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dapibus pellentesque lorem nec egestas. Aliquam consequat magna quis enim fringilla elementum. Etiam vehicula nisl quis felis sagittis placerat. Donec felis urna, bibendum ut urna vitae, euismod vestibulum lorem. Etiam leo metus, feugiat vel erat at, porttitor eleifend nisi. Suspendisse euismod orci sed sem vulputate, vitae vestibulum orci bibendum. Proin interdum sodales ipsum et facilisis. Vestibulum et eros sollicitudin, varius leo non, aliquam nunc. Proin rhoncus aliquam ex non volutpat.</Paragraph>
+                        <Paragraph>Ut egestas nunc non libero porta maximus. Donec eu mi vitae felis consequat sodales eget eu libero. Maecenas efficitur porttitor elit, eget lobortis felis imperdiet sit amet. Donec commodo lacinia eros et tempor. Nullam sed purus eu ante condimentum faucibus quis ut quam. Nulla suscipit eleifend nisi nec maximus. Cras vel nulla vitae sem eleifend tincidunt vitae et odio. Vestibulum tempor ligula nisl, eget mollis massa laoreet eu. Donec sit amet ex congue, ultricies purus id, fermentum elit. Fusce bibendum facilisis velit, et tempor arcu molestie in.</Paragraph>
+                    </Text>
+                </Item>
+                <Item>
+                    <Heading Level="3">
+                        Another Example 4
+                        <Link Class="visit" Url="">
+                            <Text Class="glyphicon glyphicon-new-window"></Text>
+                        </Link>
+                    </Heading>
+                    <Text Class="tagline" Block="true"></Text>
+                    <Text Class="content" Block="true">
+                        <Paragraph></Paragraph>
+                    </Text>
+                </Item>
+            </List>
+        </Subsection>
+    </Section>
+
+    <Section Key="skills-and-tech" Title="Skills &amp; Tech">
+        <Paragraph>I am a highly skilled software engineer who prides himself on completing tasks on time while maintaining high quality standards and adhering to software development best practices. I:</Paragraph>
+        <List>
+            <Item>plan, research, estimate and develop solutions for Government contracts</Item>
+            <Item>
+                am responsible for architecting and developing sophisticated SOAP and RESTful API (<Link Url="http://healthindicators.gov">HealthIndicators.gov</Link>)
+            </Item>
+            <Item>make and implement high-level decisions regarding overall application architecture, use and design</Item>
+            <Item>design and develop entire SQL Server databases; inspect queries and apply performance updates as needed</Item>
+            <Item>am constantly learning new technologies, frameworks and tools</Item>
+        </List>
+
+        <Subsection Title="Skills">
+            <List>
+                <Item>Bottom-up database design and development.</Item>
+                <Item>Project &amp; feature design and development.</Item>
+                <Item>UI design and implementation.</Item>
+                <Item>Clean, organized, efficient, reusable code.</Item>
+            </List>
+        </Subsection>
+
+        <Subsection Title="Technology">
+            <List>
+                <Item>.NET, C#, ASP.NET MVC, ASP.NET WebForms, Ruby on Rails, PHP, Java, Hibernate, Spring, Struts</Item>
+                <Item>HTML 5, CSS 3, JavaScript, jQuery, Bootstrap, Knockout, Highcharts/Highmaps</Item>
+                <Item>Visual Studio, Eclipse, NetBeans</Item>
+                <Item>IIS, Apache, Nginx, Tomcat, Weblogic</Item>
+                <Item>SQL Server, MySQL, Oracle</Item>
+                <Item>Windows, Linux</Item>
+                <Item>Networking, DNS, server management (Windows, Linux, Amazon Web Services)</Item>
+            </List>
+        </Subsection>
+
+        <Subsection Title="Hobbies">
+            <List>
+                <Item>Keeping up with the latest in software development.</Item>
+                <Item>3D printing – QuantumConcepts on Thingiverse.com.</Item>
+                <Item>General DIY and learning how things work.</Item>
+                <Item>Technology, astronomy, travel, photography.</Item>
+            </List>
+        </Subsection>
+    </Section>
+
+    <Section Key="work-history" Title="Work History">
+        <History StartDate="2010-05-01" Organization="Social &amp; Scientific Systems, Inc." OrganizationWebsite="http://s-3.com" OrganizationLocation="Silver Spring, Maryland" Role="Senior Software Engineer">
+            <List>
+                <Item>Selected amongst hundreds of employees to attend in-house Leadership Training instructed by the executive team.</Item>
+                <Item>Lead developer for the Health Indicators Warehouse (HealthIndicators.gov) and other government and private applications.</Item>
+                <Item>Senior Developer responsible for system and database design as well as UI design and implementation.</Item>
+                <Item>Work with database team in order to make performance updates (indexes, etc.) and recommend structural changes.</Item>
+                <Item>Deploy to QA, UAT and Production environments and manage all servers from initial configuration onward.</Item>
+                <Item>Develop unified build process and documentation for performing deployments.</Item>
+            </List>
+        </History>
+
+        <History StartDate="2008-11-01" Organization="Quantum Concepts" OrganizationWebsite="http://quantumconceptscorp.com" OrganizationLocation="Leesburg, Virginia" Role="Owner">
+            <List>
+                <Item>Research, design, develop, test and deploy software for mobile devices.</Item>
+                <Item>Write applications using the .NET Compact Framework.</Item>
+                <Item>Develop and publicly release custom code-generation tool, CodeGenerator (TheCodeGenerator.com), which provides a huge boost to team productivity as well as code stability and versatility.</Item>
+            </List>
+        </History>
+
+        <History StartDate="2008-11-01" EndDate="2009-11-01" Organization="Corporate Executive Board" OrganizationWebsite="http://executiveboard.com" OrganizationLocation="Arlington, Virginia" Role="Software Consultant">
+            <List>
+                <Item>Full life-cycle design and development for system to generate reports and benchmarks based on survey data.</Item>
+                <Item>Built on ASP.NET 3.5/WebForms, SQL Server 2005/2008, Aspose.Slides (dynamic PPT altering tool), Dundas Charts.</Item>
+                <Item>Survey data consumption, configuration, calculation, and reporting.</Item>
+                <Item>Ability to perform Dynamic Reporting based on user-selected demographic elements.</Item>
+                <Item>Develop web interface wrapper to interact with survey data provider.</Item>
+            </List>
+        </History>
+
+        <History StartDate="2005-02-01" EndDate="2010-04-01" Organization="Avenity" OrganizationWebsite="http://avenity.com" OrganizationLocation="Reston, Virginia" Role="Senior Software Developer">
+            <List>
+                <Item>
+                    Local Government Revenue Management System, .NET Framework:
+                    <List>
+                        <Item>Design, develop, and unit test complex client/server software supplications using both .NET Remoting and Web Services API layers.</Item>
+                        <Item>Utilize and improve a custom code generator to generate data objects and API layers.</Item>
+                        <Item>Implement customizations in external DLLs for each client.</Item>
+                        <Item>Create and enhance SQL Server Reporting Services reports as well as develop Custom (ad-hoc) Reporting engine.</Item>
+                        <Item>Lead developer for related public-facing web site.</Item>
+                        <Item>Design and implement workflow/processing queue.</Item>
+                        <Item>Performance and memory optimization throughout enterprise-level software package.</Item>
+                    </List>
+                </Item>
+                <Item>
+                    Compensation Analysis System, J2EE &amp; Weblogic:
+                    <List>
+                        <Item>Develop complex web application and Windows services using Java/J2EE platform.</Item>
+                        <Item>Create and refine complex SQL queries, stored procedures and views on Oracle platform.</Item>
+                        <Item>Lead developer on multiple software iterations.</Item>
+                    </List>
+                </Item>
+                <Item>
+                    General:
+                    <List>
+                        <Item>Go-to-guy for network and server configuration.</Item>
+                        <Item>Implemented custom VOIP solution (Asterisk).</Item>
+                        <Item>Developed in-house time-tracking system</Item>
+                        <Item>Presented software development training courses to other employees.</Item>
+                        <Item>Excellent evaluations each year.</Item>
+                    </List>
+                </Item>
+            </List>
+        </History>
+    </Section>
+
+    <Section Key="education" Title="Education">
+        <History StartDate="2000-08-01" EndDate="2004-12-01" Organization="Champlain College" OrganizationWebsite="http://champlain.edu" OrganizationLocation="Burlington, Vermont">
+            <List>
+                <Item>Received a Bachelor Degree in Software Engineering in December 2004.</Item>
+                <Item>Received an Associate Degree in Software Development in December 2003.</Item>
+                <Item>Software-related courses focused on hands-on skills in addition to theory.</Item>
+                <Item>Selected as a tutor in the Programming Lab.</Item>
+            </List>
+        </History>
+    </Section>
+</Resume>

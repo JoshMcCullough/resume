@@ -1,0 +1,160 @@
+﻿@import "Global.scss";
+
+html,
+body {
+    width: auto;
+    height: auto;
+    font-family: 'Times New Roman', serif;
+}
+
+body {
+    margin: 7mm;
+    font-size: 10pt;
+    background-color: transparent;
+    overflow-y: auto;
+}
+
+header {
+    padding: 0;
+    margin: 0 0 2mm 0;
+    border-bottom-color: $primary-gray;
+    background-color: transparent;
+    font-size: 10pt;
+
+    .About {
+        margin: 0;
+        padding: 0;
+        border: none;
+
+        .Name {
+            display: block;
+            float: none;
+            padding: 0;
+            width: 100%;
+            border-right: none;
+            font-size: 22pt;
+            color: #000;
+        }
+
+        .Roles {
+            display: block;
+            float: none;
+            padding: 2mm 0;
+            margin: 0;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    nav {
+        display: none;
+    }
+}
+
+section#Content {
+    padding: 0;
+
+    > div {
+        padding: 0;
+        border: none;
+        background-color: transparent;
+
+        section {
+            page-break-inside: avoid;
+        }
+
+        h1,
+        h2 {
+            margin: 0 0 2mm 0;
+        }
+
+        h1 > span,
+        h2 > span {
+            padding: 0;
+            border: none;
+            background-color: transparent;
+            -moz-box-shadow: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+
+        h1 {
+            font-size: 18pt;
+
+            &:nth-of-type(1n+2) {
+                margin-top: 5mm;
+            }
+
+            > span {
+                padding: 0;
+            }
+        }
+
+        h2 {
+            margin: 4mm 0 0 4mm;
+            font-size: 14pt;
+
+            &.history-item {
+                span {
+                    margin: 0;
+                    padding: 0;
+                }
+                
+                .organization-link {
+                    display: none;
+                }
+            }
+
+            > span {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+        }
+
+        h3 {
+            margin: 2mm 0 0 4mm;
+            font-size: 14pt;
+        }
+
+        h5 {
+            margin: 2mm 0 0 4mm;
+            font-size: 12pt;
+        }
+
+        ul {
+            padding-left: 8mm;
+
+            li {
+                text-indent: -4mm;
+
+                &:before {
+                    left: -2mm;
+                }
+
+                ul {
+                    padding-left: 2mm;
+                }
+            }
+        }
+
+        a,
+        a:link,
+        a:active,
+        a:visited,
+        a:hover {
+            color: #000;
+            text-decoration: none;
+        }
+
+        p,
+        ol,
+        ul {
+            margin: 2mm 0 2mm 4mm;
+            font-size: 10pt;
+        }
+    }
+}
+
+footer {
+    display: none;
+}

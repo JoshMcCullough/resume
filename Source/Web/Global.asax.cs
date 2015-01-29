@@ -1,4 +1,5 @@
-﻿using JSM.Web.Startup;
+﻿using JSM.Web.Models.Shared.Resume;
+using JSM.Web.Startup;
 using QuantumConcepts.Common.Mvc.Utils;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,8 @@ namespace JSM.Web {
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             NavUtil.SelectedCssClass = "Active";
+
+            Resume.Initialize(Server.MapPath("~/Content/Data/Resume.xml"));
         }
     }
 }

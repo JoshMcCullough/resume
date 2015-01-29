@@ -5,13 +5,18 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "QC Common", "QC Common", "{F361C563-3C94-4717-A36B-1A4289F5E775}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QC Common", "..\..\Quantum Concepts\Quantum Concepts\Common\Common\QC Common.csproj", "{8807828D-DB88-462A-875E-647240D48668}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QC Common", "..\..\..\Quantum Concepts\Quantum Concepts\Common\Common\QC Common.csproj", "{8807828D-DB88-462A-875E-647240D48668}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QC Common Web", "..\..\Quantum Concepts\Quantum Concepts\Common\CommonWeb\QC Common Web.csproj", "{890D3BC7-7BBB-4722-B0AB-2A840379530B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QC Common Web", "..\..\..\Quantum Concepts\Quantum Concepts\Common\CommonWeb\QC Common Web.csproj", "{890D3BC7-7BBB-4722-B0AB-2A840379530B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QC Common MVC", "..\..\Quantum Concepts\Quantum Concepts\Common\CommonMvc\QC Common MVC.csproj", "{98452B67-0A4A-4E91-B152-FF1DF80F718A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QC Common MVC", "..\..\..\Quantum Concepts\Quantum Concepts\Common\CommonMvc\QC Common MVC.csproj", "{98452B67-0A4A-4E91-B152-FF1DF80F718A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{393EFC8B-9DD0-4BAE-8464-88B0231FEF5F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{EEBB6565-A0DA-4057-A58C-2AF1D009E6D4}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,0 +1,5 @@
+﻿@model JSM.Web.Models.Shared.Resume.Resume
+
+@foreach (var s in this.Model.Sections) {
+    @Html.DisplayFor(m => s)
+}

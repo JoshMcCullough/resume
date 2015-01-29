@@ -28,7 +28,6 @@ namespace JSM.Web.Views.Shared
     using System.Web.UI;
     using System.Web.WebPages;
     using JSM.Web;
-    using JSM.Web.Models.Shared;
     using QuantumConcepts.Common.Extensions;
     using QuantumConcepts.Common.Mvc.Extensions;
     using QuantumConcepts.Common.Mvc.Utils;
@@ -36,7 +35,7 @@ namespace JSM.Web.Views.Shared
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("RazorGenerator", "2.0.0.0")]
     [System.Web.WebPages.PageVirtualPathAttribute("~/Views/Shared/_InfoSlider.cshtml")]
-    public partial class InfoSlider : System.Web.Mvc.WebViewPage<InfoSliderModel>
+    public partial class InfoSlider : System.Web.Mvc.WebViewPage<JSM.Web.Models.Shared.InfoSliderModel>
     {
         public InfoSlider()
         {
@@ -45,24 +44,24 @@ namespace JSM.Web.Views.Shared
         {
 WriteLiteral("<div");
 
-WriteAttribute("id", Tuple.Create(" id=\"", 30), Tuple.Create("\"", 44)
+WriteAttribute("id", Tuple.Create(" id=\"", 52), Tuple.Create("\"", 66)
             
             #line 3 "..\..\Views\Shared\_InfoSlider.cshtml"
-, Tuple.Create(Tuple.Create("", 35), Tuple.Create<System.Object, System.Int32>(Model.Id
+, Tuple.Create(Tuple.Create("", 57), Tuple.Create<System.Object, System.Int32>(Model.Id
             
             #line default
             #line hidden
-, 35), false)
+, 57), false)
 );
 
-WriteAttribute("class", Tuple.Create(" class=\"", 45), Tuple.Create("\"", 87)
+WriteAttribute("class", Tuple.Create(" class=\"", 67), Tuple.Create("\"", 109)
             
             #line 3 "..\..\Views\Shared\_InfoSlider.cshtml"
-, Tuple.Create(Tuple.Create("", 53), Tuple.Create<System.Object, System.Int32>(Model.CssClass ?? "info-slider"
+, Tuple.Create(Tuple.Create("", 75), Tuple.Create<System.Object, System.Int32>(Model.CssClass ?? "info-slider"
             
             #line default
             #line hidden
-, 53), false)
+, 75), false)
 );
 
 WriteLiteral(">\r\n    <span");

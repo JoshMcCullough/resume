@@ -1,0 +1,7 @@
+﻿@model JSM.Web.Models.Shared.Resume.TextRun
+
+@{
+    string element = (this.Model.Block ? "div" : "span");
+}
+
+<@element @(new MvcHtmlString(this.Model.Class.IsNullOrEmpty() ? "" : "class=\"{0}\"".FormatString(this.Model.Class)))>@{Html.RenderPartial("DisplayTemplates/Content", this.Model.Content);}</@element>

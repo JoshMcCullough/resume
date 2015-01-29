@@ -1,0 +1,11 @@
+﻿@model JSM.Web.Models.Shared.Resume.List
+
+@{
+    string element = (this.Model.Type == JSM.Web.Models.Shared.Resume.ListType.Ordered ? "ol" : "ul");
+}
+
+<@element @(new MvcHtmlString(this.Model.Class.IsNullOrEmpty() ? "" : "class=\"{0}\"".FormatString(this.Model.Class)))>
+    @foreach (var item in this.Model.Items) {
+        @Html.DisplayFor(m => item)
+    }
+</@element>

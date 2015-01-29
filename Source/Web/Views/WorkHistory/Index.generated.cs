@@ -29,6 +29,7 @@ namespace JSM.Web.Views.WorkHistory
     using System.Web.WebPages;
     using JSM.Web;
     using JSM.Web.Models.Shared;
+    using JSM.Web.Models.Shared.Resume;
     using QuantumConcepts.Common.Extensions;
     using QuantumConcepts.Common.Mvc.Extensions;
     using QuantumConcepts.Common.Mvc.Utils;
@@ -51,142 +52,71 @@ namespace JSM.Web.Views.WorkHistory
             
             #line default
             #line hidden
-WriteLiteral("\r\n\r\n<h2");
+WriteLiteral("\r\n\r\n");
 
-WriteLiteral(" class=\"history-item\"");
+            
+            #line 5 "..\..\Views\WorkHistory\Index.cshtml"
+Write(Html.DisplayForModel());
 
-WriteLiteral(">\r\n    <span");
-
-WriteLiteral(" class=\"row\"");
-
-WriteLiteral(">\r\n        <span");
-
-WriteLiteral(" class=\"col-md-3\"");
-
-WriteLiteral(">5/2010 - Present</span>\r\n        <span");
-
-WriteLiteral(" class=\"col-md-6 text-center\"");
-
-WriteLiteral(">Social &amp; Scientific Systems, Inc.</span>\r\n        <span");
-
-WriteLiteral(" class=\"col-md-3 text-right\"");
-
-WriteLiteral(@">Silver Spring, Maryland</span>
-    </span>
-</h2>
-<h3>Senior Software Engineer</h3>
-<ul>
-    <li>Selected amongst hundreds of employees to attend in-house Leadership Training instructed by the executive team.</li>
-    <li>Lead developer for the Health Indicators Warehouse (HealthIndicators.gov) and other government and private applications.</li>
-    <li>Senior Developer responsible for system and database design as well as UI design and implementation.</li>
-    <li>Work with database team in order to make performance updates (indexes, etc.) and recommend structural changes.</li>
-    <li>Deploy to QA, UAT and Production environments and manage all servers from initial configuration onward.</li>
-    <li>Develop unified build process and documentation for performing deployments.</li>
-</ul>
-
-<h2");
-
-WriteLiteral(" class=\"history-item row\"");
-
-WriteLiteral(">\r\n    <span");
-
-WriteLiteral(" class=\"row\"");
-
-WriteLiteral(">\r\n        <span");
-
-WriteLiteral(" class=\"col-md-3\"");
-
-WriteLiteral(">11/2008 - Present</span>\r\n        <span");
-
-WriteLiteral(" class=\"col-md-6 text-center\"");
-
-WriteLiteral(">Quantum Concepts Corporation</span>\r\n        <span");
-
-WriteLiteral(" class=\"col-md-3 text-right\"");
-
-WriteLiteral(@">Leesburg, Virginia</span>
-    </span>
-</h2>
-<h3>Owner</h3>
-<ul>
-    <li>Research, design, develop, test and deploy software for the Windows Phone platform.</li>
-    <li>Write applications using the .NET Compact Framework.</li>
-    <li>Develop and release custom code generation tool, CodeGenerator (TheCodeGenerator.com) which provides a huge boost to team productivity as well as code stability and versatility.</li>
-</ul>
-
-<h2");
-
-WriteLiteral(" class=\"history-item row\"");
-
-WriteLiteral(">\r\n    <span");
-
-WriteLiteral(" class=\"row\"");
-
-WriteLiteral(">\r\n        <span");
-
-WriteLiteral(" class=\"col-md-3\"");
-
-WriteLiteral(">11/2008 - 11/2009</span>\r\n        <span");
-
-WriteLiteral(" class=\"col-md-6 text-center\"");
-
-WriteLiteral(">Corporate Executive Board</span>\r\n        <span");
-
-WriteLiteral(" class=\"col-md-3 text-right\"");
-
-WriteLiteral(@">Arlington, Virginia</span>
-    </span>
-</h2>
-<h3>Software Consultant</h3>
-<ul>
-    <li>Full life-cycle design and development for system to generate reports and benchmarks based on survey data.</li>
-    <li>Built on ASP.NET 3.5/WebForms, SQL Server 2005/2008, Aspose.Slides (dynamic PPT altering tool), Dundas Charts.</li>
-    <li>Survey data consumption, configuration, calculation, and reporting.</li>
-    <li>Ability to perform Dynamic Reporting based on user-selected demographic elements.</li>
-    <li>Develop web interface wrapper to interact with survey data provider.</li>
-</ul>
-
-<h2");
-
-WriteLiteral(" class=\"history-item row\"");
-
-WriteLiteral(">\r\n    <span");
-
-WriteLiteral(" class=\"row\"");
-
-WriteLiteral(">\r\n        <span");
-
-WriteLiteral(" class=\"col-md-3\"");
-
-WriteLiteral(">2/2005 - 4/2010</span>\r\n        <span");
-
-WriteLiteral(" class=\"col-md-6 text-center\"");
-
-WriteLiteral(">Avenity, Inc.</span>\r\n        <span");
-
-WriteLiteral(" class=\"col-md-3 text-right\"");
-
-WriteLiteral(">Reston, Virginia</span>\r\n    </span>\r\n</h2>\r\n<h3>Senior Software Developer</h3>\r" +
-"\n<ul>\r\n    <li>\r\n        Local Government Revenue Management System,  .NET Frame" +
-"work:\r\n        <ul>\r\n            <li>Design, develop, and unit test complex clie" +
-"nt/server software supplications using both .NET Remoting and Web Services API l" +
-"ayers.</li>\r\n            <li>Utilize and improve a custom code generator to gene" +
-"rate data objects and API layers.</li>\r\n            <li>Implement customizations" +
-" in external DLLs for each client.</li>\r\n            <li>Create and enhance SQL " +
-"Server Reporting Services reports as well as develop Custom (ad-hoc) Reporting e" +
-"ngine.</li>\r\n            <li>Lead developer for related public-facing web site.<" +
-"/li>\r\n            <li>Design and implement workflow/processing queue.</li>\r\n    " +
-"        <li>Performance and memory optimization throughout enterprise-level soft" +
-"ware package.</li>\r\n        </ul>\r\n    </li>\r\n    <li>\r\n        Compensation Ana" +
-"lysis System, J2EE & Weblogic:\r\n        <ul>\r\n            <li>Develop complex we" +
-"b application and Windows services using Java/J2EE platform.</li>\r\n            <" +
-"li>Create and refine complex SQL queries, stored procedures and views on Oracle " +
-"platform.</li>\r\n            <li>Lead developer on multiple software iterations.<" +
-"/li>\r\n        </ul>\r\n    </li>\r\n    <li>\r\n        General:\r\n        <ul>\r\n      " +
-"      <li>Go-to-guy for network and server configuration; implemented custom VOI" +
-"P solution (Asterisk); developed in-house time-tracking system; presented softwa" +
-"re development training courses to other employees; excellent evaluations each y" +
-"ear.</li>\r\n        </ul>\r\n    </li>\r\n</ul>");
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n\r\n<!--\r\n<h2 class=\"history-item\">\r\n    <span class=\"row\">\r\n        <span class=" +
+"\"col-md-3\">5/2010 - Present</span>\r\n        <span class=\"col-md-6 text-center\">S" +
+"ocial &amp; Scientific Systems, Inc.</span>\r\n        <span class=\"col-md-3 text-" +
+"right\">Silver Spring, Maryland</span>\r\n    </span>\r\n</h2>\r\n<h3>Senior Software E" +
+"ngineer</h3>\r\n<ul>\r\n    <li>Selected amongst hundreds of employees to attend in-" +
+"house Leadership Training instructed by the executive team.</li>\r\n    <li>Lead d" +
+"eveloper for the Health Indicators Warehouse (HealthIndicators.gov) and other go" +
+"vernment and private applications.</li>\r\n    <li>Senior Developer responsible fo" +
+"r system and database design as well as UI design and implementation.</li>\r\n    " +
+"<li>Work with database team in order to make performance updates (indexes, etc.)" +
+" and recommend structural changes.</li>\r\n    <li>Deploy to QA, UAT and Productio" +
+"n environments and manage all servers from initial configuration onward.</li>\r\n " +
+"   <li>Develop unified build process and documentation for performing deployment" +
+"s.</li>\r\n</ul>\r\n\r\n<h2 class=\"history-item\">\r\n    <span class=\"row\">\r\n        <sp" +
+"an class=\"col-md-3\">11/2008 - Present</span>\r\n        <span class=\"col-md-6 text" +
+"-center\">Quantum Concepts Corporation</span>\r\n        <span class=\"col-md-3 text" +
+"-right\">Leesburg, Virginia</span>\r\n    </span>\r\n</h2>\r\n<h3>Owner</h3>\r\n<ul>\r\n   " +
+" <li>Research, design, develop, test and deploy software for the Windows Phone p" +
+"latform.</li>\r\n    <li>Write applications using the .NET Compact Framework.</li>" +
+"\r\n    <li>Develop and release custom code generation tool, CodeGenerator (TheCod" +
+"eGenerator.com) which provides a huge boost to team productivity as well as code" +
+" stability and versatility.</li>\r\n</ul>\r\n\r\n<h2 class=\"history-item\">\r\n    <span " +
+"class=\"row\">\r\n        <span class=\"col-md-3\">11/2008 - 11/2009</span>\r\n        <" +
+"span class=\"col-md-6 text-center\">Corporate Executive Board</span>\r\n        <spa" +
+"n class=\"col-md-3 text-right\">Arlington, Virginia</span>\r\n    </span>\r\n</h2>\r\n<h" +
+"3>Software Consultant</h3>\r\n<ul>\r\n    <li>Full life-cycle design and development" +
+" for system to generate reports and benchmarks based on survey data.</li>\r\n    <" +
+"li>Built on ASP.NET 3.5/WebForms, SQL Server 2005/2008, Aspose.Slides (dynamic P" +
+"PT altering tool), Dundas Charts.</li>\r\n    <li>Survey data consumption, configu" +
+"ration, calculation, and reporting.</li>\r\n    <li>Ability to perform Dynamic Rep" +
+"orting based on user-selected demographic elements.</li>\r\n    <li>Develop web in" +
+"terface wrapper to interact with survey data provider.</li>\r\n</ul>\r\n\r\n<h2 class=" +
+"\"history-item\">\r\n    <span class=\"row\">\r\n        <span class=\"col-md-3\">2/2005 -" +
+" 4/2010</span>\r\n        <span class=\"col-md-6 text-center\">Avenity, Inc.</span>\r" +
+"\n        <span class=\"col-md-3 text-right\">Reston, Virginia</span>\r\n    </span>\r" +
+"\n</h2>\r\n<h3>Senior Software Developer</h3>\r\n<ul>\r\n    <li>\r\n        Local Govern" +
+"ment Revenue Management System,  .NET Framework:\r\n        <ul>\r\n            <li>" +
+"Design, develop, and unit test complex client/server software supplications usin" +
+"g both .NET Remoting and Web Services API layers.</li>\r\n            <li>Utilize " +
+"and improve a custom code generator to generate data objects and API layers.</li" +
+">\r\n            <li>Implement customizations in external DLLs for each client.</l" +
+"i>\r\n            <li>Create and enhance SQL Server Reporting Services reports as " +
+"well as develop Custom (ad-hoc) Reporting engine.</li>\r\n            <li>Lead dev" +
+"eloper for related public-facing web site.</li>\r\n            <li>Design and impl" +
+"ement workflow/processing queue.</li>\r\n            <li>Performance and memory op" +
+"timization throughout enterprise-level software package.</li>\r\n        </ul>\r\n  " +
+"  </li>\r\n    <li>\r\n        Compensation Analysis System, J2EE & Weblogic:\r\n     " +
+"   <ul>\r\n            <li>Develop complex web application and Windows services us" +
+"ing Java/J2EE platform.</li>\r\n            <li>Create and refine complex SQL quer" +
+"ies, stored procedures and views on Oracle platform.</li>\r\n            <li>Lead " +
+"developer on multiple software iterations.</li>\r\n        </ul>\r\n    </li>\r\n    <" +
+"li>\r\n        General:\r\n        <ul>\r\n            <li>Go-to-guy for network and s" +
+"erver configuration; implemented custom VOIP solution (Asterisk); developed in-h" +
+"ouse time-tracking system; presented software development training courses to ot" +
+"her employees; excellent evaluations each year.</li>\r\n        </ul>\r\n    </li>\r\n" +
+"</ul>\r\n-->");
 
         }
     }

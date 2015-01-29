@@ -1,0 +1,3 @@
+﻿@model JSM.Web.Models.Shared.Resume.Paragraph
+
+<p @(new MvcHtmlString(this.Model.Class.IsNullOrEmpty() ? "" : "class=\"{0}\"".FormatString(this.Model.Class)))>@{Html.RenderPartial("DisplayTemplates/Content", this.Model.Content);}</p>

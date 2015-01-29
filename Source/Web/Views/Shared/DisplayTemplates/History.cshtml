@@ -1,0 +1,17 @@
+﻿@model JSM.Web.Models.Shared.Resume.History
+
+<h2 class="history-item">
+    <span class="row">
+        <span class="col-md-3">@this.Model.DateSpan</span>
+        <span class="col-md-6 text-center">
+            @this.Model.Organization
+
+            @if (!this.Model.OrganizationWebsite.IsNullOrEmpty()) {
+                <a class="organization-link" href="@this.Model.OrganizationWebsite" target="_blank"><span class="glyphicon glyphicon-new-window"></span></a>
+            }
+        </span>
+        <span class="col-md-3 text-right">@this.Model.OrganizationLocation</span>
+    </span>
+</h2>
+<h3>@this.Model.Role</h3>
+@{Html.RenderPartial("DisplayTemplates/Content", this.Model.Content);}

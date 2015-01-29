@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema id="Resume" targetNamespace="http://joshmccullough.me/Content/Data/Resume.xsd/Resume.xsd" elementFormDefault="qualified" xmlns="http://joshmccullough.me/Content/Data/Resume.xsd/Resume.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Resume">
+        <xs:complexType>
+            <xs:sequence minOccurs="1" maxOccurs="1">
+                <xs:element name="Tag" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="Section" type="Section" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+
+            <xs:attribute name="FirstName" type="xs:string" use="required"/>
+            <xs:attribute name="LastName" type="xs:string" use="required"/>
+            <xs:attribute name="DisplayName" type="xs:string" use="required"/>
+            <xs:attribute name="Email" type="xs:string"/>
+            <xs:attribute name="Phone" type="xs:string"/>
+            <xs:attribute name="Website" type="xs:string"/>
+            <xs:attribute name="LastUpdated" type="xs:date" use="required"/>
+        </xs:complexType>
+
+        <xs:unique name="UniqueTags">
+            <xs:selector xpath="Tag"/>
+            <xs:field xpath="."/>
+        </xs:unique>
+
+        <xs:unique name="UniqueSections">
+            <xs:selector xpath="Section"/>
+            <xs:field xpath="@Key"/>
+        </xs:unique>
+    </xs:element>
+
+    <xs:complexType name="TextElement" abstract="true">
+        <xs:attribute name="Class" type="xs:string"/>
+    </xs:complexType>
+
+    <xs:complexType name="Section">
+        <xs:complexContent>
+            <xs:extension base="TextElement">
+                <xs:sequence minOccurs="1" maxOccurs="1">
+                    <xs:choice minOccurs="1" maxOccurs="unbounded">
+                        <xs:element name="Heading" type="Heading" minOccurs="0" maxOccurs="unbounded"/>
+                        <xs:element name="Paragraph" type="Paragraph" minOccurs="0" maxOccurs="unbounded"/>
+                        <xs:element name="List" type="List" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:choice>
+
+                    <xs:choice minOccurs="1" maxOccurs="unbounded">
+                        <xs:element name="Subsection" type="Subsection" minOccurs="0" maxOccurs="unbounded"/>
+                        <xs:element name="History" type="History" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:choice>
+                </xs:sequence>
+
+                <xs:attribute name="Key" type="xs:string"/>
+                <xs:attribute name="Title" type="xs:string"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="Subsection">
+        <xs:complexContent>
+            <xs:extension base="Section">
+                <!--<xs:attribute name="Key" use="prohibited"/>-->
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="History">
+        <xs:complexContent>
+            <xs:extension base="Subsection">
+                <xs:attribute name="StartDate" type="xs:date" use="required"/>
+                <xs:attribute name="EndDate" type="xs:date"/>
+                <xs:attribute name="Organization" type="xs:string" use="required"/>
+                <xs:attribute name="OrganizationWebsite" type="xs:string"/>
+                <xs:attribute name="OrganizationLocation" type="xs:string"/>
+                <xs:attribute name="Role" type="xs:string"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="Heading" mixed="true">
+        <xs:complexContent>
+            <xs:extension base="TextElement">
+                <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                    <xs:element name="Text" type="Text" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="Link" type="Link" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+
+                <xs:attribute name="Level" type="xs:int" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="Text" mixed="true">
+        <xs:complexContent>
+            <xs:extension base="TextElement">
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                    <xs:element name="Heading" type="Heading" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="Text" type="Text" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="Paragraph" type="Paragraph" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="Link" type="Link" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:choice>
+
+                <xs:attribute name="Block" type="xs:boolean" default="false"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="Paragraph" mixed="true">
+        <xs:complexContent>
+            <xs:extension base="TextElement">
+                <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                    <xs:element name="Text" type="Text" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="Link" type="Link" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="Link" mixed="true">
+        <xs:complexContent>
+            <xs:extension base="TextElement">
+                <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                    <xs:element name="Text" type="Text" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+
+                <xs:attribute name="Url" type="xs:string" use="required"/>
+                <xs:attribute name="Internal" type="xs:boolean" default="false"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="List">
+        <xs:complexContent>
+            <xs:extension base="TextElement">
+                <xs:sequence minOccurs="1" maxOccurs="1">
+                    <xs:element name="Item" type="ListItem" minOccurs="1" maxOccurs="unbounded"/>
+                </xs:sequence>
+
+                <xs:attribute name="Type" type="ListType" use="optional" default="Unordered"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:simpleType name="ListType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Ordered"/>
+            <xs:enumeration value="Unordered"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="ListItem" mixed="true">
+        <xs:complexContent>
+            <xs:extension base="TextElement">
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                    <xs:element name="Heading" type="Heading" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="Text" type="Text" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="Paragraph" type="Paragraph" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="List" type="List" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="Link" type="Link" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:choice>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+</xs:schema>
