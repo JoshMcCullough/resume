@@ -180,11 +180,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>History.cshtml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Shared\DisplayTemplates\Link - Copy.generated.cs">
-      <DependentUpon>Link - Copy.cshtml</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="Views\Shared\DisplayTemplates\Link.generated.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -447,10 +442,7 @@
       <Generator>RazorGenerator</Generator>
       <LastGenOutput>TextRun.generated.cs</LastGenOutput>
     </Content>
-    <Content Include="Views\Shared\DisplayTemplates\Link - Copy.cshtml">
-      <Generator>RazorGenerator</Generator>
-      <LastGenOutput>Link - Copy.generated.cs</LastGenOutput>
-    </Content>
+    <Content Include="Views\Overview\_Content.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Export\" />

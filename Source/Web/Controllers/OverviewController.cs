@@ -8,7 +8,7 @@ using System.Web.Mvc;
 namespace JSM.Web.Controllers {
     public class OverviewController : BaseController {
         public ActionResult Index() {
-            return View("Section", Resume.Instance.FindSection("overview"));
+            return View(Resume.Instance.FindSection("overview"));
         }
     }
 }

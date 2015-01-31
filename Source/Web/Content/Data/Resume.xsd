@@ -32,7 +32,7 @@
         <xs:attribute name="Class" type="xs:string"/>
     </xs:complexType>
 
-    <xs:complexType name="Section">
+    <xs:complexType name="SectionBase" abstract="true">
         <xs:complexContent>
             <xs:extension base="TextElement">
                 <xs:sequence minOccurs="1" maxOccurs="1">
@@ -47,7 +47,13 @@
                         <xs:element name="History" type="History" minOccurs="0" maxOccurs="unbounded"/>
                     </xs:choice>
                 </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
 
+    <xs:complexType name="Section">
+        <xs:complexContent>
+            <xs:extension base="SectionBase">
                 <xs:attribute name="Key" type="xs:string"/>
                 <xs:attribute name="Title" type="xs:string"/>
             </xs:extension>
@@ -56,15 +62,15 @@
 
     <xs:complexType name="Subsection">
         <xs:complexContent>
-            <xs:extension base="Section">
-                <!--<xs:attribute name="Key" use="prohibited"/>-->
+            <xs:extension base="SectionBase">
+                <xs:attribute name="Title" type="xs:string"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
 
     <xs:complexType name="History">
         <xs:complexContent>
-            <xs:extension base="Subsection">
+            <xs:extension base="SectionBase">
                 <xs:attribute name="StartDate" type="xs:date" use="required"/>
                 <xs:attribute name="EndDate" type="xs:date"/>
                 <xs:attribute name="Organization" type="xs:string" use="required"/>

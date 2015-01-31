@@ -22,109 +22,29 @@
 
             <Heading Level="3">What Drives Me</Heading>
             <Paragraph>
-                I'm driven by being challenged. I enjoy facing, dissecting, and solving a problem. I am also motivated by knowing that <Text Class="em">someone</Text> is going to use and enjoy what I am working on. I like to help people solve their own problems – <Link Url="http://stackoverflow.com/users/374198/josh-m?tab=answers">view my profile on Stack Overflow</Link> for examples.
+                I'm driven by being challenged. I enjoy facing, dissecting, and solving problems. I also like to help people solve their own problems – <Link Url="http://stackoverflow.com/users/374198/josh-m?tab=answers">view my profile on Stack Overflow</Link> for examples. I am motivated by knowing that <Text Class="em">someone</Text> is going to use and enjoy what I am working on. I strive to create concise solutions to the programming problems I face. I believe code is almost an art. A lot of people can write something which <Text Class="em">works</Text>, but not everyone can do that <Text Class="em">correctly</Text>. I pride myself on writing clean, concise, reusable and scalable code.
             </Paragraph>
-        </Subsection>
-
-        <Subsection Title="examples">
-            <Paragraph>Please find below a small collection of my work.</Paragraph>
-            <List Class="blocks">
-                <Item>
-                    <Heading Level="3">
-                        Platform Liberty
-                        <Link Class="visit" Url="http://platformliberty.org">
-                            <Text Class="glyphicon glyphicon-new-window"></Text>
-                        </Link>
-                    </Heading>
-                    <Text Class="tagline" Block="true">Empowering candidates in the fight for liberty.</Text>
-                    <Text Class="content" Block="true">
-                        <Paragraph>The goal of this project is to provide an inexpensive, easy-to-use web application for liberty candidates. This platform will be available to any candidate who is on the side of liberty - regardless of party their party affiliation.</Paragraph>
-                    </Text>
-                    
-                </Item>
-                <Item>
-                    <Heading Level="3">
-                        Carson for Congress
-                        <Link Class="visit" Url="http://jeffreycarson.platformliberty.org">
-                            <Text Class="glyphicon glyphicon-new-window"></Text>
-                        </Link>
-                    </Heading>
-                    <Text Class="tagline" Block="true">Restoring Sanity</Text>
-                    <Text Class="content" Block="true">
-                        <Paragraph>Built atop Platform Liberty and customized to fit the needs of Jeffrey Carson's 2014 Congressional campaign.</Paragraph>
-                    </Text>
-                </Item>
-                <Item>
-                    <Heading Level="3">
-                        Another Example 1
-                        <Link Class="visit" Url="">
-                            <Text Class="glyphicon glyphicon-new-window"></Text>
-                        </Link>
-                    </Heading>
-                    <Text Class="tagline" Block="true"></Text>
-                    <Text Class="content" Block="true">
-                        <Paragraph></Paragraph>
-                    </Text>
-                </Item>
-                <Item>
-                    <Heading Level="3">
-                        Another Example 2
-                        <Link Class="visit" Url="">
-                            <Text Class="glyphicon glyphicon-new-window"></Text>
-                        </Link>
-                    </Heading>
-                    <Text Class="tagline" Block="true"></Text>
-                    <Text Class="content" Block="true">
-                        <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dapibus pellentesque lorem nec egestas. Aliquam consequat magna quis enim fringilla elementum. Etiam vehicula nisl quis felis sagittis placerat. Donec felis urna, bibendum ut urna vitae, euismod vestibulum lorem. Etiam leo metus, feugiat vel erat at, porttitor eleifend nisi. Suspendisse euismod orci sed sem vulputate, vitae vestibulum orci bibendum. Proin interdum sodales ipsum et facilisis. Vestibulum et eros sollicitudin, varius leo non, aliquam nunc. Proin rhoncus aliquam ex non volutpat.</Paragraph>
-                    </Text>
-                </Item>
-                <Item>
-                    <Heading Level="3">
-                        Another Example 3
-                        <Link Class="visit" Url="">
-                            <Text Class="glyphicon glyphicon-new-window"></Text>
-                        </Link>
-                    </Heading>
-                    <Text Class="tagline" Block="true"></Text>
-                    <Text Class="content" Block="true">
-                        <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dapibus pellentesque lorem nec egestas. Aliquam consequat magna quis enim fringilla elementum. Etiam vehicula nisl quis felis sagittis placerat. Donec felis urna, bibendum ut urna vitae, euismod vestibulum lorem. Etiam leo metus, feugiat vel erat at, porttitor eleifend nisi. Suspendisse euismod orci sed sem vulputate, vitae vestibulum orci bibendum. Proin interdum sodales ipsum et facilisis. Vestibulum et eros sollicitudin, varius leo non, aliquam nunc. Proin rhoncus aliquam ex non volutpat.</Paragraph>
-                        <Paragraph>Ut egestas nunc non libero porta maximus. Donec eu mi vitae felis consequat sodales eget eu libero. Maecenas efficitur porttitor elit, eget lobortis felis imperdiet sit amet. Donec commodo lacinia eros et tempor. Nullam sed purus eu ante condimentum faucibus quis ut quam. Nulla suscipit eleifend nisi nec maximus. Cras vel nulla vitae sem eleifend tincidunt vitae et odio. Vestibulum tempor ligula nisl, eget mollis massa laoreet eu. Donec sit amet ex congue, ultricies purus id, fermentum elit. Fusce bibendum facilisis velit, et tempor arcu molestie in.</Paragraph>
-                    </Text>
-                </Item>
-                <Item>
-                    <Heading Level="3">
-                        Another Example 4
-                        <Link Class="visit" Url="">
-                            <Text Class="glyphicon glyphicon-new-window"></Text>
-                        </Link>
-                    </Heading>
-                    <Text Class="tagline" Block="true"></Text>
-                    <Text Class="content" Block="true">
-                        <Paragraph></Paragraph>
-                    </Text>
-                </Item>
-            </List>
         </Subsection>
     </Section>
 
     <Section Key="skills-and-tech" Title="Skills &amp; Tech">
-        <Paragraph>I am a highly skilled software engineer who prides himself on completing tasks on time while maintaining high quality standards and adhering to software development best practices. I:</Paragraph>
+        <Paragraph>I am a highly skilled software engineer who prides himself on completing tasks on time while maintaining high quality standards and adhering to software development best practices. I...</Paragraph>
         <List>
-            <Item>plan, research, estimate and develop solutions for Government contracts</Item>
-            <Item>
-                am responsible for architecting and developing sophisticated SOAP and RESTful API (<Link Url="http://healthindicators.gov">HealthIndicators.gov</Link>)
-            </Item>
-            <Item>make and implement high-level decisions regarding overall application architecture, use and design</Item>
-            <Item>design and develop entire SQL Server databases; inspect queries and apply performance updates as needed</Item>
-            <Item>am constantly learning new technologies, frameworks and tools</Item>
+            <Item>plan, research, estimate and develop solutions for Federal &amp; State Government and private-sector contracts;</Item>
+            <Item>am responsible for architecting and developing sophisticated SOAP and RESTful API (<Link Url="http://healthindicators.gov">HealthIndicators.gov</Link>);</Item>
+            <Item>make and implement high-level decisions regarding overall application architecture, use and design;</Item>
+            <Item>design and develop entire SQL Server databases; inspect queries and apply performance updates as needed; and</Item>
+            <Item>am constantly learning new technologies, frameworks and tools.</Item>
         </List>
 
-        <Subsection Title="Skills">
+        <Subsection Title="Certifications &amp; Skills">
             <List>
+                <Item>CMMI for Development v1.3 certified.</Item>
                 <Item>Bottom-up database design and development.</Item>
                 <Item>Project &amp; feature design and development.</Item>
                 <Item>UI design and implementation.</Item>
                 <Item>Clean, organized, efficient, reusable code.</Item>
+                <Item>Writing internal and external documentation, presentations, tutorials, etc.</Item>
             </List>
         </Subsection>
 
@@ -143,7 +63,7 @@
         <Subsection Title="Hobbies">
             <List>
                 <Item>Keeping up with the latest in software development.</Item>
-                <Item>3D printing – QuantumConcepts on Thingiverse.com.</Item>
+                <Item>3D printing – <Link Url="http://www.thingiverse.com/QuantumConcepts/designs">QuantumConcepts on Thingiverse.com</Link>.</Item>
                 <Item>General DIY and learning how things work.</Item>
                 <Item>Technology, astronomy, travel, photography.</Item>
             </List>
@@ -153,12 +73,13 @@
     <Section Key="work-history" Title="Work History">
         <History StartDate="2010-05-01" Organization="Social &amp; Scientific Systems, Inc." OrganizationWebsite="http://s-3.com" OrganizationLocation="Silver Spring, Maryland" Role="Senior Software Engineer">
             <List>
-                <Item>Selected amongst hundreds of employees to attend in-house Leadership Training instructed by the executive team.</Item>
-                <Item>Lead developer for the Health Indicators Warehouse (HealthIndicators.gov) and other government and private applications.</Item>
+                <Item>Selected amongst hundreds of employees to attend months-long Leadership Training instructed by the executive team.</Item>
+                <Item>Participate in and lead CMMI documentation/appraisals, code reviews, client demos, standups, training sessions.</Item>
+                <Item>Lead developer for the Health Indicators Warehouse (<Link Url="http://healthindicators.gov">HealthIndicators.gov</Link>) and other government and private-sector web applications.</Item>
                 <Item>Senior Developer responsible for system and database design as well as UI design and implementation.</Item>
                 <Item>Work with database team in order to make performance updates (indexes, etc.) and recommend structural changes.</Item>
-                <Item>Deploy to QA, UAT and Production environments and manage all servers from initial configuration onward.</Item>
                 <Item>Develop unified build process and documentation for performing deployments.</Item>
+                <Item>Deploy to QA, UAT and Production environments and manage all servers from initial configuration onward.</Item>
             </List>
         </History>
 
@@ -166,7 +87,7 @@
             <List>
                 <Item>Research, design, develop, test and deploy software for mobile devices.</Item>
                 <Item>Write applications using the .NET Compact Framework.</Item>
-                <Item>Develop and publicly release custom code-generation tool, CodeGenerator (TheCodeGenerator.com), which provides a huge boost to team productivity as well as code stability and versatility.</Item>
+                <Item>Develop and publicly release custom code-generation tool, CodeGenerator (<Link Url="http://thecodegenerator.com">TheCodeGenerator.com</Link>), which provides a huge boost to team productivity as well as code stability and versatility.</Item>
             </List>
         </History>
 

@@ -42,38 +42,38 @@ namespace JSM.Web.Views.Shared.DisplayTemplates
         }
         public override void Execute()
         {
-WriteLiteral("<h2");
+WriteLiteral("<div");
 
 WriteLiteral(" class=\"history-item\"");
 
-WriteLiteral(">\r\n    <span");
+WriteLiteral(">\r\n    <h2>\r\n        <span");
 
 WriteLiteral(" class=\"row\"");
 
-WriteLiteral(">\r\n        <span");
+WriteLiteral(">\r\n            <span");
 
 WriteLiteral(" class=\"col-md-3\"");
 
 WriteLiteral(">");
 
             
-            #line 5 "..\..\Views\Shared\DisplayTemplates\History.cshtml"
-                          Write(this.Model.DateSpan);
+            #line 6 "..\..\Views\Shared\DisplayTemplates\History.cshtml"
+                              Write(this.Model.DateSpan);
 
             
             #line default
             #line hidden
-WriteLiteral("</span>\r\n        <span");
+WriteLiteral("</span>\r\n            <span");
 
 WriteLiteral(" class=\"col-md-6 text-center\"");
 
 WriteLiteral(">\r\n");
 
-WriteLiteral("            ");
+WriteLiteral("                ");
 
             
-            #line 7 "..\..\Views\Shared\DisplayTemplates\History.cshtml"
-       Write(this.Model.Organization);
+            #line 8 "..\..\Views\Shared\DisplayTemplates\History.cshtml"
+           Write(this.Model.Organization);
 
             
             #line default
@@ -81,30 +81,30 @@ WriteLiteral("            ");
 WriteLiteral("\r\n\r\n");
 
             
-            #line 9 "..\..\Views\Shared\DisplayTemplates\History.cshtml"
-            
+            #line 10 "..\..\Views\Shared\DisplayTemplates\History.cshtml"
+                
             
             #line default
             #line hidden
             
-            #line 9 "..\..\Views\Shared\DisplayTemplates\History.cshtml"
-             if (!this.Model.OrganizationWebsite.IsNullOrEmpty()) {
+            #line 10 "..\..\Views\Shared\DisplayTemplates\History.cshtml"
+                 if (!this.Model.OrganizationWebsite.IsNullOrEmpty()) {
 
             
             #line default
             #line hidden
-WriteLiteral("                <a");
+WriteLiteral("                    <a");
 
 WriteLiteral(" class=\"organization-link\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 356), Tuple.Create("\"", 394)
+WriteAttribute("href", Tuple.Create(" href=\"", 391), Tuple.Create("\"", 429)
             
-            #line 10 "..\..\Views\Shared\DisplayTemplates\History.cshtml"
-, Tuple.Create(Tuple.Create("", 363), Tuple.Create<System.Object, System.Int32>(this.Model.OrganizationWebsite
+            #line 11 "..\..\Views\Shared\DisplayTemplates\History.cshtml"
+, Tuple.Create(Tuple.Create("", 398), Tuple.Create<System.Object, System.Int32>(this.Model.OrganizationWebsite
             
             #line default
             #line hidden
-, 363), false)
+, 398), false)
 );
 
 WriteLiteral(" target=\"_blank\"");
@@ -116,30 +116,30 @@ WriteLiteral(" class=\"glyphicon glyphicon-new-window\"");
 WriteLiteral("></span></a>\r\n");
 
             
-            #line 11 "..\..\Views\Shared\DisplayTemplates\History.cshtml"
-            }
+            #line 12 "..\..\Views\Shared\DisplayTemplates\History.cshtml"
+                }
 
             
             #line default
             #line hidden
-WriteLiteral("        </span>\r\n        <span");
+WriteLiteral("            </span>\r\n            <span");
 
 WriteLiteral(" class=\"col-md-3 text-right\"");
 
 WriteLiteral(">");
 
             
-            #line 13 "..\..\Views\Shared\DisplayTemplates\History.cshtml"
-                                     Write(this.Model.OrganizationLocation);
+            #line 14 "..\..\Views\Shared\DisplayTemplates\History.cshtml"
+                                         Write(this.Model.OrganizationLocation);
 
             
             #line default
             #line hidden
-WriteLiteral("</span>\r\n    </span>\r\n</h2>\r\n<h3>");
+WriteLiteral("</span>\r\n        </span>\r\n    </h2>\r\n    <h3>");
 
             
-            #line 16 "..\..\Views\Shared\DisplayTemplates\History.cshtml"
-Write(this.Model.Role);
+            #line 17 "..\..\Views\Shared\DisplayTemplates\History.cshtml"
+   Write(this.Model.Role);
 
             
             #line default
@@ -147,11 +147,19 @@ Write(this.Model.Role);
 WriteLiteral("</h3>\r\n");
 
             
-            #line 17 "..\..\Views\Shared\DisplayTemplates\History.cshtml"
-  Html.RenderPartial("DisplayTemplates/Content", this.Model.Content);
+            #line 18 "..\..\Views\Shared\DisplayTemplates\History.cshtml"
+    
             
             #line default
             #line hidden
+            
+            #line 18 "..\..\Views\Shared\DisplayTemplates\History.cshtml"
+      Html.RenderPartial("DisplayTemplates/Content", this.Model.Content);
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n</div>");
+
         }
     }
 }

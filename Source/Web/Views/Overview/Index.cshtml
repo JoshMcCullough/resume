@@ -2,20 +2,138 @@
     ViewBag.Title = "overview";
 }
 
-@Html.DisplayForModel()
+<section>
+    @{Html.RenderPartial("_Content");}
 
+    <div class="subsection">
+        <h2><span>projects</span></h2>
+        <p>Please find below a small collection of my work. I've highlighted my involvement on each project.</p>
+        <ul class="blocks">
+            <li>
+                <h3>Health Indicators Warehouse <text class="">(HIW)</text><a class="visit" href="http://healthindicators.gov" target="_blank"><span class="glyphicon glyphicon-new-window"></span></a></h3>
+                <div class="tagline">Data Warehouse of health-related indicators - CDC/NCHS.</div>
+                <div class="content">
+                    <p>The HIW contains data from 125+ sources across 1,200+ health indicators. This project is part of the <a href="http://www.data.gov" target="_blank">Data.gov</a>'s <a href="http://www.whitehouse.gov/open" target="_blank">Open Data Initiative</a> and exposes massive amounts of publicly-consumable health-related data.</p>
+                </div>
+                <ul class="features tech-items">
+                    <li class="cs"></li>
+                    <li class="mssql"></li>
+                    <li class="html"></li>
+                    <li class="css"></li>
+                    <li class="js"></li>
+                    <li class="ui-ux"></li>
+                </ul>
+            </li>
 
-<!--
-<p>I am a highly skilled software engineer who prides himself on completing tasks on time while maintaining high quality standards and adhering to software development best practices.</p>
-<ul>
-    <li>Plan, research, estimate and develop solutions for Government contracts.</li>
-    <li>Responsible for architecting and developing sophisticated SOAP and RESTful API (HealthIndicators.gov).</li>
-    <li>Make and implement high-level decisions regarding overall application architecture, use and design.</li>
-    <li>Design and develop entire SQL Server databases; inspect queries and apply performance updates as needed.</li>
-    <li>Constantly learning new technologies, frameworks and tools.</li>
-</ul>
+            <li>
+                <h3>HIW Developers &amp; Services<a class="visit" href="http://developers.healthindicators.gov" target="_blank"><span class="glyphicon glyphicon-new-window"></span></a></h3>
+                <div class="tagline">Over 1,000 RESTful (and SOAP) service methods.</div>
+                <div class="content">
+                    <p>Exposes data from the HIW. Custom CodeGenerator templates were used to generate the service methods and documentation. The system includes a real-time URL builder/service tester and API key registration/verification.</p>
+                </div>
+                <ul class="features tech-items">
+                    <li class="cs"></li>
+                    <li class="mssql"></li>
+                    <li class="html5"></li>
+                    <li class="css3"></li>
+                    <li class="bs"></li>
+                    <li class="js"></li>
+                    <li class="ko"></li>
+                    <li class="ui-ux"></li>
+                </ul>
+            </li>
 
-<h2><span>objective</span></h2>
-<p>To apply and grow my existing skillset in a challenging, fast-paced, and rewarding software engineering environment.</p>
-<p>To bring a new level of efficiency and stability to software projects by utilizing the latest technologies and software engineering ideals.</p>
--->
+            <li>
+                <h3>CodeGenerator<a class="visit" href="http://quantumconceptscorp.com/Products/CodeGenerator.aspx" target="_blank"><span class="glyphicon glyphicon-new-window"></span></a></h3>
+                <div class="tagline">Develop stable, robust and highly versatile software, faster!</div>
+                <div class="content">
+                    <p>This tool allows you and your team to get the nuts and bolts of any project up and running amazingly fast. The backbone of CodeGenerator relies on technologies that your team probably already knows - XML and XSLT. You design an XSL Template once and CodeGenerator handles the rest.</p>
+                </div>
+                <ul class="features tech-items">
+                    <li class="cs"></li>
+                    <li class="winforms"></li>
+                    <li class="mssql"></li>
+                    <li class="mysql"></li>
+                    <li class="ui-ux"></li>
+                </ul>
+            </li>
+
+            <li>
+                <h3>Platform Liberty</h3>
+                <div class="tagline">Empowering candidates in the fight for liberty.</div>
+                <div class="content">
+                    <p>The goal of this project is to provide an inexpensive, easy-to-use web application for liberty candidates. This platform will be available to any candidate who is on the side of liberty - regardless of party their party affiliation. 10+ instances.</p>
+                </div>
+                <ul class="features tech-items">
+                    <li class="rails"></li>
+                    <li class="mysql"></li>
+                    <li class="html5"></li>
+                    <li class="css3"></li>
+                    <li class="bs"></li>
+                    <li class="js"></li>
+                    <li class="ko"></li>
+                    <li class="ui-ux"></li>
+                </ul>
+            </li>
+
+            <li>
+                <h3>Carson for Congress<a class="visit" href="http://jeffreycarson.platformliberty.org" target="_blank"><span class="glyphicon glyphicon-new-window"></span></a></h3>
+                <div class="tagline">Restoring Sanity</div>
+                <div class="content">
+                    <p>Built atop Platform Liberty and customized to fit the needs of Jeffrey Carson's 2014 Congressional campaign.</p>
+                </div>
+                <ul class="features tech-items">
+                    <li class="rails"></li>
+                    <li class="mysql"></li>
+                    <li class="html5"></li>
+                    <li class="css3"></li>
+                    <li class="bs"></li>
+                    <li class="js"></li>
+                    <li class="ko"></li>
+                    <li class="ui-ux"></li>
+                </ul>
+            </li>
+
+            <li>
+                <h3>AeroBazaar<a class="visit" href="http://aerobazaar.com" target="_blank"><span class="glyphicon glyphicon-new-window"></span></a></h3>
+                <div class="tagline">The most beautiful place to buy and sell aircraft online.</div>
+                <div class="content">
+                    <p>A robust aircraft listing engine allows potential aircraft buyers to easily find what they're looking for. Sellers can manage their inventory and add detailed information for each of their aircraft.</p>
+                </div>
+                <ul class="features tech-items">
+                    <li class="php"></li>
+                    <li class="mysql"></li>
+                    <li class="html5"></li>
+                    <li class="css3"></li>
+                    <li class="bs"></li>
+                    <li class="js"></li>
+                    <li class="ko"></li>
+                    <li class="ui-ux"></li>
+                </ul>
+            </li>
+
+            <li>
+                <h3>7Flix<a class="visit" href="http://quantumconceptscorp.com/Products/7Flix.aspx" target="_blank"><span class="glyphicon glyphicon-new-window"></span></a></h3>
+                <div class="tagline">A full-featured Netflix client for Windows Phones.</div>
+                <div class="content">
+                    <p>Although this app is no longer available, since Netflix ditched their public API, it was the most complete Netflix client on the platform at the time. It included queue management features and the ability to search and browse the entire Netflix library.</p>
+                </div>
+                <ul class="features tech-items">
+                    <li class="cs"></li>
+                    <li class="wp"></li>
+                    <li class="api"></li>
+                    <li class="sl"></li>
+                    <li class="ui-ux"></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="subsection">
+        <h2><span>self-rankings</span></h2>
+        <p>I've compiled a list of the technologies I work with most often and indicated, for each one, my level of expertise.</p>
+        <ul class="blocks expertise tech-items">
+            <li><span class="cs"></span><span class="expert"></span></li>
+        </ul>
+    </div>
+</section>

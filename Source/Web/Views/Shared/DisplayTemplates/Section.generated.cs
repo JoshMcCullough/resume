@@ -42,15 +42,19 @@ namespace JSM.Web.Views.Shared.DisplayTemplates
         }
         public override void Execute()
         {
-WriteLiteral("<article ");
+WriteLiteral("<div");
 
+WriteAttribute("class", Tuple.Create(" class=\"", 51), Tuple.Create("\"", 125)
+, Tuple.Create(Tuple.Create("", 59), Tuple.Create("section", 59), true)
             
             #line 3 "..\..\Views\Shared\DisplayTemplates\Section.cshtml"
-     Write(new MvcHtmlString(this.Model.Class.IsNullOrEmpty() ? "" : "class=\"{0}\"".FormatString(this.Model.Class)));
-
+, Tuple.Create(Tuple.Create("", 66), Tuple.Create<System.Object, System.Int32>(this.Model.Class.IsNullOrEmpty() ? "" : this.Model.Class
             
             #line default
             #line hidden
+, 66), false)
+);
+
 WriteLiteral(">\r\n    <h1><span>");
 
             
@@ -74,7 +78,7 @@ WriteLiteral("</span></h1>\r\n\r\n");
             
             #line default
             #line hidden
-WriteLiteral("\r\n</article>");
+WriteLiteral("\r\n</div>");
 
         }
     }

@@ -1,0 +1,5 @@
+﻿@model JSM.Web.Models.Shared.Resume.Section
+
+<h1><span>@this.Model.Title</span></h1>
+
+@{Html.RenderPartial("DisplayTemplates/Content", this.Model.Content);}

@@ -206,7 +206,7 @@ WriteLiteral(">\r\n");
             
             #line default
             #line hidden
-WriteLiteral("\r\n            </nav>\r\n        </header>\r\n\r\n        <section");
+WriteLiteral("\r\n            </nav>\r\n        </header>\r\n\r\n        <div");
 
 WriteLiteral(" id=\"Content\"");
 
@@ -258,33 +258,33 @@ WriteLiteral("\r\n\r\n                <div");
 
 WriteLiteral(" class=\"clearfix\"");
 
-WriteLiteral("></div>\r\n            </div>\r\n        </section>\r\n\r\n        <footer>\r\n            " +
-"<div>\r\n                <div");
+WriteLiteral("></div>\r\n            </div>\r\n        </div>\r\n\r\n        <footer>\r\n            <div" +
+">\r\n                <div");
 
 WriteLiteral(" class=\"left-menu\"");
 
 WriteLiteral(">\r\n                    <a");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 2275), Tuple.Create("\"", 2309)
+WriteAttribute("href", Tuple.Create(" href=\"", 2267), Tuple.Create("\"", 2301)
             
             #line 50 "..\..\Views\Shared\_Layout.cshtml"
-, Tuple.Create(Tuple.Create("", 2282), Tuple.Create<System.Object, System.Int32>(Url.Action("Index", "All")
+, Tuple.Create(Tuple.Create("", 2274), Tuple.Create<System.Object, System.Int32>(Url.Action("Index", "All")
             
             #line default
             #line hidden
-, 2282), false)
+, 2274), false)
 );
 
 WriteLiteral(">view as single page</a>\r\n                    <a");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 2358), Tuple.Create("\"", 2393)
+WriteAttribute("href", Tuple.Create(" href=\"", 2350), Tuple.Create("\"", 2385)
             
             #line 51 "..\..\Views\Shared\_Layout.cshtml"
-, Tuple.Create(Tuple.Create("", 2365), Tuple.Create<System.Object, System.Int32>(Url.Action("PDF", "Export")
+, Tuple.Create(Tuple.Create("", 2357), Tuple.Create<System.Object, System.Int32>(Url.Action("PDF", "Export")
             
             #line default
             #line hidden
-, 2365), false)
+, 2357), false)
 );
 
 WriteLiteral(">download as PDF</a>\r\n                    <a");

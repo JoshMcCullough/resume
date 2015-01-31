@@ -1,3 +1,0 @@
-﻿@model JSM.Web.Models.Shared.Resume.Link
-
-<a href="@Model.Url" @(new MvcHtmlString(this.Model.Internal ? "" : " target=\"_blank\"")) @(new MvcHtmlString(this.Model.Class.IsNullOrEmpty() ? "" : "class=\"{0}\"".FormatString(this.Model.Class)))>@{Html.RenderPartial("DisplayTemplates/Content", this.Model.Content);}</a>

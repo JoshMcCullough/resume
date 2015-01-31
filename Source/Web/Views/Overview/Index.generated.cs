@@ -28,7 +28,6 @@ namespace JSM.Web.Views.Overview
     using System.Web.UI;
     using System.Web.WebPages;
     using JSM.Web;
-    using JSM.Web.Models.Shared;
     using QuantumConcepts.Common.Extensions;
     using QuantumConcepts.Common.Mvc.Extensions;
     using QuantumConcepts.Common.Mvc.Utils;
@@ -51,32 +50,442 @@ namespace JSM.Web.Views.Overview
             
             #line default
             #line hidden
-WriteLiteral("\r\n\r\n");
+WriteLiteral("\r\n\r\n<section>\r\n");
 
             
-            #line 5 "..\..\Views\Overview\Index.cshtml"
-Write(Html.DisplayForModel());
-
+            #line 6 "..\..\Views\Overview\Index.cshtml"
+    
             
             #line default
             #line hidden
-WriteLiteral(@"
+            
+            #line 6 "..\..\Views\Overview\Index.cshtml"
+      Html.RenderPartial("_Content");
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n\r\n    <div");
 
+WriteLiteral(" class=\"subsection\"");
 
-<!--
-<p>I am a highly skilled software engineer who prides himself on completing tasks on time while maintaining high quality standards and adhering to software development best practices.</p>
-<ul>
-    <li>Plan, research, estimate and develop solutions for Government contracts.</li>
-    <li>Responsible for architecting and developing sophisticated SOAP and RESTful API (HealthIndicators.gov).</li>
-    <li>Make and implement high-level decisions regarding overall application architecture, use and design.</li>
-    <li>Design and develop entire SQL Server databases; inspect queries and apply performance updates as needed.</li>
-    <li>Constantly learning new technologies, frameworks and tools.</li>
-</ul>
+WriteLiteral(">\r\n        <h2><span>projects</span></h2>\r\n        <p>Please find below a small c" +
+"ollection of my work. I\'ve highlighted my involvement on each project.</p>\r\n    " +
+"    <ul");
 
-<h2><span>objective</span></h2>
-<p>To apply and grow my existing skillset in a challenging, fast-paced, and rewarding software engineering environment.</p>
-<p>To bring a new level of efficiency and stability to software projects by utilizing the latest technologies and software engineering ideals.</p>
--->");
+WriteLiteral(" class=\"blocks\"");
+
+WriteLiteral(">\r\n            <li>\r\n                <h3>Health Indicators Warehouse <text");
+
+WriteLiteral(" class=\"\"");
+
+WriteLiteral(">(HIW)</text><a");
+
+WriteLiteral(" class=\"visit\"");
+
+WriteLiteral(" href=\"http://healthindicators.gov\"");
+
+WriteLiteral(" target=\"_blank\"");
+
+WriteLiteral("><span");
+
+WriteLiteral(" class=\"glyphicon glyphicon-new-window\"");
+
+WriteLiteral("></span></a></h3>\r\n                <div");
+
+WriteLiteral(" class=\"tagline\"");
+
+WriteLiteral(">Data Warehouse of health-related indicators - CDC/NCHS.</div>\r\n                <" +
+"div");
+
+WriteLiteral(" class=\"content\"");
+
+WriteLiteral(">\r\n                    <p>The HIW contains data from 125+ sources across 1,200+ h" +
+"ealth indicators. This project is part of the <a");
+
+WriteLiteral(" href=\"http://www.data.gov\"");
+
+WriteLiteral(" target=\"_blank\"");
+
+WriteLiteral(">Data.gov</a>\'s <a");
+
+WriteLiteral(" href=\"http://www.whitehouse.gov/open\"");
+
+WriteLiteral(" target=\"_blank\"");
+
+WriteLiteral(">Open Data Initiative</a> and exposes massive amounts of publicly-consumable heal" +
+"th-related data.</p>\r\n                </div>\r\n                <ul");
+
+WriteLiteral(" class=\"features tech-items\"");
+
+WriteLiteral(">\r\n                    <li");
+
+WriteLiteral(" class=\"cs\"");
+
+WriteLiteral("></li>\r\n                    <li");
+
+WriteLiteral(" class=\"mssql\"");
+
+WriteLiteral("></li>\r\n                    <li");
+
+WriteLiteral(" class=\"html\"");
+
+WriteLiteral("></li>\r\n                    <li");
+
+WriteLiteral(" class=\"css\"");
+
+WriteLiteral("></li>\r\n                    <li");
+
+WriteLiteral(" class=\"js\"");
+
+WriteLiteral("></li>\r\n                    <li");
+
+WriteLiteral(" class=\"ui-ux\"");
+
+WriteLiteral("></li>\r\n                </ul>\r\n            </li>\r\n\r\n            <li>\r\n           " +
+"     <h3>HIW Developers &amp; Services<a");
+
+WriteLiteral(" class=\"visit\"");
+
+WriteLiteral(" href=\"http://developers.healthindicators.gov\"");
+
+WriteLiteral(" target=\"_blank\"");
+
+WriteLiteral("><span");
+
+WriteLiteral(" class=\"glyphicon glyphicon-new-window\"");
+
+WriteLiteral("></span></a></h3>\r\n                <div");
+
+WriteLiteral(" class=\"tagline\"");
+
+WriteLiteral(">Over 1,000 RESTful (and SOAP) service methods.</div>\r\n                <div");
+
+WriteLiteral(" class=\"content\"");
+
+WriteLiteral(@">
+                    <p>Exposes data from the HIW. Custom CodeGenerator templates were used to generate the service methods and documentation. The system includes a real-time URL builder/service tester and API key registration/verification.</p>
+                </div>
+                <ul");
+
+WriteLiteral(" class=\"features tech-items\"");
+
+WriteLiteral(">\r\n                    <li");
+
+WriteLiteral(" class=\"cs\"");
+
+WriteLiteral("></li>\r\n                    <li");
+
+WriteLiteral(" class=\"mssql\"");
+
+WriteLiteral("></li>\r\n                    <li");
+
+WriteLiteral(" class=\"html5\"");
+
+WriteLiteral("></li>\r\n                    <li");
+
+WriteLiteral(" class=\"css3\"");
+
+WriteLiteral("></li>\r\n                    <li");
+
+WriteLiteral(" class=\"bs\"");
+
+WriteLiteral("></li>\r\n                    <li");
+
+WriteLiteral(" class=\"js\"");
+
+WriteLiteral("></li>\r\n                    <li");
+
+WriteLiteral(" class=\"ko\"");
+
+WriteLiteral("></li>\r\n                    <li");
+
+WriteLiteral(" class=\"ui-ux\"");
+
+WriteLiteral("></li>\r\n                </ul>\r\n            </li>\r\n\r\n            <li>\r\n           " +
+"     <h3>CodeGenerator<a");
+
+WriteLiteral(" class=\"visit\"");
+
+WriteLiteral(" href=\"http://quantumconceptscorp.com/Products/CodeGenerator.aspx\"");
+
+WriteLiteral(" target=\"_blank\"");
+
+WriteLiteral("><span");
+
+WriteLiteral(" class=\"glyphicon glyphicon-new-window\"");
+
+WriteLiteral("></span></a></h3>\r\n                <div");
+
+WriteLiteral(" class=\"tagline\"");
+
+WriteLiteral(">Develop stable, robust and highly versatile software, faster!</div>\r\n           " +
+"     <div");
+
+WriteLiteral(" class=\"content\"");
+
+WriteLiteral(@">
+                    <p>This tool allows you and your team to get the nuts and bolts of any project up and running amazingly fast. The backbone of CodeGenerator relies on technologies that your team probably already knows - XML and XSLT. You design an XSL Template once and CodeGenerator handles the rest.</p>
+                </div>
+                <ul");
+
+WriteLiteral(" class=\"features tech-items\"");
+
+WriteLiteral(">\r\n                    <li");
+
+WriteLiteral(" class=\"cs\"");
+
+WriteLiteral("></li>\r\n                    <li");
+
+WriteLiteral(" class=\"winforms\"");
+
+WriteLiteral("></li>\r\n                    <li");
+
+WriteLiteral(" class=\"mssql\"");
+
+WriteLiteral("></li>\r\n                    <li");
+
+WriteLiteral(" class=\"mysql\"");
+
+WriteLiteral("></li>\r\n                    <li");
+
+WriteLiteral(" class=\"ui-ux\"");
+
+WriteLiteral("></li>\r\n                </ul>\r\n            </li>\r\n\r\n            <li>\r\n           " +
+"     <h3>Platform Liberty</h3>\r\n                <div");
+
+WriteLiteral(" class=\"tagline\"");
+
+WriteLiteral(">Empowering candidates in the fight for liberty.</div>\r\n                <div");
+
+WriteLiteral(" class=\"content\"");
+
+WriteLiteral(@">
+                    <p>The goal of this project is to provide an inexpensive, easy-to-use web application for liberty candidates. This platform will be available to any candidate who is on the side of liberty - regardless of party their party affiliation. 10+ instances.</p>
+                </div>
+                <ul");
+
+WriteLiteral(" class=\"features tech-items\"");
+
+WriteLiteral(">\r\n                    <li");
+
+WriteLiteral(" class=\"rails\"");
+
+WriteLiteral("></li>\r\n                    <li");
+
+WriteLiteral(" class=\"mysql\"");
+
+WriteLiteral("></li>\r\n                    <li");
+
+WriteLiteral(" class=\"html5\"");
+
+WriteLiteral("></li>\r\n                    <li");
+
+WriteLiteral(" class=\"css3\"");
+
+WriteLiteral("></li>\r\n                    <li");
+
+WriteLiteral(" class=\"bs\"");
+
+WriteLiteral("></li>\r\n                    <li");
+
+WriteLiteral(" class=\"js\"");
+
+WriteLiteral("></li>\r\n                    <li");
+
+WriteLiteral(" class=\"ko\"");
+
+WriteLiteral("></li>\r\n                    <li");
+
+WriteLiteral(" class=\"ui-ux\"");
+
+WriteLiteral("></li>\r\n                </ul>\r\n            </li>\r\n\r\n            <li>\r\n           " +
+"     <h3>Carson for Congress<a");
+
+WriteLiteral(" class=\"visit\"");
+
+WriteLiteral(" href=\"http://jeffreycarson.platformliberty.org\"");
+
+WriteLiteral(" target=\"_blank\"");
+
+WriteLiteral("><span");
+
+WriteLiteral(" class=\"glyphicon glyphicon-new-window\"");
+
+WriteLiteral("></span></a></h3>\r\n                <div");
+
+WriteLiteral(" class=\"tagline\"");
+
+WriteLiteral(">Restoring Sanity</div>\r\n                <div");
+
+WriteLiteral(" class=\"content\"");
+
+WriteLiteral(">\r\n                    <p>Built atop Platform Liberty and customized to fit the n" +
+"eeds of Jeffrey Carson\'s 2014 Congressional campaign.</p>\r\n                </div" +
+">\r\n                <ul");
+
+WriteLiteral(" class=\"features tech-items\"");
+
+WriteLiteral(">\r\n                    <li");
+
+WriteLiteral(" class=\"rails\"");
+
+WriteLiteral("></li>\r\n                    <li");
+
+WriteLiteral(" class=\"mysql\"");
+
+WriteLiteral("></li>\r\n                    <li");
+
+WriteLiteral(" class=\"html5\"");
+
+WriteLiteral("></li>\r\n                    <li");
+
+WriteLiteral(" class=\"css3\"");
+
+WriteLiteral("></li>\r\n                    <li");
+
+WriteLiteral(" class=\"bs\"");
+
+WriteLiteral("></li>\r\n                    <li");
+
+WriteLiteral(" class=\"js\"");
+
+WriteLiteral("></li>\r\n                    <li");
+
+WriteLiteral(" class=\"ko\"");
+
+WriteLiteral("></li>\r\n                    <li");
+
+WriteLiteral(" class=\"ui-ux\"");
+
+WriteLiteral("></li>\r\n                </ul>\r\n            </li>\r\n\r\n            <li>\r\n           " +
+"     <h3>AeroBazaar<a");
+
+WriteLiteral(" class=\"visit\"");
+
+WriteLiteral(" href=\"http://aerobazaar.com\"");
+
+WriteLiteral(" target=\"_blank\"");
+
+WriteLiteral("><span");
+
+WriteLiteral(" class=\"glyphicon glyphicon-new-window\"");
+
+WriteLiteral("></span></a></h3>\r\n                <div");
+
+WriteLiteral(" class=\"tagline\"");
+
+WriteLiteral(">The most beautiful place to buy and sell aircraft online.</div>\r\n               " +
+" <div");
+
+WriteLiteral(" class=\"content\"");
+
+WriteLiteral(@">
+                    <p>A robust aircraft listing engine allows potential aircraft buyers to easily find what they're looking for. Sellers can manage their inventory and add detailed information for each of their aircraft.</p>
+                </div>
+                <ul");
+
+WriteLiteral(" class=\"features tech-items\"");
+
+WriteLiteral(">\r\n                    <li");
+
+WriteLiteral(" class=\"php\"");
+
+WriteLiteral("></li>\r\n                    <li");
+
+WriteLiteral(" class=\"mysql\"");
+
+WriteLiteral("></li>\r\n                    <li");
+
+WriteLiteral(" class=\"html5\"");
+
+WriteLiteral("></li>\r\n                    <li");
+
+WriteLiteral(" class=\"css3\"");
+
+WriteLiteral("></li>\r\n                    <li");
+
+WriteLiteral(" class=\"bs\"");
+
+WriteLiteral("></li>\r\n                    <li");
+
+WriteLiteral(" class=\"js\"");
+
+WriteLiteral("></li>\r\n                    <li");
+
+WriteLiteral(" class=\"ko\"");
+
+WriteLiteral("></li>\r\n                    <li");
+
+WriteLiteral(" class=\"ui-ux\"");
+
+WriteLiteral("></li>\r\n                </ul>\r\n            </li>\r\n\r\n            <li>\r\n           " +
+"     <h3>7Flix<a");
+
+WriteLiteral(" class=\"visit\"");
+
+WriteLiteral(" href=\"http://quantumconceptscorp.com/Products/7Flix.aspx\"");
+
+WriteLiteral(" target=\"_blank\"");
+
+WriteLiteral("><span");
+
+WriteLiteral(" class=\"glyphicon glyphicon-new-window\"");
+
+WriteLiteral("></span></a></h3>\r\n                <div");
+
+WriteLiteral(" class=\"tagline\"");
+
+WriteLiteral(">A full-featured Netflix client for Windows Phones.</div>\r\n                <div");
+
+WriteLiteral(" class=\"content\"");
+
+WriteLiteral(@">
+                    <p>Although this app is no longer available, since Netflix ditched their public API, it was the most complete Netflix client on the platform at the time. It included queue management features and the ability to search and browse the entire Netflix library.</p>
+                </div>
+                <ul");
+
+WriteLiteral(" class=\"features tech-items\"");
+
+WriteLiteral(">\r\n                    <li");
+
+WriteLiteral(" class=\"cs\"");
+
+WriteLiteral("></li>\r\n                    <li");
+
+WriteLiteral(" class=\"wp\"");
+
+WriteLiteral("></li>\r\n                    <li");
+
+WriteLiteral(" class=\"api\"");
+
+WriteLiteral("></li>\r\n                    <li");
+
+WriteLiteral(" class=\"sl\"");
+
+WriteLiteral("></li>\r\n                    <li");
+
+WriteLiteral(" class=\"ui-ux\"");
+
+WriteLiteral("></li>\r\n                </ul>\r\n            </li>\r\n        </ul>\r\n    </div>\r\n\r\n  " +
+"  <div");
+
+WriteLiteral(" class=\"subsection\"");
+
+WriteLiteral(">\r\n        <h2><span>self-rankings</span></h2>\r\n        <p>I\'ve compiled a list o" +
+"f the technologies I work with most often and indicated, for each one, my level " +
+"of expertise.</p>\r\n        <ul");
+
+WriteLiteral(" class=\"blocks expertise tech-items\"");
+
+WriteLiteral(">\r\n            <li><span");
+
+WriteLiteral(" class=\"cs\"");
+
+WriteLiteral("></span><span");
+
+WriteLiteral(" class=\"expert\"");
+
+WriteLiteral("></span></li>\r\n        </ul>\r\n    </div>\r\n</section>");
 
         }
     }

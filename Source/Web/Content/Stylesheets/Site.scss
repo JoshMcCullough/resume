@@ -158,7 +158,7 @@ header {
     }
 }
 
-section#Content {
+#Content {
     @include Container;
 
     > div {
@@ -170,16 +170,12 @@ section#Content {
 
         h1,
         h2 {
+            margin: 0 0 40px -40px;
             text-transform: lowercase;
 
             &.normal-case {
                 text-transform: none;
             }
-        }
-
-        h1,
-        h2 {
-            margin: 0 0 40px -40px;
         }
 
         h1 > span,
@@ -216,34 +212,10 @@ section#Content {
             margin: 40px 0 20px -30px;
             font-size: 1.6em;
 
-            &.history-item {
-                text-transform: none;
-
-                > span {
-                    display: block;
-                }
-
-                .organization-link {
-                    visibility: hidden;
-                    color: $primary-gray-10d;
-                    font-size: .5em;
-
-                    &:hover {
-                        color: $primary-gray-30d;
-                    }
-                }
-
-                &:hover {
-                    .organization-link {
-                        visibility: visible;
-                    }
-                }
-            }
-
             > span {
                 padding: 10px 30px;
             }
-            
+
             + h3 {
                 margin-top: 0;
             }
@@ -277,13 +249,13 @@ section#Content {
                 margin: 0 0 0 20px;
                 padding: 0;
 
-                li {
+                > li {
                     position: relative;
                     float: left;
                     margin: 0 20px 20px 0;
                     padding: 10px;
-                    width: 400px;
-                    height: 160px;
+                    width: 420px;
+                    height: 170px;
                     border: 1px solid $primary-gray-5d;
                     background-color: $primary-gray-5l;
                     text-indent: 0;
@@ -294,17 +266,19 @@ section#Content {
                         content: none;
                     }
 
-                    &:hover{
+                    &:hover {
                         h3 a.visit {
                             display: inline;
                         }
                     }
 
                     h3 {
+                        font-size: 1.2em;
                         margin: 0;
 
                         a.visit {
                             display: none;
+                            margin-left: 5px;
                             color: $primary-gray-10d;
                             font-size: .5em;
 
@@ -321,18 +295,126 @@ section#Content {
                     }
 
                     .content {
-                        height: 125px;
+                        height: 82px;
                         font-size: .8em;
                         overflow: hidden;
                         -ms-text-overflow: ellipsis;
                         -o-text-overflow: ellipsis;
                         text-overflow: ellipsis;
+
+                        p {
+                            margin: 0;
+                        }
                     }
 
-                    .features {
-
+                    ul.features {
+                        position: absolute;
+                        margin: 0;
+                        padding: 0;
+                        bottom: 0;
+                        white-space: nowrap;
                     }
                 }
+
+                &.expertise {
+                    li {
+                        width: 200px;
+                        height: 30px;
+
+                        span {
+                            display: inline-block;
+                            width: 75px;
+                            height: 30px;
+
+                            &.novice {
+                                background-color: #DF0101;
+
+                                &:after {
+                                    content: 'novice';
+                                }
+                            }
+                            
+                            &.intermediate {
+                                background-color: #FFBF00;
+
+                                &:after {
+                                    content: 'intermediate';
+                                }
+                            }
+                            
+                            &.export {
+                                background-color: #3ADF00;
+
+                                &:after {
+                                    content: 'expert';
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.expertise span,
+                ul.features li {
+                    display: inline-block;
+                    margin: 0;
+                    padding: 5px;
+                    height: 20px;
+                    width: auto;
+                    text-indent: 0;
+                    line-height: 10px;
+                    border: 1px solid $primary-gray-5d;
+                    border-bottom: none;
+                    font-size: .6em;
+                    vertical-align: bottom;
+                    color: #fff;
+                    text-shadow: $primary-gray-90d 0 0 1px;
+                    text-align: center;
+
+                    &:before { content: none; }
+
+                    &.cs:after { content: 'C#'; }
+                    &.mvc:after { content: 'ASP.NET MVC'; }
+                    &.webforms:after { content: 'ASP.NET Webforms'; }
+                    &.mssql:after { content: 'MSSQL'; }
+                    &.mysql:after { content: 'My SQL'; }
+                    &.rails:after { content: 'Rails'; }
+                    &.php:after { content: 'PHP'; }
+                    &.wp:after { content: 'Windows Phone'; }
+                    &.api:after { content: 'API'; }
+                    &.winforms:after { content: 'Windows Forms'; }
+                    &.html:after { content: 'HTML'; }
+                    &.html5:after { content: 'HTML 5'; }
+                    &.css:after { content: 'CSS'; }
+                    &.css3:after { content: 'CSS 3'; }
+                    &.bs:after { content: 'Bootstrap'; }
+                    &.js:after { content: 'JS'; }
+                    &.ko:after { content: 'Knockout'; }
+                    &.ui-ux:after { content: 'UI/UX'; }
+                    &.sl:after { content: 'Silverlight'; }
+                }
+            }
+        }
+
+        .tech-items {
+            li,
+            span {
+                &.cs { background-color: #DF0101; }
+                &.mvc { background-color: #FFBF00; }
+                &.webforms { background-color: #0101DF; }
+                &.mssql { background-color: #DF01A5; }
+                &.mysql { background-color: #2ECCFA; }
+                &.rails { background-color: #12b44e; }
+                &.php { background-color: #7401DF; }
+                &.wp { background-color: #868A08; }
+                &.api { background-color: #f7624e; }
+                &.winforms { background-color: #522631; }
+                &.html, &.html5 { background-color: #DF3A01; }
+                &.css, &.css3 { background-color: #0B6121; }
+                &.bs { background-color: #0174DF; }
+                &.js { background-color: #DA81F5; }
+                &.ko { background-color: #086A87; }
+                &.ui-ux { background-color: #8A0829; }
+                &.sl { background-color: #585858; }
             }
         }
 
@@ -352,6 +434,42 @@ section#Content {
         em,
         .em {
             font-style: italic;
+        }
+
+        section {
+            clear: both;
+
+            .subsection {
+                clear: both;
+            }
+
+            .history-item {
+                clear: both;
+
+                h2 {
+                    text-transform: none;
+
+                    > span {
+                        display: block;
+                    }
+
+                    .organization-link {
+                        visibility: hidden;
+                        color: $primary-gray-10d;
+                        font-size: .5em;
+
+                        &:hover {
+                            color: $primary-gray-30d;
+                        }
+                    }
+
+                    &:hover {
+                        .organization-link {
+                            visibility: visible;
+                        }
+                    }
+                }
+            }
         }
     }
 }
