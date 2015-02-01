@@ -316,44 +316,7 @@ header {
                     }
                 }
 
-                &.expertise {
-                    li {
-                        width: 200px;
-                        height: 30px;
-
-                        span {
-                            display: inline-block;
-                            width: 75px;
-                            height: 30px;
-
-                            &.novice {
-                                background-color: #DF0101;
-
-                                &:after {
-                                    content: 'novice';
-                                }
-                            }
-                            
-                            &.intermediate {
-                                background-color: #FFBF00;
-
-                                &:after {
-                                    content: 'intermediate';
-                                }
-                            }
-                            
-                            &.export {
-                                background-color: #3ADF00;
-
-                                &:after {
-                                    content: 'expert';
-                                }
-                            }
-                        }
-                    }
-                }
-
-                &.expertise span,
+                &.expertise li,
                 ul.features li {
                     display: inline-block;
                     margin: 0;
@@ -391,6 +354,21 @@ header {
                     &.ko:after { content: 'Knockout'; }
                     &.ui-ux:after { content: 'UI/UX'; }
                     &.sl:after { content: 'Silverlight'; }
+                }
+
+                &.expertise {
+                    position: relative;
+                    height: 600px;
+
+                    li {
+                        position: absolute;
+                        margin: 0;
+                        width: 30px;
+                        height: 30px;
+                        min-width: 30px;
+                        min-height: 30px;
+                        vertical-align: middle;
+                    }
                 }
             }
         }

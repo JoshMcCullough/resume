@@ -189,26 +189,7 @@ header {
             padding: 0;
             bottom: 0;
             white-space: nowrap; }
-        #Content > div ul.blocks.expertise li {
-          width: 200px;
-          height: 30px; }
-          #Content > div ul.blocks.expertise li span {
-            display: inline-block;
-            width: 75px;
-            height: 30px; }
-            #Content > div ul.blocks.expertise li span.novice {
-              background-color: #DF0101; }
-              #Content > div ul.blocks.expertise li span.novice:after {
-                content: 'novice'; }
-            #Content > div ul.blocks.expertise li span.intermediate {
-              background-color: #FFBF00; }
-              #Content > div ul.blocks.expertise li span.intermediate:after {
-                content: 'intermediate'; }
-            #Content > div ul.blocks.expertise li span.export {
-              background-color: #3ADF00; }
-              #Content > div ul.blocks.expertise li span.export:after {
-                content: 'expert'; }
-        #Content > div ul.blocks.expertise span, #Content > div ul.blocks ul.features li {
+        #Content > div ul.blocks.expertise li, #Content > div ul.blocks ul.features li {
           display: inline-block;
           margin: 0;
           padding: 5px;
@@ -223,46 +204,57 @@ header {
           color: #fff;
           text-shadow: #040404 0 0 1px;
           text-align: center; }
-          #Content > div ul.blocks.expertise span:before, #Content > div ul.blocks ul.features li:before {
+          #Content > div ul.blocks.expertise li:before, #Content > div ul.blocks ul.features li:before {
             content: none; }
-          #Content > div ul.blocks.expertise span.cs:after, #Content > div ul.blocks ul.features li.cs:after {
+          #Content > div ul.blocks.expertise li.cs:after, #Content > div ul.blocks ul.features li.cs:after {
             content: 'C#'; }
-          #Content > div ul.blocks.expertise span.mvc:after, #Content > div ul.blocks ul.features li.mvc:after {
+          #Content > div ul.blocks.expertise li.mvc:after, #Content > div ul.blocks ul.features li.mvc:after {
             content: 'ASP.NET MVC'; }
-          #Content > div ul.blocks.expertise span.webforms:after, #Content > div ul.blocks ul.features li.webforms:after {
+          #Content > div ul.blocks.expertise li.webforms:after, #Content > div ul.blocks ul.features li.webforms:after {
             content: 'ASP.NET Webforms'; }
-          #Content > div ul.blocks.expertise span.mssql:after, #Content > div ul.blocks ul.features li.mssql:after {
+          #Content > div ul.blocks.expertise li.mssql:after, #Content > div ul.blocks ul.features li.mssql:after {
             content: 'MSSQL'; }
-          #Content > div ul.blocks.expertise span.mysql:after, #Content > div ul.blocks ul.features li.mysql:after {
+          #Content > div ul.blocks.expertise li.mysql:after, #Content > div ul.blocks ul.features li.mysql:after {
             content: 'My SQL'; }
-          #Content > div ul.blocks.expertise span.rails:after, #Content > div ul.blocks ul.features li.rails:after {
+          #Content > div ul.blocks.expertise li.rails:after, #Content > div ul.blocks ul.features li.rails:after {
             content: 'Rails'; }
-          #Content > div ul.blocks.expertise span.php:after, #Content > div ul.blocks ul.features li.php:after {
+          #Content > div ul.blocks.expertise li.php:after, #Content > div ul.blocks ul.features li.php:after {
             content: 'PHP'; }
-          #Content > div ul.blocks.expertise span.wp:after, #Content > div ul.blocks ul.features li.wp:after {
+          #Content > div ul.blocks.expertise li.wp:after, #Content > div ul.blocks ul.features li.wp:after {
             content: 'Windows Phone'; }
-          #Content > div ul.blocks.expertise span.api:after, #Content > div ul.blocks ul.features li.api:after {
+          #Content > div ul.blocks.expertise li.api:after, #Content > div ul.blocks ul.features li.api:after {
             content: 'API'; }
-          #Content > div ul.blocks.expertise span.winforms:after, #Content > div ul.blocks ul.features li.winforms:after {
+          #Content > div ul.blocks.expertise li.winforms:after, #Content > div ul.blocks ul.features li.winforms:after {
             content: 'Windows Forms'; }
-          #Content > div ul.blocks.expertise span.html:after, #Content > div ul.blocks ul.features li.html:after {
+          #Content > div ul.blocks.expertise li.html:after, #Content > div ul.blocks ul.features li.html:after {
             content: 'HTML'; }
-          #Content > div ul.blocks.expertise span.html5:after, #Content > div ul.blocks ul.features li.html5:after {
+          #Content > div ul.blocks.expertise li.html5:after, #Content > div ul.blocks ul.features li.html5:after {
             content: 'HTML 5'; }
-          #Content > div ul.blocks.expertise span.css:after, #Content > div ul.blocks ul.features li.css:after {
+          #Content > div ul.blocks.expertise li.css:after, #Content > div ul.blocks ul.features li.css:after {
             content: 'CSS'; }
-          #Content > div ul.blocks.expertise span.css3:after, #Content > div ul.blocks ul.features li.css3:after {
+          #Content > div ul.blocks.expertise li.css3:after, #Content > div ul.blocks ul.features li.css3:after {
             content: 'CSS 3'; }
-          #Content > div ul.blocks.expertise span.bs:after, #Content > div ul.blocks ul.features li.bs:after {
+          #Content > div ul.blocks.expertise li.bs:after, #Content > div ul.blocks ul.features li.bs:after {
             content: 'Bootstrap'; }
-          #Content > div ul.blocks.expertise span.js:after, #Content > div ul.blocks ul.features li.js:after {
+          #Content > div ul.blocks.expertise li.js:after, #Content > div ul.blocks ul.features li.js:after {
             content: 'JS'; }
-          #Content > div ul.blocks.expertise span.ko:after, #Content > div ul.blocks ul.features li.ko:after {
+          #Content > div ul.blocks.expertise li.ko:after, #Content > div ul.blocks ul.features li.ko:after {
             content: 'Knockout'; }
-          #Content > div ul.blocks.expertise span.ui-ux:after, #Content > div ul.blocks ul.features li.ui-ux:after {
+          #Content > div ul.blocks.expertise li.ui-ux:after, #Content > div ul.blocks ul.features li.ui-ux:after {
             content: 'UI/UX'; }
-          #Content > div ul.blocks.expertise span.sl:after, #Content > div ul.blocks ul.features li.sl:after {
+          #Content > div ul.blocks.expertise li.sl:after, #Content > div ul.blocks ul.features li.sl:after {
             content: 'Silverlight'; }
+        #Content > div ul.blocks.expertise {
+          position: relative;
+          height: 600px; }
+          #Content > div ul.blocks.expertise li {
+            position: absolute;
+            margin: 0;
+            width: 30px;
+            height: 30px;
+            min-width: 30px;
+            min-height: 30px;
+            vertical-align: middle; }
     #Content > div .tech-items li.cs, #Content > div .tech-items span.cs {
       background-color: #DF0101; }
     #Content > div .tech-items li.mvc, #Content > div .tech-items span.mvc {

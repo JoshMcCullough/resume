@@ -472,20 +472,204 @@ WriteLiteral("></li>\r\n                </ul>\r\n            </li>\r\n        </
 WriteLiteral(" class=\"subsection\"");
 
 WriteLiteral(">\r\n        <h2><span>self-rankings</span></h2>\r\n        <p>I\'ve compiled a list o" +
-"f the technologies I work with most often and indicated, for each one, my level " +
-"of expertise.</p>\r\n        <ul");
+"f the technologies I work with most often. The relative size of each item indica" +
+"tes my level of expertise.</p>\r\n        <ul");
 
 WriteLiteral(" class=\"blocks expertise tech-items\"");
 
-WriteLiteral(">\r\n            <li><span");
+WriteLiteral(">\r\n            <li");
 
 WriteLiteral(" class=\"cs\"");
 
-WriteLiteral("></span><span");
+WriteLiteral(" data-expertise=\"10\"");
 
-WriteLiteral(" class=\"expert\"");
+WriteLiteral("></li>\r\n            <li");
 
-WriteLiteral("></span></li>\r\n        </ul>\r\n    </div>\r\n</section>");
+WriteLiteral(" class=\"mvc\"");
+
+WriteLiteral(" data-expertise=\"10\"");
+
+WriteLiteral("></li>\r\n            <li");
+
+WriteLiteral(" class=\"webforms\"");
+
+WriteLiteral(" data-expertise=\"10\"");
+
+WriteLiteral("></li>\r\n            <li");
+
+WriteLiteral(" class=\"mssql\"");
+
+WriteLiteral(" data-expertise=\"9\"");
+
+WriteLiteral("></li>\r\n            <li");
+
+WriteLiteral(" class=\"mysql\"");
+
+WriteLiteral(" data-expertise=\"7\"");
+
+WriteLiteral("></li>\r\n            <li");
+
+WriteLiteral(" class=\"rails\"");
+
+WriteLiteral(" data-expertise=\"6\"");
+
+WriteLiteral("></li>\r\n            <li");
+
+WriteLiteral(" class=\"php\"");
+
+WriteLiteral(" data-expertise=\"5\"");
+
+WriteLiteral("></li>\r\n            <li");
+
+WriteLiteral(" class=\"wp\"");
+
+WriteLiteral(" data-expertise=\"4\"");
+
+WriteLiteral("></li>\r\n            <li");
+
+WriteLiteral(" class=\"winforms\"");
+
+WriteLiteral(" data-expertise=\"10\"");
+
+WriteLiteral("></li>\r\n            <li");
+
+WriteLiteral(" class=\"html\"");
+
+WriteLiteral(" data-expertise=\"10\"");
+
+WriteLiteral("></li>\r\n            <li");
+
+WriteLiteral(" class=\"css\"");
+
+WriteLiteral(" data-expertise=\"10\"");
+
+WriteLiteral("></li>\r\n            <li");
+
+WriteLiteral(" class=\"bs\"");
+
+WriteLiteral(" data-expertise=\"8\"");
+
+WriteLiteral("></li>\r\n            <li");
+
+WriteLiteral(" class=\"js\"");
+
+WriteLiteral(" data-expertise=\"10\"");
+
+WriteLiteral("></li>\r\n            <li");
+
+WriteLiteral(" class=\"ko\"");
+
+WriteLiteral(" data-expertise=\"7\"");
+
+WriteLiteral("></li>\r\n            <li");
+
+WriteLiteral(" class=\"sl\"");
+
+WriteLiteral(" data-expertise=\"4\"");
+
+WriteLiteral("></li>\r\n            ");
+
+WriteLiteral("\r\n        </ul>\r\n    </div>\r\n</section>\r\n\r\n");
+
+DefineSection("Scripts", () => {
+
+WriteLiteral("\r\n    <script");
+
+WriteLiteral(" type=\"text/javascript\"");
+
+WriteLiteral(">\r\n        var minSize = 30;\r\n        var maxSize = 100;\r\n        var padding = 4" +
+";\r\n        var sizeRange = (maxSize - minSize);\r\n        var movers = [\r\n       " +
+"     function ($tag, collidedTags) { $tag.css(\"top\", getExtreme(collidedTags, Ma" +
+"th.min, \"top\") - $tag.bounds.height - padding); },   //Up\r\n            function " +
+"($tag, collidedTags) { $tag.css(\"left\", getExtreme(collidedTags, Math.max, \"righ" +
+"t\") + padding); },                     //Right\r\n            function ($tag, coll" +
+"idedTags) { $tag.css(\"top\", getExtreme(collidedTags, Math.max, \"bottom\") + paddi" +
+"ng); },                     //Down\r\n            function ($tag, collidedTags) { " +
+"$tag.css(\"left\", getExtreme(collidedTags, Math.min, \"left\") - $tag.bounds.width " +
+"- padding); }   //Left\r\n        ];\r\n        var centerX, centerY;\r\n\r\n        fun" +
+"ction layoutTags($container) {\r\n            var $tags = $container.find(\"li\");\r\n" +
+"\r\n            initTags($container, $tags);\r\n            sortTags($container, $ta" +
+"gs);\r\n            sizeTags($container, $tags);\r\n            positionTags($contai" +
+"ner, $tags);\r\n        }\r\n\r\n        function initTags($container, $tags) {\r\n     " +
+"       centerX = ($container.width() / 2);\r\n            centerY = ($container.he" +
+"ight() / 2);\r\n            $tags.each(function () { this.expertise = Number(this." +
+"getAttribute(\"data-expertise\")); })\r\n        }\r\n\r\n        function sortTags($con" +
+"tainer, $tags) {\r\n            $tags.sort(function (a, b) {\r\n                var " +
+"aValue = a.expertise;\r\n                var bValue = b.expertise;\r\n\r\n            " +
+"    if (aValue > bValue)\r\n                    return -1;\r\n                else i" +
+"f (bValue > aValue)\r\n                    return 1;\r\n\r\n                return 0;\r" +
+"\n            });\r\n        }\r\n\r\n        function sizeTags($container, $tags) {\r\n " +
+"           var values = $tags.map(function () { return this.expertise; });\r\n    " +
+"        var min = Math.min.apply(Math, values);\r\n            var max = Math.max." +
+"apply(Math, values);\r\n            var range = (max - min);\r\n\r\n            $tags." +
+"each(function () {\r\n                var $tag = $(this);\r\n                var val" +
+"ue = $tag[0].expertise;\r\n                var relativeValue = ((value - min) / ra" +
+"nge);\r\n                var size = (minSize + (relativeValue * sizeRange));\r\n\r\n  " +
+"              $tag.width(size);\r\n                $tag.height(size);\r\n           " +
+"     $tag.css(\"line-height\", size + \"px\");\r\n            })\r\n        }\r\n\r\n       " +
+" function positionTags($container, $tags) {\r\n            var unplacedTags = $.ma" +
+"keArray($tags.map(function () { return $(this); }));\r\n            var placedTags" +
+" = new Array();\r\n            \r\n            //Place tags in a loop, randomly grab" +
+"bing each tag (except for the first iteration, start with the \"largest\" tag).\r\n " +
+"           while (unplacedTags.length > 0 && !stopTags) {\r\n                var t" +
+"agIndex = (placedTags.length == 0 ? 0 : Math.floor(Math.random() * unplacedTags." +
+"length));\r\n                var $tag = unplacedTags.splice(tagIndex, 1)[0];\r\n\r\n  " +
+"              //Place the tag.\r\n                placeTag(placedTags, $tag);\r\n\r\n " +
+"               //\"Mark\" the tag as placed.\r\n                placedTags.push($tag" +
+");\r\n            }\r\n\r\n            //Shift all tags so there are no negative coord" +
+"inates.\r\n            shiftTags(placedTags);\r\n            sizeContainer($containe" +
+"r, placedTags);\r\n        }\r\n\r\n        function placeTag(placedTags, $tag) {\r\n   " +
+"         var collidedTags = null;\r\n            var moverIndex = 0;\r\n\r\n          " +
+"  //Start at the center.\r\n            $tag.bounds = new Bounds($tag);\r\n         " +
+"   $tag.css(\"left\", (centerX - $tag.bounds.halfWidth));\r\n            $tag.css(\"t" +
+"op\", (centerY - $tag.bounds.halfHeight));\r\n            \r\n            do {\r\n     " +
+"           //Always clear the collided tag and recalculate the bounds.\r\n        " +
+"        collidedTags = new Array();\r\n                $tag.bounds = new Bounds($t" +
+"ag);\r\n\r\n                //Find the first collided tag (if any).\r\n               " +
+" for (var i = 0; i < placedTags.length; i++)\r\n                    if (placedTags" +
+"[i].bounds.collidesWith($tag.bounds))\r\n                        collidedTags.push" +
+"(placedTags[i]);\r\n\r\n                //If there\'s a collision, move the tag based" +
+" on an Archimedean Spiral.\r\n                if (collidedTags.length > 0) {\r\n    " +
+"                movers[moverIndex]($tag, collidedTags);\r\n\r\n                    i" +
+"f (moverIndex == (movers.length - 1))\r\n                        return;\r\n        " +
+"            else\r\n                        moverIndex = (moverIndex == (movers.le" +
+"ngth - 1) ? 0 : moverIndex + 1);\r\n                }\r\n            } while (collid" +
+"edTags.length > 0 && !stopTags);\r\n        }\r\n        var stopTags = false;\r\n\r\n  " +
+"      function shiftTags($tags) {\r\n            var minX = getExtreme($tags, Math" +
+".min, \"left\");\r\n            var minY = getExtreme($tags, Math.min, \"top\");\r\n    " +
+"        var moveX = (minX < 0 ? Math.abs(minX) : 0);\r\n            var moveY = (m" +
+"inY < 0 ? Math.abs(minY) : 0);\r\n\r\n            if (moveX > 0) {\r\n                " +
+"$tags.forEach(function ($tag) {\r\n                    $tag.css(\"left\", $tag.bound" +
+"s.left + moveX);\r\n                    $tag.bounds = new Bounds($tag);\r\n         " +
+"       });\r\n            }\r\n\r\n            if (moveY > 0) {\r\n                $tags" +
+".forEach(function ($tag) {\r\n                    $tag.css(\"top\", $tag.bounds.top " +
+"+ moveY);\r\n                    $tag.bounds = new Bounds($tag);\r\n                " +
+"});\r\n            }\r\n        }\r\n\r\n        function sizeContainer($container, $tag" +
+"s) {\r\n            var maxX = getExtreme($tags, Math.max, \"right\");\r\n            " +
+"var maxY = getExtreme($tags, Math.max, \"bottom\");\r\n\r\n            $container.widt" +
+"h(maxX);\r\n            $container.height(maxY);\r\n        }\r\n\r\n        function ge" +
+"tExtreme(tags, mathFunc, property) {\r\n            return (mathFunc.apply(Math, $" +
+".map(tags, function ($tag) { return $tag.bounds[property]; })) || 0);\r\n        }" +
+"\r\n\r\n        var Bounds = function Bounds() {\r\n            var Bounds = function " +
+"($element) {\r\n                var position = $element.position();\r\n             " +
+"   var width = $element.outerWidth();\r\n                var height = $element.out" +
+"erHeight();\r\n\r\n                this.left = position.left;\r\n                this." +
+"top = position.top;\r\n                this.width = width;\r\n                this.h" +
+"eight = height;\r\n                this.right = (position.left + width);\r\n        " +
+"        this.bottom = (position.top + height);\r\n                this.halfWidth =" +
+" (this.width / 2);\r\n                this.halfHeight = (this.height / 2);\r\n      " +
+"          this.center = {\r\n                    x: (this.left + this.halfWidth),\r" +
+"\n                    y: (this.top + this.halfHeight)\r\n                };\r\n      " +
+"      };\r\n\r\n            Bounds.prototype.collidesWith = function (otherBounds) {" +
+"\r\n                return !this.doesNotCollideWith(otherBounds);\r\n            };\r" +
+"\n\r\n            Bounds.prototype.doesNotCollideWith = function (otherBounds) {\r\n " +
+"               return (this.left > otherBounds.right || this.right < otherBounds" +
+".left || this.top > otherBounds.bottom || this.bottom < otherBounds.top);\r\n     " +
+"       };\r\n\r\n            return Bounds;\r\n        }();\r\n\r\n        window.scrollTo" +
+"(0, document.body.scrollHeight);\r\n        layoutTags($(\"ul.expertise\"));\r\n    </" +
+"script>\r\n");
+
+});
 
         }
     }
