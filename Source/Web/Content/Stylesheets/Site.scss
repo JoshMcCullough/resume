@@ -332,67 +332,35 @@ header {
                     color: #fff;
                     text-shadow: $primary-gray-90d 0 0 1px;
                     text-align: center;
+                    cursor: default;
 
-                    &:before { content: none; }
-
-                    &.cs:after { content: 'C#'; }
-                    &.mvc:after { content: 'ASP.NET MVC'; }
-                    &.webforms:after { content: 'ASP.NET Webforms'; }
-                    &.mssql:after { content: 'MSSQL'; }
-                    &.mysql:after { content: 'My SQL'; }
-                    &.rails:after { content: 'Rails'; }
-                    &.php:after { content: 'PHP'; }
-                    &.wp:after { content: 'Windows Phone'; }
-                    &.api:after { content: 'API'; }
-                    &.winforms:after { content: 'Windows Forms'; }
-                    &.html:after { content: 'HTML'; }
-                    &.html5:after { content: 'HTML 5'; }
-                    &.css:after { content: 'CSS'; }
-                    &.css3:after { content: 'CSS 3'; }
-                    &.bs:after { content: 'Bootstrap'; }
-                    &.js:after { content: 'JS'; }
-                    &.ko:after { content: 'Knockout'; }
-                    &.ui-ux:after { content: 'UI/UX'; }
-                    &.sl:after { content: 'Silverlight'; }
+                    &:before {
+                        content: none;
+                    }
                 }
 
                 &.expertise {
                     position: relative;
-                    height: 600px;
 
                     li {
+                        -moz-box-sizing: border-box;
+                        -webkit-box-sizing: border-box;
+                        box-sizing: border-box;
                         position: absolute;
                         margin: 0;
-                        width: 30px;
-                        height: 30px;
-                        min-width: 30px;
-                        min-height: 30px;
+                        padding: 4px;
+                        text-align: center;
                         vertical-align: middle;
+
+                        span {
+                            display: inline-block;
+                            width: 100%;
+                            line-height: normal;
+                            vertical-align: middle;
+                            overflow: hidden;
+                        }
                     }
                 }
-            }
-        }
-
-        .tech-items {
-            li,
-            span {
-                &.cs { background-color: #DF0101; }
-                &.mvc { background-color: #FFBF00; }
-                &.webforms { background-color: #0101DF; }
-                &.mssql { background-color: #DF01A5; }
-                &.mysql { background-color: #2ECCFA; }
-                &.rails { background-color: #12b44e; }
-                &.php { background-color: #7401DF; }
-                &.wp { background-color: #868A08; }
-                &.api { background-color: #f7624e; }
-                &.winforms { background-color: #522631; }
-                &.html, &.html5 { background-color: #DF3A01; }
-                &.css, &.css3 { background-color: #0B6121; }
-                &.bs { background-color: #0174DF; }
-                &.js { background-color: #DA81F5; }
-                &.ko { background-color: #086A87; }
-                &.ui-ux { background-color: #8A0829; }
-                &.sl { background-color: #585858; }
             }
         }
 
