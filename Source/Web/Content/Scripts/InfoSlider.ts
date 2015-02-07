@@ -94,13 +94,11 @@ class InfoSlider {
     }
 }
 
-if (jQuery != undefined) {
-    jQuery.fn.extend({
-        infoSlider: function (onSliding: Function) {
-            return new InfoSlider($(this), onSliding);
-        },
-        getInfoSlider: function () {
-            return $(this).data(InfoSlider.dataKey);
-        }
-    });
-}
+jQuery.fn.extend({
+    infoSlider: function (onSliding: Function) {
+        return new InfoSlider($(this), onSliding);
+    },
+    getInfoSlider: function () {
+        return $(this).data(InfoSlider.dataKey);
+    }
+});

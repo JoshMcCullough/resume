@@ -67,14 +67,12 @@ var InfoSlider = (function () {
     InfoSlider.dataKey = "info_slider";
     return InfoSlider;
 })();
-if (jQuery != undefined) {
-    jQuery.fn.extend({
-        infoSlider: function (onSliding) {
-            return new InfoSlider($(this), onSliding);
-        },
-        getInfoSlider: function () {
-            return $(this).data(InfoSlider.dataKey);
-        }
-    });
-}
+jQuery.fn.extend({
+    infoSlider: function (onSliding) {
+        return new InfoSlider($(this), onSliding);
+    },
+    getInfoSlider: function () {
+        return $(this).data(InfoSlider.dataKey);
+    }
+});
 //# sourceMappingURL=InfoSlider.js.map
