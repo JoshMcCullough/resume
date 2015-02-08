@@ -15,6 +15,7 @@ namespace JSM.Web.Startup {
 
             bundles.Add(new ScriptBundle("~/Content/Scripts/3rdParty").Include(
                 "~/Content/Scripts/jquery-{version}.js",
+                "~/Content/Scripts/jquery-ui-{version}.js",
                 "~/Content/Scripts/bootstrap.js",
                 "~/Content/Scripts/bigtext.js"));
 

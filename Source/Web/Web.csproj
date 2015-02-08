@@ -41,6 +41,18 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="QuantumConcepts.Common, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\QuantumConcepts.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="QuantumConcepts.Common.Mvc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\QuantumConcepts.Common.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="QuantumConcepts.Common.Web, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\QuantumConcepts.Common.Web.dll</HintPath>
+    </Reference>
     <Reference Include="RazorGenerator.Mvc">
       <HintPath>..\packages\RazorGenerator.Mvc.2.2.3\lib\net40\RazorGenerator.Mvc.dll</HintPath>
     </Reference>
@@ -266,6 +278,9 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Content\Scripts\InfoSlider.js" />
+    <Content Include="Content\Scripts\jquery-ui-1.11.2.js" />
+    <Content Include="Content\Scripts\jquery-ui-1.11.2.min.js" />
+    <Content Include="Content\Scripts\Tags.js" />
     <Content Include="Content\Stylesheets\bootstrap-theme.css" />
     <Content Include="Content\Stylesheets\bootstrap-theme.min.css" />
     <Content Include="Content\Stylesheets\bootstrap.css" />
@@ -384,6 +399,7 @@
     <Content Include="Content\Stylesheets\Global.css.map">
       <DependentUpon>Global.css</DependentUpon>
     </Content>
+    <Content Include="Content\Scripts\Tags.js.map" />
     <None Include="Properties\PublishProfiles\ftp.JoshMcCullough.me.pubxml" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <Content Include="Views\Shared\_Menu.cshtml">
@@ -457,20 +473,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Quantum Concepts\Quantum Concepts\Common\CommonMvc\QC Common MVC.csproj">
-      <Project>{98452b67-0a4a-4e91-b152-ff1df80f718a}</Project>
-      <Name>QC Common MVC</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\Quantum Concepts\Quantum Concepts\Common\CommonWeb\QC Common Web.csproj">
-      <Project>{890d3bc7-7bbb-4722-b0ab-2a840379530b}</Project>
-      <Name>QC Common Web</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\Quantum Concepts\Quantum Concepts\Common\Common\QC Common.csproj">
-      <Project>{8807828d-db88-462a-875e-647240d48668}</Project>
-      <Name>QC Common</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
