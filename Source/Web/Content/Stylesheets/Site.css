@@ -190,6 +190,9 @@ header {
             bottom: 0;
             white-space: nowrap; }
         #Content > div ul.blocks.expertise li, #Content > div ul.blocks ul.features li {
+          -moz-box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
           display: inline-block;
           margin: 0;
           padding: 5px;
@@ -198,7 +201,6 @@ header {
           text-indent: 0;
           line-height: 10px;
           border: 1px solid gainsboro;
-          border-bottom: none;
           font-size: 0.6em;
           vertical-align: bottom;
           color: #fff;
@@ -207,23 +209,42 @@ header {
           cursor: default; }
           #Content > div ul.blocks.expertise li:before, #Content > div ul.blocks ul.features li:before {
             content: none; }
+        #Content > div ul.blocks ul.features li {
+          border-bottom: none; }
+          #Content > div ul.blocks ul.features li span.rank {
+            display: none; }
         #Content > div ul.blocks.expertise {
           position: relative; }
           #Content > div ul.blocks.expertise li {
-            -moz-box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
             position: absolute;
             margin: 0;
             padding: 4px;
             text-align: center;
-            vertical-align: middle; }
+            vertical-align: middle;
+            opacity: 0;
+            overflow: visible; }
+            #Content > div ul.blocks.expertise li:hover {
+              width: auto !important;
+              z-index: 100; }
+              #Content > div ul.blocks.expertise li:hover span.rank {
+                display: inline-block; }
             #Content > div ul.blocks.expertise li span {
               display: inline-block;
               width: 100%;
+              padding: 4px 10px;
               line-height: normal;
               vertical-align: middle;
-              overflow: hidden; }
+              overflow: hidden;
+              background-color: inherit; }
+              #Content > div ul.blocks.expertise li span.rank {
+                position: absolute;
+                display: none;
+                top: 100%;
+                right: -1px;
+                width: auto;
+                border: inherit;
+                border-top: none;
+                background-color: inherit; }
     #Content > div a, #Content > div a:link, #Content > div a:active, #Content > div a:visited, #Content > div a:hover {
       color: #505050;
       text-decoration: underline; }

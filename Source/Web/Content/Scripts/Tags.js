@@ -9,6 +9,7 @@ var Tags = (function () {
         var _this = this;
         this.container = container;
         this.tags = new Array();
+        this.displayProperty = "abbreviation";
         var tagString = container.data(Tags.dataTagsKeysKey);
         if (tagString != null) {
             var tagKeys = tagString.split(" ");
@@ -25,7 +26,7 @@ var Tags = (function () {
     Tags.prototype.createElements = function () {
         var _this = this;
         this.tags.forEach(function (tag) {
-            tag.element = $("<li>").addClass("tag " + tag.key).css("background-color", tag.color.toCss()).attr("title", tag.name).data(Tags.dataTagKey, tag).append($("<span>").text(tag.name));
+            tag.element = $("<li>").addClass("tag " + tag.key).css("background-color", tag.color.toCss()).attr("title", tag.name).data(Tags.dataTagKey, tag).append($("<span>").text(tag[_this.displayProperty])).append(tag.expertise != null ? $("<span>").addClass("rank").text(tag.expertise) : null);
             _this.container.append(tag.element);
         }, this);
     };
@@ -48,14 +49,15 @@ var Tags = (function () {
         var hueMax = 360;
         var hueStep = (hueMax / ((count - 1) / valueCount));
         var colors = new Array();
-        for (var h = 0; h <= hueMax; h += hueStep) {
-            for (var v = valueMin; v <= valueMax; v += valueStep) {
+        for (var v = valueMin; v <= valueMax; v += valueStep) {
+            for (var h = 0; h <= hueMax; h += hueStep) {
                 var rgb = Tags.convertHsvToRgb(h, 100, v);
                 colors.push(rgb);
             }
         }
         return colors;
     };
+    // Based on: http://axonflux.com/handy-rgb-to-hsl-and-rgb-to-hsv-color-model-c
     Tags.convertHsvToRgb = function (h, s, v) {
         var r, g, b, i, f, p, q, t;
         h /= 360;
@@ -109,6 +111,10 @@ var Tags = (function () {
     Tags.allTags = new Array();
     return Tags;
 })();
+var ExpertiseLayoutMode;
+(function (ExpertiseLayoutMode) {
+    ExpertiseLayoutMode[ExpertiseLayoutMode["Linear"] = 0] = "Linear";
+})(ExpertiseLayoutMode || (ExpertiseLayoutMode = {}));
 var Expertise = (function (_super) {
     __extends(Expertise, _super);
     function Expertise(container, options) {
@@ -118,13 +124,26 @@ var Expertise = (function (_super) {
         this.minSize = 30;
         this.maxSize = 100;
         this.padding = 4;
+        this.layouts = {};
+        this.displayProperty = "name";
+        this.layoutMode = 0 /* Linear */;
         this.tags = $.grep(Tags.allTags, function (tag) { return tag.expertise != null; });
-        $.extend(this, options);
+        this.initLayouts();
+        $.extend(true, this, options);
         this.orderTags();
         this.sizeTags();
         this.createElements();
-        this.layoutTags();
+        $(document).ready(function () {
+            this.layoutTags();
+            this.registerEvents();
+        }.bind(this));
     }
+    Expertise.prototype.initLayouts = function () {
+        this.layouts[0 /* Linear */] = {
+            func: this.layoutTagsLinear,
+            options: new LinearLayoutOptions()
+        };
+    };
     Expertise.prototype.orderTags = function () {
         this.tags.sort(function (a, b) {
             if (a.expertise == b.expertise)
@@ -149,46 +168,90 @@ var Expertise = (function (_super) {
         }, this);
     };
     Expertise.prototype.layoutTags = function () {
+        this.layouts[this.layoutMode].func.call(this, this.layouts[this.layoutMode].options);
+    };
+    Expertise.prototype.layoutTagsLinear = function (options) {
         var _this = this;
         var firstTag = this.tags[0];
         var tagPaddingTop = parseInt(firstTag.element.css("padding-top"));
         var tagWidthOffset = (firstTag.element.outerWidth() - firstTag.element.width());
         var tagHeightOffset = (firstTag.element.outerHeight() - firstTag.element.height());
         var currentSize = null;
+        var maxRowHeight = null;
         var top = 0;
         var left = 0;
         var availableWidth = this.container.innerWidth();
-        this.tags.forEach(function (tag) {
+        this.tags.forEach(function (tag, index) {
+            var nextTop = (top + maxRowHeight + _this.padding);
             if (currentSize == null || currentSize != tag.size) {
-                if (currentSize != null)
-                    top += (currentSize + _this.padding);
+                if (currentSize != null && options.linePerLevel === true)
+                    top = nextTop;
                 currentSize = tag.size;
+                maxRowHeight = Math.max(maxRowHeight, currentSize);
+                if (options.linePerLevel === true)
+                    left = 0;
+            }
+            if ((left + currentSize) > availableWidth) {
+                top = nextTop;
+                maxRowHeight = currentSize;
                 left = 0;
             }
-            else
-                left += (currentSize + _this.padding);
-            tag.element.width(currentSize - tagWidthOffset);
-            tag.element.height(currentSize - tagHeightOffset);
-            tag.element.css("top", top);
-            tag.element.css("left", left);
-            tag.element.css("line-height", (currentSize - tagHeightOffset - tagPaddingTop) + "px");
+            tag.element.css("line-height", (currentSize - tagHeightOffset - (2 * tagPaddingTop)) + "px");
+            tag.element.delay(index * options.animationDelay).animate({
+                width: (currentSize),
+                height: (currentSize),
+                minWidth: (currentSize),
+                minHeight: (currentSize),
+                top: (top + ((maxRowHeight - currentSize) / 2)),
+                left: left,
+                opacity: 1
+            }, {
+                duration: options.animationDuration,
+                easing: options.animationEasing
+            });
+            left += (currentSize + _this.padding);
         }, this);
         this.container.height(top + currentSize);
     };
+    Expertise.prototype.registerEvents = function () {
+        $(window).resize(this.layoutTags.bind(this));
+    };
     return Expertise;
 })(Tags);
+var LayoutOptions = (function () {
+    function LayoutOptions(options) {
+        if (options === void 0) { options = null; }
+        this.animationDelay = 50;
+        this.animationDuration = 800;
+        this.animationEasing = "easeOutQuart";
+    }
+    return LayoutOptions;
+})();
+var LinearLayoutOptions = (function (_super) {
+    __extends(LinearLayoutOptions, _super);
+    function LinearLayoutOptions(options) {
+        if (options === void 0) { options = null; }
+        _super.call(this, null);
+        this.linePerLevel = true;
+        $.extend(true, this, options);
+    }
+    return LinearLayoutOptions;
+})(LayoutOptions);
 var Tag = (function () {
-    function Tag(key, name, expertise) {
+    function Tag(key, abbreviation, name, expertise) {
         if (name === void 0) { name = null; }
         if (expertise === void 0) { expertise = null; }
         this.key = key;
+        this.abbreviation = abbreviation;
         this.name = name;
         this.expertise = expertise;
         this.color = null;
         this.element = null;
         this.size = null;
+        if (abbreviation == null)
+            this.abbreviation = (this.name || this.key);
         if (name == null)
-            this.name = this.key;
+            this.name = (this.abbreviation || this.key);
     }
     return Tag;
 })();
@@ -205,68 +268,73 @@ var Rgb = (function () {
 })();
 jQuery.fn.extend({
     tags: function () {
-        return new Tags($(this));
+        $(this).each(function () {
+            new Tags($(this));
+        });
     },
     getTags: function () {
         return $(this).data(Tags.dataTagsKey);
     },
-    expertise: function () {
-        return new Expertise($(this));
+    expertise: function (options) {
+        if (options === void 0) { options = null; }
+        $(this).each(function () {
+            new Expertise($(this), options);
+        });
     },
     getExpertise: function () {
         return $(this).data(Expertise.dataTagsKey);
     },
 });
-Tags.allTags.push(new Tag("aws", "Amazon Web Services", 7));
-Tags.allTags.push(new Tag("apache2", "Apache2", 6));
-Tags.allTags.push(new Tag("api", "API"));
-Tags.allTags.push(new Tag("arcgis", "ArcGIS", 3));
-Tags.allTags.push(new Tag("arduino", "Arduino", 4));
-Tags.allTags.push(new Tag("webforms", "ASP.NET WebForms", 10));
-Tags.allTags.push(new Tag("ontime", "Axosoft OnTime", 7));
-Tags.allTags.push(new Tag("bs", "Bootstrap", 8));
-Tags.allTags.push(new Tag("cs", "C#", 10));
-Tags.allTags.push(new Tag("cpp", "C++", 3));
-Tags.allTags.push(new Tag("css", "CSS", 10));
-Tags.allTags.push(new Tag("css3", "CSS3", 10));
-Tags.allTags.push(new Tag("flash", "Dlash", 3));
-Tags.allTags.push(new Tag("git", "Git", 7));
-Tags.allTags.push(new Tag("grails", "Grails", 3));
-Tags.allTags.push(new Tag("html", "HTML", 10));
-Tags.allTags.push(new Tag("html5", "HTML5", 10));
-Tags.allTags.push(new Tag("iis", "IIS", 10));
-Tags.allTags.push(new Tag("java", "Java", 7));
-Tags.allTags.push(new Tag("js", "JavaScript", 10));
-Tags.allTags.push(new Tag("ko", "Knockout", 7));
-Tags.allTags.push(new Tag("linux", "Linux", 6));
-Tags.allTags.push(new Tag("mantis", "Mantis", 6));
-Tags.allTags.push(new Tag("mapping", "Mapping", 6));
-Tags.allTags.push(new Tag("mssql", "Microsoft SQL Server", 9));
-Tags.allTags.push(new Tag("mvc", "Model-View-Controller", 10));
-Tags.allTags.push(new Tag("msoffice", "MS Office", 6));
-Tags.allTags.push(new Tag("mysql", "My SQL", 7));
-Tags.allTags.push(new Tag("openscad", "OpenSCAD", 3));
-Tags.allTags.push(new Tag("oracle", "Oracle", 5));
-Tags.allTags.push(new Tag("php", "PHP", 5));
-Tags.allTags.push(new Tag("python", "Python", 2));
-Tags.allTags.push(new Tag("redmine", "Redmine", 6));
-Tags.allTags.push(new Tag("regex", "Regular Expressions", 9));
-Tags.allTags.push(new Tag("rails", "Ruby on Rails", 6));
-Tags.allTags.push(new Tag("sl", "Silverlight", 4));
-Tags.allTags.push(new Tag("svn", "Subversion", 9));
-Tags.allTags.push(new Tag("svg", "SVG", 7));
-Tags.allTags.push(new Tag("tfs", "Team Foundation Server", 9));
-Tags.allTags.push(new Tag("tfvc", "Team Foundation Version Control", 7));
-Tags.allTags.push(new Tag("tomcat", "Tomcat", 7));
-Tags.allTags.push(new Tag("uiux", "UI/UX", 7));
-Tags.allTags.push(new Tag("vb", "Visual Basic .NET", 8));
-Tags.allTags.push(new Tag("weblogic", "WebLogic", 10));
-Tags.allTags.push(new Tag("windows", "Windows", 10));
-Tags.allTags.push(new Tag("wcf", "Windows Communication Foundation", 7));
-Tags.allTags.push(new Tag("winforms", "Windows Forms", 10));
-Tags.allTags.push(new Tag("wp", "Windows Phone", 4));
-Tags.allTags.push(new Tag("xml", "XML", 10));
-Tags.allTags.push(new Tag("xsd", "XSD", 7));
-Tags.allTags.push(new Tag("xslt", "XSLT", 9));
+Tags.allTags.push(new Tag("aws", "AWS", "Amazon Web Services", 7));
+Tags.allTags.push(new Tag("apache2", null, "Apache2", 6));
+Tags.allTags.push(new Tag("api", "API", "API"));
+Tags.allTags.push(new Tag("arcgis", null, "ArcGIS", 3));
+Tags.allTags.push(new Tag("arduino", null, "Arduino", 4));
+Tags.allTags.push(new Tag("webforms", "WebForms", "ASP.NET WebForms", 10));
+Tags.allTags.push(new Tag("ontime", "OnTime", "Axosoft OnTime", 7));
+Tags.allTags.push(new Tag("bs", null, "Bootstrap", 8));
+Tags.allTags.push(new Tag("cs", null, "C#", 10));
+Tags.allTags.push(new Tag("cpp", null, "C++", 3));
+Tags.allTags.push(new Tag("css", null, "CSS", 10));
+Tags.allTags.push(new Tag("css3", null, "CSS3", 10));
+Tags.allTags.push(new Tag("flash", null, "Flash", 3));
+Tags.allTags.push(new Tag("git", null, "Git", 7));
+Tags.allTags.push(new Tag("grails", null, "Grails", 3));
+Tags.allTags.push(new Tag("html", null, "HTML", 10));
+Tags.allTags.push(new Tag("html5", null, "HTML5", 10));
+Tags.allTags.push(new Tag("iis", "IIS", "Internet Information Services", 10));
+Tags.allTags.push(new Tag("java", null, "Java", 7));
+Tags.allTags.push(new Tag("js", "JS", "JavaScript", 10));
+Tags.allTags.push(new Tag("ko", null, "Knockout", 7));
+Tags.allTags.push(new Tag("linux", null, "Linux", 6));
+Tags.allTags.push(new Tag("mantis", null, "Mantis", 6));
+Tags.allTags.push(new Tag("mapping", null, "Mapping", 6));
+Tags.allTags.push(new Tag("mssql", "MS SQL", "Microsoft SQL Server", 9));
+Tags.allTags.push(new Tag("mvc", "MVC", "ASP.NET MVC", 10));
+Tags.allTags.push(new Tag("msoffice", null, "MS Office", 6));
+Tags.allTags.push(new Tag("mysql", null, "My SQL", 7));
+Tags.allTags.push(new Tag("openscad", null, "OpenSCAD", 3));
+Tags.allTags.push(new Tag("oracle", null, "Oracle", 5));
+Tags.allTags.push(new Tag("php", null, "PHP", 5));
+Tags.allTags.push(new Tag("python", null, "Python", 2));
+Tags.allTags.push(new Tag("redmine", null, "Redmine", 6));
+Tags.allTags.push(new Tag("regex", "RegEx", "Regular Expressions", 9));
+Tags.allTags.push(new Tag("rails", "Rails", "Ruby on Rails", 6));
+Tags.allTags.push(new Tag("sl", null, "Silverlight", 4));
+Tags.allTags.push(new Tag("svn", "SVN", "Subversion", 9));
+Tags.allTags.push(new Tag("svg", null, "SVG", 7));
+Tags.allTags.push(new Tag("tfs", "TFS", "Team Foundation Server", 9));
+Tags.allTags.push(new Tag("tfvc", "TFVC", "Team Foundation Version Control", 7));
+Tags.allTags.push(new Tag("tomcat", null, "Tomcat", 7));
+Tags.allTags.push(new Tag("uiux", null, "UI/UX", 7));
+Tags.allTags.push(new Tag("vb", "VB.NET", "Visual Basic .NET", 8));
+Tags.allTags.push(new Tag("weblogic", null, "WebLogic", 10));
+Tags.allTags.push(new Tag("windows", null, "Windows", 10));
+Tags.allTags.push(new Tag("wcf", "WCF", "Windows Communication Foundation", 7));
+Tags.allTags.push(new Tag("winforms", "WinForms", "Windows Forms", 10));
+Tags.allTags.push(new Tag("wp", null, "Windows Phone", 4));
+Tags.allTags.push(new Tag("xml", null, "XML", 10));
+Tags.allTags.push(new Tag("xsd", null, "XSD", 7));
+Tags.allTags.push(new Tag("xslt", null, "XSLT", 9));
 Tags.init();
 //# sourceMappingURL=Tags.js.map

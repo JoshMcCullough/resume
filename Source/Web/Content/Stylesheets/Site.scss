@@ -318,6 +318,9 @@ header {
 
                 &.expertise li,
                 ul.features li {
+                    -moz-box-sizing: border-box;
+                    -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
                     display: inline-block;
                     margin: 0;
                     padding: 5px;
@@ -326,7 +329,6 @@ header {
                     text-indent: 0;
                     line-height: 10px;
                     border: 1px solid $primary-gray-5d;
-                    border-bottom: none;
                     font-size: .6em;
                     vertical-align: bottom;
                     color: #fff;
@@ -339,25 +341,54 @@ header {
                     }
                 }
 
+                ul.features li {
+                    border-bottom: none;
+
+                    span.rank {
+                        display: none;
+                    }
+                }
+
                 &.expertise {
                     position: relative;
 
                     li {
-                        -moz-box-sizing: border-box;
-                        -webkit-box-sizing: border-box;
-                        box-sizing: border-box;
                         position: absolute;
                         margin: 0;
                         padding: 4px;
                         text-align: center;
                         vertical-align: middle;
+                        opacity: 0;
+                        overflow: visible;
+
+                        &:hover {
+                            width: auto !important;
+                            z-index: 100;
+
+                            span.rank {
+                                display: inline-block;
+                            }
+                        }
 
                         span {
                             display: inline-block;
                             width: 100%;
+                            padding: 4px 10px;
                             line-height: normal;
                             vertical-align: middle;
                             overflow: hidden;
+                            background-color: inherit;
+
+                            &.rank {
+                                position: absolute;
+                                display: none;
+                                top: 100%;
+                                right: -1px;
+                                width: auto;
+                                border: inherit;
+                                border-top: none;
+                                background-color: inherit;
+                            }
                         }
                     }
                 }

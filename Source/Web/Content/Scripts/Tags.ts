@@ -5,6 +5,7 @@
     static allTags = new Array<Tag>();
 
     public tags = new Array<Tag>();
+    public displayProperty = "abbreviation";
 
     constructor(public container: JQuery) {
         var tagString = container.data(Tags.dataTagsKeysKey);
@@ -35,7 +36,10 @@
                 .attr("title", tag.name)
                 .data(Tags.dataTagKey, tag)
                 .append($("<span>")
-                    .text(tag.name));
+                    .text(tag[this.displayProperty]))
+                .append(tag.expertise != null ? $("<span>")
+                    .addClass("rank")
+                    .text(tag.expertise) : null);
 
             this.container.append(tag.element);
         }, this);
@@ -65,8 +69,8 @@
         var hueStep = (hueMax / ((count - 1) / valueCount));
         var colors = new Array<Rgb>();
 
-        for (var h = 0; h <= hueMax; h += hueStep) {
-            for (var v = valueMin; v <= valueMax; v += valueStep) {
+        for (var v = valueMin; v <= valueMax; v += valueStep) {
+            for (var h = 0; h <= hueMax; h += hueStep) {
                 var rgb = Tags.convertHsvToRgb(h, 100, v);
 
                 colors.push(rgb);
@@ -76,6 +80,7 @@
         return colors;
     }
 
+    // Based on: http://axonflux.com/handy-rgb-to-hsl-and-rgb-to-hsv-color-model-c
     private static convertHsvToRgb(h: number, s: number, v: number): Rgb {
         var r, g, b, i, f, p, q, t;
 
@@ -105,22 +110,42 @@
     }
 }
 
+enum ExpertiseLayoutMode {
+    Linear
+}
+
 class Expertise extends Tags {
     private minSize = 30;
     private maxSize = 100;
     private padding = 4;
+    private layouts = {};
+
+    public displayProperty = "name";
+    public layoutMode = ExpertiseLayoutMode.Linear;
 
     constructor(public container: JQuery, options: Object = null) {
         super(container);
 
         this.tags = $.grep(Tags.allTags, (tag) => tag.expertise != null);
+        this.initLayouts();
 
-        $.extend(this, options);
+        $.extend(true, this, options);
 
         this.orderTags();
         this.sizeTags();
         this.createElements();
-        this.layoutTags();
+
+        $(document).ready(function () {
+            this.layoutTags();
+            this.registerEvents();
+        }.bind(this));
+    }
+
+    private initLayouts() {
+        this.layouts[ExpertiseLayoutMode.Linear] = {
+            func: this.layoutTagsLinear,
+            options: new LinearLayoutOptions()
+        };
     }
 
     public orderTags(): void {
@@ -151,34 +176,80 @@ class Expertise extends Tags {
     }
 
     public layoutTags(): void {
+        this.layouts[this.layoutMode].func.call(this, this.layouts[this.layoutMode].options);
+    }
+
+    private layoutTagsLinear(options: LinearLayoutOptions): void {
         var firstTag = this.tags[0];
         var tagPaddingTop = parseInt(firstTag.element.css("padding-top"));
         var tagWidthOffset = (firstTag.element.outerWidth() - firstTag.element.width());
         var tagHeightOffset = (firstTag.element.outerHeight() - firstTag.element.height());
         var currentSize = null;
+        var maxRowHeight = null;
         var top = 0;
         var left = 0;
         var availableWidth = this.container.innerWidth();
 
-        this.tags.forEach((tag) => {
+        this.tags.forEach((tag, index) => {
+            var nextTop = (top + maxRowHeight + this.padding);
+
             if (currentSize == null || currentSize != tag.size) {
-                if (currentSize != null)
-                    top += (currentSize + this.padding);
+                if (currentSize != null && options.linePerLevel === true)
+                    top = nextTop;
 
                 currentSize = tag.size;
+                maxRowHeight = Math.max(maxRowHeight, currentSize);
+
+                if (options.linePerLevel === true)
+                    left = 0;
+            }
+
+            if ((left + currentSize) > availableWidth) {
+                top = nextTop;
+                maxRowHeight = currentSize;
                 left = 0;
             }
-            else
-                left += (currentSize + this.padding);
 
-            tag.element.width(currentSize - tagWidthOffset);
-            tag.element.height(currentSize - tagHeightOffset);
-            tag.element.css("top", top);
-            tag.element.css("left", left);
-            tag.element.css("line-height", (currentSize - tagHeightOffset - tagPaddingTop) + "px");
+            tag.element.css("line-height", (currentSize - tagHeightOffset - (2 * tagPaddingTop)) + "px");
+            tag.element.delay(index * options.animationDelay).animate({
+                width: (currentSize),
+                height: (currentSize),
+                minWidth: (currentSize),
+                minHeight: (currentSize),
+                top: (top + ((maxRowHeight - currentSize) / 2)),
+                left: left,
+                opacity: 1
+            }, {
+                duration: options.animationDuration,
+                easing: options.animationEasing
+            });
+
+            left += (currentSize + this.padding);
         }, this);
 
         this.container.height(top + currentSize);
+    }
+
+    private registerEvents() {
+        $(window).resize(this.layoutTags.bind(this));
+    }
+}
+
+class LayoutOptions {
+    public animationDelay = 50;
+    public animationDuration = 800;
+    public animationEasing = "easeOutQuart";
+
+    constructor(options: Object = null) {
+    }
+}
+
+class LinearLayoutOptions extends LayoutOptions {
+    public linePerLevel = true;
+
+    constructor(options: Object = null) {
+        super(null);
+        $.extend(true, this, options);
     }
 }
 
@@ -187,9 +258,12 @@ class Tag {
     public element: JQuery = null;
     public size: number = null;
 
-    constructor(public key: string, public name: string = null, public expertise: number = null) {
+    constructor(public key: string, public abbreviation: string, public name: string = null, public expertise: number = null) {
+        if (abbreviation == null)
+            this.abbreviation = (this.name || this.key);
+
         if (name == null)
-            this.name = this.key;
+            this.name = (this.abbreviation || this.key);
     }
 }
 
@@ -204,69 +278,74 @@ class Rgb {
 
 jQuery.fn.extend({
     tags: function () {
-        return new Tags($(this));
+        $(this).each(function () {
+            new Tags($(this));
+        });
     },
     getTags: function () {
         return $(this).data(Tags.dataTagsKey);
     },
-    expertise: function () {
-        return new Expertise($(this));
+    expertise: function (options: Object = null) {
+        $(this).each(function () {
+            new Expertise($(this), options);
+        });
     },
     getExpertise: function () {
         return $(this).data(Expertise.dataTagsKey);
     },
 });
 
-Tags.allTags.push(new Tag("aws", "Amazon Web Services", 7));
-Tags.allTags.push(new Tag("apache2", "Apache2", 6));
-Tags.allTags.push(new Tag("api", "API"));
-Tags.allTags.push(new Tag("arcgis", "ArcGIS", 3));
-Tags.allTags.push(new Tag("arduino", "Arduino", 4));
-Tags.allTags.push(new Tag("webforms", "ASP.NET WebForms", 10));
-Tags.allTags.push(new Tag("ontime", "Axosoft OnTime", 7));
-Tags.allTags.push(new Tag("bs", "Bootstrap", 8));
-Tags.allTags.push(new Tag("cs", "C#", 10));
-Tags.allTags.push(new Tag("cpp", "C++", 3));
-Tags.allTags.push(new Tag("css", "CSS", 10));
-Tags.allTags.push(new Tag("css3", "CSS3", 10));
-Tags.allTags.push(new Tag("flash", "Dlash", 3));
-Tags.allTags.push(new Tag("git", "Git", 7));
-Tags.allTags.push(new Tag("grails", "Grails", 3));
-Tags.allTags.push(new Tag("html", "HTML", 10));
-Tags.allTags.push(new Tag("html5", "HTML5", 10));
-Tags.allTags.push(new Tag("iis", "IIS", 10));
-Tags.allTags.push(new Tag("java", "Java", 7));
-Tags.allTags.push(new Tag("js", "JavaScript", 10));
-Tags.allTags.push(new Tag("ko", "Knockout", 7));
-Tags.allTags.push(new Tag("linux", "Linux", 6));
-Tags.allTags.push(new Tag("mantis", "Mantis", 6));
-Tags.allTags.push(new Tag("mapping", "Mapping", 6));
-Tags.allTags.push(new Tag("mssql", "Microsoft SQL Server", 9));
-Tags.allTags.push(new Tag("mvc", "Model-View-Controller", 10));
-Tags.allTags.push(new Tag("msoffice", "MS Office", 6));
-Tags.allTags.push(new Tag("mysql", "My SQL", 7));
-Tags.allTags.push(new Tag("openscad", "OpenSCAD", 3));
-Tags.allTags.push(new Tag("oracle", "Oracle", 5));
-Tags.allTags.push(new Tag("php", "PHP", 5));
-Tags.allTags.push(new Tag("python", "Python", 2));
-Tags.allTags.push(new Tag("redmine", "Redmine", 6));
-Tags.allTags.push(new Tag("regex", "Regular Expressions", 9));
-Tags.allTags.push(new Tag("rails", "Ruby on Rails", 6));
-Tags.allTags.push(new Tag("sl", "Silverlight", 4));
-Tags.allTags.push(new Tag("svn", "Subversion", 9));
-Tags.allTags.push(new Tag("svg", "SVG", 7));
-Tags.allTags.push(new Tag("tfs", "Team Foundation Server", 9));
-Tags.allTags.push(new Tag("tfvc", "Team Foundation Version Control", 7));
-Tags.allTags.push(new Tag("tomcat", "Tomcat", 7));
-Tags.allTags.push(new Tag("uiux", "UI/UX", 7));
-Tags.allTags.push(new Tag("vb", "Visual Basic .NET", 8));
-Tags.allTags.push(new Tag("weblogic", "WebLogic", 10));
-Tags.allTags.push(new Tag("windows", "Windows", 10));
-Tags.allTags.push(new Tag("wcf", "Windows Communication Foundation", 7));
-Tags.allTags.push(new Tag("winforms", "Windows Forms", 10));
-Tags.allTags.push(new Tag("wp", "Windows Phone", 4));
-Tags.allTags.push(new Tag("xml", "XML", 10));
-Tags.allTags.push(new Tag("xsd", "XSD", 7));
-Tags.allTags.push(new Tag("xslt", "XSLT", 9));
+Tags.allTags.push(new Tag("aws", "AWS", "Amazon Web Services", 7));
+Tags.allTags.push(new Tag("apache2", null, "Apache2", 6));
+Tags.allTags.push(new Tag("api", "API", "API"));
+Tags.allTags.push(new Tag("arcgis", null, "ArcGIS", 3));
+Tags.allTags.push(new Tag("arduino", null, "Arduino", 4));
+Tags.allTags.push(new Tag("webforms", "WebForms", "ASP.NET WebForms", 10));
+Tags.allTags.push(new Tag("ontime", "OnTime", "Axosoft OnTime", 7));
+Tags.allTags.push(new Tag("bs", null, "Bootstrap", 8));
+Tags.allTags.push(new Tag("cs", null, "C#", 10));
+Tags.allTags.push(new Tag("cpp", null, "C++", 3));
+Tags.allTags.push(new Tag("css", null, "CSS", 10));
+Tags.allTags.push(new Tag("css3", null, "CSS3", 10));
+Tags.allTags.push(new Tag("flash", null, "Flash", 3));
+Tags.allTags.push(new Tag("git", null, "Git", 7));
+Tags.allTags.push(new Tag("grails", null, "Grails", 3));
+Tags.allTags.push(new Tag("html", null, "HTML", 10));
+Tags.allTags.push(new Tag("html5", null, "HTML5", 10));
+Tags.allTags.push(new Tag("iis", "IIS", "Internet Information Services", 10));
+Tags.allTags.push(new Tag("java", null, "Java", 7));
+Tags.allTags.push(new Tag("js", "JS", "JavaScript", 10));
+Tags.allTags.push(new Tag("ko", null, "Knockout", 7));
+Tags.allTags.push(new Tag("linux", null, "Linux", 6));
+Tags.allTags.push(new Tag("mantis", null, "Mantis", 6));
+Tags.allTags.push(new Tag("mapping", null, "Mapping", 6));
+Tags.allTags.push(new Tag("mssql", "MS SQL", "Microsoft SQL Server", 9));
+Tags.allTags.push(new Tag("mvc", "MVC", "ASP.NET MVC", 10));
+Tags.allTags.push(new Tag("msoffice", null, "MS Office", 6));
+Tags.allTags.push(new Tag("mysql", null, "My SQL", 7));
+Tags.allTags.push(new Tag("openscad", null, "OpenSCAD", 3));
+Tags.allTags.push(new Tag("oracle", null, "Oracle", 5));
+Tags.allTags.push(new Tag("php", null, "PHP", 5));
+Tags.allTags.push(new Tag("python", null, "Python", 2));
+Tags.allTags.push(new Tag("redmine", null, "Redmine", 6));
+Tags.allTags.push(new Tag("regex", "RegEx", "Regular Expressions", 9));
+Tags.allTags.push(new Tag("rails", "Rails", "Ruby on Rails", 6));
+Tags.allTags.push(new Tag("sl", null, "Silverlight", 4));
+Tags.allTags.push(new Tag("svn", "SVN", "Subversion", 9));
+Tags.allTags.push(new Tag("svg", null, "SVG", 7));
+Tags.allTags.push(new Tag("tfs", "TFS", "Team Foundation Server", 9));
+Tags.allTags.push(new Tag("tfvc", "TFVC", "Team Foundation Version Control", 7));
+Tags.allTags.push(new Tag("tomcat", null, "Tomcat", 7));
+Tags.allTags.push(new Tag("uiux", null, "UI/UX", 7));
+Tags.allTags.push(new Tag("vb", "VB.NET", "Visual Basic .NET", 8));
+Tags.allTags.push(new Tag("weblogic", null, "WebLogic", 10));
+Tags.allTags.push(new Tag("windows", null, "Windows", 10));
+Tags.allTags.push(new Tag("wcf", "WCF", "Windows Communication Foundation", 7));
+Tags.allTags.push(new Tag("winforms", "WinForms", "Windows Forms", 10));
+Tags.allTags.push(new Tag("wp", null, "Windows Phone", 4));
+Tags.allTags.push(new Tag("xml", null, "XML", 10));
+Tags.allTags.push(new Tag("xsd", null, "XSD", 7));
+Tags.allTags.push(new Tag("xslt", null, "XSLT", 9));
+
 
 Tags.init();

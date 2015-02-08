@@ -50,16 +50,35 @@ namespace ASP
             
             #line default
             #line hidden
-WriteLiteral("\r\n\r\n<section>\r\n");
+WriteLiteral("\r\n\r\n<section>\r\n    <h1><span>");
 
             
             #line 6 "..\..\Views\Overview\Index.cshtml"
+         Write(this.Model.Title);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</span></h1>\r\n\r\n    <div");
+
+WriteLiteral(" class=\"subsection\"");
+
+WriteLiteral(">\r\n        <h2><span>self-rankings</span></h2>\r\n        <p>I\'ve compiled a list o" +
+"f the technologies I work with most often. The relative size of each item indica" +
+"tes my level of expertise.</p>\r\n        <ul");
+
+WriteLiteral(" class=\"blocks expertise\"");
+
+WriteLiteral("></ul>\r\n    </div>\r\n\r\n");
+
+            
+            #line 14 "..\..\Views\Overview\Index.cshtml"
     
             
             #line default
             #line hidden
             
-            #line 6 "..\..\Views\Overview\Index.cshtml"
+            #line 14 "..\..\Views\Overview\Index.cshtml"
       Html.RenderPartial("_Content");
             
             #line default
@@ -286,17 +305,7 @@ WriteLiteral(" class=\"features tags\"");
 
 WriteLiteral(" data-tags-keys=\"cs wp api sl uiux\"");
 
-WriteLiteral("></ul>\r\n            </li>\r\n        </ul>\r\n    </div>\r\n\r\n    <div");
-
-WriteLiteral(" class=\"subsection\"");
-
-WriteLiteral(">\r\n        <h2><span>self-rankings</span></h2>\r\n        <p>I\'ve compiled a list o" +
-"f the technologies I work with most often. The relative size of each item indica" +
-"tes my level of expertise.</p>\r\n        <ul");
-
-WriteLiteral(" class=\"blocks expertise\"");
-
-WriteLiteral("></ul>\r\n    </div>\r\n</section>\r\n\r\n");
+WriteLiteral("></ul>\r\n            </li>\r\n        </ul>\r\n    </div>\r\n</section>\r\n\r\n");
 
 DefineSection("Scripts", () => {
 
@@ -304,22 +313,37 @@ WriteLiteral("\r\n    <script");
 
 WriteLiteral(" type=\"text/javascript\"");
 
-WriteAttribute("src", Tuple.Create(" src=\"", 5691), Tuple.Create("\"", 5738)
+WriteAttribute("src", Tuple.Create(" src=\"", 5738), Tuple.Create("\"", 5785)
             
-            #line 85 "..\..\Views\Overview\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 5697), Tuple.Create<System.Object, System.Int32>(Url.Content("~/Content/Scripts/Tags.js")
+            #line 87 "..\..\Views\Overview\Index.cshtml"
+, Tuple.Create(Tuple.Create("", 5744), Tuple.Create<System.Object, System.Int32>(Url.Content("~/Content/Scripts/Tags.js")
             
             #line default
             #line hidden
-, 5697), false)
+, 5744), false)
 );
 
 WriteLiteral("></script>\"\r\n    <script");
 
 WriteLiteral(" type=\"text/javascript\"");
 
-WriteLiteral(">\r\n        $(\"ul.tags\").tags();\r\n        $(\"ul.expertise\").expertise();\r\n    </sc" +
-"ript>\r\n");
+WriteLiteral(@">
+        $(""ul.tags"").tags();
+        $(""ul.expertise"").expertise({
+            layouts: function () {
+                var layouts = {};
+
+                layouts[ExpertiseLayoutMode.Linear] = {
+                    options: new LinearLayoutOptions({
+                        linePerLevel: false
+                    })
+                };
+
+                return layouts;
+            }()
+        });
+    </script>
+");
 
 });
 

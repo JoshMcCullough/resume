@@ -3,6 +3,14 @@
 }
 
 <section>
+    <h1><span>@this.Model.Title</span></h1>
+
+    <div class="subsection">
+        <h2><span>self-rankings</span></h2>
+        <p>I've compiled a list of the technologies I work with most often. The relative size of each item indicates my level of expertise.</p>
+        <ul class="blocks expertise"></ul>
+    </div>
+
     @{Html.RenderPartial("_Content");}
 
     <div class="subsection">
@@ -73,18 +81,24 @@
             </li>
         </ul>
     </div>
-
-    <div class="subsection">
-        <h2><span>self-rankings</span></h2>
-        <p>I've compiled a list of the technologies I work with most often. The relative size of each item indicates my level of expertise.</p>
-        <ul class="blocks expertise"></ul>
-    </div>
 </section>
 
 @section Scripts {
     <script type="text/javascript" src="@Url.Content("~/Content/Scripts/Tags.js")"></script>"
     <script type="text/javascript">
         $("ul.tags").tags();
-        $("ul.expertise").expertise();
+        $("ul.expertise").expertise({
+            layouts: function () {
+                var layouts = {};
+
+                layouts[ExpertiseLayoutMode.Linear] = {
+                    options: new LinearLayoutOptions({
+                        linePerLevel: false
+                    })
+                };
+
+                return layouts;
+            }()
+        });
     </script>
 }
