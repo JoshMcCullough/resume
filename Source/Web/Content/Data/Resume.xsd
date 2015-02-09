@@ -54,7 +54,7 @@
     <xs:complexType name="Section">
         <xs:complexContent>
             <xs:extension base="SectionBase">
-                <xs:attribute name="Key" type="xs:string"/>
+                <xs:attribute name="Key" type="xs:string" use="required"/>
                 <xs:attribute name="Title" type="xs:string"/>
             </xs:extension>
         </xs:complexContent>
@@ -62,9 +62,7 @@
 
     <xs:complexType name="Subsection">
         <xs:complexContent>
-            <xs:extension base="SectionBase">
-                <xs:attribute name="Title" type="xs:string"/>
-            </xs:extension>
+            <xs:extension base="Section"/>
         </xs:complexContent>
     </xs:complexType>
 

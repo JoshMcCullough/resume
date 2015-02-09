@@ -8,12 +8,12 @@
     <Tag>UI/UX Designer</Tag>
 
     <Section Key="overview" Title="Overview">
-        <Subsection Title="Objective">
+        <Subsection Key="objective" Title="Objective">
             <Paragraph>To apply and grow my existing skillset in a challenging, fast-paced, and rewarding software engineering environment.</Paragraph>
             <Paragraph>To bring a new level of efficiency and stability to software projects by utilizing the latest technologies and software engineering ideals.</Paragraph>
         </Subsection>
 
-        <Subsection Title="Summary">
+        <Subsection Key="summary" Title="Summary">
             <Heading Level="3">I Love Technology (and Learning)</Heading>
             <Paragraph>
                 Almost everything I do has something to do with technology and learning. Not only do I write software <Text Class="em">every day</Text>, but I always have one or more side projects in progress. In my free time, my goal isn't always to "ship" a product or to reach a defined goal – often I simply want to <Text Class="em">learn something</Text>. Whether I'm working on a JavaScript framework, catching a glimpse of Jupiter through my telescope, installing a PC in my car, donating my tech skills for a cause in which I believe, building an HTML5 game, configuring a Linux mail server, designing and budgeting my next house project, or printing something in 3D – it all comes back to technology and my unquenchable thirst for knowledge.
@@ -37,7 +37,7 @@
             <Item>am constantly learning new technologies, frameworks and tools.</Item>
         </List>
 
-        <Subsection Title="Certifications &amp; Skills">
+        <Subsection Key="certifications-and-skills" Title="Certifications &amp; Skills">
             <List>
                 <Item>CMMI for Development v1.3 certified.</Item>
                 <Item>Bottom-up database design and development.</Item>
@@ -48,7 +48,7 @@
             </List>
         </Subsection>
 
-        <Subsection Title="Technology">
+        <Subsection Key="technology" Title="Technology">
             <List>
                 <Item>.NET, C#, ASP.NET MVC, ASP.NET WebForms, Ruby on Rails, PHP, Java, Hibernate, Spring, Struts</Item>
                 <Item>HTML 5, CSS 3, JavaScript, jQuery, Bootstrap, Knockout, Highcharts/Highmaps</Item>
@@ -60,7 +60,7 @@
             </List>
         </Subsection>
 
-        <Subsection Title="Hobbies">
+        <Subsection Key="hobbies" Title="Hobbies">
             <List>
                 <Item>Keeping up with the latest in software development.</Item>
                 <Item>3D printing – <Link Url="http://www.thingiverse.com/QuantumConcepts/designs">QuantumConcepts on Thingiverse.com</Link>.</Item>
