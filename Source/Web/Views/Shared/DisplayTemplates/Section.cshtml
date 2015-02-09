@@ -1,6 +1,6 @@
 ﻿@model JSM.Web.Models.Shared.Resume.Section
 
-<div class="section@(this.Model.Class.IsNullOrEmpty() ? "" : this.Model.Class)">
+<div id="section_@this.Model.Key" class="section@(this.Model.Class.IsNullOrEmpty() ? "" : this.Model.Class)">
     <h1><span>@this.Model.Title</span></h1>
 
     @{Html.RenderPartial("DisplayTemplates/Content", this.Model.Content);}

@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace JSM.Web.Views.Education
+namespace ASP
 {
     using System;
     using System.Collections.Generic;
@@ -28,8 +28,6 @@ namespace JSM.Web.Views.Education
     using System.Web.UI;
     using System.Web.WebPages;
     using JSM.Web;
-    using JSM.Web.Models.Shared;
-    using JSM.Web.Models.Shared.Resume;
     using QuantumConcepts.Common.Extensions;
     using QuantumConcepts.Common.Mvc.Extensions;
     using QuantumConcepts.Common.Mvc.Utils;
@@ -37,9 +35,9 @@ namespace JSM.Web.Views.Education
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("RazorGenerator", "2.0.0.0")]
     [System.Web.WebPages.PageVirtualPathAttribute("~/Views/Education/Index.cshtml")]
-    public partial class Index : System.Web.Mvc.WebViewPage<dynamic>
+    public partial class _Views_Education_Index_cshtml : System.Web.Mvc.WebViewPage<dynamic>
     {
-        public Index()
+        public _Views_Education_Index_cshtml()
         {
         }
         public override void Execute()
@@ -61,24 +59,6 @@ Write(Html.DisplayForModel());
             
             #line default
             #line hidden
-WriteLiteral(@"
-
-<!--
-<h2 class=""history-item"">
-    <span class=""row"">
-        <span class=""col-md-3"">8/2000 - 12/2004</span>
-        <span class=""col-md-6 text-center"">Champlain College</span>
-        <span class=""col-md-3 text-right"">Burlington, Vermont</span>
-    </span>
-</h2>
-<ul>
-    <li>Received a Bachelor Degree in Software Engineering in December 2004.</li>
-    <li>Received an Associate Degree in Software Development in December 2003.</li>
-    <li>Software-related courses focused on hands-on skills in addition to theory.</li>
-    <li>Selected to be a tutor in the Programming Lab.</li>
-</ul>
--->");
-
         }
     }
 }

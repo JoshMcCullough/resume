@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace JSM.Web.Views.All
+namespace ASP
 {
     using System;
     using System.Collections.Generic;
@@ -28,8 +28,6 @@ namespace JSM.Web.Views.All
     using System.Web.UI;
     using System.Web.WebPages;
     using JSM.Web;
-    using JSM.Web.Models.Shared;
-    using JSM.Web.Models.Shared.Resume;
     using QuantumConcepts.Common.Extensions;
     using QuantumConcepts.Common.Mvc.Extensions;
     using QuantumConcepts.Common.Mvc.Utils;
@@ -37,9 +35,9 @@ namespace JSM.Web.Views.All
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("RazorGenerator", "2.0.0.0")]
     [System.Web.WebPages.PageVirtualPathAttribute("~/Views/All/Index.cshtml")]
-    public partial class Index : System.Web.Mvc.WebViewPage<Resume>
+    public partial class _Views_All_Index_cshtml : System.Web.Mvc.WebViewPage<JSM.Web.Models.Shared.Resume.Resume>
     {
-        public Index()
+        public _Views_All_Index_cshtml()
         {
         }
         public override void Execute()
@@ -56,8 +54,30 @@ WriteLiteral("\r\n\r\n");
 
             
             #line 7 "..\..\Views\All\Index.cshtml"
-Write(Html.DisplayForModel());
+  Html.RenderPartial("~/Views/Overview/_Content.cshtml", this.Model.FindSection("overview"));
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n\r\n");
 
+            
+            #line 9 "..\..\Views\All\Index.cshtml"
+ foreach (var section in this.Model.Sections.Where(o => o.Key != "overview")) {
+    
+            
+            #line default
+            #line hidden
+            
+            #line 10 "..\..\Views\All\Index.cshtml"
+Write(Html.DisplayFor(m => section));
+
+            
+            #line default
+            #line hidden
+            
+            #line 10 "..\..\Views\All\Index.cshtml"
+                                  
+}
             
             #line default
             #line hidden

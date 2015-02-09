@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace JSM.Web.Views.Shared.DisplayTemplates
+namespace ASP
 {
     using System;
     using System.Collections.Generic;
@@ -35,24 +35,35 @@ namespace JSM.Web.Views.Shared.DisplayTemplates
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("RazorGenerator", "2.0.0.0")]
     [System.Web.WebPages.PageVirtualPathAttribute("~/Views/Shared/DisplayTemplates/Subsection.cshtml")]
-    public partial class Subsection_ : System.Web.Mvc.WebViewPage<JSM.Web.Models.Shared.Resume.Subsection>
+    public partial class _Views_Shared_DisplayTemplates_Subsection_cshtml_ : System.Web.Mvc.WebViewPage<JSM.Web.Models.Shared.Resume.Subsection>
     {
-        public Subsection_()
+        public _Views_Shared_DisplayTemplates_Subsection_cshtml_()
         {
         }
         public override void Execute()
         {
 WriteLiteral("<div");
 
-WriteAttribute("class", Tuple.Create(" class=\"", 54), Tuple.Create("\"", 152)
-, Tuple.Create(Tuple.Create("", 62), Tuple.Create("subsection", 62), true)
+WriteAttribute("id", Tuple.Create(" id=\"", 54), Tuple.Create("\"", 85)
+, Tuple.Create(Tuple.Create("", 59), Tuple.Create("subsection_", 59), true)
             
             #line 3 "..\..\Views\Shared\DisplayTemplates\Subsection.cshtml"
-, Tuple.Create(Tuple.Create("", 72), Tuple.Create<System.Object, System.Int32>(this.Model.Class.IsNullOrEmpty() ? "" : " {0}".FormatString(this.Model.Class)
+, Tuple.Create(Tuple.Create("", 70), Tuple.Create<System.Object, System.Int32>(this.Model.Key
             
             #line default
             #line hidden
-, 72), false)
+, 70), false)
+);
+
+WriteAttribute("class", Tuple.Create(" class=\"", 86), Tuple.Create("\"", 184)
+, Tuple.Create(Tuple.Create("", 94), Tuple.Create("subsection", 94), true)
+            
+            #line 3 "..\..\Views\Shared\DisplayTemplates\Subsection.cshtml"
+, Tuple.Create(Tuple.Create("", 104), Tuple.Create<System.Object, System.Int32>(this.Model.Class.IsNullOrEmpty() ? "" : " {0}".FormatString(this.Model.Class)
+            
+            #line default
+            #line hidden
+, 104), false)
 );
 
 WriteLiteral(">\r\n    <h2><span>");

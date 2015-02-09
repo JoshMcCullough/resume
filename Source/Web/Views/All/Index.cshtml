@@ -1,7 +1,11 @@
-﻿@model Resume
+﻿@model JSM.Web.Models.Shared.Resume.Resume
 
 @{
     ViewBag.Title = "Resume of {0}".FormatString(this.Model.DisplayName);
 }
 
-@Html.DisplayForModel()
+@{Html.RenderPartial("~/Views/Overview/_Content.cshtml", this.Model.FindSection("overview"));}
+
+@foreach (var section in this.Model.Sections.Where(o => o.Key != "overview")) {
+    @Html.DisplayFor(m => section)
+}

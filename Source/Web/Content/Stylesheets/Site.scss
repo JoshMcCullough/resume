@@ -194,10 +194,6 @@ header {
         h1 {
             font-size: 2em;
 
-            &:nth-of-type(1n+2) {
-                margin-top: 40px;
-            }
-
             > span {
                 padding: 10px 40px;
             }
@@ -251,10 +247,10 @@ header {
 
                 > li {
                     position: relative;
-                    float: left;
+                    display: inline-block;
                     margin: 0 20px 20px 0;
                     padding: 10px;
-                    width: 420px;
+                    width: 417px;
                     height: 170px;
                     border: 1px solid $primary-gray-5d;
                     background-color: $primary-gray-5l;
@@ -265,10 +261,12 @@ header {
                     &:before {
                         content: none;
                     }
-
-                    &:hover {
-                        h3 a.visit {
-                            display: inline;
+                    
+                    @media only screen {
+                        &:hover {
+                            h3 a.visit {
+                                display: inline;
+                            }
                         }
                     }
 
@@ -316,31 +314,6 @@ header {
                     }
                 }
 
-                &.expertise li,
-                ul.features li {
-                    -moz-box-sizing: border-box;
-                    -webkit-box-sizing: border-box;
-                    box-sizing: border-box;
-                    display: inline-block;
-                    margin: 0;
-                    padding: 5px;
-                    height: 20px;
-                    width: auto;
-                    text-indent: 0;
-                    line-height: 10px;
-                    border: 1px solid $primary-gray-5d;
-                    font-size: .6em;
-                    vertical-align: bottom;
-                    color: #fff;
-                    text-shadow: $primary-gray-90d 0 0 1px;
-                    text-align: center;
-                    cursor: default;
-
-                    &:before {
-                        content: none;
-                    }
-                }
-
                 ul.features li {
                     border-bottom: none;
 
@@ -348,19 +321,46 @@ header {
                         display: none;
                     }
                 }
+            }
 
-                &.expertise {
-                    position: relative;
+            &.expertise li,
+            &.features li {
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                display: inline-block;
+                margin: 0;
+                padding: 5px;
+                height: 20px;
+                width: auto;
+                text-indent: 0;
+                line-height: 10px;
+                border: 1px solid $primary-gray-5d;
+                font-size: .6em;
+                vertical-align: bottom;
+                color: #fff;
+                text-shadow: $primary-gray-90d 0 0 1px;
+                text-align: center;
+                cursor: default;
 
-                    li {
-                        position: absolute;
-                        margin: 0;
-                        padding: 4px;
-                        text-align: center;
-                        vertical-align: middle;
-                        opacity: 0;
-                        overflow: visible;
+                &:before {
+                    content: none;
+                }
+            }
 
+            &.expertise {
+                position: relative;
+
+                li {
+                    position: absolute;
+                    margin: 0;
+                    padding: 4px;
+                    text-align: center;
+                    vertical-align: middle;
+                    opacity: 0;
+                    overflow: visible;
+
+                    @media only screen {
                         &:hover {
                             width: auto !important;
                             z-index: 100;
@@ -369,26 +369,26 @@ header {
                                 display: inline-block;
                             }
                         }
+                    }
 
-                        span {
-                            display: inline-block;
-                            width: 100%;
-                            padding: 4px 10px;
-                            line-height: normal;
-                            vertical-align: middle;
-                            overflow: hidden;
+                    span {
+                        display: inline-block;
+                        width: 100%;
+                        padding: 4px 10px;
+                        line-height: normal;
+                        vertical-align: middle;
+                        overflow: hidden;
+                        background-color: inherit;
+
+                        &.rank {
+                            position: absolute;
+                            display: none;
+                            top: 100%;
+                            right: -1px;
+                            width: auto;
+                            border: inherit;
+                            border-top: none;
                             background-color: inherit;
-
-                            &.rank {
-                                position: absolute;
-                                display: none;
-                                top: 100%;
-                                right: -1px;
-                                width: auto;
-                                border: inherit;
-                                border-top: none;
-                                background-color: inherit;
-                            }
                         }
                     }
                 }
@@ -413,8 +413,14 @@ header {
             font-style: italic;
         }
 
-        section {
+        .section {
             clear: both;
+
+            &:nth-of-type(1n+2) {
+                h1 {
+                    margin-top: 40px;
+                }
+            }
 
             .subsection {
                 clear: both;
@@ -435,14 +441,18 @@ header {
                         color: $primary-gray-10d;
                         font-size: .5em;
 
-                        &:hover {
-                            color: $primary-gray-30d;
+                        @media only screen {
+                            &:hover {
+                                color: $primary-gray-30d;
+                            }
                         }
                     }
-
-                    &:hover {
-                        .organization-link {
-                            visibility: visible;
+                    
+                    @media only screen {
+                        &:hover {
+                            .organization-link {
+                                visibility: visible;
+                            }
                         }
                     }
                 }

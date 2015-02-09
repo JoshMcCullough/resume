@@ -26,7 +26,7 @@ var Tags = (function () {
     Tags.prototype.createElements = function () {
         var _this = this;
         this.tags.forEach(function (tag) {
-            tag.element = $("<li>").addClass("tag " + tag.key).css("background-color", tag.color.toCss()).attr("title", tag.name).data(Tags.dataTagKey, tag).append($("<span>").text(tag[_this.displayProperty])).append(tag.expertise != null ? $("<span>").addClass("rank").text(tag.expertise) : null);
+            tag.element = $("<li>").addClass("tag " + tag.key).css("background-color", tag.color.toCss()).data(Tags.dataTagKey, tag).attr("title", tag.name).attr("data-tags-key", tag.key).attr("data-tags-abbr", tag.abbreviation).attr("data-tags-name", tag.name).attr("data-tags-exp", tag.expertise).append($("<span>").text(tag[_this.displayProperty])).append(tag.expertise != null ? $("<span>").addClass("rank").text(tag.expertise) : null);
             _this.container.append(tag.element);
         }, this);
     };
@@ -123,6 +123,7 @@ var Expertise = (function (_super) {
         this.container = container;
         this.minSize = 30;
         this.maxSize = 100;
+        this.fixedHeight = null;
         this.padding = 4;
         this.layouts = {};
         this.displayProperty = "name";
@@ -187,22 +188,22 @@ var Expertise = (function (_super) {
                 if (currentSize != null && options.linePerLevel === true)
                     top = nextTop;
                 currentSize = tag.size;
-                maxRowHeight = Math.max(maxRowHeight, currentSize);
+                maxRowHeight = (_this.fixedHeight || Math.max(maxRowHeight, currentSize));
                 if (options.linePerLevel === true)
                     left = 0;
             }
             if ((left + currentSize) > availableWidth) {
                 top = nextTop;
-                maxRowHeight = currentSize;
+                maxRowHeight = (_this.fixedHeight || currentSize);
                 left = 0;
             }
-            tag.element.css("line-height", (currentSize - tagHeightOffset - (2 * tagPaddingTop)) + "px");
+            tag.element.css("line-height", ((_this.fixedHeight || currentSize) - tagHeightOffset - (2 * tagPaddingTop)) + "px");
             tag.element.delay(index * options.animationDelay).animate({
                 width: (currentSize),
-                height: (currentSize),
+                height: (_this.fixedHeight || currentSize),
                 minWidth: (currentSize),
-                minHeight: (currentSize),
-                top: (top + ((maxRowHeight - currentSize) / 2)),
+                minHeight: (_this.fixedHeight || currentSize),
+                top: top,
                 left: left,
                 opacity: 1
             }, {
@@ -211,7 +212,7 @@ var Expertise = (function (_super) {
             });
             left += (currentSize + _this.padding);
         }, this);
-        this.container.height(top + currentSize);
+        this.container.height(top + maxRowHeight);
     };
     Expertise.prototype.registerEvents = function () {
         $(window).resize(this.layoutTags.bind(this));
@@ -291,7 +292,6 @@ Tags.allTags.push(new Tag("api", "API", "API"));
 Tags.allTags.push(new Tag("arcgis", null, "ArcGIS", 3));
 Tags.allTags.push(new Tag("arduino", null, "Arduino", 4));
 Tags.allTags.push(new Tag("webforms", "WebForms", "ASP.NET WebForms", 10));
-Tags.allTags.push(new Tag("ontime", "OnTime", "Axosoft OnTime", 7));
 Tags.allTags.push(new Tag("bs", null, "Bootstrap", 8));
 Tags.allTags.push(new Tag("cs", null, "C#", 10));
 Tags.allTags.push(new Tag("cpp", null, "C++", 3));
@@ -324,7 +324,7 @@ Tags.allTags.push(new Tag("sl", null, "Silverlight", 4));
 Tags.allTags.push(new Tag("svn", "SVN", "Subversion", 9));
 Tags.allTags.push(new Tag("svg", null, "SVG", 7));
 Tags.allTags.push(new Tag("tfs", "TFS", "Team Foundation Server", 9));
-Tags.allTags.push(new Tag("tfvc", "TFVC", "Team Foundation Version Control", 7));
+Tags.allTags.push(new Tag("tfvc", "TFVC", "TF Version Control", 7));
 Tags.allTags.push(new Tag("tomcat", null, "Tomcat", 7));
 Tags.allTags.push(new Tag("uiux", null, "UI/UX", 7));
 Tags.allTags.push(new Tag("vb", "VB.NET", "Visual Basic .NET", 8));

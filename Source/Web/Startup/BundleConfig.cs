@@ -20,7 +20,8 @@ namespace JSM.Web.Startup {
                 "~/Content/Scripts/bigtext.js"));
 
             bundles.Add(new ScriptBundle("~/Content/Scripts/Site").Include(
-                "~/Content/Scripts/Site.js"));
+                "~/Content/Scripts/Site.js",
+                "~/Content/Scripts/Tags.js"));
 
 #if !DEBUG
             BundleTable.EnableOptimizations = true;

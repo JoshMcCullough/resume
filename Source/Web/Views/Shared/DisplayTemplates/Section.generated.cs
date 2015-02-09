@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace JSM.Web.Views.Shared.DisplayTemplates
+namespace ASP
 {
     using System;
     using System.Collections.Generic;
@@ -35,24 +35,35 @@ namespace JSM.Web.Views.Shared.DisplayTemplates
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("RazorGenerator", "2.0.0.0")]
     [System.Web.WebPages.PageVirtualPathAttribute("~/Views/Shared/DisplayTemplates/Section.cshtml")]
-    public partial class Section_ : System.Web.Mvc.WebViewPage<JSM.Web.Models.Shared.Resume.Section>
+    public partial class _Views_Shared_DisplayTemplates_Section_cshtml_ : System.Web.Mvc.WebViewPage<JSM.Web.Models.Shared.Resume.Section>
     {
-        public Section_()
+        public _Views_Shared_DisplayTemplates_Section_cshtml_()
         {
         }
         public override void Execute()
         {
 WriteLiteral("<div");
 
-WriteAttribute("class", Tuple.Create(" class=\"", 51), Tuple.Create("\"", 125)
-, Tuple.Create(Tuple.Create("", 59), Tuple.Create("section", 59), true)
+WriteAttribute("id", Tuple.Create(" id=\"", 51), Tuple.Create("\"", 79)
+, Tuple.Create(Tuple.Create("", 56), Tuple.Create("section_", 56), true)
             
             #line 3 "..\..\Views\Shared\DisplayTemplates\Section.cshtml"
-, Tuple.Create(Tuple.Create("", 66), Tuple.Create<System.Object, System.Int32>(this.Model.Class.IsNullOrEmpty() ? "" : this.Model.Class
+, Tuple.Create(Tuple.Create("", 64), Tuple.Create<System.Object, System.Int32>(this.Model.Key
             
             #line default
             #line hidden
-, 66), false)
+, 64), false)
+);
+
+WriteAttribute("class", Tuple.Create(" class=\"", 80), Tuple.Create("\"", 154)
+, Tuple.Create(Tuple.Create("", 88), Tuple.Create("section", 88), true)
+            
+            #line 3 "..\..\Views\Shared\DisplayTemplates\Section.cshtml"
+, Tuple.Create(Tuple.Create("", 95), Tuple.Create<System.Object, System.Int32>(this.Model.Class.IsNullOrEmpty() ? "" : this.Model.Class
+            
+            #line default
+            #line hidden
+, 95), false)
 );
 
 WriteLiteral(">\r\n    <h1><span>");

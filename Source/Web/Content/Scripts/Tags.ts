@@ -33,8 +33,12 @@
             tag.element = $("<li>")
                 .addClass("tag " + tag.key)
                 .css("background-color", tag.color.toCss())
-                .attr("title", tag.name)
                 .data(Tags.dataTagKey, tag)
+                .attr("title", tag.name)
+                .attr("data-tags-key", tag.key)
+                .attr("data-tags-abbr", tag.abbreviation)
+                .attr("data-tags-name", tag.name)
+                .attr("data-tags-exp", tag.expertise)
                 .append($("<span>")
                     .text(tag[this.displayProperty]))
                 .append(tag.expertise != null ? $("<span>")
@@ -117,6 +121,7 @@ enum ExpertiseLayoutMode {
 class Expertise extends Tags {
     private minSize = 30;
     private maxSize = 100;
+    private fixedHeight = null;
     private padding = 4;
     private layouts = {};
 
@@ -198,7 +203,7 @@ class Expertise extends Tags {
                     top = nextTop;
 
                 currentSize = tag.size;
-                maxRowHeight = Math.max(maxRowHeight, currentSize);
+                maxRowHeight = (this.fixedHeight || Math.max(maxRowHeight, currentSize));
 
                 if (options.linePerLevel === true)
                     left = 0;
@@ -206,17 +211,17 @@ class Expertise extends Tags {
 
             if ((left + currentSize) > availableWidth) {
                 top = nextTop;
-                maxRowHeight = currentSize;
+                maxRowHeight = (this.fixedHeight || currentSize);
                 left = 0;
             }
 
-            tag.element.css("line-height", (currentSize - tagHeightOffset - (2 * tagPaddingTop)) + "px");
+            tag.element.css("line-height", ((this.fixedHeight || currentSize) - tagHeightOffset - (2 * tagPaddingTop)) + "px");
             tag.element.delay(index * options.animationDelay).animate({
                 width: (currentSize),
-                height: (currentSize),
+                height: (this.fixedHeight || currentSize),
                 minWidth: (currentSize),
-                minHeight: (currentSize),
-                top: (top + ((maxRowHeight - currentSize) / 2)),
+                minHeight: (this.fixedHeight || currentSize),
+                top: top,
                 left: left,
                 opacity: 1
             }, {
@@ -227,7 +232,7 @@ class Expertise extends Tags {
             left += (currentSize + this.padding);
         }, this);
 
-        this.container.height(top + currentSize);
+        this.container.height(top + maxRowHeight);
     }
 
     private registerEvents() {
@@ -301,7 +306,6 @@ Tags.allTags.push(new Tag("api", "API", "API"));
 Tags.allTags.push(new Tag("arcgis", null, "ArcGIS", 3));
 Tags.allTags.push(new Tag("arduino", null, "Arduino", 4));
 Tags.allTags.push(new Tag("webforms", "WebForms", "ASP.NET WebForms", 10));
-Tags.allTags.push(new Tag("ontime", "OnTime", "Axosoft OnTime", 7));
 Tags.allTags.push(new Tag("bs", null, "Bootstrap", 8));
 Tags.allTags.push(new Tag("cs", null, "C#", 10));
 Tags.allTags.push(new Tag("cpp", null, "C++", 3));
@@ -334,7 +338,7 @@ Tags.allTags.push(new Tag("sl", null, "Silverlight", 4));
 Tags.allTags.push(new Tag("svn", "SVN", "Subversion", 9));
 Tags.allTags.push(new Tag("svg", null, "SVG", 7));
 Tags.allTags.push(new Tag("tfs", "TFS", "Team Foundation Server", 9));
-Tags.allTags.push(new Tag("tfvc", "TFVC", "Team Foundation Version Control", 7));
+Tags.allTags.push(new Tag("tfvc", "TFVC", "TF Version Control", 7));
 Tags.allTags.push(new Tag("tomcat", null, "Tomcat", 7));
 Tags.allTags.push(new Tag("uiux", null, "UI/UX", 7));
 Tags.allTags.push(new Tag("vb", "VB.NET", "Visual Basic .NET", 8));

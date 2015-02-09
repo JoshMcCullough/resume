@@ -2,13 +2,13 @@
 
 html,
 body {
-    width: auto;
+    width: 8in;
     height: auto;
-    font-family: 'Times New Roman', serif;
+    font-family: Garamond, 'Times New Roman', serif;
 }
 
 body {
-    margin: 7mm;
+    margin: .25in;
     font-size: 10pt;
     background-color: transparent;
     overflow-y: auto;
@@ -17,7 +17,7 @@ body {
 header {
     padding: 0;
     margin: 0 0 2mm 0;
-    border-bottom-color: $primary-gray;
+    border-bottom: .5mm solid $primary-gray-10d;
     background-color: transparent;
     font-size: 10pt;
 
@@ -26,23 +26,30 @@ header {
         padding: 0;
         border: none;
 
-        .Name {
-            display: block;
-            float: none;
+        .col {
             padding: 0;
-            width: 100%;
-            border-right: none;
-            font-size: 22pt;
-            color: #000;
-        }
-
-        .Roles {
-            display: block;
-            float: none;
-            padding: 2mm 0;
             margin: 0;
-            width: 100%;
-            text-align: center;
+            color: #000;
+
+            &.Name {
+                border-right: none;
+                font-size: 24pt;
+                font-weight: bold;
+                text-align: left;
+            }
+            
+            &.Roles {
+                padding-top: 10pt;
+                text-align: right;
+
+                li {
+                    padding: 0 2mm;
+
+                    &:last-child {
+                        padding-right: 0;
+                    }
+                }
+            }
         }
     }
 
@@ -51,7 +58,7 @@ header {
     }
 }
 
-section#Content {
+div#Content {
     padding: 0;
 
     > div {
@@ -59,13 +66,10 @@ section#Content {
         border: none;
         background-color: transparent;
 
-        section {
-            page-break-inside: avoid;
-        }
-
         h1,
         h2 {
             margin: 0 0 2mm 0;
+            text-transform: none;
         }
 
         h1 > span,
@@ -79,7 +83,9 @@ section#Content {
         }
 
         h1 {
+            border-bottom: .5mm solid $primary-gray;
             font-size: 18pt;
+            font-weight: bold;
 
             &:nth-of-type(1n+2) {
                 margin-top: 5mm;
@@ -91,7 +97,7 @@ section#Content {
         }
 
         h2 {
-            margin: 4mm 0 0 4mm;
+            margin: 2mm 0 0 0;
             font-size: 14pt;
 
             &.history-item {
@@ -99,7 +105,7 @@ section#Content {
                     margin: 0;
                     padding: 0;
                 }
-                
+
                 .organization-link {
                     display: none;
                 }
@@ -112,20 +118,20 @@ section#Content {
         }
 
         h3 {
-            margin: 2mm 0 0 4mm;
-            font-size: 14pt;
-        }
-
-        h5 {
-            margin: 2mm 0 0 4mm;
+            margin: 1mm 0 0 0;
             font-size: 12pt;
         }
 
+        h5 {
+            margin: 1mm 0 0 0;
+            font-size: 10pt;
+        }
+
         ul {
-            padding-left: 8mm;
+            padding-left: 4mm;
 
             li {
-                text-indent: -4mm;
+                text-indent: -2mm;
 
                 &:before {
                     left: -2mm;
@@ -133,6 +139,68 @@ section#Content {
 
                 ul {
                     padding-left: 2mm;
+                }
+            }
+
+            &.blocks {
+                margin: 0;
+                padding: 0;
+
+                > li {
+                    position: relative;
+                    display: block;
+                    margin: 0 0 2mm 0;
+                    padding: 0;
+                    width: 100%;
+                    height: auto;
+                    border: none;
+                    page-break-inside: avoid;
+
+                    h3 {
+                        .glyphicon {
+                            display: none;
+                        }
+
+                        a.visit {
+                            display: inline-block;
+                            margin: 0 0 0 2mm;
+                            font-size: 8pt;
+                        }
+                    }
+
+                    .tagline {
+                        position: absolute;
+                        top: 1mm;
+                        right: 0;
+                        margin: 0;
+                        font-style: italic;
+                    }
+
+                    .content {
+                        height: auto;
+                    }
+
+                    ul.features {
+                        position: static;
+                        margin: 0;
+                        vertical-align: middle;
+                        font-size: 8pt;
+
+                        &:before {
+                            content: 'Tech. Used: ';
+                            font-style: italic;
+                        }
+
+                        li {
+                            display: inline;
+                            padding: 0 2mm;
+                            margin: 0;
+                            border: none;
+                            vertical-align: middle;
+                            font-size: 8pt;
+                            line-height: normal;
+                        }
+                    }
                 }
             }
         }
@@ -144,17 +212,122 @@ section#Content {
         a:hover {
             color: #000;
             text-decoration: none;
+
+            &:after {
+                content: '(' attr(href) ')';
+            }
         }
 
         p,
         ol,
         ul {
-            margin: 2mm 0 2mm 4mm;
+            margin: 1mm 0;
             font-size: 10pt;
+            text-align: justify;
+        }
+
+        .section {
+            &:nth-of-type(1n+2) {
+                h1 {
+                    margin-top: 4mm;
+                }
+            }
+
+            .subsection {
+                margin: 0 0 2mm 0;
+            }
+
+            .history-item {
+                page-break-inside: avoid;
+
+                h2 {
+                    > span,
+                    > span span {
+                        padding: 0;
+                        margin: 0;
+                    }
+
+                    .organization-link {
+                        margin: 0 0 0 1mm;
+                        font-size: 8pt;
+                        visibility: visible;
+
+                        .glyphicon {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            &#section_overview {
+                #subsection_self-rankings {
+                    display: none;
+
+                    ul.expertise {
+                        position: static;
+                        padding: 0;
+                        height: auto !important;
+
+                        li {
+                            position: static;
+                            display: inline-block;
+                            margin: 0 1mm 1mm 0;
+                            padding: 0 1mm;
+                            height: 8mm !important;
+                            min-height: 8mm !important;
+                            line-height: 8mm !important;
+                            font-size: 8pt;
+                            overflow: hidden;
+
+                            &:after {
+                                content: attr(data-tags-abbr);
+                            }
+
+                            span {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &#section_skills-and-tech {
+                .subsection#subsection_certifications-and-skills,
+                .subsection#subsection_technology {
+                    clear: none;
+
+                    &#subsection_certifications-and-skills {
+                        float: left;
+                        width: 2.75in;
+                    }
+
+                    &#subsection_technology {
+                        float: right;
+                        width: 5in;
+                    }
+                }
+
+                .subsection#subsection_hobbies {
+                    clear: left;
+                }
+            }
         }
     }
 }
 
 footer {
-    display: none;
+    margin: 10mm 0 0 0;
+    padding: 0;
+    font-size: 14pt;
+    text-align: center;
+
+    > div {
+        padding: 0;
+        border: none;
+
+        a:link:after,
+        a:visited:after {
+            content: none;
+        }
+    }
 }

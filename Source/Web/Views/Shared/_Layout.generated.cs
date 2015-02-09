@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace JSM.Web.Views.Shared
+namespace ASP
 {
     using System;
     using System.Collections.Generic;
@@ -35,9 +35,9 @@ namespace JSM.Web.Views.Shared
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("RazorGenerator", "2.0.0.0")]
     [System.Web.WebPages.PageVirtualPathAttribute("~/Views/Shared/_Layout.cshtml")]
-    public partial class Layout : System.Web.Mvc.WebViewPage<dynamic>
+    public partial class _Views_Shared__Layout_cshtml : System.Web.Mvc.WebViewPage<dynamic>
     {
-        public Layout()
+        public _Views_Shared__Layout_cshtml()
         {
         }
         public override void Execute()
@@ -174,11 +174,11 @@ WriteLiteral(" class=\"row About\"");
 
 WriteLiteral(">\r\n                <div");
 
-WriteLiteral(" class=\"col-xs-12 col-md-3 Name\"");
+WriteLiteral(" class=\"col col-sm-4 col-md-3 Name\"");
 
 WriteLiteral(">Josh McCullough</div>\r\n                <ul");
 
-WriteLiteral(" class=\"col-xs-12 col-md-9 Roles\"");
+WriteLiteral(" class=\"col col-sm-8 col-md-6 Roles\"");
 
 WriteLiteral(@">
                     <li>software engineer</li>
@@ -261,30 +261,30 @@ WriteLiteral(" class=\"clearfix\"");
 WriteLiteral("></div>\r\n            </div>\r\n        </div>\r\n\r\n        <footer>\r\n            <div" +
 ">\r\n                <div");
 
-WriteLiteral(" class=\"left-menu\"");
+WriteLiteral(" class=\"left-menu hidden-print\"");
 
 WriteLiteral(">\r\n                    <a");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 2267), Tuple.Create("\"", 2301)
+WriteAttribute("href", Tuple.Create(" href=\"", 2286), Tuple.Create("\"", 2320)
             
             #line 50 "..\..\Views\Shared\_Layout.cshtml"
-, Tuple.Create(Tuple.Create("", 2274), Tuple.Create<System.Object, System.Int32>(Url.Action("Index", "All")
+, Tuple.Create(Tuple.Create("", 2293), Tuple.Create<System.Object, System.Int32>(Url.Action("Index", "All")
             
             #line default
             #line hidden
-, 2274), false)
+, 2293), false)
 );
 
 WriteLiteral(">view as single page</a>\r\n                    <a");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 2350), Tuple.Create("\"", 2385)
+WriteAttribute("href", Tuple.Create(" href=\"", 2369), Tuple.Create("\"", 2404)
             
             #line 51 "..\..\Views\Shared\_Layout.cshtml"
-, Tuple.Create(Tuple.Create("", 2357), Tuple.Create<System.Object, System.Int32>(Url.Action("PDF", "Export")
+, Tuple.Create(Tuple.Create("", 2376), Tuple.Create<System.Object, System.Int32>(Url.Action("PDF", "Export")
             
             #line default
             #line hidden
-, 2357), false)
+, 2376), false)
 );
 
 WriteLiteral(">download as PDF</a>\r\n                    <a");
@@ -293,13 +293,20 @@ WriteLiteral(" href=\"https://github.com/JoshMcCullough/jsm-web\"");
 
 WriteLiteral(" target=\"_blank\"");
 
-WriteLiteral(">view source on GitHub</a>\r\n                </div>\r\n            </div>\r\n        <" +
-"/footer>\r\n\r\n");
+WriteLiteral(">view source on GitHub</a>\r\n                </div>\r\n\r\n                <div");
+
+WriteLiteral(" class=\"visible-print Web\"");
+
+WriteLiteral(">For a more <em>interactive</em> experience, please visit <a");
+
+WriteLiteral(" href=\"http://joshmccullough.me\"");
+
+WriteLiteral(">http://JoshMcCullough.me</a>.</div>\r\n            </div>\r\n        </footer>\r\n\r\n");
 
 WriteLiteral("        ");
 
             
-            #line 57 "..\..\Views\Shared\_Layout.cshtml"
+            #line 59 "..\..\Views\Shared\_Layout.cshtml"
    Write(Scripts.Render("~/Content/Scripts/3rdParty"));
 
             
@@ -310,7 +317,7 @@ WriteLiteral("\r\n");
 WriteLiteral("        ");
 
             
-            #line 58 "..\..\Views\Shared\_Layout.cshtml"
+            #line 60 "..\..\Views\Shared\_Layout.cshtml"
    Write(Scripts.Render("~/Content/Scripts/Site"));
 
             
@@ -321,7 +328,7 @@ WriteLiteral("\r\n");
 WriteLiteral("        ");
 
             
-            #line 59 "..\..\Views\Shared\_Layout.cshtml"
+            #line 61 "..\..\Views\Shared\_Layout.cshtml"
    Write(RenderSection("Scripts", required: false));
 
             

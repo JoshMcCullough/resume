@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace JSM.Web.Views.Shared.DisplayTemplates
+namespace ASP
 {
     using System;
     using System.Collections.Generic;
@@ -35,9 +35,9 @@ namespace JSM.Web.Views.Shared.DisplayTemplates
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("RazorGenerator", "2.0.0.0")]
     [System.Web.WebPages.PageVirtualPathAttribute("~/Views/Shared/DisplayTemplates/History.cshtml")]
-    public partial class History_ : System.Web.Mvc.WebViewPage<JSM.Web.Models.Shared.Resume.History>
+    public partial class _Views_Shared_DisplayTemplates_History_cshtml_ : System.Web.Mvc.WebViewPage<JSM.Web.Models.Shared.Resume.History>
     {
-        public History_()
+        public _Views_Shared_DisplayTemplates_History_cshtml_()
         {
         }
         public override void Execute()
@@ -52,20 +52,20 @@ WriteLiteral(" class=\"row\"");
 
 WriteLiteral(">\r\n            <span");
 
-WriteLiteral(" class=\"col-md-3\"");
+WriteLiteral(" class=\"col col-xs-3 col-md-3\"");
 
 WriteLiteral(">");
 
             
             #line 6 "..\..\Views\Shared\DisplayTemplates\History.cshtml"
-                              Write(this.Model.DateSpan);
+                                           Write(this.Model.DateSpan);
 
             
             #line default
             #line hidden
 WriteLiteral("</span>\r\n            <span");
 
-WriteLiteral(" class=\"col-md-6 text-center\"");
+WriteLiteral(" class=\"col col-xs-6 col-md-6 text-center\"");
 
 WriteLiteral(">\r\n");
 
@@ -97,14 +97,14 @@ WriteLiteral("                    <a");
 
 WriteLiteral(" class=\"organization-link\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 391), Tuple.Create("\"", 429)
+WriteAttribute("href", Tuple.Create(" href=\"", 417), Tuple.Create("\"", 455)
             
             #line 11 "..\..\Views\Shared\DisplayTemplates\History.cshtml"
-, Tuple.Create(Tuple.Create("", 398), Tuple.Create<System.Object, System.Int32>(this.Model.OrganizationWebsite
+, Tuple.Create(Tuple.Create("", 424), Tuple.Create<System.Object, System.Int32>(this.Model.OrganizationWebsite
             
             #line default
             #line hidden
-, 398), false)
+, 424), false)
 );
 
 WriteLiteral(" target=\"_blank\"");
@@ -124,13 +124,13 @@ WriteLiteral("></span></a>\r\n");
             #line hidden
 WriteLiteral("            </span>\r\n            <span");
 
-WriteLiteral(" class=\"col-md-3 text-right\"");
+WriteLiteral(" class=\"col col-xs-3 col-md-3 text-right\"");
 
 WriteLiteral(">");
 
             
             #line 14 "..\..\Views\Shared\DisplayTemplates\History.cshtml"
-                                         Write(this.Model.OrganizationLocation);
+                                                      Write(this.Model.OrganizationLocation);
 
             
             #line default

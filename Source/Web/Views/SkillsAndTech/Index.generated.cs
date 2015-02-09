@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace JSM.Web.Views.SkillsAndTech
+namespace ASP
 {
     using System;
     using System.Collections.Generic;
@@ -28,8 +28,6 @@ namespace JSM.Web.Views.SkillsAndTech
     using System.Web.UI;
     using System.Web.WebPages;
     using JSM.Web;
-    using JSM.Web.Models.Shared;
-    using JSM.Web.Models.Shared.Resume;
     using QuantumConcepts.Common.Extensions;
     using QuantumConcepts.Common.Mvc.Extensions;
     using QuantumConcepts.Common.Mvc.Utils;
@@ -37,9 +35,9 @@ namespace JSM.Web.Views.SkillsAndTech
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("RazorGenerator", "2.0.0.0")]
     [System.Web.WebPages.PageVirtualPathAttribute("~/Views/SkillsAndTech/Index.cshtml")]
-    public partial class Index : System.Web.Mvc.WebViewPage<dynamic>
+    public partial class _Views_SkillsAndTech_Index_cshtml : System.Web.Mvc.WebViewPage<dynamic>
     {
-        public Index()
+        public _Views_SkillsAndTech_Index_cshtml()
         {
         }
         public override void Execute()
@@ -61,37 +59,6 @@ Write(Html.DisplayForModel());
             
             #line default
             #line hidden
-WriteLiteral(@"
-
-<!--
-<h2><span>skills</span></h2>
-<ul>
-    <li>Bottom-up database design and development.</li>
-    <li>Project & feature design and development.</li>
-    <li>UI design and implementation.</li>
-    <li>Clean, organized, efficient, reusable code.</li>
-</ul>
-
-<h2><span>technology</span></h2>
-<ul>
-    <li>.NET, C#, ASP.NET MVC, ASP.NET WebForms, Ruby on Rails, PHP, Java, Hibernate, Spring, Struts</li>
-    <li>HTML 5, CSS 3, JavaScript, jQuery, Bootstrap, Knockout, Highcharts/Highmaps</li>
-    <li>Visual Studio, Eclipse, NetBeans</li>
-    <li>IIS, Apache, Nginx, Tomcat, Weblogic</li>
-    <li>SQL Server, MySQL, Oracle</li>
-    <li>Windows, Linux</li>
-    <li>Networking, DNS, server management (Windows, Linux, Amazon Web Services)</li>
-</ul>
-
-<h2><span>hobbies</span></h2>
-<ul>
-    <li>Keeping up with the latest in software development.</li>
-    <li>3D printing – QuantumConcepts on Thingiverse.com.</li>
-    <li>General DIY and learning how things work.</li>
-    <li>Technology, astronomy, travel, photography.</li>
-</ul>
--->");
-
         }
     }
 }

@@ -18,8 +18,8 @@
     <body class="Controller-@(ViewContext.RouteData.Values["controller"]) Action-@(ViewContext.RouteData.Values["action"])">
         <header>
             <div class="row About">
-                <div class="col-xs-12 col-md-3 Name">Josh McCullough</div>
-                <ul class="col-xs-12 col-md-9 Roles">
+                <div class="col col-sm-4 col-md-3 Name">Josh McCullough</div>
+                <ul class="col col-sm-8 col-md-6 Roles">
                     <li>software engineer</li>
                     <li>leader</li>
                     <li>database developer</li>
@@ -46,11 +46,13 @@
 
         <footer>
             <div>
-                <div class="left-menu">
+                <div class="left-menu hidden-print">
                     <a href="@Url.Action("Index", "All")">view as single page</a>
                     <a href="@Url.Action("PDF", "Export")">download as PDF</a>
                     <a href="https://github.com/JoshMcCullough/jsm-web" target="_blank">view source on GitHub</a>
                 </div>
+
+                <div class="visible-print Web">For a more <em>interactive</em> experience, please visit <a href="http://joshmccullough.me">http://JoshMcCullough.me</a>.</div>
             </div>
         </footer>
 
