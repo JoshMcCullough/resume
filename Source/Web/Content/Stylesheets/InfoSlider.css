@@ -29,7 +29,8 @@
   .info-slider .label {
     margin: 0 10px;
     width: 55px;
-    color: darkgray; }
+    color: darkgray;
+    text-transform: lowercase; }
   .info-slider .content {
     margin-left: 10px;
     color: #000;
@@ -69,5 +70,34 @@
     background-color: #0f0; }
   .info-slider:hover.disabled .slider span.grip {
     background-color: rgba(0, 255, 0, 0.2); }
+
+@media print {
+  .info-slider {
+    position: static;
+    margin: 0;
+    height: auto !important;
+    width: auto;
+    border: none;
+    background-color: transparent;
+    white-space: normal; }
+    .info-slider .label, .info-slider .content, .info-slider .slider {
+      line-height: normal;
+      font-size: 10pt; }
+    .info-slider .label {
+      margin: 0 10px 0 0;
+      width: 0.5in;
+      border: none;
+      color: #000;
+      font-weight: normal;
+      text-transform: none; }
+      .info-slider .label:after {
+        content: ":"; }
+    .info-slider .content {
+      margin-left: 0; }
+      .info-slider .content a:after {
+        content: none !important; }
+    .info-slider .slider {
+      display: none; }
+ }
 
 /*# sourceMappingURL=InfoSlider.css.map */

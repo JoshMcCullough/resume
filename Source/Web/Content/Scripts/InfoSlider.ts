@@ -1,4 +1,4 @@
-﻿/// <reference path="jquery.d.ts" />
+﻿/// <reference path="Definitions/jQuery/jquery.d.ts" />
 
 class InfoSlider {
     public static dataKey: string = "info_slider";
@@ -102,3 +102,8 @@ jQuery.fn.extend({
         return $(this).data(InfoSlider.dataKey);
     }
 });
+
+interface JQuery {
+    infoSlider(onSliding: Function): InfoSlider;
+    getInfoSlider(): InfoSlider;
+}

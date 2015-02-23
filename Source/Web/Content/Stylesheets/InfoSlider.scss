@@ -45,6 +45,7 @@ $grip-color: rgba($grip-hover-color, .2) !default;
         margin: 0 10px;
         width: 55px;
         color: darken($base-color, 25%);
+        text-transform: lowercase;
     }
 
     .content {
@@ -109,6 +110,50 @@ $grip-color: rgba($grip-hover-color, .2) !default;
                     }
                 }
             }
+        }
+    }
+}
+
+@media print {
+    .info-slider {
+        position: static;
+        margin: 0;
+        height: auto !important;
+        width: auto;
+        border: none;
+        background-color: transparent;
+        white-space: normal;
+
+        .label,
+        .content,
+        .slider {
+            line-height: normal;
+            font-size: 10pt;
+        }
+
+        .label {
+            margin: 0 10px 0 0;
+            width: .5in;
+            border: none;
+            color: #000;
+            font-weight: normal;
+            text-transform: none;
+
+            &:after {
+                content: ":";
+            }
+        }
+
+        .content {
+            margin-left: 0;
+
+            a:after {
+                content: none !important;
+            }
+        }
+
+        .slider {
+            display: none;
         }
     }
 }

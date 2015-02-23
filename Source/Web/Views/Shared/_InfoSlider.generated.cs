@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace JSM.Web.Views.Shared
+namespace ASP
 {
     using System;
     using System.Collections.Generic;
@@ -35,9 +35,9 @@ namespace JSM.Web.Views.Shared
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("RazorGenerator", "2.0.0.0")]
     [System.Web.WebPages.PageVirtualPathAttribute("~/Views/Shared/_InfoSlider.cshtml")]
-    public partial class InfoSlider : System.Web.Mvc.WebViewPage<JSM.Web.Models.Shared.InfoSliderModel>
+    public partial class _Views_Shared__InfoSlider_cshtml : System.Web.Mvc.WebViewPage<JSM.Web.Models.Shared.InfoSliderModel>
     {
-        public InfoSlider()
+        public _Views_Shared__InfoSlider_cshtml()
         {
         }
         public override void Execute()

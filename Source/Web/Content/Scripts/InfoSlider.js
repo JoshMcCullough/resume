@@ -1,4 +1,4 @@
-/// <reference path="jquery.d.ts" />
+/// <reference path="Definitions/jQuery/jquery.d.ts" />
 var InfoSlider = (function () {
     function InfoSlider(target, onSliding) {
         this.sliding = false;
