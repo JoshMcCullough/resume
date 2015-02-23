@@ -1,4 +1,5 @@
-﻿@import "Global.scss";
+﻿@import "_bootstrap";
+@import "Variables";
 
 $overview-color: #6706FF;
 $skills-and-tech-color: #E80023;
@@ -77,7 +78,7 @@ header {
             padding: 20px 0;
             width: 20%;
             border: 2px solid transparent;
-            font-size: 1.6em;
+            font-size: 1.5em;
             text-align: center;
 
             &,
@@ -161,7 +162,7 @@ header {
 #Content {
     @include Container;
 
-    > div {
+    #PageContent {
         padding: 20px;
         border: 1px solid $primary-gray-5d;
         border-top: none;
@@ -228,10 +229,11 @@ header {
         }
 
         ul {
-            margin: 10px 20px 10px 0;
+            margin: 10px 0 10px 25px;
+            padding: 0;
 
             li {
-                text-indent: -15px;
+                text-indent: -.65em;
                 list-style-type: none;
 
                 &:before {
@@ -242,7 +244,7 @@ header {
             }
 
             &.blocks {
-                margin: 0 0 0 20px;
+                margin: 0;
                 padding: 0;
 
                 > li {
@@ -250,7 +252,7 @@ header {
                     display: inline-block;
                     margin: 0 20px 20px 0;
                     padding: 10px;
-                    width: 417px;
+                    width: 420px;
                     height: 170px;
                     border: 1px solid $primary-gray-5d;
                     background-color: $primary-gray-5l;
@@ -261,7 +263,7 @@ header {
                     &:before {
                         content: none;
                     }
-                    
+
                     @media only screen {
                         &:hover {
                             h3 a.visit {
@@ -323,32 +325,8 @@ header {
                 }
             }
 
-            &.expertise li,
-            &.features li {
-                -moz-box-sizing: border-box;
-                -webkit-box-sizing: border-box;
-                box-sizing: border-box;
-                display: inline-block;
-                margin: 0;
-                padding: 5px;
-                height: 20px;
-                width: auto;
-                text-indent: 0;
-                line-height: 10px;
-                border: 1px solid $primary-gray-5d;
-                font-size: .6em;
-                vertical-align: bottom;
-                color: #fff;
-                text-shadow: $primary-gray-90d 0 0 1px;
-                text-align: center;
-                cursor: default;
-
-                &:before {
-                    content: none;
-                }
-            }
-
             &.expertise {
+                margin: 0;
                 position: relative;
 
                 li {
@@ -393,6 +371,31 @@ header {
                     }
                 }
             }
+
+            &.expertise li,
+            &.features li {
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                display: inline-block;
+                margin: 0;
+                padding: 5px;
+                height: 20px;
+                width: auto;
+                text-indent: 0;
+                line-height: 10px;
+                border: 1px solid $primary-gray-5d;
+                font-size: .6em;
+                vertical-align: bottom;
+                color: #fff;
+                text-shadow: $primary-gray-90d 0 0 1px;
+                text-align: center;
+                cursor: default;
+
+                &:before {
+                    content: none;
+                }
+            }
         }
 
         a,
@@ -432,22 +435,37 @@ header {
                 h2 {
                     text-transform: none;
 
-                    > span {
+                    > .row {
                         display: block;
-                    }
 
-                    .organization-link {
-                        visibility: hidden;
-                        color: $primary-gray-10d;
-                        font-size: .5em;
+                        .dates {
+                            padding-left: 0;
+                        }
 
-                        @media only screen {
-                            &:hover {
-                                color: $primary-gray-30d;
+                        .organization-link {
+                            visibility: hidden;
+                            color: $primary-gray-10d;
+                            font-size: .5em;
+
+                            @media only screen {
+                                &:hover {
+                                    color: $primary-gray-30d;
+                                }
                             }
                         }
+
+                        
+                        .dates,
+                        .location {
+                            padding-top: 3px;
+                            font-size: .8em;
+                        }
+
+                        .location {
+                            padding-right: 0;
+                        }
                     }
-                    
+
                     @media only screen {
                         &:hover {
                             .organization-link {
@@ -465,15 +483,18 @@ footer {
     @include Container;
     margin-bottom: 40px;
 
-    > div {
-        padding: 20px;
+    #FooterContent {
+        padding: 10px;
         border: 1px solid $primary-gray-5d;
         border-top: none;
         background-color: $primary-gray;
 
         .left-menu {
             a {
+                display: inline-block;
+                padding: 10px;
                 color: $primary-gray-30d;
+                border-right: 1px solid $primary-gray-5d;
 
                 &,
                 &:focus,
@@ -489,18 +510,37 @@ footer {
                     color: $primary-gray-40d;
                 }
 
-                &:after {
-                    margin: 10px;
-                    content: "|";
-                    color: $primary-gray-5d;
-                }
-
                 &:last-child {
-                    &:after {
-                        content: none;
-                    }
+                    border-right: none;
                 }
             }
+        }
+    }
+}
+
+#PrintModal {
+    @include Container;
+
+    .modal-content {
+        box-shadow: none;
+        border-radius: 0;
+
+        .modal-header {
+            background-color: $primary-gray;
+            border-bottom: 1px solid $primary-gray-5d;
+        }
+
+        .modal-body {
+            padding: 40px;
+
+            p:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .modal-footer {
+            border: 1px solid $primary-gray-5d;
+            background-color: $primary-gray;
         }
     }
 }

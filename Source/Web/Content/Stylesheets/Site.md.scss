@@ -1,0 +1,42 @@
+﻿@import "bootstrap/_variables.scss";
+
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    header {
+        font-size: 1.5em;
+    }
+
+    #Content {
+        font-size: 1.4em;
+
+        #PageContent {
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            h2 {
+                font-size: 1.4em;
+            }
+            
+            h3 {
+                font-size: 1.2em;
+            }
+            
+            h4 {
+                font-size: 1.1em;
+            }
+
+            ul {
+                &.blocks {
+                    > li {
+                        width: 405px;
+                        height: 140px;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        font-size: 1.5em;
+    }
+}
