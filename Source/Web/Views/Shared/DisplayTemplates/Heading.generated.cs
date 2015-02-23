@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace JSM.Web.Views.Shared.DisplayTemplates
+namespace ASP
 {
     using System;
     using System.Collections.Generic;
@@ -35,9 +35,9 @@ namespace JSM.Web.Views.Shared.DisplayTemplates
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("RazorGenerator", "2.0.0.0")]
     [System.Web.WebPages.PageVirtualPathAttribute("~/Views/Shared/DisplayTemplates/Heading.cshtml")]
-    public partial class Heading_ : System.Web.Mvc.WebViewPage<JSM.Web.Models.Shared.Resume.Heading>
+    public partial class _Views_Shared_DisplayTemplates_Heading_cshtml_ : System.Web.Mvc.WebViewPage<JSM.Web.Models.Shared.Resume.Heading>
     {
-        public Heading_()
+        public _Views_Shared_DisplayTemplates_Heading_cshtml_()
         {
         }
         public override void Execute()

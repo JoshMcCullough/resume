@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace JSM.Web.Views.Shared
+namespace ASP
 {
     using System;
     using System.Collections.Generic;
@@ -28,8 +28,6 @@ namespace JSM.Web.Views.Shared
     using System.Web.UI;
     using System.Web.WebPages;
     using JSM.Web;
-    using JSM.Web.Models.Shared;
-    using JSM.Web.Models.Shared.Resume;
     using QuantumConcepts.Common.Extensions;
     using QuantumConcepts.Common.Mvc.Extensions;
     using QuantumConcepts.Common.Mvc.Utils;
@@ -37,9 +35,9 @@ namespace JSM.Web.Views.Shared
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("RazorGenerator", "2.0.0.0")]
     [System.Web.WebPages.PageVirtualPathAttribute("~/Views/Shared/Section.cshtml")]
-    public partial class Section : System.Web.Mvc.WebViewPage<JSM.Web.Models.Shared.Resume.Section>
+    public partial class _Views_Shared_Section_cshtml : System.Web.Mvc.WebViewPage<JSM.Web.Models.Shared.Resume.Section>
     {
-        public Section()
+        public _Views_Shared_Section_cshtml()
         {
         }
         public override void Execute()

@@ -52,20 +52,20 @@ WriteLiteral(" class=\"row\"");
 
 WriteLiteral(">\r\n            <span");
 
-WriteLiteral(" class=\"col col-xs-3 col-md-3\"");
+WriteLiteral(" class=\"col col-xs-3 col-md-3 dates\"");
 
 WriteLiteral(">");
 
             
             #line 6 "..\..\Views\Shared\DisplayTemplates\History.cshtml"
-                                           Write(this.Model.DateSpan);
+                                                 Write(this.Model.DateSpan);
 
             
             #line default
             #line hidden
 WriteLiteral("</span>\r\n            <span");
 
-WriteLiteral(" class=\"col col-xs-6 col-md-6 text-center\"");
+WriteLiteral(" class=\"col col-xs-6 col-md-6 text-center organization\"");
 
 WriteLiteral(">\r\n");
 
@@ -97,14 +97,14 @@ WriteLiteral("                    <a");
 
 WriteLiteral(" class=\"organization-link\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 417), Tuple.Create("\"", 455)
+WriteAttribute("href", Tuple.Create(" href=\"", 436), Tuple.Create("\"", 474)
             
             #line 11 "..\..\Views\Shared\DisplayTemplates\History.cshtml"
-, Tuple.Create(Tuple.Create("", 424), Tuple.Create<System.Object, System.Int32>(this.Model.OrganizationWebsite
+, Tuple.Create(Tuple.Create("", 443), Tuple.Create<System.Object, System.Int32>(this.Model.OrganizationWebsite
             
             #line default
             #line hidden
-, 424), false)
+, 443), false)
 );
 
 WriteLiteral(" target=\"_blank\"");
@@ -124,13 +124,13 @@ WriteLiteral("></span></a>\r\n");
             #line hidden
 WriteLiteral("            </span>\r\n            <span");
 
-WriteLiteral(" class=\"col col-xs-3 col-md-3 text-right\"");
+WriteLiteral(" class=\"col col-xs-3 col-md-3 text-right location\"");
 
 WriteLiteral(">");
 
             
             #line 14 "..\..\Views\Shared\DisplayTemplates\History.cshtml"
-                                                      Write(this.Model.OrganizationLocation);
+                                                               Write(this.Model.OrganizationLocation);
 
             
             #line default

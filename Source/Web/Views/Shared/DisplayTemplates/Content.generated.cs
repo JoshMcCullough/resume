@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace JSM.Web.Views.Shared.DisplayTemplates
+namespace ASP
 {
     using System;
     using System.Collections.Generic;
@@ -28,8 +28,6 @@ namespace JSM.Web.Views.Shared.DisplayTemplates
     using System.Web.UI;
     using System.Web.WebPages;
     using JSM.Web;
-    using JSM.Web.Models.Shared;
-    using JSM.Web.Models.Shared.Resume;
     using QuantumConcepts.Common.Extensions;
     using QuantumConcepts.Common.Mvc.Extensions;
     using QuantumConcepts.Common.Mvc.Utils;
@@ -37,9 +35,9 @@ namespace JSM.Web.Views.Shared.DisplayTemplates
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("RazorGenerator", "2.0.0.0")]
     [System.Web.WebPages.PageVirtualPathAttribute("~/Views/Shared/DisplayTemplates/Content.cshtml")]
-    public partial class Content_ : System.Web.Mvc.WebViewPage<List<object>>
+    public partial class _Views_Shared_DisplayTemplates_Content_cshtml_ : System.Web.Mvc.WebViewPage<List<object>>
     {
-        public Content_()
+        public _Views_Shared_DisplayTemplates_Content_cshtml_()
         {
         }
         public override void Execute()
