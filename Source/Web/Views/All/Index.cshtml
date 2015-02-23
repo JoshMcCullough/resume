@@ -9,3 +9,8 @@
 @foreach (var section in this.Model.Sections.Where(o => o.Key != "overview")) {
     @Html.DisplayFor(m => section)
 }
+
+<div id="section_contact-me" class="section">
+    <h1><span>Contact Me</span></h1>
+    @{Html.RenderPartial("~/Views/ContactMe/_ContactInfo.cshtml");}
+</div>

@@ -1,0 +1,38 @@
+﻿@using JSM.Web.Models.Shared;
+
+<p>If you'd like to get in touch with me, please use one of the following methods:</p>
+
+@{Html.RenderPartial("_InfoSlider", new InfoSliderModel() {
+    Id = "emailSlider",
+    Label = "Email"
+});}
+
+@{Html.RenderPartial("_InfoSlider", new InfoSliderModel() {
+    Id = "phoneSlider",
+    Label = "Phone"
+});}
+
+<script type="text/javascript">
+    function sliderCallback(url, contentCallback) {
+        var $sliderElement = this;
+
+        $.post(url, function (data) {
+            var infoSlider = $sliderElement.getInfoSlider();
+
+            infoSlider.onSliding = null;
+            infoSlider.setContent(contentCallback instanceof Function ? contentCallback(data) : data);
+        });
+    }
+
+    $(document).ready(function () {
+        var $emailSlider = $("#emailSlider");
+        var $phoneSlider = $("#phoneSlider");
+
+        $emailSlider.infoSlider(sliderCallback.bind($emailSlider, "@Url.Action("GetEmail", "ContactMe")", function (data) {
+            return $("<a>")
+                .text(data)
+                .attr("href", "mailto:" + data);
+        }));
+        $phoneSlider.infoSlider(sliderCallback.bind($phoneSlider, "@Url.Action("GetPhone", "ContactMe")"));
+    });
+</script>

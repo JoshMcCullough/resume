@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace JSM.Web.Views.ContactMe
+namespace ASP
 {
     using System;
     using System.Collections.Generic;
@@ -28,8 +28,6 @@ namespace JSM.Web.Views.ContactMe
     using System.Web.UI;
     using System.Web.WebPages;
     using JSM.Web;
-    using JSM.Web.Models.Shared;
-    using JSM.Web.Models.Shared.Resume;
     using QuantumConcepts.Common.Extensions;
     using QuantumConcepts.Common.Mvc.Extensions;
     using QuantumConcepts.Common.Mvc.Utils;
@@ -37,9 +35,9 @@ namespace JSM.Web.Views.ContactMe
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("RazorGenerator", "2.0.0.0")]
     [System.Web.WebPages.PageVirtualPathAttribute("~/Views/ContactMe/Index.cshtml")]
-    public partial class Index : System.Web.Mvc.WebViewPage<dynamic>
+    public partial class _Views_ContactMe_Index_cshtml : System.Web.Mvc.WebViewPage<dynamic>
     {
-        public Index()
+        public _Views_ContactMe_Index_cshtml()
         {
         }
         public override void Execute()
@@ -53,115 +51,14 @@ namespace JSM.Web.Views.ContactMe
             
             #line default
             #line hidden
-WriteLiteral("\r\n\r\n<p>If you\'d like to get in touch with me, please use one of the following met" +
-"hods:</p>\r\n\r\n");
-
-            
-            #line 8 "..\..\Views\ContactMe\Index.cshtml"
-  Html.RenderPartial("_InfoSlider", new InfoSliderModel() {
-    Id = "emailSlider",
-    Label = "email"
-});
-            
-            #line default
-            #line hidden
 WriteLiteral("\r\n\r\n");
 
             
-            #line 13 "..\..\Views\ContactMe\Index.cshtml"
-  Html.RenderPartial("_InfoSlider", new InfoSliderModel() {
-      Id = "phoneSlider",
-      Label = "phone"
-});
+            #line 6 "..\..\Views\ContactMe\Index.cshtml"
+  Html.RenderPartial("_ContactInfo");
             
             #line default
             #line hidden
-WriteLiteral("\r\n\r\n");
-
-DefineSection("Head", () => {
-
-WriteLiteral("\r\n    <link");
-
-WriteLiteral(" type=\"text/css\"");
-
-WriteLiteral(" rel=\"stylesheet\"");
-
-WriteAttribute("href", Tuple.Create(" href=\"", 467), Tuple.Create("\"", 526)
-            
-            #line 19 "..\..\Views\ContactMe\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 474), Tuple.Create<System.Object, System.Int32>(Url.Content("~/Content/Stylesheets/InfoSlider.css")
-            
-            #line default
-            #line hidden
-, 474), false)
-);
-
-WriteLiteral("/>\r\n");
-
-});
-
-WriteLiteral("\r\n");
-
-DefineSection("Scripts", () => {
-
-WriteLiteral("\r\n    <script");
-
-WriteLiteral(" type=\"text/javascript\"");
-
-WriteAttribute("src", Tuple.Create(" src=\"", 590), Tuple.Create("\"", 643)
-            
-            #line 23 "..\..\Views\ContactMe\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 596), Tuple.Create<System.Object, System.Int32>(Url.Content("~/Content/Scripts/InfoSlider.js")
-            
-            #line default
-            #line hidden
-, 596), false)
-);
-
-WriteLiteral("></script>\r\n    <script");
-
-WriteLiteral(" type=\"text/javascript\"");
-
-WriteLiteral(">\r\n        $(document).ready(function () {\r\n            var $emailSlider = $(\"#em" +
-"ailSlider\");\r\n            var $phoneSlider = $(\"#phoneSlider\");\r\n\r\n            $" +
-"emailSlider.infoSlider(sliderCallback.bind($emailSlider, \"");
-
-            
-            #line 29 "..\..\Views\ContactMe\Index.cshtml"
-                                                                  Write(Url.Action("GetEmail"));
-
-            
-            #line default
-            #line hidden
-WriteLiteral("\", function (data) {\r\n                return $(\"<a>\")\r\n                    .text(" +
-"data)\r\n                    .attr(\"href\", \"mailto:\" + data);\r\n            }));\r\n " +
-"           $phoneSlider.infoSlider(sliderCallback.bind($phoneSlider, \"");
-
-            
-            #line 34 "..\..\Views\ContactMe\Index.cshtml"
-                                                                  Write(Url.Action("GetPhone"));
-
-            
-            #line default
-            #line hidden
-WriteLiteral(@"""));
-        });
-
-        function sliderCallback(url, contentCallback) {
-            var $sliderElement = this;
-
-            $.post(url, function (data) {
-                var infoSlider = $sliderElement.getInfoSlider();
-
-                infoSlider.onSliding = null;
-                infoSlider.setContent(contentCallback instanceof Function ? contentCallback(data) : data);
-            });
-        }
-</script>
-");
-
-});
-
         }
     }
 }

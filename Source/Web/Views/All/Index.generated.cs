@@ -78,9 +78,32 @@ Write(Html.DisplayFor(m => section));
             #line 10 "..\..\Views\All\Index.cshtml"
                                   
 }
+
             
             #line default
             #line hidden
+WriteLiteral("\r\n<div");
+
+WriteLiteral(" id=\"section_contact-me\"");
+
+WriteLiteral(" class=\"section\"");
+
+WriteLiteral(">\r\n    <h1><span>Contact Me</span></h1>\r\n");
+
+            
+            #line 15 "..\..\Views\All\Index.cshtml"
+    
+            
+            #line default
+            #line hidden
+            
+            #line 15 "..\..\Views\All\Index.cshtml"
+      Html.RenderPartial("~/Views/ContactMe/_ContactInfo.cshtml");
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n</div>");
+
         }
     }
 }

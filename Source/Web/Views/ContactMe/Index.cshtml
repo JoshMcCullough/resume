@@ -3,46 +3,4 @@
     ViewBag.PageTitle = ViewBag.Title;
 }
 
-<p>If you'd like to get in touch with me, please use one of the following methods:</p>
-
-@{Html.RenderPartial("_InfoSlider", new InfoSliderModel() {
-    Id = "emailSlider",
-    Label = "email"
-});}
-
-@{Html.RenderPartial("_InfoSlider", new InfoSliderModel() {
-      Id = "phoneSlider",
-      Label = "phone"
-});}
-
-@section Head {
-    <link type="text/css" rel="stylesheet" href="@Url.Content("~/Content/Stylesheets/InfoSlider.css")"/>
-}
-
-@section Scripts {
-    <script type="text/javascript" src="@Url.Content("~/Content/Scripts/InfoSlider.js")"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            var $emailSlider = $("#emailSlider");
-            var $phoneSlider = $("#phoneSlider");
-
-            $emailSlider.infoSlider(sliderCallback.bind($emailSlider, "@Url.Action("GetEmail")", function (data) {
-                return $("<a>")
-                    .text(data)
-                    .attr("href", "mailto:" + data);
-            }));
-            $phoneSlider.infoSlider(sliderCallback.bind($phoneSlider, "@Url.Action("GetPhone")"));
-        });
-
-        function sliderCallback(url, contentCallback) {
-            var $sliderElement = this;
-
-            $.post(url, function (data) {
-                var infoSlider = $sliderElement.getInfoSlider();
-
-                infoSlider.onSliding = null;
-                infoSlider.setContent(contentCallback instanceof Function ? contentCallback(data) : data);
-            });
-        }
-</script>
-}
+@{Html.RenderPartial("_ContactInfo");}
