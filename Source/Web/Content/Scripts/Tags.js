@@ -197,7 +197,7 @@ var Expertise = (function (_super) {
                 maxRowHeight = (_this.fixedHeight || currentSize);
                 left = 0;
             }
-            tag.element.css("line-height", ((_this.fixedHeight || currentSize) - tagHeightOffset - (2 * tagPaddingTop)) + "px");
+            tag.element.css("line-height", ((_this.fixedHeight || currentSize) - tagHeightOffset) + "px");
             tag.element.delay(index * options.animationDelay).animate({
                 width: (currentSize),
                 height: (_this.fixedHeight || currentSize),
@@ -300,6 +300,8 @@ Tags.allTags.push(new Tag("css3", null, "CSS3", 10));
 Tags.allTags.push(new Tag("flash", null, "Flash", 3));
 Tags.allTags.push(new Tag("git", null, "Git", 7));
 Tags.allTags.push(new Tag("grails", null, "Grails", 3));
+Tags.allTags.push(new Tag("highcharts", null, "Highcharts", 6));
+Tags.allTags.push(new Tag("highmaps", null, "Highmaps", 8));
 Tags.allTags.push(new Tag("html", null, "HTML", 10));
 Tags.allTags.push(new Tag("html5", null, "HTML5", 10));
 Tags.allTags.push(new Tag("iis", "IIS", "Internet Information Services", 10));
@@ -307,12 +309,12 @@ Tags.allTags.push(new Tag("java", null, "Java", 7));
 Tags.allTags.push(new Tag("js", "JS", "JavaScript", 10));
 Tags.allTags.push(new Tag("ko", null, "Knockout", 7));
 Tags.allTags.push(new Tag("linux", null, "Linux", 6));
-Tags.allTags.push(new Tag("mantis", null, "Mantis", 6));
+Tags.allTags.push(new Tag("mantis", null, "Mantis", 8));
 Tags.allTags.push(new Tag("mapping", null, "Mapping", 6));
 Tags.allTags.push(new Tag("mssql", "MS SQL", "Microsoft SQL Server", 9));
+Tags.allTags.push(new Tag("ssrs", null, "Microsoft SQL Server Reporting Services", 8));
 Tags.allTags.push(new Tag("mvc", "MVC", "ASP.NET MVC", 10));
-Tags.allTags.push(new Tag("msoffice", null, "MS Office", 6));
-Tags.allTags.push(new Tag("mysql", null, "My SQL", 7));
+Tags.allTags.push(new Tag("mysql", null, "My SQL", 8));
 Tags.allTags.push(new Tag("openscad", null, "OpenSCAD", 3));
 Tags.allTags.push(new Tag("oracle", null, "Oracle", 5));
 Tags.allTags.push(new Tag("php", null, "PHP", 5));
@@ -322,19 +324,19 @@ Tags.allTags.push(new Tag("regex", "RegEx", "Regular Expressions", 9));
 Tags.allTags.push(new Tag("rails", "Rails", "Ruby on Rails", 6));
 Tags.allTags.push(new Tag("sl", null, "Silverlight", 4));
 Tags.allTags.push(new Tag("svn", "SVN", "Subversion", 9));
-Tags.allTags.push(new Tag("svg", null, "SVG", 7));
-Tags.allTags.push(new Tag("tfs", "TFS", "Team Foundation Server", 9));
-Tags.allTags.push(new Tag("tfvc", "TFVC", "TF Version Control", 7));
+Tags.allTags.push(new Tag("tfs", "TFS", "Team Foundation Server", 6));
+Tags.allTags.push(new Tag("tfvc", "TFVC", "Team Foundation Version Control", 7));
 Tags.allTags.push(new Tag("tomcat", null, "Tomcat", 7));
 Tags.allTags.push(new Tag("uiux", null, "UI/UX", 7));
 Tags.allTags.push(new Tag("vb", "VB.NET", "Visual Basic .NET", 8));
 Tags.allTags.push(new Tag("weblogic", null, "WebLogic", 10));
 Tags.allTags.push(new Tag("windows", null, "Windows", 10));
+Tags.allTags.push(new Tag("winserver", null, "Windows Server", 9));
 Tags.allTags.push(new Tag("wcf", "WCF", "Windows Communication Foundation", 7));
 Tags.allTags.push(new Tag("winforms", "WinForms", "Windows Forms", 10));
 Tags.allTags.push(new Tag("wp", null, "Windows Phone", 4));
 Tags.allTags.push(new Tag("xml", null, "XML", 10));
-Tags.allTags.push(new Tag("xsd", null, "XSD", 7));
+Tags.allTags.push(new Tag("xsd", null, "XSD", 8));
 Tags.allTags.push(new Tag("xslt", null, "XSLT", 9));
 Tags.init();
 //# sourceMappingURL=Tags.js.map
