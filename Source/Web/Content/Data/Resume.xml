@@ -16,13 +16,13 @@
         <Subsection Key="summary" Title="Summary">
             <Heading Level="3">I Love Technology (and Learning)</Heading>
             <Paragraph>
-                Almost everything I do has something to do with technology and learning. Not only do I write software <Text Class="em">every day</Text>, but I always have one or more side projects in progress. In my free time, my goal isn't always to "ship" a product or to reach a defined goal – often I simply want to <Text Class="em">learn something</Text>. Whether I'm working on a JavaScript framework, catching a glimpse of Jupiter through my telescope, installing a PC in my car, donating my tech skills for a cause in which I believe, building an HTML5 game, configuring a Linux mail server, designing and budgeting my next house project, or printing something in 3D – it all comes back to technology and my unquenchable thirst for knowledge.
+                Almost everything I do has something to do with technology and learning. Not only do I write software <Text Class="em">every day</Text>, but I always have one or more side projects in progress. In my free time, my goal isn't always to "ship" a product or to reach a defined goal &#8212; often I simply want to <Text Class="em">learn something</Text>. Whether I'm working on a JavaScript framework, catching a glimpse of Jupiter through my telescope, installing a PC in my car, donating my tech skills for a cause in which I believe, building an HTML5 game engine, configuring a Linux mail server, designing and budgeting my next house project, or printing something in 3D &#8212; <Link Url="http://www.thingiverse.com/QuantumConcepts">view my profile on Thingiverse</Link> &#8212; it all comes back to technology and my unquenchable thirst for knowledge.
             </Paragraph>
             <Paragraph>I live and breathe this stuff.</Paragraph>
 
             <Heading Level="3">What Drives Me</Heading>
             <Paragraph>
-                I'm driven by being challenged. I enjoy facing, dissecting, and solving problems. I also like to help people solve their own problems – <Link Url="http://stackoverflow.com/users/374198/josh-m?tab=answers">view my profile on Stack Overflow</Link> for examples. I am motivated by knowing that <Text Class="em">someone</Text> is going to use and enjoy what I am working on. I strive to create concise solutions to the programming problems I face. I believe code is almost an art. A lot of people can write something which <Text Class="em">works</Text>, but not everyone can do that <Text Class="em">correctly</Text>. I pride myself on writing clean, concise, reusable and scalable code.
+                I'm driven by being challenged. I enjoy facing, dissecting, and solving problems. I also like to help people solve their own problems &#8212; <Link Url="http://stackoverflow.com/users/374198/josh-m?tab=answers">view my profile on Stack Overflow</Link> for examples. I am motivated by knowing that <Text Class="em">someone</Text> is going to use and enjoy what I am working on. I strive to create concise solutions to the programming problems I face. I believe code is almost an art. A lot of people can write something which <Text Class="em">works</Text>, but not everyone can do that <Text Class="em">correctly</Text>. I pride myself on writing clean, concise, reusable and scalable code.
             </Paragraph>
         </Subsection>
     </Section>
@@ -30,6 +30,8 @@
     <Section Key="skills-and-tech" Title="Skills &amp; Tech">
         <Paragraph>I am a highly skilled software engineer who prides himself on completing tasks on time while maintaining high quality standards and adhering to software development best practices. I...</Paragraph>
         <List>
+            <Item>mentor and train junior developers and implement coding standards;</Item>
+            <Item>do everything from infrastructure configuration to backend and frontend design and implementation;</Item>
             <Item>plan, research, estimate and develop solutions for Federal &amp; State Government and private-sector contracts;</Item>
             <Item>am responsible for architecting and developing sophisticated SOAP and RESTful API (<Link Url="http://healthindicators.gov">HealthIndicators.gov</Link>);</Item>
             <Item>make and implement high-level decisions regarding overall application architecture, use and design;</Item>
@@ -44,15 +46,19 @@
                 <Item>Project &amp; feature design and development.</Item>
                 <Item>UI design and implementation.</Item>
                 <Item>Clean, organized, efficient, reusable code.</Item>
-                <Item>Writing internal and external documentation, presentations, tutorials, etc.</Item>
+                <Item>Automating as much as possible, whenever possible.</Item>
+                <Item>Writing and delivering internal and external documentation, demos, presentations, tutorials, etc.</Item>
             </List>
         </Subsection>
 
         <Subsection Key="technology" Title="Technology">
             <List>
                 <Item>.NET, C#, ASP.NET MVC, ASP.NET WebForms, Ruby on Rails, PHP, Java, Hibernate, Spring, Struts</Item>
-                <Item>HTML 5, CSS 3, JavaScript, jQuery, Bootstrap, Knockout, Highcharts/Highmaps</Item>
+                <Item>HTML, CSS, JavaScript, jQuery, Bootstrap, Knockout, Highcharts/Highmaps</Item>
                 <Item>Visual Studio, Eclipse, NetBeans</Item>
+                <Item>
+                    Git, Subversion, TFS/TFVC &#8212; <Link Url="https://github.com/JoshMcCullough">view my profile on Github</Link>
+                </Item>
                 <Item>IIS, Apache, Nginx, Tomcat, Weblogic</Item>
                 <Item>SQL Server, MySQL, Oracle</Item>
                 <Item>Windows, Linux</Item>
@@ -63,7 +69,7 @@
         <Subsection Key="hobbies" Title="Hobbies">
             <List>
                 <Item>Keeping up with the latest in software development.</Item>
-                <Item>3D printing – <Link Url="http://www.thingiverse.com/QuantumConcepts/designs">QuantumConcepts on Thingiverse.com</Link>.</Item>
+                <Item>3D printing &#8212; <Link Url="http://www.thingiverse.com/QuantumConcepts/designs">QuantumConcepts on Thingiverse.com</Link>.</Item>
                 <Item>General DIY and learning how things work.</Item>
                 <Item>Technology, astronomy, travel, photography.</Item>
             </List>
