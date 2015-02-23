@@ -1,14 +1,18 @@
-﻿@import "Global.scss";
+﻿@import "Variables";
+
+@page {
+    margin: .25in;
+}
 
 html,
 body {
-    width: 8in;
-    height: auto;
+    margin: 0;
     font-family: Garamond, 'Times New Roman', serif;
 }
 
 body {
-    margin: .25in;
+    width: 8in;
+    height: 10.5in;
     font-size: 10pt;
     background-color: transparent;
     overflow-y: auto;
@@ -32,15 +36,21 @@ header {
             color: #000;
 
             &.Name {
+                float: left;
+                width: auto;
                 border-right: none;
                 font-size: 24pt;
                 font-weight: bold;
                 text-align: left;
+                vertical-align: middle;
             }
             
             &.Roles {
-                padding-top: 10pt;
+                float: right;
+                padding: 4mm 0 0 0;
+                width: auto;
                 text-align: right;
+                vertical-align: middle;
 
                 li {
                     padding: 0 2mm;
@@ -58,17 +68,16 @@ header {
     }
 }
 
-div#Content {
+#Content {
     padding: 0;
-
-    > div {
+    
+    #PageContent {
         padding: 0;
         border: none;
         background-color: transparent;
 
         h1,
         h2 {
-            margin: 0 0 2mm 0;
             text-transform: none;
         }
 
@@ -83,6 +92,7 @@ div#Content {
         }
 
         h1 {
+            margin: 0;
             border-bottom: .5mm solid $primary-gray;
             font-size: 18pt;
             font-weight: bold;
@@ -97,7 +107,7 @@ div#Content {
         }
 
         h2 {
-            margin: 2mm 0 0 0;
+            margin: 3mm 0 0 0;
             font-size: 14pt;
 
             &.history-item {
@@ -115,15 +125,24 @@ div#Content {
                 padding-top: 0;
                 padding-bottom: 0;
             }
+
+            + h3 {
+                margin-top: 0;
+            }
+        }
+
+        h3,
+        h4,
+        h5 {
+            margin: 2mm 0 0 0;
         }
 
         h3 {
-            margin: 1mm 0 0 0;
             font-size: 12pt;
         }
 
+        h4,
         h5 {
-            margin: 1mm 0 0 0;
             font-size: 10pt;
         }
 
@@ -157,6 +176,8 @@ div#Content {
                     page-break-inside: avoid;
 
                     h3 {
+                        margin-top: 1mm;
+
                         .glyphicon {
                             display: none;
                         }
@@ -234,7 +255,7 @@ div#Content {
             }
 
             .subsection {
-                margin: 0 0 2mm 0;
+                margin: 0 0 4mm 0;
             }
 
             .history-item {
@@ -248,13 +269,7 @@ div#Content {
                     }
 
                     .organization-link {
-                        margin: 0 0 0 1mm;
-                        font-size: 8pt;
-                        visibility: visible;
-
-                        .glyphicon {
-                            display: none;
-                        }
+                        display: none;
                     }
                 }
             }
@@ -262,32 +277,6 @@ div#Content {
             &#section_overview {
                 #subsection_self-rankings {
                     display: none;
-
-                    ul.expertise {
-                        position: static;
-                        padding: 0;
-                        height: auto !important;
-
-                        li {
-                            position: static;
-                            display: inline-block;
-                            margin: 0 1mm 1mm 0;
-                            padding: 0 1mm;
-                            height: 8mm !important;
-                            min-height: 8mm !important;
-                            line-height: 8mm !important;
-                            font-size: 8pt;
-                            overflow: hidden;
-
-                            &:after {
-                                content: attr(data-tags-abbr);
-                            }
-
-                            span {
-                                display: none;
-                            }
-                        }
-                    }
                 }
             }
 
@@ -295,20 +284,18 @@ div#Content {
                 .subsection#subsection_certifications-and-skills,
                 .subsection#subsection_technology {
                     clear: none;
+                    margin: 0;
+                    padding: 0;
 
                     &#subsection_certifications-and-skills {
                         float: left;
-                        width: 2.75in;
+                        width: 3in;
                     }
 
                     &#subsection_technology {
                         float: right;
-                        width: 5in;
+                        width: 4.75in;
                     }
-                }
-
-                .subsection#subsection_hobbies {
-                    clear: left;
                 }
             }
         }
@@ -321,7 +308,7 @@ footer {
     font-size: 14pt;
     text-align: center;
 
-    > div {
+    #FooterContent {
         padding: 0;
         border: none;
 

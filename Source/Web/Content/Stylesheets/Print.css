@@ -1,10 +1,13 @@
-﻿html, body {
-  width: 8in;
-  height: auto;
+﻿@page {
+  margin: 0.25in; }
+
+html, body {
+  margin: 0;
   font-family: Garamond, 'Times New Roman', serif; }
 
 body {
-  margin: 0.25in;
+  width: 8in;
+  height: 10.5in;
   font-size: 10pt;
   background-color: transparent;
   overflow-y: auto; }
@@ -24,13 +27,19 @@ header {
       margin: 0;
       color: #000; }
       header .About .col.Name {
+        float: left;
+        width: auto;
         border-right: none;
         font-size: 24pt;
         font-weight: bold;
-        text-align: left; }
+        text-align: left;
+        vertical-align: middle; }
       header .About .col.Roles {
-        padding-top: 10pt;
-        text-align: right; }
+        float: right;
+        padding: 4mm 0 0 0;
+        width: auto;
+        text-align: right;
+        vertical-align: middle; }
         header .About .col.Roles li {
           padding: 0 2mm; }
           header .About .col.Roles li:last-child {
@@ -38,59 +47,61 @@ header {
   header nav {
     display: none; }
 
-div#Content {
+#Content {
   padding: 0; }
-  div#Content > div {
+  #Content #PageContent {
     padding: 0;
     border: none;
     background-color: transparent; }
-    div#Content > div h1, div#Content > div h2 {
-      margin: 0 0 2mm 0;
+    #Content #PageContent h1, #Content #PageContent h2 {
       text-transform: none; }
-    div#Content > div h1 > span, div#Content > div h2 > span {
+    #Content #PageContent h1 > span, #Content #PageContent h2 > span {
       padding: 0;
       border: none;
       background-color: transparent;
       -moz-box-shadow: none;
       -webkit-box-shadow: none;
       box-shadow: none; }
-    div#Content > div h1 {
+    #Content #PageContent h1 {
+      margin: 0;
       border-bottom: 0.5mm solid #e9e9e9;
       font-size: 18pt;
       font-weight: bold; }
-      div#Content > div h1:nth-of-type(1n+2) {
+      #Content #PageContent h1:nth-of-type(1n+2) {
         margin-top: 5mm; }
-      div#Content > div h1 > span {
+      #Content #PageContent h1 > span {
         padding: 0; }
-    div#Content > div h2 {
-      margin: 2mm 0 0 0;
+    #Content #PageContent h2 {
+      margin: 3mm 0 0 0;
       font-size: 14pt; }
-      div#Content > div h2.history-item span {
+      #Content #PageContent h2.history-item span {
         margin: 0;
         padding: 0; }
-      div#Content > div h2.history-item .organization-link {
+      #Content #PageContent h2.history-item .organization-link {
         display: none; }
-      div#Content > div h2 > span {
+      #Content #PageContent h2 > span {
         padding-top: 0;
         padding-bottom: 0; }
-    div#Content > div h3 {
-      margin: 1mm 0 0 0;
+      #Content #PageContent h2 + h3 {
+        margin-top: 0; }
+    #Content #PageContent h3, #Content #PageContent h4, #Content #PageContent h5 {
+      margin: 2mm 0 0 0; }
+    #Content #PageContent h3 {
       font-size: 12pt; }
-    div#Content > div h5 {
-      margin: 1mm 0 0 0;
+    #Content #PageContent h4, #Content #PageContent h5 {
       font-size: 10pt; }
-    div#Content > div ul {
+    #Content #PageContent ul {
       padding-left: 4mm; }
-      div#Content > div ul li {
+      #Content #PageContent ul li {
         text-indent: -2mm; }
-        div#Content > div ul li:before {
+        #Content #PageContent ul li:before {
           left: -2mm; }
-        div#Content > div ul li ul {
+        #Content #PageContent ul li ul {
           padding-left: 2mm; }
-      div#Content > div ul.blocks {
+      #Content #PageContent ul.blocks {
         margin: 0;
         padding: 0; }
-        div#Content > div ul.blocks > li {
+        #Content #PageContent ul.blocks > li {
           position: relative;
           display: block;
           margin: 0 0 2mm 0;
@@ -99,29 +110,31 @@ div#Content {
           height: auto;
           border: none;
           page-break-inside: avoid; }
-          div#Content > div ul.blocks > li h3 .glyphicon {
-            display: none; }
-          div#Content > div ul.blocks > li h3 a.visit {
-            display: inline-block;
-            margin: 0 0 0 2mm;
-            font-size: 8pt; }
-          div#Content > div ul.blocks > li .tagline {
+          #Content #PageContent ul.blocks > li h3 {
+            margin-top: 1mm; }
+            #Content #PageContent ul.blocks > li h3 .glyphicon {
+              display: none; }
+            #Content #PageContent ul.blocks > li h3 a.visit {
+              display: inline-block;
+              margin: 0 0 0 2mm;
+              font-size: 8pt; }
+          #Content #PageContent ul.blocks > li .tagline {
             position: absolute;
             top: 1mm;
             right: 0;
             margin: 0;
             font-style: italic; }
-          div#Content > div ul.blocks > li .content {
+          #Content #PageContent ul.blocks > li .content {
             height: auto; }
-          div#Content > div ul.blocks > li ul.features {
+          #Content #PageContent ul.blocks > li ul.features {
             position: static;
             margin: 0;
             vertical-align: middle;
             font-size: 8pt; }
-            div#Content > div ul.blocks > li ul.features:before {
+            #Content #PageContent ul.blocks > li ul.features:before {
               content: 'Tech. Used: ';
               font-style: italic; }
-            div#Content > div ul.blocks > li ul.features li {
+            #Content #PageContent ul.blocks > li ul.features li {
               display: inline;
               padding: 0 2mm;
               margin: 0;
@@ -129,70 +142,48 @@ div#Content {
               vertical-align: middle;
               font-size: 8pt;
               line-height: normal; }
-    div#Content > div a, div#Content > div a:link, div#Content > div a:active, div#Content > div a:visited, div#Content > div a:hover {
+    #Content #PageContent a, #Content #PageContent a:link, #Content #PageContent a:active, #Content #PageContent a:visited, #Content #PageContent a:hover {
       color: #000;
       text-decoration: none; }
-      div#Content > div a:after, div#Content > div a:link:after, div#Content > div a:active:after, div#Content > div a:visited:after, div#Content > div a:hover:after {
+      #Content #PageContent a:after, #Content #PageContent a:link:after, #Content #PageContent a:active:after, #Content #PageContent a:visited:after, #Content #PageContent a:hover:after {
         content: '(' attr(href) ')'; }
-    div#Content > div p, div#Content > div ol, div#Content > div ul {
+    #Content #PageContent p, #Content #PageContent ol, #Content #PageContent ul {
       margin: 1mm 0;
       font-size: 10pt;
       text-align: justify; }
-    div#Content > div .section:nth-of-type(1n+2) h1 {
+    #Content #PageContent .section:nth-of-type(1n+2) h1 {
       margin-top: 4mm; }
-    div#Content > div .section .subsection {
-      margin: 0 0 2mm 0; }
-    div#Content > div .section .history-item {
+    #Content #PageContent .section .subsection {
+      margin: 0 0 4mm 0; }
+    #Content #PageContent .section .history-item {
       page-break-inside: avoid; }
-      div#Content > div .section .history-item h2 > span, div#Content > div .section .history-item h2 > span span {
+      #Content #PageContent .section .history-item h2 > span, #Content #PageContent .section .history-item h2 > span span {
         padding: 0;
         margin: 0; }
-      div#Content > div .section .history-item h2 .organization-link {
-        margin: 0 0 0 1mm;
-        font-size: 8pt;
-        visibility: visible; }
-        div#Content > div .section .history-item h2 .organization-link .glyphicon {
-          display: none; }
-    div#Content > div .section#section_overview #subsection_self-rankings {
+      #Content #PageContent .section .history-item h2 .organization-link {
+        display: none; }
+    #Content #PageContent .section#section_overview #subsection_self-rankings {
       display: none; }
-      div#Content > div .section#section_overview #subsection_self-rankings ul.expertise {
-        position: static;
-        padding: 0;
-        height: auto !important; }
-        div#Content > div .section#section_overview #subsection_self-rankings ul.expertise li {
-          position: static;
-          display: inline-block;
-          margin: 0 1mm 1mm 0;
-          padding: 0 1mm;
-          height: 8mm !important;
-          min-height: 8mm !important;
-          line-height: 8mm !important;
-          font-size: 8pt;
-          overflow: hidden; }
-          div#Content > div .section#section_overview #subsection_self-rankings ul.expertise li:after {
-            content: attr(data-tags-abbr); }
-          div#Content > div .section#section_overview #subsection_self-rankings ul.expertise li span {
-            display: none; }
-    div#Content > div .section#section_skills-and-tech .subsection#subsection_certifications-and-skills, div#Content > div .section#section_skills-and-tech .subsection#subsection_technology {
-      clear: none; }
-      div#Content > div .section#section_skills-and-tech .subsection#subsection_certifications-and-skills#subsection_certifications-and-skills, div#Content > div .section#section_skills-and-tech .subsection#subsection_technology#subsection_certifications-and-skills {
+    #Content #PageContent .section#section_skills-and-tech .subsection#subsection_certifications-and-skills, #Content #PageContent .section#section_skills-and-tech .subsection#subsection_technology {
+      clear: none;
+      margin: 0;
+      padding: 0; }
+      #Content #PageContent .section#section_skills-and-tech .subsection#subsection_certifications-and-skills#subsection_certifications-and-skills, #Content #PageContent .section#section_skills-and-tech .subsection#subsection_technology#subsection_certifications-and-skills {
         float: left;
-        width: 2.75in; }
-      div#Content > div .section#section_skills-and-tech .subsection#subsection_certifications-and-skills#subsection_technology, div#Content > div .section#section_skills-and-tech .subsection#subsection_technology#subsection_technology {
+        width: 3in; }
+      #Content #PageContent .section#section_skills-and-tech .subsection#subsection_certifications-and-skills#subsection_technology, #Content #PageContent .section#section_skills-and-tech .subsection#subsection_technology#subsection_technology {
         float: right;
-        width: 5in; }
-    div#Content > div .section#section_skills-and-tech .subsection#subsection_hobbies {
-      clear: left; }
+        width: 4.75in; }
 
 footer {
   margin: 10mm 0 0 0;
   padding: 0;
   font-size: 14pt;
   text-align: center; }
-  footer > div {
+  footer #FooterContent {
     padding: 0;
     border: none; }
-    footer > div a:link:after, footer > div a:visited:after {
+    footer #FooterContent a:link:after, footer #FooterContent a:visited:after {
       content: none; }
 
 /*# sourceMappingURL=Print.css.map */
