@@ -6,20 +6,19 @@
         <meta name="author" content="Josh McCullough"/>
         <meta name="description" content="I'm a highly skilled software engineer who prides himself on completing tasks on time while maintaining high quality standards and adhering to software development best practices." />
         <meta name="keywords" content="software,development,engineering,engineer,c#,.NET,coding,coder,for hire"/>
-        <title>Josh McCullough | A top-quality, full-stack software engineer.</title>
+        <title>Josh McCullough - A top-quality, full-stack software engineer.</title>
         <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"/>
-        @Styles.Render("~/Content/Stylesheets/3rdParty")
         @Styles.Render("~/Content/Stylesheets/Site")
         @Styles.RenderFormat("<link href=\"{0}\" rel=\"stylesheet\" media=\"print\" />", "~/Content/Stylesheets/Print")
         @Scripts.Render("~/Content/Scripts/3rdParty")
         @Scripts.Render("~/Content/Scripts/Site")
         @RenderSection("Head", required: false)
-</head>
+    </head>
     <body class="Controller-@(ViewContext.RouteData.Values["controller"]) Action-@(ViewContext.RouteData.Values["action"])">
         <header>
             <div class="row About">
-                <div class="col col-sm-4 col-md-3 Name">Josh McCullough</div>
-                <ul class="col col-sm-8 col-md-6 Roles">
+                <div class="col col-sm-12 col-md-4 Name">Josh McCullough</div>
+                <ul class="col col-sm-12 col-md-8 Roles">
                     <li>software engineer</li>
                     <li>leader</li>
                     <li>database developer</li>
@@ -33,11 +32,11 @@
         </header>
 
         <div id="Content">
-            <div>
+            <div id="PageContent">
                 @if (ViewBag.PageTitle != null) {
                     <h1><span>@ViewBag.PageTitle</span></h1>
                 }
-                
+
                 @RenderBody()
 
                 <div class="clearfix"></div>
@@ -45,10 +44,10 @@
         </div>
 
         <footer>
-            <div>
+            <div id="FooterContent">
                 <div class="left-menu hidden-print">
-                    <a href="@Url.Action("Index", "All")">view as single page</a>
-                    <a href="@Url.Action("PDF", "Export")">download as PDF</a>
+                    <a href="@Url.Action("Index", "All")">view as a single page</a>
+                    <a href="@Url.Action("PDF", "Export")">download as a PDF</a>
                     <a href="https://github.com/JoshMcCullough/jsm-web" target="_blank">view source on GitHub</a>
                 </div>
 
@@ -56,8 +55,32 @@
             </div>
         </footer>
 
+        <div id="PrintModal" class="modal fade hidden-print">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title">download complete resume</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p>You just printed this page, or at least thought about it.</p>
+                        <p>Would you like to download a PDF version of my resume?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="DownloadPDFButton" type="button" class="btn btn-default" data-dismiss="modal">Download PDF</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         @Scripts.Render("~/Content/Scripts/3rdParty")
         @Scripts.Render("~/Content/Scripts/Site")
         @RenderSection("Scripts", required: false)
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                Site.initialize("@Url.Content("~/")");
+            });
+        </script>
     </body>
 </html>
