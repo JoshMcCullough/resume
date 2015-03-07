@@ -42,4 +42,13 @@ Site.initializers.push(function () {
     else if (window.onafterprint)
         $(window).on("afterprint", Site.printing.showPrintModal);
 });
+//Initialize the message modal.
+Site.initializers.push(function () {
+    var messageModal = $("#MessageModal");
+    if (messageModal.length > 0) {
+        messageModal.modal({
+            keyboard: true
+        });
+    }
+});
 //# sourceMappingURL=Site.js.map

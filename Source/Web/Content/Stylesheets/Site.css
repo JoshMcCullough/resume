@@ -5437,21 +5437,22 @@ footer {
       footer #FooterContent .left-menu a:last-child {
         border-right: none; }
 
-#PrintModal {
+.modal {
   padding: 0 40px;
   font-size: 1.8em; }
-  #PrintModal .modal-content {
-    box-shadow: none;
-    border-radius: 0; }
-    #PrintModal .modal-content .modal-header {
-      background-color: #e9e9e9;
-      border-bottom: 1px solid gainsboro; }
-    #PrintModal .modal-content .modal-body {
-      padding: 40px; }
-      #PrintModal .modal-content .modal-body p:last-child {
-        margin-bottom: 0; }
-    #PrintModal .modal-content .modal-footer {
-      border: 1px solid gainsboro;
-      background-color: #e9e9e9; }
+
+#PrintModal .modal-content {
+  box-shadow: none;
+  border-radius: 0; }
+  #PrintModal .modal-content .modal-header {
+    background-color: #e9e9e9;
+    border-bottom: 1px solid gainsboro; }
+  #PrintModal .modal-content .modal-body {
+    padding: 40px; }
+    #PrintModal .modal-content .modal-body p:last-child {
+      margin-bottom: 0; }
+  #PrintModal .modal-content .modal-footer {
+    border: 1px solid gainsboro;
+    background-color: #e9e9e9; }
 
 /*# sourceMappingURL=Site.css.map */

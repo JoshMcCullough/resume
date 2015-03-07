@@ -518,9 +518,11 @@ footer {
     }
 }
 
-#PrintModal {
+.modal {
     @include Container;
+}
 
+#PrintModal {
     .modal-content {
         box-shadow: none;
         border-radius: 0;

@@ -321,14 +321,14 @@ WriteLiteral(">\r\n                        <h2");
 
 WriteLiteral(" class=\"modal-title\"");
 
-WriteLiteral(">download complete resume</h2>\r\n                    </div>\r\n                    <" +
+WriteLiteral(">download complete résumé</h2>\r\n                    </div>\r\n                    <" +
 "div");
 
 WriteLiteral(" class=\"modal-body\"");
 
 WriteLiteral(">\r\n                        <p>You just printed this page, or at least thought abo" +
 "ut it.</p>\r\n                        <p>Would you like to download a PDF version " +
-"of my resume?</p>\r\n                    </div>\r\n                    <div");
+"of my résumé?</p>\r\n                    </div>\r\n                    <div");
 
 WriteLiteral(" class=\"modal-footer\"");
 
@@ -353,10 +353,85 @@ WriteLiteral(" data-dismiss=\"modal\"");
 WriteLiteral(">Close</button>\r\n                    </div>\r\n                </div>\r\n            " +
 "</div>\r\n        </div>\r\n\r\n");
 
+            
+            #line 76 "..\..\Views\Shared\_Layout.cshtml"
+        
+            
+            #line default
+            #line hidden
+            
+            #line 76 "..\..\Views\Shared\_Layout.cshtml"
+         if (this.TempData.HasMessage()) {
+
+            
+            #line default
+            #line hidden
+WriteLiteral("            <div");
+
+WriteLiteral(" id=\"MessageModal\"");
+
+WriteAttribute("class", Tuple.Create(" class=\"", 3771), Tuple.Create("\"", 3838)
+, Tuple.Create(Tuple.Create("", 3779), Tuple.Create("modal", 3779), true)
+, Tuple.Create(Tuple.Create(" ", 3784), Tuple.Create("fade", 3785), true)
+, Tuple.Create(Tuple.Create(" ", 3789), Tuple.Create("hidden-print", 3790), true)
+            
+            #line 77 "..\..\Views\Shared\_Layout.cshtml"
+, Tuple.Create(Tuple.Create(" ", 3802), Tuple.Create<System.Object, System.Int32>(this.TempData.GetMessagePriority()
+            
+            #line default
+            #line hidden
+, 3803), false)
+);
+
+WriteLiteral(">\r\n                <div");
+
+WriteLiteral(" class=\"modal-dialog\"");
+
+WriteLiteral(">\r\n                    <div");
+
+WriteLiteral(" class=\"modal-content\"");
+
+WriteLiteral(">\r\n                        <div");
+
+WriteLiteral(" class=\"modal-body\"");
+
+WriteLiteral(">\r\n                            <p>");
+
+            
+            #line 81 "..\..\Views\Shared\_Layout.cshtml"
+                          Write(this.TempData.GetMessage());
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</p>\r\n                        </div>\r\n                        <div");
+
+WriteLiteral(" class=\"modal-footer\"");
+
+WriteLiteral(">\r\n                            <button");
+
+WriteLiteral(" type=\"button\"");
+
+WriteLiteral(" class=\"btn btn-default\"");
+
+WriteLiteral(" data-dismiss=\"modal\"");
+
+WriteLiteral(">Close</button>\r\n                        </div>\r\n                    </div>\r\n    " +
+"            </div>\r\n            </div>\r\n");
+
+            
+            #line 89 "..\..\Views\Shared\_Layout.cshtml"
+        }
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n");
+
 WriteLiteral("        ");
 
             
-            #line 76 "..\..\Views\Shared\_Layout.cshtml"
+            #line 91 "..\..\Views\Shared\_Layout.cshtml"
    Write(Scripts.Render("~/Content/Scripts/3rdParty"));
 
             
@@ -367,7 +442,7 @@ WriteLiteral("\r\n");
 WriteLiteral("        ");
 
             
-            #line 77 "..\..\Views\Shared\_Layout.cshtml"
+            #line 92 "..\..\Views\Shared\_Layout.cshtml"
    Write(Scripts.Render("~/Content/Scripts/Site"));
 
             
@@ -378,7 +453,7 @@ WriteLiteral("\r\n");
 WriteLiteral("        ");
 
             
-            #line 78 "..\..\Views\Shared\_Layout.cshtml"
+            #line 93 "..\..\Views\Shared\_Layout.cshtml"
    Write(RenderSection("Scripts", required: false));
 
             
@@ -392,7 +467,7 @@ WriteLiteral(">\r\n            $(document).ready(function () {\r\n              
 "");
 
             
-            #line 82 "..\..\Views\Shared\_Layout.cshtml"
+            #line 97 "..\..\Views\Shared\_Layout.cshtml"
                             Write(Url.Content("~/"));
 
             

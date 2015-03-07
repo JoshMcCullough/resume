@@ -59,11 +59,11 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h2 class="modal-title">download complete resume</h2>
+                        <h2 class="modal-title">download complete résumé</h2>
                     </div>
                     <div class="modal-body">
                         <p>You just printed this page, or at least thought about it.</p>
-                        <p>Would you like to download a PDF version of my resume?</p>
+                        <p>Would you like to download a PDF version of my résumé?</p>
                     </div>
                     <div class="modal-footer">
                         <button id="DownloadPDFButton" type="button" class="btn btn-default" data-dismiss="modal">Download PDF</button>
@@ -72,6 +72,21 @@
                 </div>
             </div>
         </div>
+
+        @if (this.TempData.HasMessage()) {
+            <div id="MessageModal" class="modal fade hidden-print @this.TempData.GetMessagePriority()">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <p>@this.TempData.GetMessage()</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
 
         @Scripts.Render("~/Content/Scripts/3rdParty")
         @Scripts.Render("~/Content/Scripts/Site")
