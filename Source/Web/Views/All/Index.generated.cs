@@ -45,7 +45,7 @@ namespace ASP
             
             #line 3 "..\..\Views\All\Index.cshtml"
   
-    ViewBag.Title = "Resume of {0}".FormatString(this.Model.DisplayName);
+    ViewBag.Title = "Résumé of {0}".FormatString(this.Model.DisplayName);
 
             
             #line default

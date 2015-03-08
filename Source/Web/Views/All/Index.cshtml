@@ -1,7 +1,7 @@
 ﻿@model JSM.Web.Models.Shared.Resume.Resume
 
 @{
-    ViewBag.Title = "Resume of {0}".FormatString(this.Model.DisplayName);
+    ViewBag.Title = "Résumé of {0}".FormatString(this.Model.DisplayName);
 }
 
 @{Html.RenderPartial("~/Views/Overview/_Content.cshtml", this.Model.FindSection("overview"));}
