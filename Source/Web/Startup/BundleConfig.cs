@@ -6,9 +6,9 @@ namespace JSM.Web.Startup {
         public static void RegisterBundles(BundleCollection bundles) {
             bundles.Add(new StyleBundle("~/Content/Stylesheets/Site").Include(
                 "~/Content/Stylesheets/Site.css",
-                "~/Content/Stylesheets/Site.xs.css",
-                "~/Content/Stylesheets/Site.sm.css",
                 "~/Content/Stylesheets/Site.md.css",
+                "~/Content/Stylesheets/Site.sm.css",
+                "~/Content/Stylesheets/Site.xs.css",
                 "~/Content/Stylesheets/InfoSlider.css"));
 
             bundles.Add(new StyleBundle("~/Content/Stylesheets/Print").Include(
