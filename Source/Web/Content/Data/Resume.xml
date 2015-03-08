@@ -77,7 +77,7 @@
     </Section>
 
     <Section Key="work-history" Title="Work History">
-        <History StartDate="2010-05-01" Organization="Social &amp; Scientific Systems, Inc." OrganizationWebsite="http://s-3.com" OrganizationLocation="Silver Spring, Maryland" Role="Senior Software Engineer">
+        <History StartDate="2010-05-01" Organization="Social &amp; Scientific Systems" OrganizationWebsite="http://s-3.com" OrganizationLocation="Silver Spring, Maryland" Role="Senior Software Engineer">
             <List>
                 <Item>Selected amongst hundreds of employees to attend months-long Leadership Training instructed by the executive team.</Item>
                 <Item>Participate in and lead CMMI documentation/appraisals, code reviews, client demos, standups, training sessions.</Item>
