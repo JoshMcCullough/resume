@@ -107,9 +107,9 @@ WriteLiteral(" id=\"subsection_projects\"");
 
 WriteLiteral(" class=\"subsection\"");
 
-WriteLiteral(">\r\n        <h2><span>Projects</span></h2>\r\n        <p>Please find below a small c" +
-"ollection of my work. I\'ve highlighted my involvement on each project.</p>\r\n    " +
-"    <ul");
+WriteLiteral(">\r\n        <h2><span>Projects</span></h2>\r\n        <p>Please find below a <em>sma" +
+"ll collection</em> of my work. I\'ve highlighted my involvement on each project.<" +
+"/p>\r\n        <ul");
 
 WriteLiteral(" class=\"blocks\"");
 
