@@ -35,7 +35,7 @@ namespace ASP
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("RazorGenerator", "2.0.0.0")]
     [System.Web.WebPages.PageVirtualPathAttribute("~/Views/ContactMe/Index.cshtml")]
-    public partial class _Views_ContactMe_Index_cshtml : System.Web.Mvc.WebViewPage<dynamic>
+    public partial class _Views_ContactMe_Index_cshtml : System.Web.Mvc.WebViewPage<JSM.Web.Models.ContactMe.SendMessageModel>
     {
         public _Views_ContactMe_Index_cshtml()
         {
@@ -43,7 +43,7 @@ namespace ASP
         public override void Execute()
         {
             
-            #line 1 "..\..\Views\ContactMe\Index.cshtml"
+            #line 3 "..\..\Views\ContactMe\Index.cshtml"
   
     ViewBag.Title = "contact me";
     ViewBag.PageTitle = ViewBag.Title;
@@ -54,8 +54,141 @@ namespace ASP
 WriteLiteral("\r\n\r\n");
 
             
-            #line 6 "..\..\Views\ContactMe\Index.cshtml"
+            #line 8 "..\..\Views\ContactMe\Index.cshtml"
   Html.RenderPartial("_ContactInfo");
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n\r\n<p>Or you can send me a message right now...</p>\r\n\r\n");
+
+            
+            #line 12 "..\..\Views\ContactMe\Index.cshtml"
+ using (Html.BeginForm("Index", "ContactMe", FormMethod.Post)) {
+    
+            
+            #line default
+            #line hidden
+            
+            #line 13 "..\..\Views\ContactMe\Index.cshtml"
+Write(Html.LabelFor(m => m.Email));
+
+            
+            #line default
+            #line hidden
+            
+            #line 13 "..\..\Views\ContactMe\Index.cshtml"
+                                
+    
+            
+            #line default
+            #line hidden
+            
+            #line 14 "..\..\Views\ContactMe\Index.cshtml"
+Write(Html.EditorFor(m => m.Email));
+
+            
+            #line default
+            #line hidden
+            
+            #line 14 "..\..\Views\ContactMe\Index.cshtml"
+                                 
+
+    
+            
+            #line default
+            #line hidden
+            
+            #line 16 "..\..\Views\ContactMe\Index.cshtml"
+Write(Html.LabelFor(m => m.Subject));
+
+            
+            #line default
+            #line hidden
+            
+            #line 16 "..\..\Views\ContactMe\Index.cshtml"
+                                  
+    
+            
+            #line default
+            #line hidden
+            
+            #line 17 "..\..\Views\ContactMe\Index.cshtml"
+Write(Html.EditorFor(m => m.Subject));
+
+            
+            #line default
+            #line hidden
+            
+            #line 17 "..\..\Views\ContactMe\Index.cshtml"
+                                   
+
+    
+            
+            #line default
+            #line hidden
+            
+            #line 19 "..\..\Views\ContactMe\Index.cshtml"
+Write(Html.LabelFor(m => m.Message));
+
+            
+            #line default
+            #line hidden
+            
+            #line 19 "..\..\Views\ContactMe\Index.cshtml"
+                                  
+    
+            
+            #line default
+            #line hidden
+            
+            #line 20 "..\..\Views\ContactMe\Index.cshtml"
+Write(Html.EditorFor(m => m.Message));
+
+            
+            #line default
+            #line hidden
+            
+            #line 20 "..\..\Views\ContactMe\Index.cshtml"
+                                   
+    
+    
+            
+            #line default
+            #line hidden
+            
+            #line 22 "..\..\Views\ContactMe\Index.cshtml"
+Write(Html.EditorFor(m => m.SecurityQuestion));
+
+            
+            #line default
+            #line hidden
+            
+            #line 22 "..\..\Views\ContactMe\Index.cshtml"
+                                            
+    
+
+            
+            #line default
+            #line hidden
+WriteLiteral("    <div");
+
+WriteLiteral(" class=\"footer\"");
+
+WriteLiteral(">\r\n        <button");
+
+WriteLiteral(" type=\"submit\"");
+
+WriteLiteral(" class=\"btn btn-success\"");
+
+WriteLiteral("><span");
+
+WriteLiteral(" class=\"glyphicon glyphicon-check\"");
+
+WriteLiteral("></span> Send Message</button>\r\n    </div>\r\n");
+
+            
+            #line 27 "..\..\Views\ContactMe\Index.cshtml"
+}
             
             #line default
             #line hidden

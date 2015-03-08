@@ -134,6 +134,8 @@
     <Compile Include="Controllers\ExportController.cs" />
     <Compile Include="Controllers\SkillsAndTechController.cs" />
     <Compile Include="Controllers\WorkHistoryController.cs" />
+    <Compile Include="Models\ContactMe\SecurityQuestionModel.cs" />
+    <Compile Include="Models\ContactMe\SendMessageModel.cs" />
     <Compile Include="Models\Shared\Resume\Heading.cs" />
     <Compile Include="Models\Shared\Resume\History.cs" />
     <Compile Include="Models\Shared\Resume\Tag.cs" />
@@ -166,6 +168,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Index.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ContactMe\Thanks.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Thanks.cshtml</DependentUpon>
     </Compile>
     <Compile Include="Views\ContactMe\_ContactInfo.generated.cs">
       <AutoGen>True</AutoGen>
@@ -241,6 +248,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TextRun.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\EditorTemplates\SecurityQuestionModel.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SecurityQuestionModel.cshtml</DependentUpon>
     </Compile>
     <Compile Include="Views\Shared\Error.generated.cs">
       <AutoGen>True</AutoGen>
@@ -607,6 +619,14 @@
     <Content Include="Views\ContactMe\_ContactInfo.cshtml">
       <Generator>RazorGenerator</Generator>
       <LastGenOutput>_ContactInfo.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\EditorTemplates\SecurityQuestionModel.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>SecurityQuestionModel.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\ContactMe\Thanks.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Thanks.generated.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>

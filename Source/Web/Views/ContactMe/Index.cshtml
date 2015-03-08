@@ -1,6 +1,27 @@
-﻿@{
+﻿@model JSM.Web.Models.ContactMe.SendMessageModel
+
+@{
     ViewBag.Title = "contact me";
     ViewBag.PageTitle = ViewBag.Title;
 }
 
 @{Html.RenderPartial("_ContactInfo");}
+
+<p>Or you can send me a message right now...</p>
+
+@using (Html.BeginForm("Index", "ContactMe", FormMethod.Post)) {
+    @Html.LabelFor(m => m.Email)
+    @Html.EditorFor(m => m.Email)
+
+    @Html.LabelFor(m => m.Subject)
+    @Html.EditorFor(m => m.Subject)
+
+    @Html.LabelFor(m => m.Message)
+    @Html.EditorFor(m => m.Message)
+    
+    @Html.EditorFor(m => m.SecurityQuestion)
+    
+    <div class="footer">
+        <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-check"></span> Send Message</button>
+    </div>
+}
