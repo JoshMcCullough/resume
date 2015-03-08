@@ -185,3 +185,5 @@ FakesAssemblies/
 
 # Other
 Publish/
+Source/Web/Configuration/Local/*
+Source/Web/Configuration/Production/*
