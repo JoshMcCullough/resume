@@ -316,29 +316,17 @@
     <Content Include="Content\Scripts\jquery-ui-1.11.2.min.js" />
     <Content Include="Content\Scripts\Site.js" />
     <Content Include="Content\Scripts\Tags.js" />
-    <Content Include="Content\Stylesheets\Site.md - Copy - Copy.css">
-      <DependentUpon>Site.sm.scss</DependentUpon>
-    </Content>
-    <Content Include="Content\Stylesheets\Site.md - Copy.css">
-      <DependentUpon>Site.xs.scss</DependentUpon>
-    </Content>
-    <Content Include="Content\Stylesheets\Site.md - Copy.min - Copy.css">
-      <DependentUpon>Site.md - Copy - Copy.css</DependentUpon>
-    </Content>
-    <Content Include="Content\Stylesheets\Site.md - Copy.min.css">
-      <DependentUpon>Site.md - Copy.css</DependentUpon>
-    </Content>
     <Content Include="Content\Stylesheets\Site.md.css">
       <DependentUpon>Site.md.scss</DependentUpon>
     </Content>
     <Content Include="Content\Stylesheets\Site.md.min.css">
       <DependentUpon>Site.md.css</DependentUpon>
     </Content>
-    <Content Include="Content\Stylesheets\Site.xs - Copy.css">
+    <Content Include="Content\Stylesheets\Site.sm.css">
       <DependentUpon>Site.sm.scss</DependentUpon>
     </Content>
-    <Content Include="Content\Stylesheets\Site.xs - Copy.min.css">
-      <DependentUpon>Site.xs - Copy.css</DependentUpon>
+    <Content Include="Content\Stylesheets\Site.sm.min.css">
+      <DependentUpon>Site.sm.css</DependentUpon>
     </Content>
     <Content Include="Content\Stylesheets\Site.xs.css">
       <DependentUpon>Site.xs.scss</DependentUpon>
@@ -541,18 +529,12 @@
       <DependentUpon>Site.md.css</DependentUpon>
     </Content>
     <Content Include="Content\Stylesheets\Site.xs.scss" />
-    <Content Include="Content\Stylesheets\Site.md - Copy.css.map">
-      <DependentUpon>Site.md - Copy.css</DependentUpon>
-    </Content>
     <Content Include="Content\Stylesheets\Site.xs.css.map">
       <DependentUpon>Site.xs.css</DependentUpon>
     </Content>
     <Content Include="Content\Stylesheets\Site.sm.scss" />
-    <Content Include="Content\Stylesheets\Site.md - Copy.css - Copy.map">
-      <DependentUpon>Site.md - Copy - Copy.css</DependentUpon>
-    </Content>
-    <Content Include="Content\Stylesheets\Site.xs - Copy.css.map">
-      <DependentUpon>Site.xs - Copy.css</DependentUpon>
+    <Content Include="Content\Stylesheets\Site.sm.css.map">
+      <DependentUpon>Site.sm.css</DependentUpon>
     </Content>
     <None Include="Properties\PublishProfiles\ftp.JoshMcCullough.me.pubxml" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />

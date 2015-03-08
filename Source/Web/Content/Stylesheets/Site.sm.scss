@@ -1,4 +1,52 @@
 ﻿@import "bootstrap/_variables.scss";
 
-@media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+@media (max-width: $screen-sm-max) {
+    header {
+        padding: 20px 20px 0 20px;
+
+        .About {
+            .Name {
+                border: none;
+            }
+        }
+
+        nav {
+            a {
+                font-size: 1.1em;
+            }
+        }
+    }
+
+    #Content {
+        #PageContent {
+            h1 {
+                font-size: 1.6em;
+            }
+
+            h2 {
+                font-size: 1.3em;
+            }
+
+            h3 {
+                font-size: 1.2em;
+            }
+
+            h4 {
+                font-size: 1.1em;
+            }
+
+            ul.blocks {
+                > li {
+                    margin-right: 0;
+                    width: 100%;
+                    height: auto;
+
+                    .content {
+                        margin-bottom: 20px;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
 }

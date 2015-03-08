@@ -52,7 +52,7 @@ WriteLiteral(" class=\"row\"");
 
 WriteLiteral(">\r\n            <span");
 
-WriteLiteral(" class=\"col col-xs-3 col-md-3 dates\"");
+WriteLiteral(" class=\"col col-sm-3 col-md-3 dates\"");
 
 WriteLiteral(">");
 
@@ -65,7 +65,7 @@ WriteLiteral(">");
             #line hidden
 WriteLiteral("</span>\r\n            <span");
 
-WriteLiteral(" class=\"col col-xs-6 col-md-6 text-center organization\"");
+WriteLiteral(" class=\"col col-sm-6 col-md-6 text-center organization\"");
 
 WriteLiteral(">\r\n");
 
@@ -124,7 +124,7 @@ WriteLiteral("></span></a>\r\n");
             #line hidden
 WriteLiteral("            </span>\r\n            <span");
 
-WriteLiteral(" class=\"col col-xs-3 col-md-3 text-right location\"");
+WriteLiteral(" class=\"col col-sm-3 col-md-3 text-right location\"");
 
 WriteLiteral(">");
 

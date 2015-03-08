@@ -1,6 +1,6 @@
 ﻿@import "bootstrap/_variables.scss";
 
-@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+@media (max-width: $screen-md-max) {
     header {
         font-size: 1.5em;
     }
