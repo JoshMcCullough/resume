@@ -1,4 +1,102 @@
 ﻿@import "bootstrap/_variables.scss";
+@import "Variables";
 
-@media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+@media (max-width: $screen-xs-max) {
+    header {
+        position: relative;
+
+        .About {
+            .Name {
+                font-size: 3em;
+
+                @media (max-width: 430px) {
+                    font-size: 2em;
+                }
+            }
+
+            .Roles {
+                padding: 0;
+
+                li {
+                    border: none;
+                }
+            }
+        }
+
+        #navbar-toggle {
+            position: absolute;
+            bottom: 0;
+            right: 20px;
+            border: none;
+            background-color: transparent;
+            font-size: 1.5em;
+        }
+
+        nav {
+            display: none;
+
+            a {
+                /* 3 per line. */
+                width: 33%;
+                float: left;
+                font-size: 1.5em;
+                
+                /* 2 per line. */
+                @media (max-width: 600px) {
+                    width: 50%;
+                }
+
+                /* 1 per line. */
+                @media (max-width: 410px) {
+                    float: none;
+                    display: block;
+                    width: auto;
+                }
+            }
+        }
+    }
+
+    #Content {
+        #PageContent {
+            .section {
+                .history-item {
+                    h2 {
+                        > .row {
+                            .col {
+                                padding: 0;
+
+                                &.dates {
+                                }
+
+                                &.organization {
+                                    margin-bottom: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        font-size: 1.2em;
+
+        #FooterContent {
+            &:after {
+                clear: both;
+            }
+
+            .menu {
+                a {
+                    float: left;
+                    border: none;
+
+                    &:nth-child(even) {
+                        float: right;
+                    }
+                }
+            }
+        }
+    }
 }

@@ -23,6 +23,15 @@ var Site = {
     }
 };
 
+//Initialize the nav toggler.
+Site.initializers.push(function () {
+    $("#navbar-toggle").click(function () {
+        $("header nav").toggle({
+            duration: 200
+        });
+    });
+});
+
 //Initialize the print modal.
 Site.initializers.push(function () {
     $("#DownloadPDFButton").click(function () {

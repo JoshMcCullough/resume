@@ -5175,20 +5175,22 @@ header {
       box-sizing: border-box;
       padding: 20px 0;
       width: 20%;
-      border: 2px solid transparent;
       font-size: 1.5em;
       text-align: center; }
       header nav a, header nav a:focus, header nav a:hover, header nav a:active, header nav a:visited, header nav a.Active {
         text-decoration: none; }
-      header nav a.Active:before, header nav a.Active:after {
+      header nav a:before, header nav a:after {
+        visibility: hidden;
         margin: 0 5px;
         vertical-align: middle;
         color: #9d9d9d;
         text-shadow: none; }
-      header nav a.Active:before {
+      header nav a:before {
         content: "<"; }
-      header nav a.Active:after {
+      header nav a:after {
         content: "/>"; }
+      header nav a.Active:before, header nav a.Active:after {
+        visibility: visible; }
       header nav a.Overview {
         color: #9652ff;
         text-shadow: #200052 1px 1px 1px; }
@@ -5397,6 +5399,7 @@ header {
           #Content #PageContent .section .history-item h2 > .row {
             display: block; }
             #Content #PageContent .section .history-item h2 > .row .col {
+              text-align: left;
               white-space: nowrap; }
               #Content #PageContent .section .history-item h2 > .row .col.dates {
                 padding-left: 0; }
@@ -5404,7 +5407,8 @@ header {
                 padding-top: 3px;
                 font-size: 0.8em; }
               #Content #PageContent .section .history-item h2 > .row .col.location {
-                padding-right: 0; }
+                padding-right: 0;
+                text-align: right; }
             #Content #PageContent .section .history-item h2 > .row .organization-link {
               visibility: hidden;
               color: #d0d0d0;
@@ -5417,29 +5421,27 @@ header {
             #Content #PageContent .section .history-item h2:hover .organization-link {
               visibility: visible; }
  }
-    #Content #PageContent form {
-      margin-left: 40px; }
-      #Content #PageContent form label {
-        display: block;
-        margin: 20px 0 5px 0; }
-      #Content #PageContent form input[type=text], #Content #PageContent form input[type=email], #Content #PageContent form textarea {
-        padding: 10px;
-        width: 300px;
-        max-width: 100%; }
-        #Content #PageContent form input[type=text].xs, #Content #PageContent form input[type=email].xs, #Content #PageContent form textarea.xs {
-          width: 75px; }
-        #Content #PageContent form input[type=text].sm, #Content #PageContent form input[type=email].sm, #Content #PageContent form textarea.sm {
-          width: 150px; }
-      #Content #PageContent form textarea {
-        width: 600px;
-        height: 200px;
-        resize: vertical; }
-      #Content #PageContent form .field-validation-error {
-        display: block;
-        margin: 5px 0 0 10px;
-        color: #990000; }
-      #Content #PageContent form .footer {
-        margin-top: 20px; }
+    #Content #PageContent form label {
+      display: block;
+      margin: 20px 0 5px 0; }
+    #Content #PageContent form input[type=text], #Content #PageContent form input[type=email], #Content #PageContent form textarea {
+      padding: 10px;
+      width: 300px;
+      max-width: 100%; }
+      #Content #PageContent form input[type=text].xs, #Content #PageContent form input[type=email].xs, #Content #PageContent form textarea.xs {
+        width: 75px; }
+      #Content #PageContent form input[type=text].sm, #Content #PageContent form input[type=email].sm, #Content #PageContent form textarea.sm {
+        width: 150px; }
+    #Content #PageContent form textarea {
+      width: 600px;
+      height: 200px;
+      resize: vertical; }
+    #Content #PageContent form .field-validation-error {
+      display: block;
+      margin: 5px 0 0 10px;
+      color: #990000; }
+    #Content #PageContent form .footer {
+      margin-top: 20px; }
 
 footer {
   padding: 0 40px;
@@ -5450,16 +5452,16 @@ footer {
     border: 1px solid gainsboro;
     border-top: none;
     background-color: #e9e9e9; }
-    footer #FooterContent .left-menu a {
+    footer #FooterContent .menu a {
       display: inline-block;
       padding: 10px 20px;
       color: #9d9d9d;
       border-right: 1px solid gainsboro; }
-      footer #FooterContent .left-menu a, footer #FooterContent .left-menu a:focus, footer #FooterContent .left-menu a:hover, footer #FooterContent .left-menu a:active, footer #FooterContent .left-menu a:visited, footer #FooterContent .left-menu a.Active {
+      footer #FooterContent .menu a, footer #FooterContent .menu a:focus, footer #FooterContent .menu a:hover, footer #FooterContent .menu a:active, footer #FooterContent .menu a:visited, footer #FooterContent .menu a.Active {
         text-decoration: none; }
-      footer #FooterContent .left-menu a:hover, footer #FooterContent .left-menu a.Active {
+      footer #FooterContent .menu a:hover, footer #FooterContent .menu a.Active {
         color: #838383; }
-      footer #FooterContent .left-menu a:last-child {
+      footer #FooterContent .menu a:last-child {
         border-right: none; }
 
 .modal {

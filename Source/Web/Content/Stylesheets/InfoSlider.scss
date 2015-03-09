@@ -5,7 +5,7 @@ $grip-color: rgba($grip-hover-color, .2) !default;
 .info-slider {
     position: relative;
     top: 5px;
-    margin: 0 0 20px 20px;
+    margin: 0 0 20px 0;
     height: 34px;
     width: 400px;
     border: solid 1px $base-color;
@@ -111,6 +111,12 @@ $grip-color: rgba($grip-hover-color, .2) !default;
                 }
             }
         }
+    }
+}
+
+@media (max-width: 600px) {
+    .info-slider {
+        width: 100%;
     }
 }
 

@@ -1,2 +1,54 @@
-﻿
+﻿@media (max-width: 767px) {
+  header {
+    position: relative; }
+    header .About .Name {
+      font-size: 3em; }
+      @media (max-width: 430px) {
+        header .About .Name {
+          font-size: 2em; } }
+    header .About .Roles {
+      padding: 0; }
+      header .About .Roles li {
+        border: none; }
+    header #navbar-toggle {
+      position: absolute;
+      bottom: 0;
+      right: 20px;
+      border: none;
+      background-color: transparent;
+      font-size: 1.5em; }
+    header nav {
+      display: none; }
+      header nav a {
+        /* 3 per line. */
+        width: 33%;
+        float: left;
+        font-size: 1.5em;
+        /* 2 per line. */
+        /* 1 per line. */ }
+        @media (max-width: 600px) {
+          header nav a {
+            width: 50%; } }
+        @media (max-width: 410px) {
+          header nav a {
+            float: none;
+            display: block;
+            width: auto; } }
+
+  #Content #PageContent .section .history-item h2 > .row .col {
+    padding: 0; }
+    #Content #PageContent .section .history-item h2 > .row .col.organization {
+      margin-bottom: 10px; }
+
+  footer {
+    font-size: 1.2em; }
+    footer #FooterContent:after {
+      clear: both; }
+    footer #FooterContent .menu a {
+      float: left;
+      border: none; }
+      footer #FooterContent .menu a:nth-child(even) {
+        float: right; }
+ }
+
 /*# sourceMappingURL=Site.xs.css.map */

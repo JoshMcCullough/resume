@@ -77,7 +77,6 @@ header {
             box-sizing: border-box;
             padding: 20px 0;
             width: 20%;
-            border: 2px solid transparent;
             font-size: 1.5em;
             text-align: center;
 
@@ -90,20 +89,28 @@ header {
                 text-decoration: none;
             }
 
-            &.Active:before,
-            &.Active:after {
+            &:before,
+            &:after {
+                visibility: hidden;
                 margin: 0 5px;
                 vertical-align: middle;
                 color: $primary-gray-30d;
                 text-shadow: none;
             }
 
-            &.Active:before {
+            &:before {
                 content: "<";
             }
 
-            &.Active:after {
+            &:after {
                 content: "/>";
+            }
+
+            &.Active {
+                &:before,
+                &:after {
+                    visibility: visible;
+                }
             }
 
             &.Overview {

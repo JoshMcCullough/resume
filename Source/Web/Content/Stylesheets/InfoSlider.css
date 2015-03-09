@@ -1,7 +1,7 @@
 ﻿.info-slider {
   position: relative;
   top: 5px;
-  margin: 0 0 20px 20px;
+  margin: 0 0 20px 0;
   height: 34px;
   width: 400px;
   border: solid 1px #e9e9e9;
@@ -70,6 +70,11 @@
     background-color: #0f0; }
   .info-slider:hover.disabled .slider span.grip {
     background-color: rgba(0, 255, 0, 0.2); }
+
+@media (max-width: 600px) {
+  .info-slider {
+    width: 100%; }
+ }
 
 @media print {
   .info-slider {

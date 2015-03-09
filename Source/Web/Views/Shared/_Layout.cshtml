@@ -26,13 +26,19 @@
                     <li>ui/ux designer</li>
                 </ul>
             </div>
-            <nav class="row">
+
+            <button id="navbar-toggle" class="visible-xs">
+                <span class="sr-only">toggle navigation</span>
+                <span aria-hidden="true">...</span>
+            </button>
+
+            <nav class="clearfix">
                 @{Html.RenderPartial("_Menu");}
             </nav>
         </header>
 
         <div id="Content">
-            <div id="PageContent">
+            <div id="PageContent" class="clearfix">
                 @if (ViewBag.PageTitle != null) {
                     <h1><span>@ViewBag.PageTitle</span></h1>
                 }

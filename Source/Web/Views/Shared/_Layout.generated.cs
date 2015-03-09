@@ -177,20 +177,35 @@ WriteLiteral(@">
                     <li>ui/ux designer</li>
                 </ul>
             </div>
-            <nav");
 
-WriteLiteral(" class=\"row\"");
+            <button");
+
+WriteLiteral(" id=\"navbar-toggle\"");
+
+WriteLiteral(" class=\"visible-xs\"");
+
+WriteLiteral(">\r\n                <span");
+
+WriteLiteral(" class=\"sr-only\"");
+
+WriteLiteral(">toggle navigation</span>\r\n                <span");
+
+WriteLiteral(" aria-hidden=\"true\"");
+
+WriteLiteral(">...</span>\r\n            </button>\r\n\r\n            <nav");
+
+WriteLiteral(" class=\"clearfix\"");
 
 WriteLiteral(">\r\n");
 
             
-            #line 30 "..\..\Views\Shared\_Layout.cshtml"
+            #line 36 "..\..\Views\Shared\_Layout.cshtml"
                 
             
             #line default
             #line hidden
             
-            #line 30 "..\..\Views\Shared\_Layout.cshtml"
+            #line 36 "..\..\Views\Shared\_Layout.cshtml"
                   Html.RenderPartial("_Menu");
             
             #line default
@@ -203,16 +218,18 @@ WriteLiteral(">\r\n            <div");
 
 WriteLiteral(" id=\"PageContent\"");
 
+WriteLiteral(" class=\"clearfix\"");
+
 WriteLiteral(">\r\n");
 
             
-            #line 36 "..\..\Views\Shared\_Layout.cshtml"
+            #line 42 "..\..\Views\Shared\_Layout.cshtml"
                 
             
             #line default
             #line hidden
             
-            #line 36 "..\..\Views\Shared\_Layout.cshtml"
+            #line 42 "..\..\Views\Shared\_Layout.cshtml"
                  if (ViewBag.PageTitle != null) {
 
             
@@ -221,7 +238,7 @@ WriteLiteral(">\r\n");
 WriteLiteral("                    <h1><span>");
 
             
-            #line 37 "..\..\Views\Shared\_Layout.cshtml"
+            #line 43 "..\..\Views\Shared\_Layout.cshtml"
                          Write(ViewBag.PageTitle);
 
             
@@ -230,7 +247,7 @@ WriteLiteral("                    <h1><span>");
 WriteLiteral("</span></h1>\r\n");
 
             
-            #line 38 "..\..\Views\Shared\_Layout.cshtml"
+            #line 44 "..\..\Views\Shared\_Layout.cshtml"
                 }
 
             
@@ -241,7 +258,7 @@ WriteLiteral("\r\n");
 WriteLiteral("                ");
 
             
-            #line 40 "..\..\Views\Shared\_Layout.cshtml"
+            #line 46 "..\..\Views\Shared\_Layout.cshtml"
            Write(RenderBody());
 
             
@@ -258,30 +275,30 @@ WriteLiteral(" id=\"FooterContent\"");
 
 WriteLiteral(">\r\n                <div");
 
-WriteLiteral(" class=\"left-menu hidden-print\"");
+WriteLiteral(" class=\"menu clearfix hidden-print\"");
 
 WriteLiteral(">\r\n                    <a");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 2254), Tuple.Create("\"", 2288)
+WriteAttribute("href", Tuple.Create(" href=\"", 2484), Tuple.Create("\"", 2518)
             
-            #line 49 "..\..\Views\Shared\_Layout.cshtml"
-, Tuple.Create(Tuple.Create("", 2261), Tuple.Create<System.Object, System.Int32>(Url.Action("Index", "All")
+            #line 55 "..\..\Views\Shared\_Layout.cshtml"
+, Tuple.Create(Tuple.Create("", 2491), Tuple.Create<System.Object, System.Int32>(Url.Action("Index", "All")
             
             #line default
             #line hidden
-, 2261), false)
+, 2491), false)
 );
 
 WriteLiteral(">view as a single page</a>\r\n                    <a");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 2339), Tuple.Create("\"", 2374)
+WriteAttribute("href", Tuple.Create(" href=\"", 2569), Tuple.Create("\"", 2604)
             
-            #line 50 "..\..\Views\Shared\_Layout.cshtml"
-, Tuple.Create(Tuple.Create("", 2346), Tuple.Create<System.Object, System.Int32>(Url.Action("PDF", "Export")
+            #line 56 "..\..\Views\Shared\_Layout.cshtml"
+, Tuple.Create(Tuple.Create("", 2576), Tuple.Create<System.Object, System.Int32>(Url.Action("PDF", "Export")
             
             #line default
             #line hidden
-, 2346), false)
+, 2576), false)
 );
 
 WriteLiteral(">download as a PDF</a>\r\n                    <a");
@@ -354,13 +371,13 @@ WriteLiteral(">Close</button>\r\n                    </div>\r\n                <
 "</div>\r\n        </div>\r\n\r\n");
 
             
-            #line 76 "..\..\Views\Shared\_Layout.cshtml"
+            #line 82 "..\..\Views\Shared\_Layout.cshtml"
         
             
             #line default
             #line hidden
             
-            #line 76 "..\..\Views\Shared\_Layout.cshtml"
+            #line 82 "..\..\Views\Shared\_Layout.cshtml"
          if (this.TempData.HasMessage()) {
 
             
@@ -370,17 +387,17 @@ WriteLiteral("            <div");
 
 WriteLiteral(" id=\"MessageModal\"");
 
-WriteAttribute("class", Tuple.Create(" class=\"", 3771), Tuple.Create("\"", 3838)
-, Tuple.Create(Tuple.Create("", 3779), Tuple.Create("modal", 3779), true)
-, Tuple.Create(Tuple.Create(" ", 3784), Tuple.Create("fade", 3785), true)
-, Tuple.Create(Tuple.Create(" ", 3789), Tuple.Create("hidden-print", 3790), true)
+WriteAttribute("class", Tuple.Create(" class=\"", 4001), Tuple.Create("\"", 4068)
+, Tuple.Create(Tuple.Create("", 4009), Tuple.Create("modal", 4009), true)
+, Tuple.Create(Tuple.Create(" ", 4014), Tuple.Create("fade", 4015), true)
+, Tuple.Create(Tuple.Create(" ", 4019), Tuple.Create("hidden-print", 4020), true)
             
-            #line 77 "..\..\Views\Shared\_Layout.cshtml"
-, Tuple.Create(Tuple.Create(" ", 3802), Tuple.Create<System.Object, System.Int32>(this.TempData.GetMessagePriority()
+            #line 83 "..\..\Views\Shared\_Layout.cshtml"
+, Tuple.Create(Tuple.Create(" ", 4032), Tuple.Create<System.Object, System.Int32>(this.TempData.GetMessagePriority()
             
             #line default
             #line hidden
-, 3803), false)
+, 4033), false)
 );
 
 WriteLiteral(">\r\n                <div");
@@ -398,7 +415,7 @@ WriteLiteral(" class=\"modal-body\"");
 WriteLiteral(">\r\n                            <p>");
 
             
-            #line 81 "..\..\Views\Shared\_Layout.cshtml"
+            #line 87 "..\..\Views\Shared\_Layout.cshtml"
                           Write(this.TempData.GetMessage());
 
             
@@ -420,7 +437,7 @@ WriteLiteral(">Close</button>\r\n                        </div>\r\n             
 "            </div>\r\n            </div>\r\n");
 
             
-            #line 89 "..\..\Views\Shared\_Layout.cshtml"
+            #line 95 "..\..\Views\Shared\_Layout.cshtml"
         }
 
             
@@ -431,7 +448,7 @@ WriteLiteral("\r\n");
 WriteLiteral("        ");
 
             
-            #line 91 "..\..\Views\Shared\_Layout.cshtml"
+            #line 97 "..\..\Views\Shared\_Layout.cshtml"
    Write(Scripts.Render("~/Content/Scripts/3rdParty"));
 
             
@@ -442,7 +459,7 @@ WriteLiteral("\r\n");
 WriteLiteral("        ");
 
             
-            #line 92 "..\..\Views\Shared\_Layout.cshtml"
+            #line 98 "..\..\Views\Shared\_Layout.cshtml"
    Write(Scripts.Render("~/Content/Scripts/Site"));
 
             
@@ -453,7 +470,7 @@ WriteLiteral("\r\n");
 WriteLiteral("        ");
 
             
-            #line 93 "..\..\Views\Shared\_Layout.cshtml"
+            #line 99 "..\..\Views\Shared\_Layout.cshtml"
    Write(RenderSection("Scripts", required: false));
 
             
@@ -467,7 +484,7 @@ WriteLiteral(">\r\n            $(document).ready(function () {\r\n              
 "");
 
             
-            #line 97 "..\..\Views\Shared\_Layout.cshtml"
+            #line 103 "..\..\Views\Shared\_Layout.cshtml"
                             Write(Url.Content("~/"));
 
             
