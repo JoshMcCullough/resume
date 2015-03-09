@@ -3,15 +3,15 @@
 <div class="history-item">
     <h2>
         <span class="row">
-            <span class="col col-sm-3 col-md-3 dates">@this.Model.DateSpan</span>
-            <span class="col col-sm-6 col-md-6 text-center organization">
+            <span class="col col-xs-12 col-sm-6 col-md-6 text-center organization">
                 @this.Model.Organization
 
                 @if (!this.Model.OrganizationWebsite.IsNullOrEmpty()) {
                     <a class="organization-link" href="@this.Model.OrganizationWebsite" target="_blank"><span class="glyphicon glyphicon-new-window"></span></a>
                 }
             </span>
-            <span class="col col-sm-3 col-md-3 text-right location">@this.Model.OrganizationLocation</span>
+            <span class="col col-xs-6 col-sm-3 col-md-3 dates">@this.Model.DateSpan</span>
+            <span class="col col-xs-6 col-sm-3 col-md-3 text-right location">@this.Model.OrganizationLocation</span>
         </span>
     </h2>
     <h3>@this.Model.Role</h3>

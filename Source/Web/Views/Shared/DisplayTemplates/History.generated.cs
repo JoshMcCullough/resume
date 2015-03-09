@@ -52,27 +52,14 @@ WriteLiteral(" class=\"row\"");
 
 WriteLiteral(">\r\n            <span");
 
-WriteLiteral(" class=\"col col-sm-3 col-md-3 dates\"");
-
-WriteLiteral(">");
-
-            
-            #line 6 "..\..\Views\Shared\DisplayTemplates\History.cshtml"
-                                                 Write(this.Model.DateSpan);
-
-            
-            #line default
-            #line hidden
-WriteLiteral("</span>\r\n            <span");
-
-WriteLiteral(" class=\"col col-sm-6 col-md-6 text-center organization\"");
+WriteLiteral(" class=\"col col-xs-12 col-sm-6 col-md-6 text-center organization\"");
 
 WriteLiteral(">\r\n");
 
 WriteLiteral("                ");
 
             
-            #line 8 "..\..\Views\Shared\DisplayTemplates\History.cshtml"
+            #line 7 "..\..\Views\Shared\DisplayTemplates\History.cshtml"
            Write(this.Model.Organization);
 
             
@@ -81,13 +68,13 @@ WriteLiteral("                ");
 WriteLiteral("\r\n\r\n");
 
             
-            #line 10 "..\..\Views\Shared\DisplayTemplates\History.cshtml"
+            #line 9 "..\..\Views\Shared\DisplayTemplates\History.cshtml"
                 
             
             #line default
             #line hidden
             
-            #line 10 "..\..\Views\Shared\DisplayTemplates\History.cshtml"
+            #line 9 "..\..\Views\Shared\DisplayTemplates\History.cshtml"
                  if (!this.Model.OrganizationWebsite.IsNullOrEmpty()) {
 
             
@@ -97,14 +84,14 @@ WriteLiteral("                    <a");
 
 WriteLiteral(" class=\"organization-link\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 436), Tuple.Create("\"", 474)
+WriteAttribute("href", Tuple.Create(" href=\"", 363), Tuple.Create("\"", 401)
             
-            #line 11 "..\..\Views\Shared\DisplayTemplates\History.cshtml"
-, Tuple.Create(Tuple.Create("", 443), Tuple.Create<System.Object, System.Int32>(this.Model.OrganizationWebsite
+            #line 10 "..\..\Views\Shared\DisplayTemplates\History.cshtml"
+, Tuple.Create(Tuple.Create("", 370), Tuple.Create<System.Object, System.Int32>(this.Model.OrganizationWebsite
             
             #line default
             #line hidden
-, 443), false)
+, 370), false)
 );
 
 WriteLiteral(" target=\"_blank\"");
@@ -116,7 +103,7 @@ WriteLiteral(" class=\"glyphicon glyphicon-new-window\"");
 WriteLiteral("></span></a>\r\n");
 
             
-            #line 12 "..\..\Views\Shared\DisplayTemplates\History.cshtml"
+            #line 11 "..\..\Views\Shared\DisplayTemplates\History.cshtml"
                 }
 
             
@@ -124,13 +111,26 @@ WriteLiteral("></span></a>\r\n");
             #line hidden
 WriteLiteral("            </span>\r\n            <span");
 
-WriteLiteral(" class=\"col col-sm-3 col-md-3 text-right location\"");
+WriteLiteral(" class=\"col col-xs-6 col-sm-3 col-md-3 dates\"");
+
+WriteLiteral(">");
+
+            
+            #line 13 "..\..\Views\Shared\DisplayTemplates\History.cshtml"
+                                                          Write(this.Model.DateSpan);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</span>\r\n            <span");
+
+WriteLiteral(" class=\"col col-xs-6 col-sm-3 col-md-3 text-right location\"");
 
 WriteLiteral(">");
 
             
             #line 14 "..\..\Views\Shared\DisplayTemplates\History.cshtml"
-                                                               Write(this.Model.OrganizationLocation);
+                                                                        Write(this.Model.OrganizationLocation);
 
             
             #line default

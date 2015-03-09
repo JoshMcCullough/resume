@@ -439,6 +439,7 @@ header {
                         display: block;
 
                         .col {
+                            text-align: left;
                             white-space: nowrap;
 
                             &.dates {
@@ -454,6 +455,7 @@ header {
 
                             &.location {
                                 padding-right: 0;
+                                text-align: right;
                             }
                         }
 
