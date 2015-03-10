@@ -254,7 +254,7 @@ WriteLiteral("></span></a></h3>\r\n                <div");
 
 WriteLiteral(" class=\"tagline\"");
 
-WriteLiteral(">Restoring Sanity</div>\r\n                <div");
+WriteLiteral("></div>\r\n                <div");
 
 WriteLiteral(" class=\"content\"");
 
