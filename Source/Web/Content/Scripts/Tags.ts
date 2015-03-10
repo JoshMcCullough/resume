@@ -193,6 +193,7 @@ class Expertise extends Tags {
         var maxRowHeight = null;
         var top = 0;
         var left = 0;
+        var zIndex = this.tags.length;
         var availableWidth = this.container.innerWidth();
 
         this.tags.forEach((tag, index) => {
@@ -216,6 +217,7 @@ class Expertise extends Tags {
             }
 
             tag.element.css("line-height", ((this.fixedHeight || currentSize) - tagHeightOffset) + "px");
+            tag.element.css("z-index", zIndex);
             tag.element.delay(index * options.animationDelay).animate({
                 width: (currentSize),
                 height: (this.fixedHeight || currentSize),
@@ -230,6 +232,7 @@ class Expertise extends Tags {
             });
 
             left += (currentSize + this.padding);
+            zIndex--;
         }, this);
 
         this.container.height(top + maxRowHeight);
@@ -339,7 +342,7 @@ Tags.allTags.push(new Tag("rails", "Rails", "Ruby on Rails", 6));
 Tags.allTags.push(new Tag("sl", null, "Silverlight", 4));
 Tags.allTags.push(new Tag("svn", "SVN", "Subversion", 9));
 Tags.allTags.push(new Tag("tfs", "TFS", "Team Foundation Server", 6));
-Tags.allTags.push(new Tag("tfvc", "TFVC", "Team Foundation Version Control", 7));
+Tags.allTags.push(new Tag("tfvc", "TFVC", "TF Version Control", 7));
 Tags.allTags.push(new Tag("tomcat", null, "Tomcat", 7));
 Tags.allTags.push(new Tag("uiux", null, "UI/UX", 7));
 Tags.allTags.push(new Tag("vb", "VB.NET", "Visual Basic .NET", 8));
