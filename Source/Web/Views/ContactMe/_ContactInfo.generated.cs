@@ -87,31 +87,53 @@ WriteLiteral(@">
         });
     }
 
+    function emailSliderCallback() {
+        var $emailSlider = $(""#emailSlider"");
+
+        sliderCallback.call($emailSlider, """);
+
+            
+            #line 30 "..\..\Views\ContactMe\_ContactInfo.cshtml"
+                                      Write(Url.Action("GetEmail", "ContactMe"));
+
+            
+            #line default
+            #line hidden
+WriteLiteral(@""", function (data) {
+            return $(""<a>"")
+                .text(data)
+                .attr(""href"", ""mailto:"" + data);
+        });
+    }
+
+    function phoneSliderCallback() {
+        var $phoneSlider = $(""#phoneSlider"");
+
+        sliderCallback.call($phoneSlider, """);
+
+            
+            #line 40 "..\..\Views\ContactMe\_ContactInfo.cshtml"
+                                      Write(Url.Action("GetPhone", "ContactMe"));
+
+            
+            #line default
+            #line hidden
+WriteLiteral(@""");
+    }
+
     $(document).ready(function () {
         var $emailSlider = $(""#emailSlider"");
         var $phoneSlider = $(""#phoneSlider"");
 
-        $emailSlider.infoSlider(sliderCallback.bind($emailSlider, """);
+        $emailSlider.infoSlider(emailSliderCallback);
+        $phoneSlider.infoSlider(phoneSliderCallback);
 
-            
-            #line 31 "..\..\Views\ContactMe\_ContactInfo.cshtml"
-                                                              Write(Url.Action("GetEmail", "ContactMe"));
-
-            
-            #line default
-            #line hidden
-WriteLiteral("\", function (data) {\r\n            return $(\"<a>\")\r\n                .text(data)\r\n " +
-"               .attr(\"href\", \"mailto:\" + data);\r\n        }));\r\n        $phoneSli" +
-"der.infoSlider(sliderCallback.bind($phoneSlider, \"");
-
-            
-            #line 36 "..\..\Views\ContactMe\_ContactInfo.cshtml"
-                                                              Write(Url.Action("GetPhone", "ContactMe"));
-
-            
-            #line default
-            #line hidden
-WriteLiteral("\"));\r\n    });\r\n</script>");
+        $(document).one(""click keydown scroll"", function () {
+            emailSliderCallback();
+            phoneSliderCallback();
+        });
+    });
+</script>");
 
         }
     }

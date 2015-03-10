@@ -24,15 +24,32 @@
         });
     }
 
+    function emailSliderCallback() {
+        var $emailSlider = $("#emailSlider");
+
+        sliderCallback.call($emailSlider, "@Url.Action("GetEmail", "ContactMe")", function (data) {
+            return $("<a>")
+                .text(data)
+                .attr("href", "mailto:" + data);
+        });
+    }
+
+    function phoneSliderCallback() {
+        var $phoneSlider = $("#phoneSlider");
+
+        sliderCallback.call($phoneSlider, "@Url.Action("GetPhone", "ContactMe")");
+    }
+
     $(document).ready(function () {
         var $emailSlider = $("#emailSlider");
         var $phoneSlider = $("#phoneSlider");
 
-        $emailSlider.infoSlider(sliderCallback.bind($emailSlider, "@Url.Action("GetEmail", "ContactMe")", function (data) {
-            return $("<a>")
-                .text(data)
-                .attr("href", "mailto:" + data);
-        }));
-        $phoneSlider.infoSlider(sliderCallback.bind($phoneSlider, "@Url.Action("GetPhone", "ContactMe")"));
+        $emailSlider.infoSlider(emailSliderCallback);
+        $phoneSlider.infoSlider(phoneSliderCallback);
+
+        $(document).one("click keydown scroll", function () {
+            emailSliderCallback();
+            phoneSliderCallback();
+        });
     });
 </script>
