@@ -379,6 +379,7 @@
     <Content Include="Configuration\Production\SMTP.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Download\Resume.pdf" />
     <None Include="Content\Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Content\Scripts\jquery-2.1.1.js" />
     <Content Include="Content\Scripts\jquery-2.1.1.min.js" />
@@ -612,7 +613,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Content\Download\" />
     <Folder Include="Views\Export\" />
   </ItemGroup>
   <ItemGroup>
