@@ -19,7 +19,7 @@ namespace JSM.Web.Controllers
         }
 
         public static string GetResumeDownloadFilename(string extension) {
-            return "Josh McCullough's Resume {0}.{1}".FormatString(DateTime.Now, extension);
+            return "Resume of Josh McCullough {0:yyyyMMdd}.{1}".FormatString(DateTime.Now, extension);
         }
     }
 }
