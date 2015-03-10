@@ -152,5 +152,12 @@
                 <Item>Selected as a tutor in the Programming Lab.</Item>
             </List>
         </History>
+        <History StartDate="2002-06-01" EndDate="2002-08-01" Organization="National Institute of Standards and Technology" OrganizationWebsite="http://nist.gov" OrganizationLocation="Gaithersburg, Maryland">
+            <List>
+                <Item>Summer intern at NIST in Information Technology/Biometrics group.</Item>
+                <Item>Worked on Common Biometrics Exchange File Format (CBEFF) project (C++) and contributed to a related paper.</Item>
+                <Item>Received two certificates of accomplishment during my internship.</Item>
+            </List>
+        </History>
     </Section>
 </Resume>
