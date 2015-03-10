@@ -311,7 +311,7 @@ WriteLiteral(">view source on GitHub</a>\r\n                </div>\r\n\r\n      
 
 WriteLiteral(" class=\"visible-print Web\"");
 
-WriteLiteral(">For a more <em>interactive</em> experience, please visit <a");
+WriteLiteral(">For a more <em>interesting</em> experience, please visit <a");
 
 WriteLiteral(" href=\"http://joshmccullough.me\"");
 
