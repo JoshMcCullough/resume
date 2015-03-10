@@ -6,7 +6,8 @@
     <div id="subsection_self-rankings" class="subsection">
         <h2><span>Self-rankings</span></h2>
         <p>I've compiled a list of the technologies with which I most often work. The relative size of each item indicates my level of expertise.</p>
-        <ul class="expertise"></ul>
+        <p class="warning visible-xs">This works much better on a larger screen - trust me.</p>
+        <ul class="expertise clearfix"></ul>
     </div>
 
     @{Html.RenderPartial("DisplayTemplates/Content", this.Model.Content);}

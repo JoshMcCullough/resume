@@ -83,20 +83,24 @@ WriteLiteral(" class=\"subsection\"");
 
 WriteLiteral(">\r\n        <h2><span>Self-rankings</span></h2>\r\n        <p>I\'ve compiled a list o" +
 "f the technologies with which I most often work. The relative size of each item " +
-"indicates my level of expertise.</p>\r\n        <ul");
+"indicates my level of expertise.</p>\r\n        <p");
 
-WriteLiteral(" class=\"expertise\"");
+WriteLiteral(" class=\"warning visible-xs\"");
+
+WriteLiteral(">This works much better on a larger screen - trust me.</p>\r\n        <ul");
+
+WriteLiteral(" class=\"expertise clearfix\"");
 
 WriteLiteral("></ul>\r\n    </div>\r\n\r\n");
 
             
-            #line 12 "..\..\Views\Overview\_Content.cshtml"
+            #line 13 "..\..\Views\Overview\_Content.cshtml"
     
             
             #line default
             #line hidden
             
-            #line 12 "..\..\Views\Overview\_Content.cshtml"
+            #line 13 "..\..\Views\Overview\_Content.cshtml"
       Html.RenderPartial("DisplayTemplates/Content", this.Model.Content);
             
             #line default
