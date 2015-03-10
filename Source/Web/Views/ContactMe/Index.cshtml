@@ -7,9 +7,9 @@
 
 @{Html.RenderPartial("_ContactInfo");}
 
-<p>Or you can send me a message right now...</p>
-
 @using (Html.BeginForm("Index", "ContactMe", FormMethod.Post)) {
+    <p>Or you can send me a message right now...</p>
+
     @Html.LabelFor(m => m.Email)
     @Html.EditorFor(m => m.Email)
 

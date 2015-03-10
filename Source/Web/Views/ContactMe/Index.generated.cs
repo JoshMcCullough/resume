@@ -59,11 +59,20 @@ WriteLiteral("\r\n\r\n");
             
             #line default
             #line hidden
-WriteLiteral("\r\n\r\n<p>Or you can send me a message right now...</p>\r\n\r\n");
+WriteLiteral("\r\n\r\n");
+
+            
+            #line 10 "..\..\Views\ContactMe\Index.cshtml"
+ using (Html.BeginForm("Index", "ContactMe", FormMethod.Post)) {
+
+            
+            #line default
+            #line hidden
+WriteLiteral("    <p>Or you can send me a message right now...</p>\r\n");
 
             
             #line 12 "..\..\Views\ContactMe\Index.cshtml"
- using (Html.BeginForm("Index", "ContactMe", FormMethod.Post)) {
+
     
             
             #line default
