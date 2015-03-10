@@ -80,17 +80,18 @@
   .info-slider {
     position: static;
     margin: 0;
-    height: auto !important;
+    height: 12pt;
     width: auto;
     border: none;
     background-color: transparent;
-    white-space: normal; }
+    white-space: normal;
+    line-height: normal; }
     .info-slider .label, .info-slider .content, .info-slider .slider {
       line-height: normal;
       font-size: 10pt; }
     .info-slider .label {
-      margin: 0 10px 0 0;
-      width: 0.5in;
+      margin: 0 4mm 0 4mm;
+      width: 10mm;
       border: none;
       color: #000;
       font-weight: normal;

@@ -124,11 +124,12 @@ $grip-color: rgba($grip-hover-color, .2) !default;
     .info-slider {
         position: static;
         margin: 0;
-        height: auto !important;
+        height: 12pt;
         width: auto;
         border: none;
         background-color: transparent;
         white-space: normal;
+        line-height: normal;
 
         .label,
         .content,
@@ -138,8 +139,8 @@ $grip-color: rgba($grip-hover-color, .2) !default;
         }
 
         .label {
-            margin: 0 10px 0 0;
-            width: .5in;
+            margin: 0 4mm 0 4mm;
+            width: 10mm;
             border: none;
             color: #000;
             font-weight: normal;
