@@ -5270,6 +5270,8 @@ header {
           position: relative;
           left: -10px;
           content: "\2013"; }
+        #Content #PageContent ul li > ul {
+          margin-top: 0; }
       #Content #PageContent ul.blocks {
         margin: 0;
         padding: 0; }
@@ -5322,7 +5324,7 @@ header {
             white-space: nowrap; }
         #Content #PageContent ul.blocks ul.features li {
           border-bottom: none; }
-          #Content #PageContent ul.blocks ul.features li span.rank {
+          #Content #PageContent ul.blocks ul.features li .rank {
             display: none; }
       #Content #PageContent ul.expertise {
         margin: 0;
@@ -5339,7 +5341,7 @@ header {
             #Content #PageContent ul.expertise li:hover {
               width: auto !important;
               z-index: 100; }
-              #Content #PageContent ul.expertise li:hover span.rank {
+              #Content #PageContent ul.expertise li:hover .rank {
                 display: inline-block; }
  }
           #Content #PageContent ul.expertise li span {
@@ -5442,6 +5444,15 @@ header {
       color: #990000; }
     #Content #PageContent form .footer {
       margin-top: 20px; }
+    #Content #PageContent .warning {
+      margin: 20px;
+      padding: 5px;
+      border: 1px solid #e9e9e9;
+      border-left: none;
+      border-right: none;
+      text-align: center;
+      color: #838383;
+      font-size: 0.8em; }
 
 footer {
   padding: 0 40px;

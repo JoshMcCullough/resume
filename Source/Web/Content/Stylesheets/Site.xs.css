@@ -1,4 +1,4 @@
-﻿@media (max-width: 767px) {
+﻿@media screen and (max-width: 767px) {
   header {
     position: relative; }
     header .About .Name {
@@ -35,13 +35,38 @@
             display: block;
             width: auto; } }
 
-  #Content #PageContent .section .history-item h2 > .row .col {
-    padding: 0; }
-    #Content #PageContent .section .history-item h2 > .row .col.organization {
-      margin-bottom: 10px; }
+  #Content {
+    padding-right: 0;
+    border-right: none; }
+    #Content #PageContent .section .history-item h2 > .row .col {
+      padding: 0; }
+      #Content #PageContent .section .history-item h2 > .row .col.organization {
+        margin-bottom: 10px; }
+    #Content #PageContent ul.expertise {
+      height: auto !important; }
+      #Content #PageContent ul.expertise li {
+        position: relative;
+        float: left;
+        top: auto !important;
+        left: auto !important;
+        margin-bottom: 4px;
+        height: 20px !important;
+        min-height: 30px !important;
+        line-height: 18px !important; }
+        #Content #PageContent ul.expertise li, #Content #PageContent ul.expertise li:hover {
+          width: 50% !important;
+          min-width: 50% !important; }
+        #Content #PageContent ul.expertise li span.rank {
+          display: block;
+          top: 5px;
+          right: 4px;
+          height: 20px;
+          border-right: none;
+          border-bottom: none; }
 
   footer {
-    font-size: 1.2em; }
+    padding-right: 0;
+    border-right: none; }
     footer #FooterContent:after {
       clear: both; }
     footer #FooterContent .menu a {

@@ -248,6 +248,10 @@ header {
                     left: -10px;
                     content: "\2013";
                 }
+
+                > ul {
+                    margin-top: 0;
+                }
             }
 
             &.blocks {
@@ -326,7 +330,7 @@ header {
                 ul.features li {
                     border-bottom: none;
 
-                    span.rank {
+                    .rank {
                         display: none;
                     }
                 }
@@ -350,7 +354,7 @@ header {
                             width: auto !important;
                             z-index: 100;
 
-                            span.rank {
+                            .rank {
                                 display: inline-block;
                             }
                         }
@@ -527,6 +531,17 @@ header {
             .footer {
                 margin-top: 20px;
             }
+        }
+
+        .warning {
+            margin: 20px;
+            padding: 5px;
+            border: 1px solid $primary-gray;
+            border-left: none;
+            border-right: none;
+            text-align: center;
+            color: $primary-gray-40d;
+            font-size: .8em;
         }
     }
 }

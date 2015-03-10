@@ -1,7 +1,7 @@
 ﻿@import "bootstrap/_variables.scss";
 @import "Variables";
 
-@media (max-width: $screen-xs-max) {
+@media screen and (max-width: $screen-xs-max) {
     header {
         position: relative;
 
@@ -57,6 +57,9 @@
     }
 
     #Content {
+        padding-right: 0;
+        border-right: none;
+
         #PageContent {
             .section {
                 .history-item {
@@ -64,9 +67,6 @@
                         > .row {
                             .col {
                                 padding: 0;
-
-                                &.dates {
-                                }
 
                                 &.organization {
                                     margin-bottom: 10px;
@@ -76,11 +76,42 @@
                     }
                 }
             }
+
+            ul.expertise {
+                height: auto !important;
+
+                li {
+                    position: relative;
+                    float: left;
+                    top: auto !important;
+                    left: auto !important;
+                    margin-bottom: 4px;
+                    height: 20px !important;
+                    min-height: 30px !important;
+                    line-height: 18px !important;
+
+                    &,
+                    &:hover {
+                        width: 50% !important;
+                        min-width: 50% !important;
+                    }
+
+                    span.rank {
+                        display: block;
+                        top: 5px;
+                        right: 4px;
+                        height: 20px;
+                        border-right: none;
+                        border-bottom: none;
+                    }
+                }
+            }
         }
     }
 
     footer {
-        font-size: 1.2em;
+        padding-right: 0;
+        border-right: none;
 
         #FooterContent {
             &:after {

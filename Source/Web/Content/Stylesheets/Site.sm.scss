@@ -1,7 +1,7 @@
 ﻿@import "bootstrap/_variables.scss";
 @import "Variables";
 
-@media (max-width: $screen-sm-max) {
+@media screen and (max-width: $screen-sm-max) {
     header {
         padding: 20px 20px 0 20px;
 
