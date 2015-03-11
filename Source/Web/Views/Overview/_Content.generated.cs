@@ -75,7 +75,21 @@ WriteLiteral(">\r\n    <h1><span>");
             
             #line default
             #line hidden
-WriteLiteral("</span></h1>\r\n\r\n    <div");
+WriteLiteral("</span></h1>\r\n\r\n");
+
+            
+            #line 6 "..\..\Views\Overview\_Content.cshtml"
+    
+            
+            #line default
+            #line hidden
+            
+            #line 6 "..\..\Views\Overview\_Content.cshtml"
+      Html.RenderPartial("DisplayTemplates/Content", this.Model.Content);
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n\r\n    <div");
 
 WriteLiteral(" id=\"subsection_self-rankings\"");
 
@@ -91,21 +105,7 @@ WriteLiteral(">This works much better on a larger screen - trust me.</p>\r\n    
 
 WriteLiteral(" class=\"expertise clearfix\"");
 
-WriteLiteral("></ul>\r\n    </div>\r\n\r\n");
-
-            
-            #line 13 "..\..\Views\Overview\_Content.cshtml"
-    
-            
-            #line default
-            #line hidden
-            
-            #line 13 "..\..\Views\Overview\_Content.cshtml"
-      Html.RenderPartial("DisplayTemplates/Content", this.Model.Content);
-            
-            #line default
-            #line hidden
-WriteLiteral("\r\n\r\n    <div");
+WriteLiteral("></ul>\r\n    </div>\r\n\r\n    <div");
 
 WriteLiteral(" id=\"subsection_projects\"");
 
