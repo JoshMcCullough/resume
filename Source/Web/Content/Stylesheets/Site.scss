@@ -259,17 +259,42 @@ header {
                 padding: 0;
 
                 > li {
+                    -moz-box-sizing: border-box;
+                    -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
                     position: relative;
                     display: inline-block;
                     margin: 0 20px 20px 0;
                     padding: 10px;
-                    width: 420px;
+                    width: calc(25% - 18px);
                     height: 170px;
                     border: 1px solid $primary-gray-5d;
                     background-color: $primary-gray-5l;
                     text-indent: 0;
                     overflow: hidden;
                     vertical-align: top;
+                    
+                    @media (min-width: 1800px) {
+                        &:nth-child(4n) {
+                            margin-right: 0;
+                        }
+                    }
+
+                    @media (min-width: 1500px) and (max-width: 1799px) {
+                        width: calc(33% - 12px);
+
+                        &:nth-child(3n) {
+                            margin-right: 0;
+                        }
+                    }
+
+                    @media (max-width: 1499px) {
+                        width: calc(50% - 12px);
+
+                        &:nth-child(2n) {
+                            margin-right: 0;
+                        }
+                    }
 
                     &:before {
                         content: none;
@@ -339,6 +364,7 @@ header {
             &.expertise {
                 margin: 0;
                 position: relative;
+                overflow: hidden;
 
                 li {
                     position: absolute;

@@ -43,19 +43,25 @@
       #Content #PageContent .section .history-item h2 > .row .col.organization {
         margin-bottom: 10px; }
     #Content #PageContent ul.expertise {
-      height: auto !important; }
+      height: auto !important;
+      max-height: 340px !important;
+      margin-bottom: 10px; }
+      #Content #PageContent ul.expertise.all {
+        max-height: none !important; }
       #Content #PageContent ul.expertise li {
         position: relative;
         float: left;
         top: auto !important;
         left: auto !important;
-        margin-bottom: 4px;
+        margin: 0 4px 4px 0;
         height: 20px !important;
         min-height: 30px !important;
         line-height: 18px !important; }
         #Content #PageContent ul.expertise li, #Content #PageContent ul.expertise li:hover {
-          width: 50% !important;
-          min-width: 50% !important; }
+          width: calc(50% - 2px) !important;
+          min-width: calc(50% - 2px) !important; }
+        #Content #PageContent ul.expertise li:nth-child(2n) {
+          margin-right: 0; }
         #Content #PageContent ul.expertise li span.rank {
           display: block;
           top: 5px;
@@ -63,6 +69,13 @@
           height: 20px;
           border-right: none;
           border-bottom: none; }
+    #Content #PageContent .expertise-btn {
+      display: inline;
+      text-decoration: none;
+      cursor: pointer; }
+      #Content #PageContent .expertise-btn .glyphicon {
+        margin: 10px;
+        font-size: 0.6em; }
 
   footer {
     padding-right: 0;

@@ -105,7 +105,29 @@ WriteLiteral(">This works much better on a larger screen - trust me.</p>\r\n    
 
 WriteLiteral(" class=\"expertise clearfix\"");
 
-WriteLiteral("></ul>\r\n    </div>\r\n\r\n    <div");
+WriteLiteral("></ul>\r\n        <div");
+
+WriteLiteral(" class=\"text-center\"");
+
+WriteLiteral(">\r\n            <a");
+
+WriteLiteral(" id=\"toggle-expertise\"");
+
+WriteLiteral(" class=\"visible-xs expertise-btn\"");
+
+WriteLiteral("><span");
+
+WriteLiteral(" class=\"glyphicon glyphicon-chevron-down\"");
+
+WriteLiteral("></span> <span");
+
+WriteLiteral(" class=\"text\"");
+
+WriteLiteral(">show all</span> <span");
+
+WriteLiteral(" class=\"glyphicon glyphicon-chevron-down\"");
+
+WriteLiteral("></span></a>\r\n        </div>\r\n    </div>\r\n\r\n    <div");
 
 WriteLiteral(" id=\"subsection_projects\"");
 
@@ -211,7 +233,7 @@ WriteLiteral(">Develop stable, robust and highly versatile software, faster!</di
 WriteLiteral(" class=\"content\"");
 
 WriteLiteral(@">
-                    <p>This tool allows you and your team to get the nuts and bolts of any project up and running amazingly fast. The backbone of CodeGenerator relies on technologies that your team probably already knows - XML and XSLT. You design an XSL Template once and CodeGenerator handles the rest.</p>
+                    <p>This tool allows you and your team to get the nuts and bolts of any project up and running amazingly fast. The backbone of CodeGenerator relies on XML and XSLT. You design an XSL Template once and CodeGenerator handles the rest.</p>
                 </div>
                 <ul");
 
@@ -350,6 +372,7 @@ WriteLiteral(" type=\"text/javascript\"");
 WriteLiteral(@">
     $document.ready(function () {
         $(""ul.tags"").tags();
+
         $(""ul.expertise"").expertise({
             minSize: 30,
             maxSize: 150,
@@ -365,6 +388,19 @@ WriteLiteral(@">
 
                 return layouts;
             }()
+        });
+
+        $(""#toggle-expertise"").click(function () {
+            var $togglExpertise = $(this);
+            var $togglExpertiseText = $togglExpertise.children("".text"");
+            var $togglExpertiseIcon = $togglExpertise.children("".glyphicon"");
+            var $expertise = $(""ul.expertise"");
+            var show = !$expertise.hasClass(""all"");
+
+            $togglExpertiseText.text(show ? ""show less"" : ""show all"");
+            $togglExpertiseIcon.toggleClass(""glyphicon-chevron-down"", !show);
+            $togglExpertiseIcon.toggleClass(""glyphicon-chevron-up"", show);
+            $expertise.toggleClass(""all"", show);
         });
     });
 </script>

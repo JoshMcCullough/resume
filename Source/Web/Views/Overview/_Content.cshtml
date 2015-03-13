@@ -10,6 +10,9 @@
         <p>I've compiled a list of the technologies with which I most often work. The relative size of each item indicates my level of expertise.</p>
         <p class="warning visible-xs">This works much better on a larger screen - trust me.</p>
         <ul class="expertise clearfix"></ul>
+        <div class="text-center">
+            <a id="toggle-expertise" class="visible-xs expertise-btn"><span class="glyphicon glyphicon-chevron-down"></span> <span class="text">show all</span> <span class="glyphicon glyphicon-chevron-down"></span></a>
+        </div>
     </div>
 
     <div id="subsection_projects" class="subsection">
@@ -38,7 +41,7 @@
                 <h3>CodeGenerator<a class="visit" href="http://quantumconceptscorp.com/Products/CodeGenerator.aspx" target="_blank"><span class="glyphicon glyphicon-new-window"></span></a></h3>
                 <div class="tagline">Develop stable, robust and highly versatile software, faster!</div>
                 <div class="content">
-                    <p>This tool allows you and your team to get the nuts and bolts of any project up and running amazingly fast. The backbone of CodeGenerator relies on technologies that your team probably already knows - XML and XSLT. You design an XSL Template once and CodeGenerator handles the rest.</p>
+                    <p>This tool allows you and your team to get the nuts and bolts of any project up and running amazingly fast. The backbone of CodeGenerator relies on XML and XSLT. You design an XSL Template once and CodeGenerator handles the rest.</p>
                 </div>
                 <ul class="features tags" data-tags-keys="cs winforms mssql mysql uiux"></ul>
             </li>
@@ -94,6 +97,7 @@
 <script type="text/javascript">
     $document.ready(function () {
         $("ul.tags").tags();
+
         $("ul.expertise").expertise({
             minSize: 30,
             maxSize: 150,
@@ -109,6 +113,19 @@
 
                 return layouts;
             }()
+        });
+
+        $("#toggle-expertise").click(function () {
+            var $togglExpertise = $(this);
+            var $togglExpertiseText = $togglExpertise.children(".text");
+            var $togglExpertiseIcon = $togglExpertise.children(".glyphicon");
+            var $expertise = $("ul.expertise");
+            var show = !$expertise.hasClass("all");
+
+            $togglExpertiseText.text(show ? "show less" : "show all");
+            $togglExpertiseIcon.toggleClass("glyphicon-chevron-down", !show);
+            $togglExpertiseIcon.toggleClass("glyphicon-chevron-up", show);
+            $expertise.toggleClass("all", show);
         });
     });
 </script>
