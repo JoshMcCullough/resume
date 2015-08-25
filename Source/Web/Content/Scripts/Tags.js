@@ -1,4 +1,4 @@
-var __extends = this.__extends || function (d, b) {
+var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
     __.prototype = b.prototype;
@@ -26,7 +26,20 @@ var Tags = (function () {
     Tags.prototype.createElements = function () {
         var _this = this;
         this.tags.forEach(function (tag) {
-            tag.element = $("<li>").addClass("tag " + tag.key).css("background-color", tag.color.toCss()).data(Tags.dataTagKey, tag).attr("title", tag.name).attr("data-tags-key", tag.key).attr("data-tags-abbr", tag.abbreviation).attr("data-tags-name", tag.name).attr("data-tags-exp", tag.expertise).append($("<span>").text(tag[_this.displayProperty])).append(tag.expertise != null ? $("<span>").addClass("rank").text(tag.expertise) : null);
+            tag.element = $("<li>")
+                .addClass("tag " + tag.key)
+                .css("background-color", tag.color.toCss())
+                .data(Tags.dataTagKey, tag)
+                .attr("title", tag.name)
+                .attr("data-tags-key", tag.key)
+                .attr("data-tags-abbr", tag.abbreviation)
+                .attr("data-tags-name", tag.name)
+                .attr("data-tags-exp", tag.expertise)
+                .append($("<span>")
+                .text(tag[_this.displayProperty]))
+                .append(tag.expertise != null ? $("<span>")
+                .addClass("rank")
+                .text(tag.expertise) : null);
             _this.container.append(tag.element);
         }, this);
     };
@@ -127,7 +140,7 @@ var Expertise = (function (_super) {
         this.padding = 4;
         this.layouts = {};
         this.displayProperty = "name";
-        this.layoutMode = 0 /* Linear */;
+        this.layoutMode = ExpertiseLayoutMode.Linear;
         this.tags = $.grep(Tags.allTags, function (tag) { return tag.expertise != null; });
         this.initLayouts();
         $.extend(true, this, options);
@@ -140,7 +153,7 @@ var Expertise = (function (_super) {
         }.bind(this));
     }
     Expertise.prototype.initLayouts = function () {
-        this.layouts[0 /* Linear */] = {
+        this.layouts[ExpertiseLayoutMode.Linear] = {
             func: this.layoutTagsLinear,
             options: new LinearLayoutOptions()
         };
@@ -296,6 +309,7 @@ Tags.allTags.push(new Tag("arcgis", null, "ArcGIS", 3));
 Tags.allTags.push(new Tag("arduino", null, "Arduino", 4));
 Tags.allTags.push(new Tag("webforms", "WebForms", "ASP.NET WebForms", 10));
 Tags.allTags.push(new Tag("bs", null, "Bootstrap", 8));
+Tags.allTags.push(new Tag("bower", null, "Bower", 9));
 Tags.allTags.push(new Tag("cs", null, "C#", 10));
 Tags.allTags.push(new Tag("cpp", null, "C++", 3));
 Tags.allTags.push(new Tag("css", null, "CSS", 10));
@@ -303,6 +317,7 @@ Tags.allTags.push(new Tag("css3", null, "CSS3", 10));
 Tags.allTags.push(new Tag("flash", null, "Flash", 3));
 Tags.allTags.push(new Tag("git", null, "Git", 7));
 Tags.allTags.push(new Tag("grails", null, "Grails", 3));
+Tags.allTags.push(new Tag("gulp", null, "Gulp", 7));
 Tags.allTags.push(new Tag("highcharts", null, "Highcharts", 6));
 Tags.allTags.push(new Tag("highmaps", null, "Highmaps", 8));
 Tags.allTags.push(new Tag("html", null, "HTML", 10));
