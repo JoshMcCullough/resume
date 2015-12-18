@@ -1,8 +1,7 @@
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
-    __.prototype = b.prototype;
-    d.prototype = new __();
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Tags = (function () {
     function Tags(container) {
@@ -307,17 +306,17 @@ Tags.allTags.push(new Tag("apache2", null, "Apache2", 6));
 Tags.allTags.push(new Tag("api", "API", "API"));
 Tags.allTags.push(new Tag("arcgis", null, "ArcGIS", 3));
 Tags.allTags.push(new Tag("arduino", null, "Arduino", 4));
+Tags.allTags.push(new Tag("mvc", "MVC", "ASP.NET MVC", 10));
 Tags.allTags.push(new Tag("webforms", "WebForms", "ASP.NET WebForms", 10));
 Tags.allTags.push(new Tag("bs", null, "Bootstrap", 8));
-Tags.allTags.push(new Tag("bower", null, "Bower", 9));
 Tags.allTags.push(new Tag("cs", null, "C#", 10));
 Tags.allTags.push(new Tag("cpp", null, "C++", 3));
 Tags.allTags.push(new Tag("css", null, "CSS", 10));
 Tags.allTags.push(new Tag("css3", null, "CSS3", 10));
+Tags.allTags.push(new Tag("di", null, "Dependency Injection", 7));
 Tags.allTags.push(new Tag("flash", null, "Flash", 3));
 Tags.allTags.push(new Tag("git", null, "Git", 7));
 Tags.allTags.push(new Tag("grails", null, "Grails", 3));
-Tags.allTags.push(new Tag("gulp", null, "Gulp", 7));
 Tags.allTags.push(new Tag("highcharts", null, "Highcharts", 6));
 Tags.allTags.push(new Tag("highmaps", null, "Highmaps", 8));
 Tags.allTags.push(new Tag("html", null, "HTML", 10));
@@ -331,7 +330,6 @@ Tags.allTags.push(new Tag("mantis", null, "Mantis", 8));
 Tags.allTags.push(new Tag("mapping", null, "Mapping", 6));
 Tags.allTags.push(new Tag("mssql", "MS SQL", "Microsoft SQL Server", 9));
 Tags.allTags.push(new Tag("ssrs", null, "Microsoft SQL Server Reporting Services", 8));
-Tags.allTags.push(new Tag("mvc", "MVC", "ASP.NET MVC", 10));
 Tags.allTags.push(new Tag("mysql", null, "My SQL", 8));
 Tags.allTags.push(new Tag("openscad", null, "OpenSCAD", 3));
 Tags.allTags.push(new Tag("oracle", null, "Oracle", 5));
@@ -346,13 +344,14 @@ Tags.allTags.push(new Tag("tfs", "TFS", "Team Foundation Server", 6));
 Tags.allTags.push(new Tag("tfvc", "TFVC", "TF Version Control", 7));
 Tags.allTags.push(new Tag("tomcat", null, "Tomcat", 7));
 Tags.allTags.push(new Tag("uiux", null, "UI/UX", 7));
+Tags.allTags.push(new Tag("testing", null, "Unit Testing", 7));
 Tags.allTags.push(new Tag("vb", "VB.NET", "Visual Basic .NET", 8));
 Tags.allTags.push(new Tag("weblogic", null, "WebLogic", 10));
 Tags.allTags.push(new Tag("windows", null, "Windows", 10));
-Tags.allTags.push(new Tag("winserver", null, "Windows Server", 9));
 Tags.allTags.push(new Tag("wcf", "WCF", "Windows Communication Foundation", 7));
 Tags.allTags.push(new Tag("winforms", "WinForms", "Windows Forms", 10));
 Tags.allTags.push(new Tag("wp", null, "Windows Phone", 4));
+Tags.allTags.push(new Tag("winserver", null, "Windows Server", 9));
 Tags.allTags.push(new Tag("xml", null, "XML", 10));
 Tags.allTags.push(new Tag("xsd", null, "XSD", 8));
 Tags.allTags.push(new Tag("xslt", null, "XSLT", 9));
