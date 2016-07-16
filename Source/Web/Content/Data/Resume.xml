@@ -81,7 +81,12 @@
   </Section>
 
   <Section Key="work-history" Title="Work History">
-    <History StartDate="2015-09-28" Organization="i360" OrganizationWebsite="http://i-360.com" OrganizationLocation="Arlington, Virginia" Role="Solutions Developer">
+    <History StartDate="2016-03-07" Organization="ARMATURE" OrganizationWebsite="http://armaturecorp.com" OrganizationLocation="Dulles, Virginia" Role="Senior Software Engineer">
+      <List>
+        <Item>Full-stack development using C#, WebApi 2, Elastic Search, CouchDB and Aurelia.</Item>
+      </List>
+    </History>
+    <History StartDate="2015-09-28" EndDate="2016-03-04" Organization="i360" OrganizationWebsite="http://i-360.com" OrganizationLocation="Arlington, Virginia" Role="Solutions Developer">
       <List>
         <Item>Responsible for full stack development (front-end to API to back-end) for fast-paced, large solution.</Item>
         <Item>Utilize best-practices such as dependency injection, unit testing, continuous testing and continuous integration.</Item>
