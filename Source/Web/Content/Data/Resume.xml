@@ -79,11 +79,26 @@
   </Section>
 
   <Section Key="work-history" Title="Work History">
-    <History StartDate="2016-03-07" Organization="ARMATURE" OrganizationWebsite="http://armaturecorp.com" OrganizationLocation="Dulles, Virginia" Role="Senior Software Engineer">
+    <History StartDate="2008-11-01" Organization="Quantum Concepts" OrganizationWebsite="http://quantumconceptscorp.com" OrganizationLocation="Leesburg, Virginia" Role="Owner">
       <List>
-        <Item>Full-stack development using C#, WebApi 2, Elastic Search, CouchDB and Aurelia.</Item>
+        <Item>Work directly with clients to solve techical problems, improve workflow, and suggest resolutions.</Item>
+        <Item>Research, design, develop, test and deploy software for mobile devices.</Item>
+        <Item>Write applications using the .NET, .NET Core &amp; the .NET Compact Framework.</Item>
+        <Item>
+          Develop and publicly release custom code-generation tool, CodeGenerator (<Link Url="http://thecodegenerator.com">TheCodeGenerator.com</Link>), which provides a huge boost to team productivity as well as code stability and versatility.
+        </Item>
       </List>
     </History>
+      
+    <History StartDate="2016-03-07" EndDate="2018-03-16" Organization="ARMATURE" OrganizationWebsite="http://armaturecorp.com" OrganizationLocation="Dulles, Virginia" Role="Senior Software Engineer">
+      <List>
+        <Item>Full-stack development using C#, WebApi 2, Elastic Search, CouchDB and Aurelia.</Item>
+        <Item>Maintain, improve, and add features across a dozen micro-services.</Item>
+        <Item>Design and implement RESTful APIs for large Quality Management system.</Item>
+        <Item>Participate in and lead "dev sessions" sharing new technologies, frameworks, and patterns.</Item>
+      </List>
+    </History>
+      
     <History StartDate="2015-09-28" EndDate="2016-03-04" Organization="i360" OrganizationWebsite="http://i-360.com" OrganizationLocation="Arlington, Virginia" Role="Solutions Developer">
       <List>
         <Item>Responsible for full stack development (front-end to API to back-end) for fast-paced, large solution.</Item>
@@ -91,6 +106,7 @@
         <Item>Create and update internal NuGet packages, Visual Studio extensions, and Visual Studio analyzers (Roslyn) to enforce and enhance development process.</Item>
       </List>
     </History>
+      
     <History StartDate="2010-05-01" EndDate="2015-09-11" Organization="Social &amp; Scientific Systems" OrganizationWebsite="http://s-3.com" OrganizationLocation="Silver Spring, Maryland" Role="Senior Software Engineer">
       <List>
         <Item>Selected amongst hundreds of employees to attend months-long Leadership Training instructed by the executive team.</Item>
@@ -102,16 +118,6 @@
         <Item>Work with database team in order to make performance updates (indexes, etc.) and recommend structural changes.</Item>
         <Item>Develop unified build process and documentation for performing deployments.</Item>
         <Item>Deploy to QA, UAT and Production environments and manage all servers from initial configuration onward.</Item>
-      </List>
-    </History>
-
-    <History StartDate="2008-11-01" Organization="Quantum Concepts" OrganizationWebsite="http://quantumconceptscorp.com" OrganizationLocation="Leesburg, Virginia" Role="Owner">
-      <List>
-        <Item>Research, design, develop, test and deploy software for mobile devices.</Item>
-        <Item>Write applications using the .NET Compact Framework.</Item>
-        <Item>
-          Develop and publicly release custom code-generation tool, CodeGenerator (<Link Url="http://thecodegenerator.com">TheCodeGenerator.com</Link>), which provides a huge boost to team productivity as well as code stability and versatility.
-        </Item>
       </List>
     </History>
 
