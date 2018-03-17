@@ -33,11 +33,9 @@
       <Item>mentor and train junior developers and implement coding standards;</Item>
       <Item>do everything from infrastructure configuration to backend and frontend design and implementation;</Item>
       <Item>plan, research, estimate and develop solutions for Federal &amp; State Government and private-sector contracts;</Item>
-      <Item>
-        am responsible for architecting and developing sophisticated SOAP and RESTful API (<Link Url="http://healthindicators.gov">HealthIndicators.gov</Link>);
-      </Item>
+      <Item>am responsible for architecting and developing sophisticated RESTful API (<Link Url="http://healthindicators.gov">HealthIndicators.gov</Link>);</Item>
       <Item>make and implement high-level decisions regarding overall application architecture, use and design;</Item>
-      <Item>design and develop entire SQL Server databases; inspect queries and apply performance updates as needed; and</Item>
+      <Item>design and develop SQL Server databases; inspect queries and apply performance updates as needed; utilize CouchDB and Elasticsearch database; and</Item>
       <Item>am constantly learning new technologies, frameworks and tools.</Item>
     </List>
 
