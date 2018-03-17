@@ -19,7 +19,7 @@ namespace JSM.Web {
 
             NavUtil.SelectedCssClass = "Active";
 
-            Resume.Initialize(Server.MapPath("~/Content/Data/Resume.xml"));
+            Resume.Initialize(Server.MapPath("~/Content/Data/Resume.xml"), true);
         }
     }
 }
