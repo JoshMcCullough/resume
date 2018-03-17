@@ -9,7 +9,7 @@
 
   <Section Key="overview" Title="Overview">
     <Subsection Key="objective" Title="Objective">
-      <Paragraph>To apply and grow my existing skillset in a challenging, fast-paced, and rewarding software engineering environment.</Paragraph>
+      <Paragraph>To apply and grow my existing skill-set in a challenging, fast-paced, and rewarding software engineering environment.</Paragraph>
       <Paragraph>To bring a new level of efficiency and stability to software projects by utilizing the latest technologies and software engineering ideals.</Paragraph>
     </Subsection>
 
@@ -33,7 +33,7 @@
       <Item>mentor and train junior developers and implement coding standards;</Item>
       <Item>do everything from infrastructure configuration to backend and frontend design and implementation;</Item>
       <Item>plan, research, estimate and develop solutions for Federal &amp; State Government and private-sector contracts;</Item>
-      <Item>am responsible for architecting and developing sophisticated RESTful API (<Link Url="http://healthindicators.gov">HealthIndicators.gov</Link>);</Item>
+      <Item>am responsible for designing and developing sophisticated RESTful API (<Link Url="http://healthindicators.gov">HealthIndicators.gov</Link>);</Item>
       <Item>make and implement high-level decisions regarding overall application architecture, use and design;</Item>
       <Item>design and develop SQL Server databases; inspect queries and apply performance updates as needed; utilize CouchDB and Elasticsearch database; and</Item>
       <Item>am constantly learning new technologies, frameworks and tools.</Item>
@@ -53,14 +53,13 @@
 
     <Subsection Key="technology" Title="Technology">
       <List>
-        <Item>.NET, C#, ASP.NET MVC, ASP.NET WebForms, Ruby on Rails, PHP, Java, Hibernate, Spring, Struts</Item>
-        <Item>HTML, CSS, JavaScript, jQuery, Bootstrap, Knockout, Highcharts/Highmaps</Item>
-        <Item>Visual Studio, Eclipse, NetBeans</Item>
-        <Item>
-          Git, Subversion, TFS/TFVC &#8212; <Link Url="https://github.com/JoshMcCullough">view my profile on Github</Link>
-        </Item>
+        <Item>.NET, C#, WebAPI 2, ASP.NET MVC &amp; WebForms, Java</Item>
+        <Item>Node/NPM, JSPM, NuGet</Item>
+        <Item>Aurelia, HTML, CSS/SCSS/LESS, JavaScript, Typescript, jQuery, Bootstrap, Google MDL, Knockout, Highcharts/Highmaps</Item>
+        <Item>Visual Studio, VS Code, Eclipse, NetBeans</Item>
+        <Item>Git, Subversion, TFS/TFVC &#8212; <Link Url="https://github.com/JoshMcCullough">view my profile on Github</Link></Item>
         <Item>IIS, Apache, Nginx, Tomcat, Weblogic</Item>
-        <Item>SQL Server, MySQL, Oracle</Item>
+        <Item>Elasticsearch, CouchDB, SQL Server, MySQL, Oracle</Item>
         <Item>Windows, Linux</Item>
         <Item>Networking, DNS, server management (Windows, Linux, Amazon Web Services)</Item>
       </List>
@@ -69,9 +68,7 @@
     <Subsection Key="hobbies" Title="Hobbies">
       <List>
         <Item>Keeping up with the latest in software development.</Item>
-        <Item>
-          3D printing &#8212; <Link Url="http://www.thingiverse.com/QuantumConcepts/designs">QuantumConcepts on Thingiverse.com</Link>.
-        </Item>
+        <Item>3D printing &#8212; <Link Url="http://www.thingiverse.com/QuantumConcepts/designs">QuantumConcepts on Thingiverse.com</Link>.</Item>
         <Item>General DIY and learning how things work.</Item>
         <Item>Technology, astronomy, travel, photography.</Item>
       </List>
@@ -81,7 +78,8 @@
   <Section Key="work-history" Title="Work History">
     <History StartDate="2008-11-01" Organization="Quantum Concepts" OrganizationWebsite="http://quantumconceptscorp.com" OrganizationLocation="Leesburg, Virginia" Role="Owner">
       <List>
-        <Item>Work directly with clients to solve techical problems, improve workflow, and suggest resolutions.</Item>
+        <Item Class="highlight">Currently accepting contract work; please <Link Url="ContactMe" Internal="true">contact me</Link> to get started!</Item>
+        <Item>Work directly with clients to solve technical problems, improve work-flow, and suggest resolutions.</Item>
         <Item>Research, design, develop, test and deploy software for mobile devices.</Item>
         <Item>Write applications using the .NET, .NET Core &amp; the .NET Compact Framework.</Item>
         <Item>
@@ -92,7 +90,7 @@
       
     <History StartDate="2016-03-07" EndDate="2018-03-16" Organization="ARMATURE" OrganizationWebsite="http://armaturecorp.com" OrganizationLocation="Dulles, Virginia" Role="Senior Software Engineer">
       <List>
-        <Item>Full-stack development using C#, WebApi 2, Elastic Search, CouchDB and Aurelia.</Item>
+        <Item>Full-stack development using C#, WebApi 2, Elasticsearch, CouchDB and Aurelia.</Item>
         <Item>Maintain, improve, and add features across a dozen micro-services.</Item>
         <Item>Design and implement RESTful APIs for large Quality Management system.</Item>
         <Item>Participate in and lead "dev sessions" sharing new technologies, frameworks, and patterns.</Item>
