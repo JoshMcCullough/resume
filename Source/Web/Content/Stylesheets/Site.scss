@@ -1,5 +1,5 @@
 ﻿@import "_bootstrap";
-@import "Variables";
+@import "Variables.scss";
 
 $overview-color: #6706FF;
 $skills-and-tech-color: #E80023;
@@ -273,7 +273,7 @@ header {
                     text-indent: 0;
                     overflow: hidden;
                     vertical-align: top;
-                    
+
                     @media (min-width: 1800px) {
                         &:nth-child(4n) {
                             margin-right: 0;
@@ -514,6 +514,14 @@ header {
                             .organization-link {
                                 visibility: visible;
                             }
+                        }
+                    }
+                }
+
+                ul {
+                    li {
+                        &.highlight {
+                            font-weight: bold;
                         }
                     }
                 }
