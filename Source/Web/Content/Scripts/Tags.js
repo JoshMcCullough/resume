@@ -1,9 +1,14 @@
-var __extends = (this && this.__extends) || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-};
-var Tags = (function () {
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var Tags = /** @class */ (function () {
     function Tags(container) {
         var _this = this;
         this.container = container;
@@ -122,34 +127,35 @@ var Tags = (function () {
     Tags.dataTagKey = "tags";
     Tags.allTags = new Array();
     return Tags;
-})();
+}());
 var ExpertiseLayoutMode;
 (function (ExpertiseLayoutMode) {
     ExpertiseLayoutMode[ExpertiseLayoutMode["Linear"] = 0] = "Linear";
 })(ExpertiseLayoutMode || (ExpertiseLayoutMode = {}));
-var Expertise = (function (_super) {
+var Expertise = /** @class */ (function (_super) {
     __extends(Expertise, _super);
     function Expertise(container, options) {
         if (options === void 0) { options = null; }
-        _super.call(this, container);
-        this.container = container;
-        this.minSize = 30;
-        this.maxSize = 100;
-        this.fixedHeight = null;
-        this.padding = 4;
-        this.layouts = {};
-        this.displayProperty = "name";
-        this.layoutMode = ExpertiseLayoutMode.Linear;
-        this.tags = $.grep(Tags.allTags, function (tag) { return tag.expertise != null; });
-        this.initLayouts();
-        $.extend(true, this, options);
-        this.orderTags();
-        this.sizeTags();
-        this.createElements();
+        var _this = _super.call(this, container) || this;
+        _this.container = container;
+        _this.minSize = 30;
+        _this.maxSize = 100;
+        _this.fixedHeight = null;
+        _this.padding = 4;
+        _this.layouts = {};
+        _this.displayProperty = "name";
+        _this.layoutMode = ExpertiseLayoutMode.Linear;
+        _this.tags = $.grep(Tags.allTags, function (tag) { return tag.expertise != null; });
+        _this.initLayouts();
+        $.extend(true, _this, options);
+        _this.orderTags();
+        _this.sizeTags();
+        _this.createElements();
         $(document).ready(function () {
             this.layoutTags();
             this.registerEvents();
-        }.bind(this));
+        }.bind(_this));
+        return _this;
     }
     Expertise.prototype.initLayouts = function () {
         this.layouts[ExpertiseLayoutMode.Linear] = {
@@ -233,27 +239,28 @@ var Expertise = (function (_super) {
         $(window).resize(this.layoutTags.bind(this));
     };
     return Expertise;
-})(Tags);
-var LayoutOptions = (function () {
+}(Tags));
+var LayoutOptions = /** @class */ (function () {
     function LayoutOptions(options) {
         if (options === void 0) { options = null; }
         this.animationDelay = 50;
-        this.animationDuration = 800;
+        this.animationDuration = 300;
         this.animationEasing = "easeOutQuart";
     }
     return LayoutOptions;
-})();
-var LinearLayoutOptions = (function (_super) {
+}());
+var LinearLayoutOptions = /** @class */ (function (_super) {
     __extends(LinearLayoutOptions, _super);
     function LinearLayoutOptions(options) {
         if (options === void 0) { options = null; }
-        _super.call(this, null);
-        this.linePerLevel = true;
-        $.extend(true, this, options);
+        var _this = _super.call(this, null) || this;
+        _this.linePerLevel = true;
+        $.extend(true, _this, options);
+        return _this;
     }
     return LinearLayoutOptions;
-})(LayoutOptions);
-var Tag = (function () {
+}(LayoutOptions));
+var Tag = /** @class */ (function () {
     function Tag(key, abbreviation, name, expertise) {
         if (name === void 0) { name = null; }
         if (expertise === void 0) { expertise = null; }
@@ -264,14 +271,16 @@ var Tag = (function () {
         this.color = null;
         this.element = null;
         this.size = null;
-        if (abbreviation == null)
+        if (abbreviation == null) {
             this.abbreviation = (this.name || this.key);
-        if (name == null)
+        }
+        if (name == null) {
             this.name = (this.abbreviation || this.key);
+        }
     }
     return Tag;
-})();
-var Rgb = (function () {
+}());
+var Rgb = /** @class */ (function () {
     function Rgb(r, g, b) {
         this.r = r;
         this.g = g;
@@ -281,7 +290,7 @@ var Rgb = (function () {
         return "rgb(" + this.r + ", " + this.g + ", " + this.b + ")";
     };
     return Rgb;
-})();
+}());
 jQuery.fn.extend({
     tags: function () {
         $(this).each(function () {
@@ -301,34 +310,40 @@ jQuery.fn.extend({
         return $(this).data(Expertise.dataTagsKey);
     },
 });
-Tags.allTags.push(new Tag("aws", "AWS", "Amazon Web Services", 7));
+Tags.allTags.push(new Tag("azure", null, "Azure", 5));
+Tags.allTags.push(new Tag("couchdb", null, "CouchDB", 6));
+Tags.allTags.push(new Tag("elasticsearch", null, "Elasticsearch", 7));
+Tags.allTags.push(new Tag("microservices", null, "Microservices", 7));
+Tags.allTags.push(new Tag("node", null, "Node/NPM", 7));
+Tags.allTags.push(new Tag("typescript", null, "TypeScript", 8));
+Tags.allTags.push(new Tag("aws", "AWS", "Amazon Web Services", 5));
 Tags.allTags.push(new Tag("apache2", null, "Apache2", 6));
-Tags.allTags.push(new Tag("api", "API", "API"));
 Tags.allTags.push(new Tag("arcgis", null, "ArcGIS", 3));
 Tags.allTags.push(new Tag("arduino", null, "Arduino", 4));
-Tags.allTags.push(new Tag("mvc", "MVC", "ASP.NET MVC", 10));
-Tags.allTags.push(new Tag("webforms", "WebForms", "ASP.NET WebForms", 10));
+Tags.allTags.push(new Tag("mvc", "MVC", "ASP.NET MVC", 9));
+Tags.allTags.push(new Tag("webforms", "WebForms", "WebForms", 8));
+Tags.allTags.push(new Tag("webapi2", null, "Web API 2", 9));
+Tags.allTags.push(new Tag("aurelia", null, "Aurelia", 8));
 Tags.allTags.push(new Tag("bs", null, "Bootstrap", 8));
-Tags.allTags.push(new Tag("cs", null, "C#", 10));
+Tags.allTags.push(new Tag("mdl", null, "Google MDL", 6));
+Tags.allTags.push(new Tag("cs", null, "C#", 9));
 Tags.allTags.push(new Tag("cpp", null, "C++", 3));
-Tags.allTags.push(new Tag("css", null, "CSS", 10));
-Tags.allTags.push(new Tag("css3", null, "CSS3", 10));
-Tags.allTags.push(new Tag("di", null, "Dependency Injection", 7));
+Tags.allTags.push(new Tag("css", null, "CSS/3", 9));
+Tags.allTags.push(new Tag("di", null, "Dependency Injection", 9));
 Tags.allTags.push(new Tag("flash", null, "Flash", 3));
-Tags.allTags.push(new Tag("git", null, "Git", 7));
+Tags.allTags.push(new Tag("git", null, "Git", 8));
 Tags.allTags.push(new Tag("grails", null, "Grails", 3));
 Tags.allTags.push(new Tag("highcharts", null, "Highcharts", 6));
 Tags.allTags.push(new Tag("highmaps", null, "Highmaps", 8));
-Tags.allTags.push(new Tag("html", null, "HTML", 10));
-Tags.allTags.push(new Tag("html5", null, "HTML5", 10));
-Tags.allTags.push(new Tag("iis", "IIS", "Internet Information Services", 10));
+Tags.allTags.push(new Tag("html", null, "HTML/5", 9));
+Tags.allTags.push(new Tag("iis", null, "IIS", 9));
 Tags.allTags.push(new Tag("java", null, "Java", 7));
-Tags.allTags.push(new Tag("js", "JS", "JavaScript", 10));
+Tags.allTags.push(new Tag("js", "JS", "JavaScript", 9));
 Tags.allTags.push(new Tag("ko", null, "Knockout", 7));
 Tags.allTags.push(new Tag("linux", null, "Linux", 6));
 Tags.allTags.push(new Tag("mantis", null, "Mantis", 8));
 Tags.allTags.push(new Tag("mapping", null, "Mapping", 6));
-Tags.allTags.push(new Tag("mssql", "MS SQL", "Microsoft SQL Server", 9));
+Tags.allTags.push(new Tag("mssql", "MS SQL", "SQL Server", 9));
 Tags.allTags.push(new Tag("ssrs", null, "Microsoft SQL Server Reporting Services", 8));
 Tags.allTags.push(new Tag("mysql", null, "My SQL", 8));
 Tags.allTags.push(new Tag("openscad", null, "OpenSCAD", 3));
@@ -339,20 +354,20 @@ Tags.allTags.push(new Tag("redmine", null, "Redmine", 6));
 Tags.allTags.push(new Tag("regex", "RegEx", "Regular Expressions", 9));
 Tags.allTags.push(new Tag("rails", "Rails", "Ruby on Rails", 6));
 Tags.allTags.push(new Tag("sl", null, "Silverlight", 4));
-Tags.allTags.push(new Tag("svn", "SVN", "Subversion", 9));
+Tags.allTags.push(new Tag("svn", "SVN", "Subversion", 7));
 Tags.allTags.push(new Tag("tfs", "TFS", "Team Foundation Server", 6));
 Tags.allTags.push(new Tag("tfvc", "TFVC", "TF Version Control", 7));
 Tags.allTags.push(new Tag("tomcat", null, "Tomcat", 7));
 Tags.allTags.push(new Tag("uiux", null, "UI/UX", 7));
 Tags.allTags.push(new Tag("testing", null, "Unit Testing", 7));
 Tags.allTags.push(new Tag("vb", "VB.NET", "Visual Basic .NET", 8));
-Tags.allTags.push(new Tag("weblogic", null, "WebLogic", 10));
-Tags.allTags.push(new Tag("windows", null, "Windows", 10));
+Tags.allTags.push(new Tag("weblogic", null, "WebLogic", 9));
+Tags.allTags.push(new Tag("windows", null, "Windows", 9));
 Tags.allTags.push(new Tag("wcf", "WCF", "Windows Communication Foundation", 7));
-Tags.allTags.push(new Tag("winforms", "WinForms", "Windows Forms", 10));
+Tags.allTags.push(new Tag("winforms", "WinForms", "Windows Forms", 9));
 Tags.allTags.push(new Tag("wp", null, "Windows Phone", 4));
 Tags.allTags.push(new Tag("winserver", null, "Windows Server", 9));
-Tags.allTags.push(new Tag("xml", null, "XML", 10));
+Tags.allTags.push(new Tag("xml", null, "XML", 9));
 Tags.allTags.push(new Tag("xsd", null, "XSD", 8));
 Tags.allTags.push(new Tag("xslt", null, "XSLT", 9));
 Tags.init();
