@@ -124,25 +124,14 @@ I am a highly skilled software engineer who prides himself on completing tasks o
 - Develop web interface wrapper to interact with survey data provider.
 
 ### Avenity: 2/2005 - 4/2010; Reston, Virginia
-**Senior Software Developer**
-- Local Government Revenue Management System, .NET Framework:
-  - Design, develop, and unit test complex client/server software supplications using both .NET Remoting and Web Services API layers.
-  - Utilize and improve a custom code generator to generate data objects and API layers.
-  - Implement customizations in external DLLs for each client.
-  - Create and enhance SQL Server Reporting Services reports as well as develop Custom (ad-hoc) Reporting engine.
-  - Lead developer for related public-facing web site.
-  - Design and implement workflow/processing queue.
-  - Performance and memory optimization throughout enterprise-level software package.
-- Compensation Analysis System, J2EE & Weblogic:
-  - Develop complex web application and Windows services using Java/J2EE platform.
-  - Create and refine complex SQL queries, stored procedures and views on Oracle platform.
-  - Lead developer on multiple software iterations.
-- General:
-  - Go-to-guy for network and server configuration.
-  - Implemented custom VOIP solution (Asterisk).
-  - Developed in-house time-tracking system
-  - Presented software development training courses to other employees.
-  - Excellent evaluations each year.
+- Design, develop, and unit test complex client/server applications using both .NET Remoting and Web Services API layers.
+- Utilize and improve a custom code generator to generate data objects and API layers.
+- Lead developer for related public-facing web site.
+- Develop complex web application and Windows services using Java/J2EE platform.
+- Create and refine complex SQL queries, stored procedures and views on Oracle platform.
+- Go-to-guy for network and server configuration.
+- Developed in-house time-tracking system.
+- Presented software development training courses to other employees.
 
 ## Education
 ### Champlain College: 8/2000 - 12/2004; Burlington, Vermont
@@ -158,7 +147,7 @@ I am a highly skilled software engineer who prides himself on completing tasks o
 
 ## Contact Me
 If you'd like to get in touch with me, please use one of the following methods:
-  Email: me@joshmccullough.me
-  Phone: (802) 318-6441
+  
+**Email:** me@joshmccullough.me; **Phone:** (802) 318-6441
 
 For a more *interesting* experience, please visit http://JoshMcCullough.me.
