@@ -129,36 +129,14 @@
 
     <History StartDate="2005-02-01" EndDate="2010-04-01" Organization="Avenity" OrganizationWebsite="http://avenity.com" OrganizationLocation="Reston, Virginia" Role="Senior Software Developer">
       <List>
-        <Item>
-          Local Government Revenue Management System, .NET Framework:
-          <List>
-            <Item>Design, develop, and unit test complex client/server software supplications using both .NET Remoting and Web Services API layers.</Item>
-            <Item>Utilize and improve a custom code generator to generate data objects and API layers.</Item>
-            <Item>Implement customizations in external DLLs for each client.</Item>
-            <Item>Create and enhance SQL Server Reporting Services reports as well as develop Custom (ad-hoc) Reporting engine.</Item>
-            <Item>Lead developer for related public-facing web site.</Item>
-            <Item>Design and implement workflow/processing queue.</Item>
-            <Item>Performance and memory optimization throughout enterprise-level software package.</Item>
-          </List>
-        </Item>
-        <Item>
-          Compensation Analysis System, J2EE &amp; Weblogic:
-          <List>
-            <Item>Develop complex web application and Windows services using Java/J2EE platform.</Item>
-            <Item>Create and refine complex SQL queries, stored procedures and views on Oracle platform.</Item>
-            <Item>Lead developer on multiple software iterations.</Item>
-          </List>
-        </Item>
-        <Item>
-          General:
-          <List>
-            <Item>Go-to-guy for network and server configuration.</Item>
-            <Item>Implemented custom VOIP solution (Asterisk).</Item>
-            <Item>Developed in-house time-tracking system</Item>
-            <Item>Presented software development training courses to other employees.</Item>
-            <Item>Excellent evaluations each year.</Item>
-          </List>
-        </Item>
+        <Item>Design, develop, and unit test complex client/server applications using both .NET Remoting and Web Services API layers.</Item>
+        <Item>Utilize and improve a custom code generator to generate data objects and API layers.</Item>
+        <Item>Lead developer for related public-facing web site.</Item>
+        <Item>Develop complex web application and Windows services using Java/J2EE platform.</Item>
+        <Item>Create and refine complex SQL queries, stored procedures and views on Oracle platform.</Item>
+        <Item>Go-to-guy for network and server configuration.</Item>
+        <Item>Developed in-house time-tracking system.</Item>
+        <Item>Presented software development training courses to other employees.</Item>
       </List>
     </History>
   </Section>
