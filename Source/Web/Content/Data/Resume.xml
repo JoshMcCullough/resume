@@ -76,15 +76,13 @@
   </Section>
 
   <Section Key="work-history" Title="Work History">
-    <History StartDate="2008-11-01" Organization="Quantum Concepts" OrganizationWebsite="http://quantumconceptscorp.com" OrganizationLocation="Leesburg, Virginia" Role="Owner">
+    <History StartDate="2008-11-01" Organization="Quantum Concepts" OrganizationWebsite="http://quantumconceptscorp.com" OrganizationLocation="Leesburg, Virginia" Role="Owner / Freelance Contractor">
       <List>
         <Item Class="highlight">Currently accepting contract work; please <Link Url="ContactMe" Internal="true">contact me</Link> to get started!</Item>
         <Item>Work directly with clients to solve technical problems, improve work-flow, and suggest resolutions.</Item>
         <Item>Research, design, develop, test and deploy software for mobile devices.</Item>
         <Item>Write applications using the .NET, .NET Core &amp; the .NET Compact Framework.</Item>
-        <Item>
-          Develop and publicly release custom code-generation tool, CodeGenerator (<Link Url="http://thecodegenerator.com">TheCodeGenerator.com</Link>), which provides a huge boost to team productivity as well as code stability and versatility.
-        </Item>
+        <Item>Develop and publicly release custom code-generation tool, CodeGenerator (<Link Url="http://thecodegenerator.com">TheCodeGenerator.com</Link>), which provides a huge boost to team productivity as well as code stability and versatility.</Item>
       </List>
     </History>
       

@@ -161,7 +161,7 @@ WriteLiteral(">Accreditation, certification, and quality management software.</d
 WriteLiteral(" class=\"content\"");
 
 WriteLiteral(@">
-                    <p>Built using cutting-edge Javascript frameworks and tools, this SAAS package utilizes a complex set of microservices, CouchDB to store aggregated data, and Elasticsearch to provide instant search results across the entire platform.</p>
+                    <p>Built using cutting-edge Javascript frameworks and tools, Fabric utilizes a complex set of microservices, CouchDB to store aggregated data, and Elasticsearch to provide instant search results across the entire platform.</p>
                 </div>
                 <ul");
 
