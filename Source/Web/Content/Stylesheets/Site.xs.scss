@@ -79,8 +79,9 @@
 
             ul.expertise {
                 height: auto !important;
-                max-height: 340px !important;
+                max-height: 300px !important;
                 margin-bottom: 10px;
+                overflow: hidden;
 
                 &.all {
                     max-height: none !important;
