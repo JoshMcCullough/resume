@@ -19,9 +19,12 @@ var Tags = /** @class */ (function () {
             var tagKeys = tagString.split(" ");
             tagKeys.forEach(function (key) {
                 var tag = $.grep(Tags.allTags, function (tag) { return tag.key == key; }).shift();
-                if (tag == null)
+                if (tag == null) {
                     console.log("Unknown tag \"" + key + "\".");
-                _this.tags.push(tag);
+                }
+                else {
+                    _this.tags.push(tag);
+                }
             }, this);
             this.createElements();
         }

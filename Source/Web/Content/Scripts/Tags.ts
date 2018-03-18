@@ -16,10 +16,12 @@
             tagKeys.forEach((key) => {
                 var tag = $.grep(Tags.allTags, (tag) => tag.key == key).shift();
 
-                if (tag == null)
+                if (tag == null) {
                     console.log("Unknown tag \"" + key + "\".");
-
-                this.tags.push(tag);
+                }
+                else {
+                    this.tags.push(tag);
+                }
             }, this);
 
             this.createElements();
