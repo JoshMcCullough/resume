@@ -97,11 +97,7 @@ WriteLiteral(" class=\"subsection\"");
 
 WriteLiteral(">\r\n        <h2><span>Self-rankings</span></h2>\r\n        <p>I\'ve compiled a list o" +
 "f the technologies with which I most often work. The relative size of each item " +
-"indicates my level of expertise.</p>\r\n        <p");
-
-WriteLiteral(" class=\"warning visible-xs\"");
-
-WriteLiteral(">This works much better on a larger screen &mdash; trust me.</p>\r\n        <ul");
+"indicates my level of expertise.</p>\r\n        <ul");
 
 WriteLiteral(" class=\"expertise clearfix\"");
 
