@@ -1,4 +1,4 @@
-﻿@import "Variables";
+﻿@import "Variables.scss";
 
 @page {
     margin: .25in;
@@ -255,6 +255,10 @@ header {
         }
 
         .section {
+            &#section_work-history {
+                page-break-before: always;
+            }
+            
             &:nth-of-type(1n+2) {
                 h1 {
                     margin-top: 2mm;

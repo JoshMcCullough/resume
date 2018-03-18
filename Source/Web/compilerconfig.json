@@ -1,6 +1,10 @@
 ﻿[
-    {
-        "outputFile": "Content/Stylesheets/Site.css",
-        "inputFile": "Content/Stylesheets/Site.scss"
-    }
+  {
+    "outputFile": "Content/Stylesheets/Site.css",
+    "inputFile": "Content/Stylesheets/Site.scss"
+  },
+  {
+    "outputFile": "Content/Stylesheets/Print.css",
+    "inputFile": "Content/Stylesheets/Print.scss"
+  }
 ]
