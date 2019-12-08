@@ -1,5 +1,5 @@
 ﻿@model JSM.Web.Models.ContactMe.SecurityQuestionModel
 
-@Html.EditorFor(m => m.Key)
+@Html.HiddenFor(m => m.Key)
 @Html.LabelFor(m => m.Answer, "Solve: {0}".FormatString(this.Model.Question))
 @Html.EditorFor(m => m.Answer)

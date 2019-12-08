@@ -78,10 +78,10 @@
   </Section>
 
   <Section Key="work-history" Title="Work History">
-    <History StartDate="2018-05-01" Organization="Tesla Government", OrganizationWebsite="https://teslagov.com" OrganizationLocation="Vienna, Virginia" Role="Lead Software Engineer">
+    <History StartDate="2018-05-01" Organization="Tesla Government" OrganizationWebsite="https://teslagov.com" OrganizationLocation="Vienna, Virginia" Role="Lead Software Engineer">
       <List>
-        <Item>Lead, support, and mentor team members in daily development activities.</item>
-        <Item>Lead agile meetings; plan, estimate, and assign tasks.</Item>
+        <Item>Lead, support, and mentor team members in daily development activities.</Item>
+        <Item>Perform DevOps tasks to enable continuous integration and ensure smooth deployments.</Item>
         <Item>Ensure best practices and code quality via code reviews.</Item>
         <Item>Assist in gathering technical requirements and determining best technical solution for new features.</Item>
         <Item>Develop software which informs important decisions across the globe.</Item>

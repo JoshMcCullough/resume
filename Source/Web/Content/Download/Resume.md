@@ -1,5 +1,5 @@
 # Josh McCullough
-software engineer | leader | database developer | mentor | ui/ux designer
+software engineer | leader | architect | mentor | ui/ux designer
 
 ## Objective
 To apply and grow my existing skill-set in a challenging, fast-paced, and rewarding software engineering environment.

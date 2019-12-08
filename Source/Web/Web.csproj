@@ -527,8 +527,6 @@
     <Content Include="Content\Stylesheets\Site.sm.css.map">
       <DependentUpon>Site.sm.css</DependentUpon>
     </Content>
-    <None Include="Properties\PublishProfiles\ftp.JoshMcCullough.me.pubxml" />
-    <None Include="Properties\PublishProfiles\Local.pubxml" />
     <Content Include="Views\Shared\_Menu.cshtml">
       <Generator>RazorGenerator</Generator>
       <LastGenOutput>_Menu.generated.cs</LastGenOutput>
@@ -601,6 +599,7 @@
       <Generator>RazorGenerator</Generator>
       <LastGenOutput>Thanks.generated.cs</LastGenOutput>
     </Content>
+    <None Include="Properties\PublishProfiles\Release %28local%29.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Export\" />

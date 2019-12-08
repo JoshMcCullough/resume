@@ -1,7 +1,10 @@
 var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
@@ -314,12 +317,12 @@ jQuery.fn.extend({
     },
 });
 Tags.allTags.push(new Tag("azure", null, "Azure", 5));
-Tags.allTags.push(new Tag("couchdb", null, "CouchDB", 6));
+Tags.allTags.push(new Tag("couchdb", null, "CouchDB", 5));
 Tags.allTags.push(new Tag("elasticsearch", null, "Elasticsearch", 7));
 Tags.allTags.push(new Tag("microservices", null, "Microservices", 7));
 Tags.allTags.push(new Tag("node", null, "Node/NPM", 7));
-Tags.allTags.push(new Tag("typescript", null, "TypeScript", 8));
-Tags.allTags.push(new Tag("aws", "AWS", "Amazon Web Services", 5));
+Tags.allTags.push(new Tag("typescript", null, "TypeScript", 9));
+Tags.allTags.push(new Tag("aws", "AWS", "Amazon Web Services", 7));
 Tags.allTags.push(new Tag("apache2", null, "Apache2", 5));
 Tags.allTags.push(new Tag("arcgis", null, "ArcGIS", 3));
 Tags.allTags.push(new Tag("arduino", null, "Arduino", 4));
@@ -331,24 +334,23 @@ Tags.allTags.push(new Tag("bs", null, "Bootstrap", 8));
 Tags.allTags.push(new Tag("mdl", null, "Google MDL", 6));
 Tags.allTags.push(new Tag("cs", null, "C#", 9));
 Tags.allTags.push(new Tag("cpp", null, "C++", 3));
-Tags.allTags.push(new Tag("css", null, "CSS/3", 9));
+Tags.allTags.push(new Tag("css", null, "CSS", 9));
 Tags.allTags.push(new Tag("di", null, "Dependency Injection", 9));
 Tags.allTags.push(new Tag("flash", null, "Flash", 3));
 Tags.allTags.push(new Tag("git", null, "Git", 8));
 Tags.allTags.push(new Tag("grails", null, "Grails", 3));
-Tags.allTags.push(new Tag("highcharts", null, "Highcharts", 6));
-Tags.allTags.push(new Tag("highmaps", null, "Highmaps", 6));
+Tags.allTags.push(new Tag("highcharts", null, "Highcharts", 4));
+Tags.allTags.push(new Tag("highmaps", null, "Highmaps", 4));
 Tags.allTags.push(new Tag("html", null, "HTML/5", 9));
 Tags.allTags.push(new Tag("iis", null, "IIS", 7));
-Tags.allTags.push(new Tag("java", null, "Java", 7));
+Tags.allTags.push(new Tag("java", null, "Java", 9));
 Tags.allTags.push(new Tag("js", "JS", "JavaScript", 9));
-Tags.allTags.push(new Tag("ko", null, "Knockout", 7));
-Tags.allTags.push(new Tag("linux", null, "Linux", 6));
+Tags.allTags.push(new Tag("ko", null, "Knockout", 6));
+Tags.allTags.push(new Tag("linux", null, "Linux", 7));
 Tags.allTags.push(new Tag("mantis", null, "Mantis", 6));
-Tags.allTags.push(new Tag("mapping", null, "Mapping", 6));
 Tags.allTags.push(new Tag("mssql", "MS SQL", "SQL Server", 9));
 Tags.allTags.push(new Tag("ssrs", null, "Microsoft SSRS", 6));
-Tags.allTags.push(new Tag("mysql", null, "My SQL", 7));
+Tags.allTags.push(new Tag("mysql", null, "My SQL", 8));
 Tags.allTags.push(new Tag("openscad", null, "OpenSCAD", 3));
 Tags.allTags.push(new Tag("oracle", null, "Oracle", 5));
 Tags.allTags.push(new Tag("php", null, "PHP", 4));
@@ -360,18 +362,21 @@ Tags.allTags.push(new Tag("sl", null, "Silverlight", 4));
 Tags.allTags.push(new Tag("svn", "SVN", "Subversion", 8));
 Tags.allTags.push(new Tag("tfs", "TFS", "Team Foundation Server", 6));
 Tags.allTags.push(new Tag("tfvc", "TFVC", "TF Version Control", 7));
-Tags.allTags.push(new Tag("tomcat", null, "Tomcat", 5));
+Tags.allTags.push(new Tag("tomcat", null, "Tomcat", 4));
 Tags.allTags.push(new Tag("uiux", null, "UI/UX", 7));
-Tags.allTags.push(new Tag("testing", null, "Unit Testing", 7));
-Tags.allTags.push(new Tag("vb", "VB.NET", "Visual Basic .NET", 6));
-Tags.allTags.push(new Tag("weblogic", null, "WebLogic", 4));
+Tags.allTags.push(new Tag("testing", null, "Unit Testing", 9));
+Tags.allTags.push(new Tag("vb", "VB.NET", "Visual Basic .NET", 5));
+Tags.allTags.push(new Tag("weblogic", null, "WebLogic", 3));
 Tags.allTags.push(new Tag("windows", null, "Windows", 9));
 Tags.allTags.push(new Tag("wcf", "WCF", "WCF", 7));
-Tags.allTags.push(new Tag("winforms", "WinForms", "Windows Forms", 7));
-Tags.allTags.push(new Tag("wp", null, "Windows Phone", 4));
+Tags.allTags.push(new Tag("winforms", "WinForms", "Windows Forms", 6));
 Tags.allTags.push(new Tag("winserver", null, "Windows Server", 7));
 Tags.allTags.push(new Tag("xml", null, "XML", 7));
 Tags.allTags.push(new Tag("xsd", null, "XSD", 6));
 Tags.allTags.push(new Tag("xslt", null, "XSLT", 7));
+Tags.allTags.push(new Tag("react", null, "React", 7));
+Tags.allTags.push(new Tag("redux", null, "Redux", 7));
+Tags.allTags.push(new Tag("hibernate", null, "Hibernate", 6));
+Tags.allTags.push(new Tag("flyway", null, "Flyway", 8));
 Tags.init();
 //# sourceMappingURL=Tags.js.map

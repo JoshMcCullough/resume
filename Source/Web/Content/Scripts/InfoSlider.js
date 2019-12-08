@@ -1,5 +1,5 @@
 /// <reference path="Definitions/jQuery/jquery.d.ts" />
-var InfoSlider = (function () {
+var InfoSlider = /** @class */ (function () {
     function InfoSlider(target, onSliding) {
         this.sliding = false;
         this.minWidth = 15;
@@ -66,7 +66,7 @@ var InfoSlider = (function () {
     };
     InfoSlider.dataKey = "info_slider";
     return InfoSlider;
-})();
+}());
 jQuery.fn.extend({
     infoSlider: function (onSliding) {
         return new InfoSlider($(this), onSliding);

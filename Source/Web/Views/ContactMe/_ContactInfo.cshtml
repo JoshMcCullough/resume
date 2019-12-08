@@ -1,18 +1,15 @@
 ﻿@using JSM.Web.Models.Shared;
 
-<p>If you'd like to get in touch with me, please use one of the following methods:</p>
+<p>If you'd like to get in touch with me, please send me an email:</p>
 
 @{Html.RenderPartial("_InfoSlider", new InfoSliderModel() {
     Id = "emailSlider",
     Label = "Email"
 });}
 
-@{Html.RenderPartial("_InfoSlider", new InfoSliderModel() {
-    Id = "phoneSlider",
-    Label = "Phone"
-});}
-
 <script type="text/javascript">
+	var emailSliderCallbackExecuted = false;
+
     function sliderCallback(url, contentCallback) {
         var $sliderElement = this;
 
@@ -27,29 +24,20 @@
     function emailSliderCallback() {
         var $emailSlider = $("#emailSlider");
 
-        sliderCallback.call($emailSlider, "@Url.Action("GetEmail", "ContactMe")", function (data) {
-            return $("<a>")
-                .text(data)
-                .attr("href", "mailto:" + data);
-        });
-    }
+		if (!emailSliderCallbackExecuted) {
+			sliderCallback.call($emailSlider, "@Url.Action("GetEmail", "ContactMe")", function (data) {
+				return $("<a>")
+					.text(data)
+					.attr("href", "mailto:" + data);
+			});
+		}
 
-    function phoneSliderCallback() {
-        var $phoneSlider = $("#phoneSlider");
-
-        sliderCallback.call($phoneSlider, "@Url.Action("GetPhone", "ContactMe")");
+		emailSliderCallbackExecuted = true;
     }
 
     $(document).ready(function () {
         var $emailSlider = $("#emailSlider");
-        var $phoneSlider = $("#phoneSlider");
 
         $emailSlider.infoSlider(emailSliderCallback);
-        $phoneSlider.infoSlider(phoneSliderCallback);
-
-        $(document).one("click keydown scroll", function () {
-            emailSliderCallback();
-            phoneSliderCallback();
-        });
     });
 </script>
