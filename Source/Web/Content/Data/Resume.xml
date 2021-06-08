@@ -78,8 +78,9 @@
   </Section>
 
   <Section Key="work-history" Title="Work History">
-    <History StartDate="2018-05-01" Organization="Tesla Government" OrganizationWebsite="https://teslagov.com" OrganizationLocation="Vienna, Virginia" Role="Lead Software Engineer">
+    <History StartDate="2018-05-01" Organization="Tesla Government" OrganizationWebsite="https://teslagov.com" OrganizationLocation="Vienna, Virginia" Role="Director of Software Development">
       <List>
+        <Item>Promoted to Lead Developer in 2019; promoted to Director of Software Development in 2021.</Item>
         <Item>Lead, support, and mentor team members in daily development activities.</Item>
         <Item>Perform DevOps tasks to enable continuous integration and ensure smooth deployments.</Item>
         <Item>Ensure best practices and code quality via code reviews.</Item>
